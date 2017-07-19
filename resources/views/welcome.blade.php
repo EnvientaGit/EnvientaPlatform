@@ -79,7 +79,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Envienta(S)
+                    Envienta
                 </div>
 
                 <div class="links">
