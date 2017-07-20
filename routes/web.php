@@ -11,6 +11,13 @@
 |
 */
 
+/* Static Links */
+
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('playground', function() {
+    return view('playground.main');
+})->name('playground.main');
+

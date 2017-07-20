@@ -1,0 +1,1 @@
+<p>This is gonna be the <b>footer</b> part</p>
