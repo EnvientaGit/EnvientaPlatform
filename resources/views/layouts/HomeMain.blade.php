@@ -12,18 +12,18 @@
 
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="{{ URL::to('css/bootstrap.min.css') }}" type="text/css">
+        <link rel="stylesheet" href="{{ URL::to('css/playground-style.css') }}" type="text/css">
 
     </head>
     <body>
-        <div class="container">
+        <div class="container-fluid">
             @include('partials.navigation')
         </div>
 
-            <div class="container">
+            <div class="container-fluid">
                 @yield('content')   
             </div>
-        <div class="container">
-            @include('partials.footer')
-        </div>
+    
+        @include('partials.footer')
     </body>
 </html>
