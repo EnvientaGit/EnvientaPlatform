@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="platform.css" type="text/css"> </head>
 
 <body class="bg-primary">
-  <nav class="navbar navbar-expand-md navbar-inverse bg-inverse">
+  <nav class="navbar navbar-expand-md navbar-inverse bg-warning">
     <div class="container">
       <img class="img-fluid d-block" src="img/envienta_platform_logo.png">
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
@@ -46,16 +46,16 @@
     <div class="container">
       <div class="row">
         <div class="col-md-3">
-          <a class="btn btn-warning btn-block btn-sm my-3" href="#" data-toggle="">EDIT PROJECT<i class="fa"></i></a>
+          <a class="btn btn-warning btn-block my-3 btn-lg" href="#" data-toggle="">EDIT PROJECT<i class="fa"></i></a>
         </div>
         <div class="col-md-3">
-          <a class="btn btn-warning btn-block btn-sm my-3" href="#" data-toggle="">OVERVIEW<i class="fa"></i></a>
+          <a class="btn btn-warning btn-block my-3 btn-lg" href="#" data-toggle="">OVERVIEW<i class="fa"></i></a>
         </div>
         <div class="col-md-3">
-          <a class="btn btn-warning btn-block btn-sm my-3" href="#" data-toggle="">BACK THIS PROJECT<i class="fa"></i></a>
+          <a class="btn btn-warning btn-block my-3 btn-lg" href="#" data-toggle="">BACK THIS PROJECT<i class="fa"></i></a>
         </div>
         <div class="col-md-3">
-          <a class="btn btn-warning btn-block btn-sm my-3" href="#" data-toggle="">PURCHASE<i class="fa"></i></a>
+          <a class="btn btn-warning btn-block my-3 btn-lg" href="#" data-toggle="">PURCHASE<i class="fa"></i></a>
         </div>
       </div>
     </div>
@@ -86,45 +86,39 @@
   <div class="p-0">
     <div class="container p-3">
       <div class="row">
-        <div class="col-md-8">
-
-          <h2>Dynamic Pills</h2>
-<p>To make the tabs toggleable, add the data-toggle="pill" attribute to each
-    link. Then add a .tab-pane class with a unique ID for every tab and wrap
-    them inside a div element with class .tab-content.</p>
-<ul class="nav nav-pills">
-    <li class="active nav-item"><a data-toggle="pill" href="#home" class="nav-link">Home</a>
-    </li>
-    <li class="nav-item"><a data-toggle="pill" href="#menu1" class="nav-link">Menu 1</a>
-    </li>
-    <li class="nav-item"><a data-toggle="pill" href="#menu2" class="nav-link">Menu 2</a>
-    </li>
-    <li class="nav-item"><a data-toggle="pill" href="#menu3" class="nav-link">Menu 3</a>
-    </li>
-</ul>
-<div class="tab-content">
-    <div id="home" class="tab-pane fade in active">
-         <h3>HOME</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua.</p>
-    </div>
-    <div id="menu1" class="tab-pane fade">
-         <h3>Menu 1</h3>
-        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-            ut aliquip ex ea commodo consequat.</p>
-    </div>
-    <div id="menu2" class="tab-pane fade">
-         <h3>Menu 2</h3>
-        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-            doloremque laudantium, totam rem aperiam.</p>
-    </div>
-    <div id="menu3" class="tab-pane fade">
-         <h3>Menu 3</h3>
-        <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae
-            vitae dicta sunt explicabo.</p>
-    </div>
-</div>
-          
+        <div class="col-md-8 p-0 m-0">
+          <ul class="nav nav-pills nav-justified">
+            <li class="nav-item mx-3 bg-warning">
+              <a data-toggle="pill" href="#home" class="nav-link active"><b>CAMPAIGN</b></a>
+            </li>
+            <li class="nav-item bg-warning mx-3">
+              <a data-toggle="pill" href="#menu1" class="nav-link"><b>UPDATES</b></a>
+            </li>
+            <li class="nav-item bg-warning mx-3">
+              <a data-toggle="pill" href="#menu2" class="nav-link"><b>COMMENTS</b></a>
+            </li>
+            <li class="nav-item bg-warning mx-3">
+              <a data-toggle="pill" href="#menu3" class="nav-link"><b>BACKERS</b></a>
+            </li>
+          </ul>
+          <div class="tab-content">
+            <div id="home" class="tab-pane fade show active">
+              <h3>HOME</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            <div id="menu1" class="tab-pane fade">
+              <h3>Menu 1</h3>
+              <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            <div id="menu2" class="tab-pane fade">
+              <h3>Menu 2</h3>
+              <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+            </div>
+            <div id="menu3" class="tab-pane fade">
+              <h3>Menu 3</h3>
+              <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+            </div>
+          </div>
         </div>
         <div class="col-md-4">
           <div class="card">
