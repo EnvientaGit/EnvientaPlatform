@@ -12,7 +12,7 @@
 
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="{{ URL::to('css/bootstrap.min.css') }}" type="text/css">
-        <link rel="stylesheet" href="{{ URL::to('css/playground-style.css') }}" type="text/css">
+        <link rel="stylesheet" href="{{ URL::to('css/envienta.css') }}" type="text/css">
 
     </head>
     <body>
