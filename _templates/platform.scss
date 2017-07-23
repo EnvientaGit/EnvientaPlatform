@@ -107,9 +107,15 @@ $border-radius-sm: $border-radius * .8;
 /* Custom */
 
 .style-backer {
-font-size: 130%;
+  font-size: 130%; }
+
+.nav-justified .nav-item > a:hover,
+.nav-justified .nav-item > a:focus {
+  color: #fff;
+  background-color: #4296b5;
 }
 
-.style-nav-custom {
-font-size: 130%;
+.nav-justified .nav-item > a {
+  color: #4296b5;
+  background-color: none;
 }
