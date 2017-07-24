@@ -1,5 +1,166 @@
 @extends('layouts.HomeMain')
 
 @section('content')
-        <h3>This is gonna be the <b>content</b> part</p>
+  <div class="bg-primary text-white">
+    <div class="container">
+      <div class="row my-2">
+        <div class="col-md-3">
+          <a class="btn btn-block my-1 btn-warning" href="#" data-toggle=""><b>EDIT PROJECT</b><i class="fa"></i></a>
+        </div>
+        <div class="col-md-3">
+          <a class="btn btn-block my-1 btn-warning" href="#" data-toggle=""><b>OVERVIEW</b><i class="fa"></i></a>
+        </div>
+        <div class="col-md-3">
+          <a class="btn btn-block my-1 btn-info" href="#" data-toggle=""><b>BACK THIS PROJECT</b><i class="fa"></i></a>
+        </div>
+        <div class="col-md-3">
+          <a class="btn btn-block my-1 btn-warning" href="#" data-toggle=""><b>PURCHASE</b><i class="fa"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="">
+    <div class="container bg-warning p-3">
+      <div class="row">
+        <div class="col-md-8 bg-warning">
+          <div class="embed-responsive embed-responsive-16by9 w-100 p-0 m-0">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/KTAiOtJoD-4" allowfullscreen=""> </iframe>
+          </div>
+        </div>
+        <div class="col-md-4 bg-warning">
+          <h1 class="display-4 py-3"><b>$7,500</b></h1>
+          <p class="">raised by <b>12</b> backers</p> <span class="badge badge-default w-75 bg-danger text-danger">Badge</span>
+          <h5 class="" contenteditable="true">
+            <div><b><br></b></div><b>75%</b> of <b>$10,000 </b>flexible goal
+            <div>
+              <br> </div>
+          </h5>
+          <p class="">From the creator of the award-winning product comes the next one! A portable “go-anywhere” product. Take it outside - the product built to defy rain, dust, dirt and the rough and tumble of life.</p>
+          <a class="btn btn-danger btn-block btn-lg"
+            href="#">BACK THIS PROJECT<i class="fa"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="">
+    <div class="container p-3">
+      <div class="row">
+        <div class="col-md-8">
+          <div class="row">
+            <div class="col-md-12">
+              <ul class="nav nav-pills nav-tabs nav-justified">
+                <li class="nav-item mx-3">
+                  <a data-toggle="pill" href="#home" class="nav-link active"><b>HOME</b></a>
+                </li>
+                <li class="nav-item mx-3">
+                  <a data-toggle="pill" href="#menu1" class="nav-link"><b>UPDATES</b></a>
+                </li>
+                <li class="nav-item mx-3">
+                  <a data-toggle="pill" href="#menu2" class="nav-link"><b>COMMENTS</b></a>
+                </li>
+                <li class="nav-item mx-3">
+                  <a data-toggle="pill" href="#menu3" class="nav-link"><b>BACKERS</b></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="tab-content">
+            <div id="home" class="tab-pane fade show active">
+              <div class="row">
+                <div class="container bg-warning mx-3 p-3">
+                  <h3 class="text-info">HOME</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+              </div>
+            </div>
+            <div id="menu1" class="tab-pane fade">
+              <div class="row">
+                <div class="container p-3 m-3 bg-warning">
+                  <h3 class="text-info">UPDATES</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+              </div>
+            </div>
+            <div id="menu2" class="tab-pane fade">
+              <div class="row">
+                <div class="container p-3 m-3 bg-warning">
+                  <h3 class="text-info">COMMENTS</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+              </div>
+            </div>
+            <div id="menu3" class="tab-pane fade">
+              <div class="row">
+                <div class="container p-3 m-3 bg-warning">
+                  <h3 class="text-info">BACKERS</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <ul class="list-group">
+              <li class="list-group-item px-2 bg-info text-white"><i class="fa fa-credit-card fa-2x"></i><b class="style-backer">&nbsp;&nbsp;&nbsp;PLEDGE $15 OR MORE</b></li>
+            </ul>
+            <div class="card-block card-warning">
+              <h4 class="text-info"><b>BUY US A COFFEE</b></h4>
+              <p>Help keep us moving along with this project. Mea tempor electram in, ius tantas verterem ad.</p>
+              <p><i class="fa fa-users fa-fw"></i><b>&nbsp;&nbsp;&nbsp;23 out of 100 claimed</b>
+                <br><i class="fa fa-calendar fa-fw"></i><b>&nbsp; &nbsp;Estimated delivery: Dec 2016</b></p>
+              <p>
+                <a href="#" class="btn btn-block btn-outline-danger btn-sm"><b>SELECT THIS REWARD</b></a>
+              </p>
+            </div>
+          </div>
+          <br>
+          <div class="card">
+            <ul class="list-group">
+              <li class="list-group-item text-white px-2 bg-info"><i class="fa fa-credit-card fa-2x"></i><b class="style-backer">&nbsp;&nbsp;&nbsp;PLEDGE $15 OR MORE</b></li>
+            </ul>
+            <div class="card-block card-warning">
+              <h4 class="text-info"><b>BUY US A COFFEE</b></h4>
+              <p>Help keep us moving along with this project. Mea tempor electram in, ius tantas verterem ad.</p>
+              <p><i class="fa fa-users fa-fw"></i><b>&nbsp;&nbsp;&nbsp;23 out of 100 claimed</b>
+                <br><i class="fa fa-calendar fa-fw"></i><b>&nbsp; &nbsp;Estimated delivery: Dec 2016</b></p>
+              <p>
+                <a href="#" class="btn btn-block btn-outline-danger btn-sm"><b>SELECT THIS REWARD</b></a>
+              </p>
+            </div>
+          </div>
+          <br>
+          <div class="card">
+            <ul class="list-group">
+              <li class="list-group-item text-white px-2 bg-info"><i class="fa fa-credit-card fa-2x"></i><b class="style-backer">&nbsp;&nbsp;&nbsp;PLEDGE $15 OR MORE</b></li>
+            </ul>
+            <div class="card-block card-warning">
+              <h4 class="text-info"><b>BUY US A COFFEE</b></h4>
+              <p>Help keep us moving along with this project. Mea tempor electram in, ius tantas verterem ad.</p>
+              <p><i class="fa fa-users fa-fw"></i><b>&nbsp;&nbsp;&nbsp;23 out of 100 claimed</b>
+                <br><i class="fa fa-calendar fa-fw"></i><b>&nbsp; &nbsp;Estimated delivery: Dec 2016</b></p>
+              <p>
+                <a href="#" class="btn btn-block btn-outline-danger btn-sm"><b>SELECT THIS REWARD</b></a>
+              </p>
+            </div>
+          </div>
+          <br>
+          <div class="card">
+            <ul class="list-group">
+              <li class="list-group-item px-2 bg-info text-white"><i class="fa fa-credit-card fa-2x"></i><b class="style-backer">&nbsp;&nbsp;&nbsp;PLEDGE $15 OR MORE</b></li>
+            </ul>
+            <div class="card-block card-warning">
+              <h4 class="text-info"><b>BUY US A COFFEE</b></h4>
+              <p>Help keep us moving along with this project. Mea tempor electram in, ius tantas verterem ad.</p>
+              <p><i class="fa fa-users fa-fw"></i><b>&nbsp;&nbsp;&nbsp;23 out of 100 claimed</b>
+                <br><i class="fa fa-calendar fa-fw"></i><b>&nbsp; &nbsp;Estimated delivery: Dec 2016</b></p>
+              <p>
+                <a href="#" class="btn btn-block btn-outline-danger btn-sm"><b>SELECT THIS REWARD</b></a>
+              </p>
+            </div>
+          </div>
+          <br> </div>
+      </div>
+    </div>
+  </div>
 @endsection 

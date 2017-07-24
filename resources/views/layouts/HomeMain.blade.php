@@ -17,19 +17,15 @@
         <link rel="stylesheet" href="{{ URL::to('css/font-awesome.css') }}">
 
         <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="{{ URL::to('css/bootstrap.min.css') }}" type="text/css">
+        {{-- <link rel="stylesheet" href="{{ URL::to('css/bootstrap.min.css') }}" type="text/css"> --}}
         <link rel="stylesheet" href="{{ URL::to('css/platform.css') }}" type="text/css">
 
     </head>
     
     <body class="bg-primary">
-        <div class="container-fluid">
-            @include('partials.navigation')
-        </div>
+        @include('partials.navigation')
 
-        <div class="container-fluid">
-            @yield('content')   
-        </div>
+        @yield('content')
 
         <div class="container-fluid">
             @include('partials.footer')
