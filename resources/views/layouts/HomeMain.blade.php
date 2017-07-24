@@ -13,15 +13,14 @@
         {{-- Title --}}
         <title>Envienta Playground</title>
 
-        <!-- Fonts -->
+        <!-- Default CSS -->
         <link rel="stylesheet" href="{{ URL::to('css/font-awesome.css') }}">
 
-        <!-- Latest compiled and minified CSS -->
-        {{-- <link rel="stylesheet" href="{{ URL::to('css/bootstrap.min.css') }}" type="text/css"> --}}
+        <!-- Custom CSS -->
         <link rel="stylesheet" href="{{ URL::to('css/platform.css') }}" type="text/css">
 
     </head>
-    
+
     <body class="bg-primary">
         @include('partials.navigation')
 
