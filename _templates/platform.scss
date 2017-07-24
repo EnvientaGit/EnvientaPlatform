@@ -14,18 +14,49 @@ $brand-primary:             #f1f1f1;
 
 
 
-$brand-success:             #ffffff;
 
 
 
 
 
-$brand-info:                #333;
-$brand-warning:             #4296b5;
+
+
+
+
+$brand-success:             #38ab00;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$brand-info:                #4296b5;
+
+$brand-warning:             #ffffff;
+
+
+
+
+
+
+
+
 
 $brand-danger:              #ff6600;
 
-$brand-inverse:             #4296b6;
+$brand-inverse:             #aaaaaa;
+
+
+
 
  
 
@@ -48,15 +79,27 @@ $enable-print-styles:       true !default;
 
 $body-color: #454545;
 $body-color-inverse: invert($body-color) !default;
-$link-color: #ffffff;
+$link-color: #4296b6;
 
 
 
 
 
 
-$font-family-base: Lato;
-$headings-font-family: Lato;
+
+
+
+$font-family-base: 'Trebuchet MS', Helvetica, sans-serif;
+
+
+
+
+
+
+
+
+$headings-font-family: 'Trebuchet MS', Helvetica, sans-serif;
+
 
 $font-size-base: 1rem; // Assumes the browser default, typically `16px`
 $font-size-h1: 2.5 * $font-size-base;
@@ -99,6 +142,10 @@ html,body {
 
 
 
+
+
+
+
 $border-radius: 0px;
 $border-radius-lg: $border-radius * 1.2;
 $border-radius-sm: $border-radius * .8;
@@ -106,22 +153,32 @@ $border-radius-sm: $border-radius * .8;
 
 /* Custom */
 
+/* Backers winsow ----------------------------- */
+/* font size on backers window */
 .style-backer {
   font-size: 130%; }
 
+/* backer window border */
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border: 0px solid rgba(0, 0, 0, 0);
+  border-radius: 0px; }
+
+/* inside nav buttons ----------------------------- */
 .nav-justified .nav-item > a:hover,
 .nav-justified .nav-item > a:focus {
-  color: #fff;
+  color: #ffffff;
   background-color: #4296b5;
-  border: solid 1px;
-  border-color: #4296b5;
 }
 
 .nav-justified .nav-item > a {
   color: #4296b5;
-  background-color: none;
-  border: solid 1px;
-  border-color: #4296b5;
+  background-color: #ffffff;
+  margin-bottom: 3px;
+
 }
 
 .nav {
@@ -133,3 +190,49 @@ $border-radius-sm: $border-radius * .8;
 .nav-pills .nav-item.show .nav-link {
   color: #fff;
   background-color: #4296b5; }
+
+.nav-tabs {
+  border-bottom: 0px solid #ddd; }
+
+/* Color definitions ----------------------------- */
+/* Search window - green */
+.btn-outline-success {
+  color: #ffffff;
+  background-color: transparent;
+  background-image: none;
+  border-color: #4296b5; }
+  .btn-outline-success:hover {
+    color: #fff;
+    background-color: #347790;
+    border-color: #4296b5; }
+  .btn-outline-success:focus, .btn-outline-success.focus {
+    box-shadow: 0 0 0 0px rgba(56, 171, 0, 0.5); }
+  .btn-outline-success.disabled, .btn-outline-success:disabled {
+    color: #4296b5;
+    background-color: transparent; }
+  .btn-outline-success:active, .btn-outline-success.active,
+  .show > .btn-outline-success.dropdown-toggle {
+    color: #fff;
+    background-color: #4296b5;
+    border-color: #4296b5; }
+
+/* Inactive elements - buttons - white */
+.btn-warning {
+  color: #4296b5;
+  background-color: #ffffff;
+  border-color: #ffffff; }
+  .btn-warning:hover {
+    color: #fff;
+    background-color: #4296b5;
+    border-color: #4296b5; }
+  .btn-warning:focus, .btn-warning.focus {
+    box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.5); }
+  .btn-warning.disabled, .btn-warning:disabled {
+    background-color: #ffffff;
+    border-color: #4296b5; }
+  .btn-warning:active, .btn-warning.active,
+  .show > .btn-warning.dropdown-toggle {
+    color: #fff;
+    background-color: #e6e6e6;
+    background-image: none;
+    border-color: #4296b5; }
