@@ -6001,22 +6001,24 @@ body > * {
   background-color: #ff6600; }
 
 /* inside nav buttons ----------------------------- */
-.nav-justified .nav-item > a:hover {
+.nav-pills .nav-item > a:hover {
   color: #ffffff;
   background-color: #ff6600; }
 
-.nav-justified .nav-item > a:focus {
+.nav-pills .nav-item > a:focus {
   color: #ffffff;
   background-color: #18739f; }
 
-.nav-justified .nav-item > a {
+.nav-pills .nav-item > a {
   color: #18739f;
   background-color: #ffffff;
   margin-bottom: 8px; }
 
 .nav {
-  margin-left: -1rem;
-  margin-right: -1rem; }
+  text-align: center;
+  margin-left: -14px;
+  margin-right: -14px;
+  margin-bottom: 13px; }
 
 .nav-pills .nav-link.active,
 .nav-pills .nav-item.show .nav-link {
