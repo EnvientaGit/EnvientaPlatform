@@ -21,3 +21,7 @@ Route::get('playground', function() {
     return view('playground.main');
 })->name('playground.main');
 
+Route::get('campaign', function() {
+    return view('playground.campaign');
+})->name('playground.campaign');
+
