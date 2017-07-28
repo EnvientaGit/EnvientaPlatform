@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row">
       <div class="col-md-12 col-sm-12 col py-3">
-        <ol class="breadcrumb breadcrumb-arrow">
+        <ol class="breadcrumby breadcrumby-arrow">
           <li>
             <a href="#"><i class="fa fa-home my-2" aria-hidden="true"></i></a>
           </li>
