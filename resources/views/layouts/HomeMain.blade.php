@@ -25,9 +25,9 @@
         @include('partials.navigation')
 
         @yield('content')
-
-        <div class="container-fluid">
-            @include('partials.footer')
-        </div>
+        
+        @include('partials.breadcrumbs')
+        
+        @include('partials.footer')
     </body>
 </html>

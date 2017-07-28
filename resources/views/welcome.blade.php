@@ -9,6 +9,9 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+        
+        <!-- Boostrap CDN -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
         <!-- Styles -->
         <style>
@@ -65,7 +68,7 @@
         </style>
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
+        <div class="flex-center position-ref full-height">0
             @if (Route::has('login'))
                 <div class="top-right links">
                     @if (Auth::check())
@@ -77,19 +80,45 @@
                 </div>
             @endif
 
-            <div class="content">
-                <div class="title">
-                    <p>Envienta <br> Open Source Everything</p>
-                <img src="{{ URL::to('img/page-under-construction.png') }}" alt="">
-                </div>
+            <div class="container-fluid">
+                <div row>
+                    <div class="col-md-6 pull-left">
+                        <div class="title">
+                            <p>Envienta: <br> Open Source Everything</p>
+                            <img src="{{ URL::to('img/page-under-construction.png') }}" alt="">
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 pull-right">
+                        <h2>Working layouts so far:</h2><br>
 
-                {{-- <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div> --}}
+                        <ul>
+                            <li>
+                                <h4>Crowdfunding page from - Pingendo - 01_crowdfunding_page.html</h4>
+                                <a href="{{ route('playground.main') }}" target="_blank"><h4>/playground</h4></a>
+                                <hr>
+                            </li>
+                            <li>
+                                <h4>Crowdfunding page from - Pingendo - 02_campaigns_page.html</h4>
+                                <a href="{{ route('playground.campaign') }}"" target="_blank"><h4>/campaign</h4></a>
+                                <hr>
+                            </li>
+                            <li>
+                                <h4>Front page from - Pingendo - 03_front_page.html</h4>
+                                <a href="#"" target="_blank"><h4>/front</h4></a>
+                                <hr>
+                            </li>
+                        </ul>
+                    
+                        {{-- <div class="links">
+                            <a href="https://laravel.com/docs">Documentation</a>
+                            <a href="https://laracasts.com">Laracasts</a>
+                            <a href="https://laravel-news.com">News</a>
+                            <a href="https://forge.laravel.com">Forge</a>
+                            <a href="https://github.com/laravel/laravel">GitHub</a>
+                        </div> --}}
+                    </div>
+                </div>
             </div>
         </div>
     </body>

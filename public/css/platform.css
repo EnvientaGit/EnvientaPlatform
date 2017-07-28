@@ -6114,14 +6114,11 @@ body > * {
 .breadcrumb-arrow {
   height: 36px;
   padding: 0;
+  margin-left: -5px;
+  margin-right: -5px;
   line-height: 36px;
   list-style: none;
   background-color: #e6e9ed; }
-
-.breadcrumb-arrow li:first-child a {
-  border-radius: 4px 0 0 4px;
-  -webkit-border-radius: 4px 0 0 4px;
-  -moz-border-radius: 4px 0 0 4px; }
 
 .breadcrumb-arrow li, .breadcrumb-arrow li a, .breadcrumb-arrow li span {
   display: inline-block;
@@ -6133,9 +6130,6 @@ body > * {
 .breadcrumb-arrow li + li:before {
   padding: 0;
   content: ""; }
-
-.breadcrumb-arrow li span {
-  padding: 0 10px; }
 
 .breadcrumb-arrow li a, .breadcrumb-arrow li:not(:first-child) span {
   height: 36px;
@@ -6177,11 +6171,11 @@ body > * {
   border-left: 11px solid #2494be; }
 
 .breadcrumb-arrow li a:focus, .breadcrumb-arrow li a:hover {
-  background-color: #4fc1e9;
-  border: 1px solid #4fc1e9; }
+  background-color: #ff6600;
+  border: 1px solid #ff6600; }
 
 .breadcrumb-arrow li a:focus:before, .breadcrumb-arrow li a:hover:before {
-  border-left-color: #4fc1e9; }
+  border-left-color: #ff6600; }
 
 .breadcrumb-arrow li a:active {
   background-color: #2494be;
@@ -6193,4 +6187,6 @@ body > * {
 .breadcrumb-arrow li span {
   color: #434a54; }
 
-/*												*/
+/*	Subscribe margin	*/
+.form-inline {
+  margin-top: 33px; }
