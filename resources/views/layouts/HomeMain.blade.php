@@ -15,6 +15,7 @@
 
         <!-- Default CSS -->
         <link rel="stylesheet" href="{{ URL::to('css/font-awesome.css') }}">
+        {{-- <link rel="stylesheet" href="{{ URL::to('css/bootstrap_4.css') }}"> --}}
 
         <!-- Custom CSS -->
         <link rel="stylesheet" href="{{ URL::to('css/platform.css') }}" type="text/css">
@@ -25,8 +26,8 @@
         @include('partials.navigation')
 
         @yield('content')
-        
-        @include('partials.breadcrumbs')
+
+        @include('partials.breadcrumbs_2')
         
         @include('partials.footer')
     </body>
