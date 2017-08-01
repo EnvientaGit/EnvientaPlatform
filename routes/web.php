@@ -25,3 +25,7 @@ Route::get('campaign', function() {
     return view('playground.campaign');
 })->name('playground.campaign');
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

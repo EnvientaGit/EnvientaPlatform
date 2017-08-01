@@ -69,16 +69,16 @@
     </head>
     <body>
         <div class="flex-center position-ref full-height">0
-            @if (Route::has('login'))
+            {{-- @if (Route::has('login'))
                 <div class="top-right links">
                     @if (Auth::check())
                         <a href="{{ url('/home') }}">Home</a>
                     @else
-                        <a href="{{ url('/login') }}">Login</a>
+                        <a href="{{ url('/login') }}">Loginka</a>
                         <a href="{{ url('/register') }}">Register</a>
                     @endif
                 </div>
-            @endif
+            @endif --}}
 
             <div class="container-fluid">
                 <div row>
@@ -93,6 +93,11 @@
                         <h2>Working layouts so far:</h2><br>
 
                         <ul>
+                            <li>
+                                <h4>Crowdfunding page from - Pingendo - 01_crowdfunding_page.html</h4>
+                                <a href="{{ url('/home') }}" target="_blank"><h4>Home to Login & Register</h4></a>
+                                <hr>
+                            </li>
                             <li>
                                 <h4>Crowdfunding page from - Pingendo - 01_crowdfunding_page.html</h4>
                                 <a href="{{ route('playground.main') }}" target="_blank"><h4>/playground</h4></a>
