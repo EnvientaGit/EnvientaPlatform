@@ -12,6 +12,13 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    <!-- Default CSS -->
+    <link rel="stylesheet" href="{{ URL::to('css/font-awesome.css') }}">
+    <link rel="stylesheet" href="{{ URL::to('css/bootstrap-social.css') }}">
+    {{-- <link rel="stylesheet" href="{{ URL::to('css/bootstrap_4.css') }}"> --}}
+
+    
 </head>
 <body>
     <div id="app">
