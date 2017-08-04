@@ -6117,11 +6117,10 @@ body > * {
   margin-left: -5px;
   margin-right: -5px;
   line-height: 36px;
-  list-style: none; }
+  list-style: none;
+  background-color: #e6e9ed; }
 
-.breadcrumby-arrow li, 
-.breadcrumby-arrow li a, 
-.breadcrumby-arrow li span {
+.breadcrumby-arrow li, .breadcrumby-arrow li a, .breadcrumby-arrow li span {
   display: inline-block;
   /*vertical-align: top;*/ }
 
@@ -6132,8 +6131,7 @@ body > * {
   padding: 0;
   content: ""; }
 
-.breadcrumby-arrow li a, 
-.breadcrumby-arrow li:not(:first-child) span {
+.breadcrumby-arrow li a, .breadcrumby-arrow li:not(:first-child) span {
   height: 36px;
   padding: 0 10px 0 25px;
   line-height: 36px; }
@@ -6148,18 +6146,10 @@ body > * {
   background-color: #18739f;
   border: 1px solid #18739f; }
 
-.breadcrumby-arrow li span {
-  position: relative;
-  color: #fff;
-  text-decoration: none;
-  background-color: #ff6600;
-  border: 1px solid #18739f; }
-
 .breadcrumby-arrow li:first-child a {
   padding-left: 10px; }
 
-.breadcrumby-arrow li a:after, 
-.breadcrumby-arrow li a:before {
+.breadcrumby-arrow li a:after, .breadcrumby-arrow li a:before {
   position: absolute;
   top: -1px;
   width: 0;
@@ -6194,39 +6184,31 @@ body > * {
 .breadcrumby-arrow li a:active:after, .breadcrumby-arrow li a:active:before {
   border-left-color: #2494be; }
 
+.breadcrumby-arrow li span {
+  color: #434a54; }
+
 /*	Subscribe margin	*/
 .form-inline {
   margin-top: 33px; }
 
+/* tdn part - Text Decoration None */
+a.tdn {
+  text-decoration: none; }
 
-/* Scroller */
+/* animation */
+i.fa-arrow-right {
+  -webkit-animation-duration: 15s;
+  -webkit-animation-iteration-count: infinite; }
 
-.timeline:before {
-  position: absolute;
-  content: "";
-  margin-left: -1.5px;
-}
-.timeline-horizontal {
-  list-style: none;
-  position: relative;
-  padding: 0;
-  display: inline-block;
-}
-.timeline-horizontal:before {
-  top: auto;
-  left: 56px;
-  right: 0;
-  width: 100%;
-  margin-bottom: 10px;
-}
-.timeline-horizontal .timeline-item {
-  display: table-cell;
-  width: 20%;
-  min-width: 320px;
-  padding-left: 0px;
-  vertical-align: bottom;
-}
-.timeline-horizontal .timeline-item:before,
-.timeline-horizontal .timeline-item:after {
-  display: none;
-}
+/* Removes white gap between slides - chagnge to base color of slide images */
+.carousel {
+  background: #18739F; }
+
+/* Forces image to be 100% width and not max width of 100% */
+.carousel-item .img-fluid {
+  width: 100%; }
+
+/* anchors are inline so you need ot make them block to go full width */
+.carousel-item a {
+  display: block;
+  width: 100%; }

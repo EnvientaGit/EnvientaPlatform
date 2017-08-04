@@ -10,7 +10,7 @@
                     <form class="form-horizontal" method="POST" action="{{ route('login') }}">
                         {{ csrf_field() }}
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                            <label for="email" class="col-md-4 control-label">Login with: </label>
+                            <label for="email" class="col-md-4 control-label">Login with </label>
 
                             <div class="col-md-4">
                                 <a class="btn btn-block btn-social btn-github">

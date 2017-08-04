@@ -110,7 +110,7 @@
                             </li>
                             <li>
                                 <h4>Front page from - Pingendo - 03_front_page.html</h4>
-                                <a href="#"" target="_blank"><h4>/front</h4></a>
+                                <a href="{{ route('playground.FrontPage') }}"" target="_blank"><h4>/front</h4></a>
                                 <hr>
                             </li>
                         </ul>

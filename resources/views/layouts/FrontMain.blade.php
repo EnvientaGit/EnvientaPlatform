@@ -19,11 +19,14 @@
 
         <!-- Custom CSS -->
         <link rel="stylesheet" href="{{ URL::to('css/platform.css') }}" type="text/css">
+        <link rel="stylesheet" href="{{ URL::to('css/animate.css') }}" type="text/css">
 
     </head>
 
     <body class="bg-primary">
         @include('partials.navigation')
+
+        @include('partials.carousel')
 
         @yield('content')
 

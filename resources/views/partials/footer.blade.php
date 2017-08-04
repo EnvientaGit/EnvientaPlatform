@@ -90,3 +90,4 @@
 <script src="{{ URL::to('js/jquery-3.1.1.min.js') }}"></script>
 <script src="{{ URL::to('js/tether.min.js') }}"></script>
 <script src="{{ URL::to('js/bootstrap-4.0.0-alpha.6.min.js') }}"></script>
+<script src="{{ URL::to('js/typing_text_animation.js') }}"></script>

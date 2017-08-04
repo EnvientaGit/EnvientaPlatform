@@ -25,6 +25,10 @@ Route::get('campaign', function() {
     return view('playground.campaign');
 })->name('playground.campaign');
 
+Route::get('front', function() {
+    return view('playground.FrontPage');
+})->name('playground.FrontPage');
+
 
 Auth::routes();
 
