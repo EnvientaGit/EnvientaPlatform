@@ -66,6 +66,6 @@
     <a class="carousel-control-next" href="#carousel" role="button" data-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span> <span class="sr-only">Next</span> </a>
   </div>
   <!-- /.carousel -->
-  <div class="container-fluid text-center">
+  {{-- <div class="container-fluid text-center">
     <p>Full width carousel with a maximum height and art direction. Resize window to see image change based on the size of the window.</p>
-  </div>
+  </div> --}}

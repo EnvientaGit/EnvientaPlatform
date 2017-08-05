@@ -133,7 +133,7 @@
         <br>
         <div class="card">
           <ul class="list-group">
-            <li class="list-group-item text-white px-2 bg-info"><i class="fa fa-users fa-2x mx-1"></i><b class="style-backer">&nbsp;&nbsp;STUDENT COMMUNITY</b></li>
+            <li class="list-group-item text-white px-2 bg-info"><i class="fa fa-graduation-cap fa-2x mx-1"></i><b class="style-backer">&nbsp;&nbsp;STUDENT COMMUNITY</b></li>
           </ul>
           <div class="card-block card-warning">
             <h4 class="text-info"><b>BE AN INTERN !</b></h4>
