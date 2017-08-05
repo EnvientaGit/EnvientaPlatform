@@ -41,7 +41,7 @@
         <div class="col-md-4 bg-warning">
           <h1 class="display-4 py-3"><b>$7,500</b></h1>
           <p class="">raised by <b>12</b> backers</p>
-          <div class="c_completion">
+          <div style="width: 100%; min-width: 2em; height: 1.5em; background-color:#f1f1f1;">
             <div class="bg-success" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%;">&nbsp;</div>
           </div>
           <h5 class="">
@@ -81,7 +81,7 @@
             <div id="home" class="tab-pane fade show active">
               <div class="row">
                 <div class="container bg-warning mx-3 p-3">
-                  <h3 class="text-info">HOME</h3>
+                  <h3 class="text-info">{{ $title }}</h3>
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 </div>
               </div>
