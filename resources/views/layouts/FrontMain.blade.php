@@ -28,6 +28,8 @@
 
         @include('partials.carousel')
 
+        @include('partials.categories')
+
         @yield('content')
 
         @include('partials.breadcrumbs')

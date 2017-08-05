@@ -6122,7 +6122,7 @@ body > * {
 
 .breadcrumby-arrow li, .breadcrumby-arrow li a, .breadcrumby-arrow li span {
   display: inline-block;
-  /*vertical-align: top;*/ }
+  vertical-align: none; }
 
 .breadcrumby-arrow li:not(:first-child) {
   margin-left: -5px; }
@@ -6212,3 +6212,20 @@ i.fa-arrow-right {
 .carousel-item a {
   display: block;
   width: 100%; }
+
+.lst {
+  list-style-type: none;
+  margin-left: -2.5em;
+  margin-bottom: 0;
+  text-align: left; }
+
+/* Category elements */
+.lst .nav-item a.active {
+  color: #fff;
+  background-color: #18739f; }
+
+.c_completion {
+  width: 100%;
+  min-width: 2em;
+  height: 1.5em;
+  background-color: #f1f1f1; }
