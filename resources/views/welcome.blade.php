@@ -100,7 +100,7 @@
                             </li>
                             <li>
                                 <h4>Crowdfunding page from - Pingendo - 01_crowdfunding_page.html</h4>
-                                <a href="{{ route('playground.main') }}" target="_blank"><h4>/playground</h4></a>
+                                <a href="{{ route('playground.main') }}" target="_blank"><h4>/project/3</h4></a>
                                 <hr>
                             </li>
                             <li>
