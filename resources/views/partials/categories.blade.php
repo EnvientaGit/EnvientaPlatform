@@ -296,7 +296,7 @@
         </div>
         <br>
         <div class="card">
-          <a href="#" class="btn btn-outline-info">See All</a>
+          <a href="{{ url('/campaign') }}" class="btn btn-outline-info">See All</a>
         </div>
       </div>
     </div>
