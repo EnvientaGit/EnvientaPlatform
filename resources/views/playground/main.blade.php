@@ -41,7 +41,7 @@
         <div class="col-md-4 bg-warning">
           <h1 class="display-4 py-3"><b>$7,500</b></h1>
           <p class="">raised by <b>12</b> backers</p>
-          <div style="width: 100%; min-width: 2em; height: 1.5em; background-color:#f1f1f1;">
+          <div class="c_completion">
             <div class="bg-success" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%;">&nbsp;</div>
           </div>
           <h5 class="">

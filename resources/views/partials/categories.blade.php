@@ -1,4 +1,4 @@
-<div class="container p-3">
+  <div class="container p-3">
     <div class="row">
       <div class="col-md-10">
         <div class="tab-content">
@@ -7,7 +7,7 @@
               <div class="container bg-warning mx-3 p-3">
                 <div class="row mx-0">
                   <div class="col-md-6 px-0">
-                    <img class="img-fluid d-block" src="img/800x600_1.jpg">
+                    <img class="img-fluid d-block" src="{{ URL::to('img/800x600_1.jpg') }}">
                     <h4 class="py-2">Completion</h4>
                     <div class="c_completion">
                       <div class="bg-success" role="progressbar" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100" style="width: 66%;">&nbsp;&nbsp;66%</div>
@@ -39,7 +39,7 @@
               <div class="container bg-warning mx-3 p-3">
                 <div class="row mx-0">
                   <div class="col-md-6 px-0">
-                    <img class="img-fluid d-block" src="img/800x600_2.jpeg">
+                    <img class="img-fluid d-block" src="{{ URL::to('img/800x600_2.jpeg') }}">
                     <h4 class="py-2">Completion</h4>
                     <div class="c_completion">
                       <div class="bg-success" role="progressbar" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100" style="width: 66%;">&nbsp;&nbsp;66%</div>
@@ -71,7 +71,7 @@
               <div class="container bg-warning mx-3 p-3">
                 <div class="row mx-0">
                   <div class="col-md-6 px-0">
-                    <img class="img-fluid d-block" src="img/800x600_3.jpg">
+                    <img class="img-fluid d-block" src="{{ URL::to('img/800x600_3.jpg') }}">
                     <h4 class="py-2">Completion</h4>
                     <div class="c_completion">
                       <div class="bg-success" role="progressbar" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100" style="width: 66%;">&nbsp;&nbsp;66%</div>
@@ -103,7 +103,7 @@
               <div class="container bg-warning mx-3 p-3">
                 <div class="row mx-0">
                   <div class="col-md-6 px-0">
-                    <img class="img-fluid d-block" src="img/800x600_4.jpg">
+                    <img class="img-fluid d-block" src="{{ URL::to('img/800x600_4.jpg') }}">
                     <h4 class="py-2">Completion</h4>
                     <div class="c_completion">
                       <div class="bg-success" role="progressbar" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100" style="width: 66%;">&nbsp;&nbsp;66%</div>
@@ -135,7 +135,7 @@
               <div class="container bg-warning mx-3 p-3">
                 <div class="row mx-0">
                   <div class="col-md-6 px-0">
-                    <img class="img-fluid d-block" src="img/800x600_5.jpg">
+                    <img class="img-fluid d-block" src="{{ URL::to('img/800x600_5.jpg') }}">
                     <h4 class="py-2">Completion</h4>
                     <div class="c_completion">
                       <div class="bg-success" role="progressbar" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100" style="width: 66%;">&nbsp;&nbsp;66%</div>
@@ -167,7 +167,7 @@
               <div class="container bg-warning mx-3 p-3">
                 <div class="row mx-0">
                   <div class="col-md-6 px-0">
-                    <img class="img-fluid d-block" src="img/800x600_6.png">
+                    <img class="img-fluid d-block" src="{{ URL::to('img/800x600_6.png') }}">
                     <h4 class="py-2">Completion</h4>
                     <div class="c_completion">
                       <div class="bg-success" role="progressbar" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100" style="width: 66%;">&nbsp;&nbsp;66%</div>
@@ -199,7 +199,7 @@
               <div class="container bg-warning mx-3 p-3">
                 <div class="row mx-0">
                   <div class="col-md-6 px-0">
-                    <img class="img-fluid d-block" src="img/800x600_7.jpg">
+                    <img class="img-fluid d-block" src="{{ URL::to('img/800x600_7.jpg') }}">
                     <h4 class="py-2">Completion</h4>
                     <div class="c_completion">
                       <div class="bg-success" role="progressbar" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100" style="width: 66%;">&nbsp;&nbsp;66%</div>
@@ -231,7 +231,7 @@
               <div class="container bg-warning mx-3 p-3">
                 <div class="row mx-0">
                   <div class="col-md-6 px-0">
-                    <img class="img-fluid d-block" src="img/800x600_8.jpg">
+                    <img class="img-fluid d-block" src="{{ URL::to('img/800x600_8.jpg') }}">
                     <h4 class="py-2">Completion</h4>
                     <div class="c_completion">
                       <div class="bg-success" role="progressbar" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100" style="width: 66%;">&nbsp;&nbsp;66%</div>

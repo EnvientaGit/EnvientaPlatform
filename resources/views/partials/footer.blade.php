@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-4 my-2">
-                <img class="d-block img-fluid mx-auto" src="img/envienta_platform_logo_big.png">
+                <img class="d-block img-fluid mx-auto" src="{{ URL::to('img/envienta_platform_logo_big.png') }}">
             </div>
             <div class="col-md-4 my-2">
                 <div class="text-center my-2">

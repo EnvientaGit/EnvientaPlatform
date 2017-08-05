@@ -15,10 +15,10 @@
                     What image sizes should you use? This can help - https://codepen.io/JacobLett/pen/NjramL
                      -->
           <picture>
-            <source srcset="img/1440x600_1.jpg" media="(min-width: 1400px)">
-            <source srcset="img/1440x600_1.jpg" media="(min-width: 769px)">
-            <source srcset="img/1440x600_1.jpg" media="(min-width: 577px)">
-            <img srcset="img/1440x600_1.jpg" alt="responsive image" class="d-block img-fluid"> </picture>
+            <source srcset="{{ URL::to('img/1440x600_1.jpg') }}" media="(min-width: 1400px)">
+            <source srcset="{{ URL::to('img/1440x600_1.jpg') }}" media="(min-width: 769px)">
+            <source srcset="{{ URL::to('img/1440x600_1.jpg') }}" media="(min-width: 577px)">
+            <img srcset="{{ URL::to('img/1440x600_1.jpg') }}" alt="responsive image" class="d-block img-fluid"> </picture>
           <div class="carousel-caption">
             <div class="text-left">
               <h4><span class="bg-info p-1">Project_Name</span></h4>
@@ -31,10 +31,10 @@
       <div class="carousel-item">
         <a href="#">
           <picture>
-            <source srcset="img/1440x600_2.jpg" media="(min-width: 1400px)">
-            <source srcset="img/1440x600_2.jpg" media="(min-width: 769px)">
-            <source srcset="img/1440x600_2.jpg" media="(min-width: 577px)">
-            <img srcset="img/1440x600_2.jpg" alt="responsive image" class="d-block img-fluid"> </picture>
+            <source srcset="{{ URL::to('img/1440x600_2.jpg') }}" media="(min-width: 1400px)">
+            <source srcset="{{ URL::to('img/1440x600_2.jpg') }}" media="(min-width: 769px)">
+            <source srcset="{{ URL::to('img/1440x600_2.jpg') }}" media="(min-width: 577px)">
+            <img srcset="{{ URL::to('img/1440x600_2.jpg') }}" alt="responsive image" class="d-block img-fluid"> </picture>
           <div class="carousel-caption justify-content-center align-items-center">
             <div class="text-right">
               <h4><span class="bg-info p-1">Project_Name</span></h4>
@@ -47,10 +47,10 @@
       <div class="carousel-item">
         <a href="#">
           <picture>
-            <source srcset="img/1440x600_3.jpg" media="(min-width: 1400px)">
-            <source srcset="img/1440x600_3.jpg" media="(min-width: 769px)">
-            <source srcset="img/1440x600_3.jpg" media="(min-width: 577px)">
-            <img srcset="img/1440x600_3.jpg" alt="responsive image" class="d-block img-fluid"> </picture>
+            <source srcset="{{ URL::to('img/1440x600_3.jpg') }}" media="(min-width: 1400px)">
+            <source srcset="{{ URL::to('img/1440x600_3.jpg') }}" media="(min-width: 769px)">
+            <source srcset="{{ URL::to('img/1440x600_3.jpg') }}" media="(min-width: 577px)">
+            <img srcset="{{ URL::to('img/1440x600_3.jpg') }}" alt="responsive image" class="d-block img-fluid"> </picture>
           <div class="carousel-caption justify-content-center align-items-center">
             <div class="text-center">
               <h4><span class="bg-info p-1">Project_Name</span></h4>
