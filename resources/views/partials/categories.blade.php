@@ -2,6 +2,7 @@
     <div class="row">
       <div class="col-md-10">
         <div class="tab-content">
+
           <div id="c_home" class="tab-pane  animated bounceIn  active">
             <div class="row">
               <div class="container bg-warning mx-3 p-3">
@@ -34,6 +35,7 @@
               </div>
             </div>
           </div>
+
           <div id="c_menu1" class="tab-pane animated bounceIn">
             <div class="row">
               <div class="container bg-warning mx-3 p-3">
@@ -66,6 +68,7 @@
               </div>
             </div>
           </div>
+
           <div id="c_menu2" class="tab-pane animated bounceIn">
             <div class="row">
               <div class="container bg-warning mx-3 p-3">
@@ -98,6 +101,7 @@
               </div>
             </div>
           </div>
+
           <div id="c_menu3" class="tab-pane animated bounceIn">
             <div class="row">
               <div class="container bg-warning mx-3 p-3">
@@ -130,6 +134,7 @@
               </div>
             </div>
           </div>
+
           <div id="c_menu4" class="tab-pane animated bounceIn">
             <div class="row">
               <div class="container bg-warning mx-3 p-3">
@@ -162,6 +167,7 @@
               </div>
             </div>
           </div>
+
           <div id="c_menu5" class="tab-pane animated bounceIn">
             <div class="row">
               <div class="container bg-warning mx-3 p-3">
@@ -194,6 +200,7 @@
               </div>
             </div>
           </div>
+
           <div id="c_menu6" class="tab-pane animated bounceIn">
             <div class="row">
               <div class="container bg-warning mx-3 p-3">
@@ -226,6 +233,7 @@
               </div>
             </div>
           </div>
+
           <div id="c_menu7" class="tab-pane animated bounceIn">
             <div class="row">
               <div class="container bg-warning mx-3 p-3">
@@ -258,6 +266,7 @@
               </div>
             </div>
           </div>
+          
         </div>
       </div>
       <div class="col-md-2">

@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md navbar-inverse bg-info">
+  <nav class="navbar navbar-expand-md navbar-inverse bg-info">
     <div class="container">
       <img class="img-fluid d-block" src="{{ URL::to('img/envienta_platform_logo.png') }}">
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>

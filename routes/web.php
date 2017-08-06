@@ -29,6 +29,10 @@ Route::get('front', function() {
     return view('playground.FrontPage');
 })->name('playground.FrontPage');
 
+Route::get('overview', function() {
+    return view('playground.overview');
+})->name('playground.overview');
+
 
 Auth::routes();
 

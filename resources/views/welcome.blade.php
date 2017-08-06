@@ -113,6 +113,11 @@
                                 <a href="{{ route('playground.FrontPage') }}"" target="_blank"><h4>/front</h4></a>
                                 <hr>
                             </li>
+                            <li>
+                                <h4>Overview page from - Pingendo - 04_overview_page.html</h4>
+                                <a href="{{ route('playground.overview') }}"" target="_blank"><h4>/overview</h4></a>
+                                <hr>
+                            </li>
                         </ul>
                     
                         {{-- <div class="links">

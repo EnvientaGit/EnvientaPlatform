@@ -4,6 +4,7 @@
   <div class="my-2">
     <div class="container">
       <div class="row">
+
         <div class="bg-warning col-md-4">
           <img class="img-fluid d-block my-3" src="{{ URL::to('img/image_1.jpg') }}">
           <h4 class="text-info"><b>THE FIRST PROJECT PAGE</b></h4>
@@ -25,6 +26,7 @@
             <a class="btn btn-block my-3 btn-outline-info" href="#">DONATIONS&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;$ 3.7K</a>
           </div>
         </div>
+
         <div class="col-md-4 bg-warning">
           <img class="img-fluid d-block my-3" src="{{ URL::to('img/image_2.jpg') }}">
           <h4 class="text-info"><b>LOOKING FOR VALAMI</b></h4>
@@ -46,6 +48,7 @@
             <a class="btn btn-block my-3 btn-outline-info" href="#">DONATIONS&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;$ 1.2K</a>
           </div>
         </div>
+
         <div class="col-md-4 bg-warning">
           <img class="img-fluid d-block my-3" src="{{ URL::to('img/image_3.png') }}">
           <h4 class="text-info"><b>THE FIRST PROJECT PAGE</b></h4>
@@ -67,12 +70,14 @@
             <a class="btn btn-block my-3 btn-outline-info" href="#">DONATIONS&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;$ 7.6K</a>
           </div>
         </div>
+
       </div>
     </div>
   </div>
   <div class="my-2">
     <div class="container">
       <div class="row">
+
         <div class="bg-warning col-md-4">
           <img class="img-fluid d-block my-3" src="{{ URL::to('img/image_4.jpg') }}">
           <h4 class="text-info"><b>THE FIRST PROJECT PAGE</b></h4>
@@ -94,6 +99,7 @@
             <a class="btn btn-block my-3 btn-outline-info" href="#">DONATIONS&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;$ 4.2K</a>
           </div>
         </div>
+
         <div class="col-md-4 bg-warning">
           <img class="img-fluid d-block my-3" src="{{ URL::to('img/image_5.jpg') }}">
           <h4 class="text-info"><b>THE FIRST PROJECT PAGE</b></h4>
@@ -115,6 +121,7 @@
             <a class="btn btn-block my-3 btn-outline-info" href="#">DONATIONS&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;$ 1.2K</a>
           </div>
         </div>
+
         <div class="col-md-4 bg-warning">
           <img class="img-fluid d-block my-3" src="{{ URL::to('img/image_6.jpg') }}">
           <h4 class="text-info"><b>THE FIRST PROJECT PAGE</b></h4>
@@ -136,6 +143,7 @@
             <a class="btn btn-block my-3 btn-outline-info" href="#">DONATIONS&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;$ 0.5K</a>
           </div>
         </div>
+        
       </div>
     </div>
   </div>
