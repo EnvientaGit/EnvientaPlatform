@@ -1,6 +1,6 @@
           <div class="card">
             <ul class="list-group">
-              <li class="list-group-item px-2 bg-info text-white"><i class="fa fa-credit-card fa-2x mx-1"></i><b class="style-backer">&nbsp;&nbsp;PLEDGE $15 OR MORE</b></li>
+              <li class="list-group-item text-white px-2 bg-info"><i class="fa fa-pie-chart fa-2x mx-1"></i><b class="style-backer">&nbsp;PLEDGE INDICATOR</b></li>
             </ul>
             <div class="card-block card-warning">
               <h4 class="text-info"><b>BUY US A COFFEE</b></h4>

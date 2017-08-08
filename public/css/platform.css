@@ -6232,20 +6232,35 @@ i.fa-arrow-right {
 
 .e_pencil .fa-pencil-square-o {
   /*display: none;*/
-  color: #18739f;
-}
+  color: #18739f; }
 
+/* Share this project - label balance*/
+.row.px-3.stp {
+  margin: 0 -1em; }
 
+.collapse > h6,
+.card-block > h6 {
+  line-height: 0%;
+  font-size: 0.8rem;
+  color: #ff6600; }
 
+.collapse > h4,
+.card-block > h4 {
+  color: #18739f; }
 
+.card-block > h5 {
+  color: #ff6600; }
 
+.card-block.pi {
+  margin-top: -1.5em; }
 
+.card-block.pi > p > a,
+.card-block.pi > p > span {
+  padding-left: 2em; }
 
+/* CC License style(s) */
+img.ccl {
+  background-color: #18739f; }
 
-
-
-
-
-
-
-
+span.cct {
+  color: #18739f; }

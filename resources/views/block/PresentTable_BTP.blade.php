@@ -4,7 +4,7 @@
           <div class="embed-responsive embed-responsive-16by9">
             <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/KTAiOtJoD-4" allowfullscreen=""> </iframe>
           </div>
-          <div class="row px-3">
+          <div class="row px-3 stp">
             <div class="col-md-12 bg-info" style="text-align: center;"><span class="text-info"><b class="text-white">SHARE THIS PROJECT</b></span></div>
             <div class="col-md-12" style="padding-left: 0px;">
               <a class="btn btn-warning btn-sm" href="#"><i class="fa fa-facebook-square"></i>&nbsp;&nbsp;Facebook</a>

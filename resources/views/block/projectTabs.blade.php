@@ -1,7 +1,3 @@
-@extends('layouts.HomeMain')
-
-@section('content')
-
   <div class="text-white bg-primary">
     <div class="container">
       <div class="row my-2">
@@ -20,20 +16,5 @@
       </div>
     </div>
   </div>
-  
-  @include('block.presentTable_BTP')
 
-  <div class="">
-    <div class="container p-3">
-      <div class="row">
-        <div class="col-md-8">
-          @include('block.TabPill_BTP')
-        </div>
-        <div class="col-md-4">
-          @include('block.PerkSideBar_BTP')
-        </div>
-      </div>
-    </div>
-  </div>
-
-@endsection 
+{{-- A  "btn-info" teszi aktivvá a gombot! --}}

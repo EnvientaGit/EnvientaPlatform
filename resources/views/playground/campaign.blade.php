@@ -1,6 +1,7 @@
 @extends('layouts.HomeMain')
 
 @section('content')
+
   <div class="my-2">
     <div class="container">
       <div class="row">
@@ -74,6 +75,7 @@
       </div>
     </div>
   </div>
+
   <div class="my-2">
     <div class="container">
       <div class="row">
@@ -147,4 +149,5 @@
       </div>
     </div>
   </div>
+  
 @endsection 
