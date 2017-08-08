@@ -86,9 +86,8 @@
         </div>
         <div class="col-md-4 bg-warning">
           <div class="pull-right e_pencil"> <i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i> </div>
-          <h3 class="py-3"><b>THE FIRST PROJECT PAGE WITH THE FINAL LAYOUTS AND TABS</b></h3>
-          <p class="">From the creator of the award-winning product comes the next one! A portable “go-anywhere” product. Take it outside - the product built to defy rain, dust, dirt and the rough and tumble. From the creator of the award-winning product comes the
-            next one! A portable “go-anywhere” product. Take it outside - the product built</p>
+          <h3 class="py-3"><b>{{$title}}</b></h3>
+          <p class="">{{$description}}</p>
           <a class="btn btn-info btn-block btn-lg" href="#">JOIN THIS PROJECT<i class="fa"></i></a>
           <a class="btn btn-danger btn-block btn-lg" href="#">DONATE THIS PROJECT<i class="fa"></i></a>
         </div>

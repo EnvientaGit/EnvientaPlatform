@@ -11,6 +11,6 @@ class ProjectController extends Controller
     public function show($id)
     {
       $project = Project::findOrFail($id);
-      return view('playground.main', $project);
+      return view('playground.overview', $project);
     }
 }

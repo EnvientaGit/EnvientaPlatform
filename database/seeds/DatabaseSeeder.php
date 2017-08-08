@@ -19,6 +19,7 @@ class DatabaseSeeder extends Seeder
 	for ($i = 0; $i < 50; $i++) {
             Project::create([
                 'title' => $faker->sentence,
+                'description' => $faker->text,
             ]);
         }
     }
