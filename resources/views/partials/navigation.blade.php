@@ -21,7 +21,7 @@
           <input class="form-control mr-sm-2" type="text" placeholder="Search">
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
         </form>
-        <button id="login_btn" class="btn btn-default"> Login </button>
+        <button id="login_btn" class="btn btn-default" data-toggle="modal" data-target="#login_dialog"> Login </button>
         <div id="profile_block">
         <img src="{{ URL::to('img/user_placeholder.png') }}" class="d-block rounded float-left" height="40" width="40">
         <div class="btn-group text-left">
@@ -36,6 +36,24 @@
       </div>
     </div>
   </nav>
+  
+  <div id="login_dialog" class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        <p>One fine body&hellip;</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Send login token</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 
 {{-- <h3>This is gonna be the <b>navigation</b> part</p> --}}
 
