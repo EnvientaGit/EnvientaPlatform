@@ -17,21 +17,21 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('playground', function() {
-    return view('playground.main');
-})->name('playground.main');
+Route::get('project', function() {
+    return view('project.main');
+})->name('project.main');
 
 Route::get('campaign', function() {
-    return view('playground.campaign');
-})->name('playground.campaign');
+    return view('project.campaign');
+})->name('project.campaign');
 
 Route::get('front', function() {
-    return view('playground.FrontPage');
-})->name('playground.FrontPage');
+    return view('project.FrontPage');
+})->name('project.FrontPage');
 
 Route::get('overview', function() {
-    return view('playground.overview');
-})->name('playground.overview');
+    return view('project.overview');
+})->name('project.overview');
 
 
 Auth::routes();

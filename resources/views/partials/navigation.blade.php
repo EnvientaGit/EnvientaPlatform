@@ -24,7 +24,7 @@
         
         @if(!Auth::check())
         <button id="login_btn" class="btn btn-danger" data-toggle="modal" data-target="#login_dialog"> Log In </button>
-	@else
+	       @else
         <div id="profile_block">
         <img src="{{ URL::to('img/user_placeholder.png') }}" class="d-block float-left" height="40" width="40">
         <div class="btn-group text-left">
@@ -57,7 +57,12 @@
             <input id="email" type="email" class="input-large" name="email" placeholder="Enter email address">
           </div>
           {{-- reCAPTCHA code --}}
-          <div class="g-recaptcha" data-sitekey="6LeszhoTAAAAAMP_DLjZj0yW9xA-J-4IdhEq-TKJ"></div>
+          <button
+            class="g-recaptcha"
+            data-sitekey="6LdznCwUAAAAAAblIY11zkroyvcBb2mir4AdQYHT"
+            data-callback="YourOnSubmitFn">
+            Submit
+          </button>
 
         </form>
       </div>

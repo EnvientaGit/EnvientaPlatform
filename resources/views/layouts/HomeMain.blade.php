@@ -22,7 +22,7 @@
         <link rel="stylesheet" href="{{ URL::to('css/animate.css') }}" type="text/css">
 
         {{-- reCAPTCHA --}}
-        <script src='https://www.google.com/recaptcha/api.js?hl=en'></script>
+        <script src='https://www.google.com/recaptcha/api.js'></script>
 
     </head>
 
