@@ -51,25 +51,27 @@
       </div>
       <div class="modal-body">
         <p>Type your email address below to get a <i>Log In link.</i></p>
-        <form class="form-inline">
+        <form>
           <div class="input-group">
             <span class="input-group-addon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
             <input id="email" type="email" class="input-large" name="email" placeholder="Enter email address">
           </div>
-          {{-- reCAPTCHA code --}}
-          <button
+          <br>
+          {{-- <button
             class="g-recaptcha"
             data-sitekey="6LdznCwUAAAAAAblIY11zkroyvcBb2mir4AdQYHT"
             data-callback="YourOnSubmitFn">
             Submit
-          </button>
-
+          </button> --}}
+          <div class="modal-footer">
+            <button class="btn btn-info g-recaptcha"
+                    data-sitekey="6LdznCwUAAAAAAblIY11zkroyvcBb2mir4AdQYHT"
+                    data-callback="YourOnSubmitFn">Send login token</button>
+            <button type="button" class="btn btn-outline-info" data-dismiss="modal">Close</button>
+          </div>
         </form>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-info">Send login token</button>
-        <button type="button" class="btn btn-outline-info" data-dismiss="modal">Close</button>
-      </div>
+      
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
