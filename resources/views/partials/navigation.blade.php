@@ -21,11 +21,13 @@
           <input class="form-control mr-sm-2" type="text" placeholder="Search">
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
         </form>
-        <button id="login_btn" class="btn btn-default" data-toggle="modal" data-target="#login_dialog"> Login </button>
+        <button id="login_btn" class="btn btn-danger" data-toggle="modal" data-target="#login_dialog"> Log In </button>
+
+        {{-- If statement goes below --}}
         <div id="profile_block">
-        <img src="{{ URL::to('img/user_placeholder.png') }}" class="d-block rounded float-left" height="40" width="40">
+        <img src="{{ URL::to('img/user_placeholder.png') }}" class="d-block float-left" height="40" width="40">
         <div class="btn-group text-left">
-          <button class="btn dropdown-toggle btn-info" data-toggle="dropdown"> Profile </button>
+          <button class="btn dropdown-toggle btn-info" data-toggle="dropdown">Profile</button>
           <div class="dropdown-menu">
             <a class="dropdown-item" href="#">Edit Profile</a>
             <div class="dropdown-divider"></div>
@@ -33,23 +35,31 @@
           </div>
         </div>
         </div>
+        {{-- Until here --}}
+
       </div>
     </div>
   </nav>
   
-  <div id="login_dialog" class="modal fade" tabindex="-1" role="dialog">
+<div id="login_dialog" class="modal animated bounceIn" tabindex="-1" role="dialog" aria-labelledby="modalLabelLarge" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
+        <h4 class="modal-title">Log In - Simply with an email!</h4>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title">Modal title</h4>
       </div>
       <div class="modal-body">
-        <p>One fine body&hellip;</p>
+        <p>Type your email address below to get a <i>Log In link.</i></p>
+        <form class="form-inline">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+            <input id="email" type="email" class="input-large" name="email" placeholder="Enter email address">
+          </div>
+        </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Send login token</button>
+        <button type="button" class="btn btn-info">Send login token</button>
+        <button type="button" class="btn btn-outline-info" data-dismiss="modal">Close</button>
       </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->

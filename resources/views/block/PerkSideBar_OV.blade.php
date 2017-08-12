@@ -4,7 +4,7 @@
                 <img src="img/CC_BY_NC.svg" alt="CC_BY_NC" width="330" height="">
               </li>
             </ul> -->
-            <img src="img/CC_BY_NC_blue.svg" alt="CC_BY_NC" width="349.33" class="ccl">
+            <img src="{{ URL::to('img/CC_BY_NC_blue.svg') }}" alt="CC_BY_NC" width="349.33" class="img-responsive ccl">
             <div class="card-block card-warning">
               <h4 class="text-info"><i class="fa fa-creative-commons fa-lg mx-1"></i><b>LICENSE AREA</b></h4><br>
               <p>This project belongs to Creative Common License, which means you have no right to copy the product behind the project without any given permission from the owner/creator!</p>
