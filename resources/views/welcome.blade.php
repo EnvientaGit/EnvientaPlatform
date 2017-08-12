@@ -100,22 +100,22 @@
                             </li>
                             <li>
                                 <h4>Crowdfunding page from - Pingendo - 01_crowdfunding_page.html</h4>
-                                <a href="{{ route('playground.main') }}" target="_blank"><h4>/project/3</h4></a>
+                                <a href="{{ route('project.main') }}" target="_blank"><h4>/project/3</h4></a>
                                 <hr>
                             </li>
                             <li>
                                 <h4>Crowdfunding page from - Pingendo - 02_campaigns_page.html</h4>
-                                <a href="{{ route('playground.campaign') }}"" target="_blank"><h4>/campaign</h4></a>
+                                <a href="{{ route('project.campaign') }}"" target="_blank"><h4>/campaign</h4></a>
                                 <hr>
                             </li>
                             <li>
                                 <h4>Front page from - Pingendo - 03_front_page.html</h4>
-                                <a href="{{ route('playground.FrontPage') }}"" target="_blank"><h4>/front</h4></a>
+                                <a href="{{ route('project.FrontPage') }}"" target="_blank"><h4>/front</h4></a>
                                 <hr>
                             </li>
                             <li>
                                 <h4>Overview page from - Pingendo - 04_overview_page.html</h4>
-                                <a href="{{ route('playground.overview') }}"" target="_blank"><h4>/overview</h4></a>
+                                <a href="{{ route('project.overview') }}"" target="_blank"><h4>/overview</h4></a>
                                 <hr>
                             </li>
                         </ul>

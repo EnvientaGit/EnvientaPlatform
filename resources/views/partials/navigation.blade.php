@@ -21,9 +21,10 @@
           <input class="form-control mr-sm-2" type="text" placeholder="Search">
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
         </form>
+        
+        @if(!Auth::check())
         <button id="login_btn" class="btn btn-danger" data-toggle="modal" data-target="#login_dialog"> Log In </button>
-
-        {{-- If statement goes below --}}
+	@else
         <div id="profile_block">
         <img src="{{ URL::to('img/user_placeholder.png') }}" class="d-block float-left" height="40" width="40">
         <div class="btn-group text-left">
@@ -35,7 +36,7 @@
           </div>
         </div>
         </div>
-        {{-- Until here --}}
+        @endif
 
       </div>
     </div>
