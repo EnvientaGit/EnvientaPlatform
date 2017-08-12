@@ -85,7 +85,7 @@
 <!--CAPTCHA CODE-->
         <div style="text-align:left;">
             <div class="g-recaptcha" data-sitekey="6LdznCwUAAAAAAblIY11zkroyvcBb2mir4AdQYHT"
-                 data-size="invisible" data-callback="onSubmit"></div>
+                 data-size="invisible" data-callback="onLoginSubmit"></div>
         </div>
         <!--CAPTCHA CODE-->
 {{-- <h3>This is gonna be the <b>footer</b> part</p> --}}
@@ -97,3 +97,16 @@
 <script src="{{ URL::to('js/tether.min.js') }}"></script>
 <script src="{{ URL::to('js/bootstrap-4.0.0-alpha.6.min.js') }}"></script>
 <script src="{{ URL::to('js/typing_text_animation.js') }}"></script>
+<script>
+  $(document).ready(function() {
+    $('#login_form_submit').click(function(e) {
+      e.preventDefault();
+      grecaptcha.execute();
+    });
+  });
+  
+  function onLoginSubmit(token) {
+    $('#login_form_token').val(token);
+    $('#login_form').submit();
+  }
+</script>
