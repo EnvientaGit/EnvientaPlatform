@@ -55,6 +55,9 @@
             <span class="input-group-addon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
             <input id="email" type="email" class="input-large" name="email" placeholder="Enter email address">
           </div>
+          {{-- reCAPTCHA code --}}
+          <div class="g-recaptcha" data-sitekey="6LeszhoTAAAAAMP_DLjZj0yW9xA-J-4IdhEq-TKJ"></div>
+
         </form>
       </div>
       <div class="modal-footer">
