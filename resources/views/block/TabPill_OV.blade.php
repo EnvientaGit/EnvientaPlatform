@@ -20,7 +20,7 @@
             <div id="home" class="tab-pane animated fadeInRight active">
               <div class="row">
                 <div class="container bg-warning mx-3 p-3">
-                  <h3 class="text-info">ABOUT</h3>
+                  <h3 class="text-info">DETAILS</h3>
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 </div>
               </div>
@@ -28,7 +28,7 @@
             <div id="menu1" class="tab-pane animated fadeInRight">
               <div class="row">
                 <div class="container bg-warning mx-3 p-3">
-                  <h3 class="text-info">UPDATES</h3>
+                  <h3 class="text-info">BLUEPRINTS</h3>
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 </div>
               </div>
@@ -36,7 +36,7 @@
             <div id="menu2" class="tab-pane animated fadeInRight">
               <div class="row">
                 <div class="container bg-warning mx-3 p-3">
-                  <h3 class="text-info">COMMENTS</h3>
+                  <h3 class="text-info">DOWNLOADS</h3>
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 </div>
               </div>
@@ -44,7 +44,7 @@
             <div id="menu3" class="tab-pane animated fadeInRight">
               <div class="row">
                 <div class="container bg-warning mx-3 p-3">
-                  <h3 class="text-info">BACKERS</h3>
+                  <h3 class="text-info">COMMENTS</h3>
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 </div>
               </div>
