@@ -64,9 +64,7 @@
             Submit
           </button> --}}
           <div class="modal-footer">
-            <button class="btn btn-info g-recaptcha"
-                    data-sitekey="6LdznCwUAAAAAAblIY11zkroyvcBb2mir4AdQYHT"
-                    data-callback="YourOnSubmitFn">Send login token</button>
+            <button class="btn btn-info">Send login token</button>
             <button type="button" class="btn btn-outline-info" data-dismiss="modal">Close</button>
           </div>
         </form>

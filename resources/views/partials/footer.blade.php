@@ -82,6 +82,12 @@
         </div>
     </div>
 </div>
+<!--CAPTCHA CODE-->
+        <div style="text-align:left;">
+            <div class="g-recaptcha" data-sitekey="6LdznCwUAAAAAAblIY11zkroyvcBb2mir4AdQYHT"
+                 data-size="invisible" data-callback="onSubmit"></div>
+        </div>
+        <!--CAPTCHA CODE-->
 {{-- <h3>This is gonna be the <b>footer</b> part</p> --}}
 
 <!-- Scripts -->
