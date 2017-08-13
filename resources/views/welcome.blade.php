@@ -100,7 +100,7 @@
                             </li>
                             <li>
                                 <h4>Crowdfunding page from - Pingendo - 01_crowdfunding_page.html</h4>
-                                <a href="{{ route('project.main') }}" target="_blank"><h4>/project/3</h4></a>
+                                <a href="{{ route('project.main') }}" target="_blank"><h4>/project</h4></a>
                                 <hr>
                             </li>
                             <li>
@@ -115,10 +115,17 @@
                             </li>
                             <li>
                                 <h4>Overview page from - Pingendo - 04_overview_page.html</h4>
-                                <a href="{{ route('project.overview') }}"" target="_blank"><h4>/overview</h4></a>
+                                <a href="{{ URL::to('projects/3') }}" target="_blank"><h4>/overview</h4></a>
                                 <hr>
                             </li>
                         </ul>
+
+                        {{-- Route instances:
+                            
+                            {{ URL::to('projects/3') }}
+                            {{ route('project.overview') }}
+                            
+                         --}}
                     
                         {{-- <div class="links">
                             <a href="https://laravel.com/docs">Documentation</a>

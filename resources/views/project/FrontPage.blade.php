@@ -11,10 +11,10 @@
   <div class="container p-3">
     <div class="row">
       <div class="col-md-8">
-        @include('block.TabPill_Front')
+        @include('Block.Front_TabPill')
       </div>
       <div class="col-md-4">
-        @include('block.PerkSideBar_Front')
+        @include('Block.Front_PerkSideBar')
       </div>
     </div>
   </div>

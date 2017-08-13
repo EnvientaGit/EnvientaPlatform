@@ -18,16 +18,16 @@
     </div>
   </div>
 
-  @include('block.PresentTable_OV')
+  @include('Block.Ov_PresentTable')
 
   <div class="">
     <div class="container p-3">
       <div class="row">
         <div class="col-md-8">
-          @include('block.TabPill_OV')
+          @include('Block.Ov_TabPill')
         </div>
         <div class="col-md-4">
-          @include('block.PerkSideBar_OV')
+          @include('Block.Ov_PerkSideBar')
         </div>
       </div>
     </div>
