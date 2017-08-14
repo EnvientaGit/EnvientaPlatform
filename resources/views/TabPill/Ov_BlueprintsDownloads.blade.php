@@ -3,44 +3,39 @@
 <hr>
 <iframe src="https://3dwarehouse.sketchup.com/embed.html?mid=f9c78f177ea35a4bf5926f6cee661177&width=580&height=326" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" width="694.60" height="435" allowfullscreen></iframe>
 <hr>
-<table class="table table-striped my-3">
-  <thead>
-    <tr>
-      <th>#</th>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Username</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
-  </tbody>
-</table>
-<br>
-<div class="list-group">
-  <a href="#" class="list-group-item active">
-    Cras justo odio
-  </a>
-  <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
-  <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
-  <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
-  <a href="#" class="list-group-item list-group-item-action disabled">Vestibulum at eros</a>
-</div>
-{{-- hover the rowa! then you will get what you're looking for!! --}}
+	<table class="table table-hover table-responsive">
+	  <thead class="thead-default">
+	    <tr>
+	      <th scope="row"><h5>№</h5></th>
+	      <th class="text-center"><h5>Model</h5></th>
+	      <th class="text-center"><h5>Version</h5></th>
+	      <th class="text-center"><h5>Size</h5></th>
+	      <th class="text-center"><h5>File</h5></th>
+	    </tr>
+	  </thead>
+	  <tbody>
+	    <tr class="text-center">
+	      <th scope="row" class="btn-outline-info">3.</th>
+	      <td><b>2017/03/07</b></td>
+	      <td class="btn-danger">v1.1.2</td>
+	      <td>3.8 MB</td>
+	      <td><a href="https://3dwarehouse.sketchup.com/warehouse/getbinary?subjectId=f9c78f177ea35a4bf5926f6cee661177&subjectClass=entity&cache=1502744804219&fn=IBC%20Aquaponic%20system.skp&recordEvent=true&name=s17"><i class="fa fa-cloud-download fa-lg" aria-hidden="true"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="badge badge-default badge-pill">2562x</span></td>
+	    </tr>
+	    <tr class="text-center">
+	      <th scope="row" class="btn-outline-info">2.</th>
+	      <td><b>2017/01/22</b></td>
+	      <td class="btn-danger">v0.5.7</td>
+	      <td>2.7 MB</td>
+	      <td><a href="https://3dwarehouse.sketchup.com/warehouse/getbinary?subjectId=f9c78f177ea35a4bf5926f6cee661177&subjectClass=entity&cache=1502744804220&fn=IBC%20Aquaponic%20system.skp&recordEvent=true&name=s16"><i class="fa fa-cloud-download fa-lg" aria-hidden="true"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="badge badge-default badge-pill">763x</span></td>
+	    </tr>
+	    <tr class="text-center">
+	      <th scope="row" class="btn-outline-info">1.</th>
+	      <td><b>2016/06/15</b></td>
+	      <td class="btn-danger">v0.1.3</td>
+	      <td>1.6 MB</td>
+	      <td><a href="https://3dwarehouse.sketchup.com/warehouse/getbinary?subjectId=f9c78f177ea35a4bf5926f6cee661177&subjectClass=entity&cache=1502744804220&fn=IBC%20Aquaponic%20system.skp&recordEvent=true&name=s15"><i class="fa fa-cloud-download fa-lg" aria-hidden="true"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="badge badge-default badge-pill">632x</span></td>
+	    </tr>
+	  </tbody>
+	</table>
+
+

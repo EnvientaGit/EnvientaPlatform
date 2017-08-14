@@ -6266,8 +6266,21 @@ span.cct {
   color: #18739f; }
 
 
+/* Table head */
+table.table.table-hover.table-responsive {
+    border: 1px solid #18739f;
+}
 
+.table thead th {
+  color: #fff;
+  background-color: #18739f;
+  border-bottom: 1px solid #18739f;
+  border-top: 1px solid #18739f;
+}
 
+.table-hover tbody tr:hover {
+  background-color: rgba(24, 115, 159, 0.075);
+}
 
 
 
