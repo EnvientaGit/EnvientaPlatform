@@ -27,7 +27,7 @@
             <div id="menu1" class="tab-pane animated fadeInRight">
               <div class="row">
                 <div class="container bg-warning mx-3 p-3">
-                  @include('tabpill.faq')
+                  @include('tabpill.ov_faq')
                 </div>
               </div>
             </div>
