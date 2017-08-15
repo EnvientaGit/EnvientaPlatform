@@ -5,7 +5,7 @@
                   <a data-toggle="pill" href="#home" class="nav-link active"><b>DETAILS</b></a>
                 </li>
                 <li class="nav-item col-md-3">
-                  <a data-toggle="pill" href="#menu1" class="nav-link"><b>UPDATES</b></a>
+                  <a data-toggle="pill" href="#menu1" class="nav-link"><b>FAQ</b></a>
                 </li>
                 <li class="nav-item col-md-3">
                   <a data-toggle="pill" href="#menu2" class="nav-link"><b>BLUEPRINTS</b></a>
@@ -27,7 +27,7 @@
             <div id="menu1" class="tab-pane animated fadeInRight">
               <div class="row">
                 <div class="container bg-warning mx-3 p-3">
-                  @include('tabpill.ov_updates')
+                  @include('tabpill.faq')
                 </div>
               </div>
             </div>
