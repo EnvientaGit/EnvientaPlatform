@@ -13,26 +13,14 @@
 					</div>
 				</div>
 		  	</div>
-			<div class="row">
-			  	<div class="col-md-12">
-			  		<div class="row">
-			  			<div class="col-md-4">
-			  				<p class="text-center">Uploaded 2016/06/15</p>
-			  			</div>
-			  			<div class="col-md-4">
-			  				<p class="text-center">Last modified 2017/03/07</p>
-			  			</div>
-			  			<div class="col-md-4">
-			  				<p class="text-center">.smth File Size 3.8 MB</span>
-			  			</div>
-			  		</div>	
-			  	</div>
-			</div>
 		  	<div class="card-block">
 		    	<p class="card-text">This is a typical AP system that anyone can build in there backyard.</p>
-		    	<p class="card-text">Aperiam? Perferendis, cursus pellentesque autem auctor, luctus ducimus, a, dui atque turpis? Quasi! Wisi maecenas dictum vitae urna! Illo quibusdam earum risus varius fames vitae, deleniti vero. Felis harum. Mi. Molestiae repellendus nostrud aliquet beatae bibendum. Scelerisque ut hic optio? Dictumst vivamus, augue culpa, quo autem, incidunt nulla, tenetur unde.</p>
+		    	<p class="card-text">
+		    		Aperiam? Perferendis, cursus pellentesque autem auctor, luctus ducimus, a, dui atque turpis? Quasi! Wisi maecenas dictum vitae urna! Illo quibusdam earum risus varius fames vitae, deleniti vero. Felis harum. Mi. Molestiae repellendus nostrud aliquet beatae bibendum. Scelerisque ut hic optio? Dictumst vivamus, augue culpa, quo autem, incidunt nulla, tenetur unde.
+		    	</p>
 		  	</div>
 		</div>
+		<p class="btime">Uploaded 2016/06/15</p>
 	</div>
 </div>
 <div class="row">
@@ -46,6 +34,7 @@
 		    </h4>
 		  </div>
 		</div>
+		<p class="btime">Modified 2017/03/07</p>
 	</div>
 </div>
 <div class="row">
