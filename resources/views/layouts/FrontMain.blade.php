@@ -27,16 +27,16 @@ p<!doctype html>
     </head>
 
     <body class="bg-primary">
-        @include('partials.Navigation')
+        @include('partials.navigation')
 
-        @include('partials.Carousel')
+        @include('partials.carousel')
 
-        @include('partials.Categories')
+        @include('partials.categories')
 
         @yield('content')
 
-        @include('partials.BreadCrumbs')
+        @include('partials.breadcrumbs')
         
-        @include('partials.Footer')
+        @include('partials.footer')
     </body>
 </html>

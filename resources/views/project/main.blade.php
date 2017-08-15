@@ -1,4 +1,4 @@
-@extends('layouts.HomeMain')
+@extends('layouts.homemain')
 
 @section('content')
 
@@ -18,16 +18,16 @@
     </div>
   </div>
   
-  @include('block.Btp_PresentTable')
+  @include('block.btp_presenttable')
 
   <div class="">
     <div class="container p-3">
       <div class="row">
         <div class="col-md-8">
-          @include('block.Btp_TabPill')
+          @include('block.btp_tabpill')
         </div>
         <div class="col-md-4">
-          @include('block.Btp_PerkSideBar')
+          @include('block.btp_perksidebar')
         </div>
       </div>
     </div>

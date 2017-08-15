@@ -1,4 +1,4 @@
-@extends('layouts.HomeMain')
+@extends('layouts.homemain')
 
 @section('content')
 
@@ -18,16 +18,16 @@
     </div>
   </div>
 
-  @include('block.Ov_PresentTable')
+  @include('block.ov_presenttable')
 
   <div class="">
     <div class="container p-3">
       <div class="row">
         <div class="col-md-8">
-          @include('block.Ov_TabPill')
+          @include('block.ov_tabpill')
         </div>
         <div class="col-md-4">
-          @include('block.Ov_PerkSideBar')
+          @include('block.ov_perksidebar')
         </div>
       </div>
     </div>

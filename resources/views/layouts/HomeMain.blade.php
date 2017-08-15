@@ -27,12 +27,12 @@
     </head>
 
     <body class="bg-primary">
-        @include('partials.Navigation')
+        @include('partials.navigation')
 
         @yield('content')
 
-        @include('partials.BreadCrumbs')
+        @include('partials.breadcrumbs')
         
-        @include('partials.Footer')
+        @include('partials.footer')
     </body>
 </html>

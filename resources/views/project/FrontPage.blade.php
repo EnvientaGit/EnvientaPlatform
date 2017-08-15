@@ -1,4 +1,4 @@
-@extends('layouts.FrontMain')
+@extends('layouts.frontmain')
 
 @section('content')
 
@@ -11,10 +11,10 @@
   <div class="container p-3">
     <div class="row">
       <div class="col-md-8">
-        @include('Block.Front_TabPill')
+        @include('block.front_tabpill')
       </div>
       <div class="col-md-4">
-        @include('Block.Front_PerkSideBar')
+        @include('block.front_perksidebar')
       </div>
     </div>
   </div>
