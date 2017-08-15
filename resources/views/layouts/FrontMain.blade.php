@@ -1,4 +1,4 @@
-<!doctype html>
+p<!doctype html>
 <html>
     <head>
 
@@ -27,16 +27,16 @@
     </head>
 
     <body class="bg-primary">
-        @include('Partials.Navigation')
+        @include('partials.Navigation')
 
-        @include('Partials.Carousel')
+        @include('partials.Carousel')
 
-        @include('Partials.Categories')
+        @include('partials.Categories')
 
         @yield('content')
 
-        @include('Partials.BreadCrumbs')
+        @include('partials.BreadCrumbs')
         
-        @include('Partials.Footer')
+        @include('partials.Footer')
     </body>
 </html>

@@ -18,16 +18,16 @@
     </div>
   </div>
   
-  @include('Block.Btp_PresentTable')
+  @include('block.Btp_PresentTable')
 
   <div class="">
     <div class="container p-3">
       <div class="row">
         <div class="col-md-8">
-          @include('Block.Btp_TabPill')
+          @include('block.Btp_TabPill')
         </div>
         <div class="col-md-4">
-          @include('Block.Btp_PerkSideBar')
+          @include('block.Btp_PerkSideBar')
         </div>
       </div>
     </div>
