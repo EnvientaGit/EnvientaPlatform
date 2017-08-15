@@ -5,13 +5,13 @@
                   <a data-toggle="pill" href="#home" class="nav-link active"><b>DETAILS</b></a>
                 </li>
                 <li class="nav-item col-md-3">
-                  <a data-toggle="pill" href="#menu1" class="nav-link"><b>FAQ</b></a>
+                  <a data-toggle="pill" href="#menu1" class="nav-link"><b>BLUEPRINTS</b></a>
                 </li>
                 <li class="nav-item col-md-3">
-                  <a data-toggle="pill" href="#menu2" class="nav-link"><b>BLUEPRINTS</b></a>
+                  <a data-toggle="pill" href="#menu2" class="nav-link"><b>COMMENTS</b></a>
                 </li>
                 <li class="nav-item col-md-3">
-                  <a data-toggle="pill" href="#menu3" class="nav-link"><b>COMMENTS</b></a>
+                  <a data-toggle="pill" href="#menu3" class="nav-link"><b>FAQ</b></a>
                 </li>
               </ul>
             </div>
@@ -24,24 +24,25 @@
                 </div>
               </div>
             </div>
+            
             <div id="menu1" class="tab-pane animated fadeInRight">
-              <div class="row">
-                <div class="container bg-warning mx-3 p-3">
-                  @include('tabpill.ov_faq')
-                </div>
-              </div>
-            </div>
-            <div id="menu2" class="tab-pane animated fadeInRight">
               <div class="row">
                 <div class="container bg-warning mx-3 p-3">
                   @include('tabpill.ov_blueprintsdownloads')
                 </div>
               </div>
             </div>
-            <div id="menu3" class="tab-pane animated fadeInRight">
+            <div id="menu2" class="tab-pane animated fadeInRight">
               <div class="row">
                 <div class="container bg-warning mx-3 p-3">
                   @include('tabpill.ov_commentsfaq')
+                </div>
+              </div>
+            </div>
+            <div id="menu3" class="tab-pane animated fadeInRight">
+              <div class="row">
+                <div class="container bg-warning mx-3 p-3">
+                  @include('tabpill.ov_faq')
                 </div>
               </div>
             </div>
