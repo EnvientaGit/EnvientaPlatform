@@ -6287,6 +6287,43 @@ span.dlc {
   font-size: 1em;
 }
 
+span.bdu {
+  font-size: 0.7em;
+}
+
+/* Details hashtags */
+.dlc > a {
+  color: #fe6600;
+  font-size: 0.8em;
+}
+
+h3.card-header.dtitle {
+  color: #fff;
+  background-color: #1873a0;
+}
+
+h5.rhash {
+  color: #18739f;
+}
+
+/* Like "heart" symbol */
+i.fa.fa-heart-o {
+  padding-top: 0.5em;
+  padding-left: 2.4em;
+}
+
+.col-md-2.dtitle {
+  background-color: #1873a0;
+  color: #fff;
+  margin-left: -0.9em;
+}
+
+
+
+
+
+
+
 
 
 

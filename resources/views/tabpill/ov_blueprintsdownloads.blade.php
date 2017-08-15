@@ -1,8 +1,5 @@
-<h3 class="text-info">BLUEPRINTS</h3>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-<hr>
-<iframe src="https://3dwarehouse.sketchup.com/embed.html?mid=f9c78f177ea35a4bf5926f6cee661177&width=580&height=326" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" width="694.60" height="435" allowfullscreen></iframe>
-<hr>
+<div class="container bg-warning mx-3">
+	<iframe src="https://3dwarehouse.sketchup.com/embed.html?mid=f9c78f177ea35a4bf5926f6cee661177&width=580&height=326" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" width="694.60" height="435" allowfullscreen></iframe>
 	<table class="table table-hover table-responsive">
 	  <thead class="thead-default">
 	    <tr>
@@ -37,5 +34,6 @@
 	    </tr>
 	  </tbody>
 	</table>
+</div>
 
 
