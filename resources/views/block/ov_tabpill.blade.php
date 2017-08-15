@@ -20,28 +20,28 @@
             <div id="home" class="tab-pane animated fadeInRight active">
               <div class="row">
                 <div class="container bg-warning mx-3 p-3">
-                  @include('TabPill.Ov_Details')
+                  @include('tabpill.ov_details')
                 </div>
               </div>
             </div>
             <div id="menu1" class="tab-pane animated fadeInRight">
               <div class="row">
                 <div class="container bg-warning mx-3 p-3">
-                  @include('TabPill.Ov_Updates')
+                  @include('tabpill.ov_updates')
                 </div>
               </div>
             </div>
             <div id="menu2" class="tab-pane animated fadeInRight">
               <div class="row">
                 <div class="container bg-warning mx-3 p-3">
-                  @include('TabPill.Ov_BlueprintsDownloads')
+                  @include('tabpill.ov_blueprintsdownloads')
                 </div>
               </div>
             </div>
             <div id="menu3" class="tab-pane animated fadeInRight">
               <div class="row">
                 <div class="container bg-warning mx-3 p-3">
-                  @include('TabPill.Ov_CommentsFaq')
+                  @include('tabpill.ov_commentsfaq')
                 </div>
               </div>
             </div>

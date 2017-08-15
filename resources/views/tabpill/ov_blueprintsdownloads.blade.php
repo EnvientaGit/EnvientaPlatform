@@ -15,23 +15,23 @@
 	  </thead>
 	  <tbody>
 	    <tr class="text-center">
-	      <th scope="row" class="btn-outline-info text-center">3.</th>
+	      <th scope="row" class="btn-danger text-center">3.</th>
 	      <td><b>2017/03/07</b></td>
-	      <td class="btn-danger">v1.1.2</td>
+	      <td class="btn-outline-info">v1.1.2</td>
 	      <td>3.8 MB</td>
 	      <td><a href="https://3dwarehouse.sketchup.com/warehouse/getbinary?subjectId=f9c78f177ea35a4bf5926f6cee661177&subjectClass=entity&cache=1502744804219&fn=IBC%20Aquaponic%20system.skp&recordEvent=true&name=s17"><i class="fa fa-cloud-download fa-lg" aria-hidden="true"></i></a>&nbsp;<span class="dlc">- 2562x</span></td>
 	    </tr>
 	    <tr class="text-center">
-	      <th scope="row" class="btn-outline-info text-center">2.</th>
+	      <th scope="row" class="btn-danger text-center">2.</th>
 	      <td><b>2017/01/22</b></td>
-	      <td class="btn-danger">v0.5.7</td>
+	      <td class="btn-outline-info">v0.5.7</td>
 	      <td>2.7 MB</td>
 	      <td><a href="https://3dwarehouse.sketchup.com/warehouse/getbinary?subjectId=f9c78f177ea35a4bf5926f6cee661177&subjectClass=entity&cache=1502744804220&fn=IBC%20Aquaponic%20system.skp&recordEvent=true&name=s16"><i class="fa fa-cloud-download fa-lg" aria-hidden="true"></i></a>&nbsp;<span class="dlc">- 2562x</span></td>
 	    </tr>
 	    <tr class="text-center">
-	      <th scope="row" class="btn-outline-info text-center">1.</th>
+	      <th scope="row" class="btn-danger text-center">1.</th>
 	      <td><b>2016/06/15</b></td>
-	      <td class="btn-danger">v0.1.3</td>
+	      <td class="btn-outline-info">v0.1.3</td>
 	      <td>1.6 MB</td>
 	      <td><a href="https://3dwarehouse.sketchup.com/warehouse/getbinary?subjectId=f9c78f177ea35a4bf5926f6cee661177&subjectClass=entity&cache=1502744804220&fn=IBC%20Aquaponic%20system.skp&recordEvent=true&name=s15"><i class="fa fa-cloud-download fa-lg" aria-hidden="true"></i></a>&nbsp;<span class="dlc">- 2562x</span></td>
 	    </tr>
