@@ -8,9 +8,10 @@
 							<h3 class="card-header dtitle">IBC Aquaponic system
 							<div class="panel-group pull-right" id="accordion" role="tablist" aria-multiselectable="true">
 							  <div class="panel-heading" role="tab" id="headingFive">
+							  <span class="lns">Like &amp; Save</span>
 							    <a class="collapsed faq-links" data-toggle="collapse" data-parent="#accordion" 
-							        href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-							      <i class="fa fa-heart-o fa-2x"></i>
+							        href="#collapseFive" aria-expanded="false" aria-controls="collapseFive"> 
+							      <i class="fa fa-heart-o fa-lg"></i>
 							    </a>
 							  </div>
 							</div>

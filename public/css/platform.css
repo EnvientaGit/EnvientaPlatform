@@ -6345,7 +6345,11 @@ h3.card-header.ftitle {
   background-color: #ffffff;
 }
 
-
+/* like n save */
+span.lns {
+  font-size: 0.6em;
+  padding-right: 1em;
+}
 
 
 
