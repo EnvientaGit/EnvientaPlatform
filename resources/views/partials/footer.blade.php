@@ -98,6 +98,10 @@
 <script src="{{ URL::to('js/bootstrap-4.0.0-alpha.6.min.js') }}"></script>
 <script src="{{ URL::to('js/typing_text_animation.js') }}"></script>
 <script src="{{ URL::to('js/heart_like.js') }}"></script>
+
+{{-- Disqus --}}
+<script id="dsq-count-scr" src="//localhost-ttb34uya0n.disqus.com/count.js" async></script>
+
 <script>
   $(document).ready(function() {
     $('#login_form_submit').click(function(e) {
