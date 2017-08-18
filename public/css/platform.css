@@ -6308,15 +6308,16 @@ h5.rhash {
 }
 
 /* Like "heart" symbol */
-i.fa.fa-heart-o {
-  padding-top: 0.5em;
-  padding-left: 2.4em;
-}
-
-.col-md-2.dtitle {
-  background-color: #1873a0;
+a.faq-links {
+  font-size: 20px;
   color: #fff;
-  margin-left: -0.9em;
+  background-color: #1873a0;
+}
+.faq-links:hover {
+  text-decoration: none;
+}
+.faq-links:focus {
+  text-decoration: none;
 }
 
 /* Box Times - upload - modified */
@@ -6328,8 +6329,21 @@ p.btime {
   margin-bottom: 0em;
 }
 
+/* 3D Model */
+iframe.dmodel {
+  margin-bottom: -7px;
+}
 
+/* Blueprints Table */
+table.table.table-hover.table-responsive {
+  margin-bottom: 0;
+}
 
+/* Faq Tab */
+h3.card-header.ftitle {
+  color: #18739f;
+  background-color: #ffffff;
+}
 
 
 

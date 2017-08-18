@@ -22,18 +22,12 @@
             </div>
             
             <div id="menu1" class="tab-pane animated fadeInRight">
-              <div class="row">
                 @include('tabpill.ov_blueprintsdownloads')
-              </div>
             </div>
             <div id="menu2" class="tab-pane animated fadeInRight">
-              <div class="row">
                 @include('tabpill.ov_commentsfaq')
-              </div>
             </div>
             <div id="menu3" class="tab-pane animated fadeInRight">
-              <div class="row">
                 @include('tabpill.ov_faq')
-              </div>
             </div>
           </div>

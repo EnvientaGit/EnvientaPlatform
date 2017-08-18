@@ -1,4 +1,11 @@
-<div class="container bg-warning mx-3 p-3">
-	<h3 class="text-info">COMMENTS</h3>
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+<div class="row">
+	<div class="container bg-warning mx-3 p-0">
+		<div class="card">
+        	<div class="row">
+          		<div class="col-md-12">
+            		<h3 class="card-header ftitle">Comments</h3>
+          		</div>
+        	</div>
+    	</div>
+	</div>
 </div>

@@ -4,11 +4,17 @@
 			<div class="row">
 				<div class="col-md-12">
 					<div class="row">
-						<div class="col-md-10 ttitle">
-							<h3 class="card-header dtitle">IBC Aquaponic system</h3>
-						</div>
-						<div class="col-md-2 dtitle">
-			  				<h3><i class="fa fa-heart-o" aria-hidden="true"></i></h3>
+						<div class="col-md-12">
+							<h3 class="card-header dtitle">IBC Aquaponic system
+							<div class="panel-group pull-right" id="accordion" role="tablist" aria-multiselectable="true">
+							  <div class="panel-heading" role="tab" id="headingFive">
+							    <a class="collapsed faq-links" data-toggle="collapse" data-parent="#accordion" 
+							        href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+							      <i class="fa fa-heart-o fa-2x"></i>
+							    </a>
+							  </div>
+							</div>
+							</h3>
 						</div>
 					</div>
 				</div>
