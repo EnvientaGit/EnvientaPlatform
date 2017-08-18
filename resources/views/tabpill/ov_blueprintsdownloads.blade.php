@@ -1,4 +1,4 @@
-<div class="container bg-warning mx-3">
+<div class="container bg-warning mx-3 p-0">
 	<iframe src="https://3dwarehouse.sketchup.com/embed.html?mid=f9c78f177ea35a4bf5926f6cee661177&width=580&height=326" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" width="694.60" height="435" allowfullscreen></iframe>
 	<table class="table table-hover table-responsive">
 	  <thead class="thead-default">
