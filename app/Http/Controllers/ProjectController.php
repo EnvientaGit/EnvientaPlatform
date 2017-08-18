@@ -14,9 +14,6 @@ class ProjectController extends Controller
       $parsedown = new \Parsedown();
       $faq = $parsedown->text(file_get_contents(public_path() . "/repo/$id/faq.md"));
       
-      return view('project.overview', array(
-	'project' => $project,
-	'faq' => $faq
-      ));
+      return view('project.overview', array('project' => $project, 'faq' => $faq));
     }
 }

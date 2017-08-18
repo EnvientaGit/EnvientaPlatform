@@ -9,7 +9,7 @@
     </div>
   	<div class="row my-0">
             <div class="col-md-12">
-            <!--
+            
               <div aria-multiselectable="true" id="accordion" role="tablist">
                 <div class="card">
                   <div class="card-header bg-info" role="tab" id="headingOne">
@@ -19,6 +19,8 @@
                   </div>
                   <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
                     <div class="card-block" align="justify">
+                      {!! $faq !!}
+                      <br>
                       Non aliquam viverra blandit, diamlorem, nunc error, ut! Est, sint quia mollitia sociosqu? Ratione, quasi, diam rhoncus cupidatat eaque molestiae, metus? Justo ducimus distinctio quia eligendi do, tempus dignissimos pariatur montes quod elementum soluta voluptates justo.
                       <br>
                     </div>
@@ -51,8 +53,8 @@
                   </div>
                 </div>
               </div>
-            -->
-            {!! $faq !!}
+            
+            
             </div>
           </div>
     </div>
