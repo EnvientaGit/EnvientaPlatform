@@ -9,6 +9,7 @@
     </div>
   	<div class="row my-0">
             <div class="col-md-12">
+            <!--
               <div aria-multiselectable="true" id="accordion" role="tablist">
                 <div class="card">
                   <div class="card-header bg-info" role="tab" id="headingOne">
@@ -50,6 +51,8 @@
                   </div>
                 </div>
               </div>
+            -->
+            {!! $faq !!}
             </div>
           </div>
     </div>

@@ -86,8 +86,8 @@
         </div>
         <div class="col-md-4 bg-warning">
           <div class="pull-right e_pencil"> <i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i> </div>
-          <h3 class="py-3"><b>{{$title}}</b></h3>
-          <p class="">{{$description}}</p>
+          <h3 class="py-3"><b>{{$project->title}}</b></h3>
+          <p class="">{{$project->description}}</p>
           <a class="btn btn-info btn-block btn-lg" href="#">JOIN THIS PROJECT<i class="fa"></i></a>
           <a class="btn btn-danger btn-block btn-lg" href="#">DONATE THIS PROJECT<i class="fa"></i></a>
         </div>
