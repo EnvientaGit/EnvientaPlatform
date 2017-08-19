@@ -47,11 +47,9 @@ Route::get('personal', function() {
 
 
 //Auth::routes();
-Route::post('/auth/login', function(Request $request) {
-  //var_dump($_POST);
-  $response=file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=6LdznCwUAAAAAEkHGSIIWFp2MCk4hpWFu-40yYNB&response=".$_POST['captcha_token']."&remoteip=".$_SERVER['REMOTE_ADDR']);
-  var_dump($response);
-});
+Route::post('/auth/login', 'LoginController@register');
+
+Route::get('/auth/login', 'LoginController@login');
 
 Route::get('/home', 'HomeController@index')->name('home');
 
