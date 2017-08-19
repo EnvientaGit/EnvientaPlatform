@@ -80,45 +80,67 @@
                 </div>
             @endif --}}
 
-            <div class="container-fluid">
+            <div class="container-fluid"">
                 <div row>
-                    <div class="col-md-6 pull-left">
+                    <div class="col-md-8 pull-left">
                         <div class="title">
                             <p>Envienta: <br> Open Source Everything</p>
                             <img src="{{ URL::to('img/page-under-construction.png') }}" alt="">
                         </div>
                     </div>
                     
-                    <div class="col-md-6 pull-right">
-                        <h2>Working layouts so far:</h2><br>
+                    <div class="col-md-4 pull-right">
+                        <h2>Temporary links:</h2><br>
+                        <div style="height:52em; width:34em; overflow:auto; border-left:1px solid #ffd648; padding:2%">
+                            <ol>
+                                <li>
+                                    <h4>Laravel Registartion and Login</h4>
+                                    <a href="{{ url('/home') }}" target="_blank"><h4><b>/home</b></h4></a>
+                                    <hr>
+                                </li>
+                                <li>
+                                    <h4>Front</h4>
+                                    <a href="{{ route('page.front') }}"" target="_blank"><h4><b>/front</b></h4></a>
+                                    <hr>
+                                </li>
+                                <li>
+                                    <h4>Landing</h4>
+                                    <a href="{{ route('page.landing') }}"" target="_blank"><h4><b>/landing</b></h4></a>
+                                    <hr>
+                                </li>
+                                <li>
+                                    <h4>Profile</h4>
+                                    <a href="{{ route('profile.personal') }}"" target="_blank"><h4><b>/personal</b></h4></a>
+                                    <hr>
+                                </li>
+                                <li>
+                                    <h4>Overview</h4>
+                                    <a href="{{ URL::to('projects/3') }}" target="_blank"><h4><b>/overview</b></h4></a>
+                                    <hr>
+                                </li>
+                                <li>
+                                    <h4>Back the project</h4>
+                                    <a href="{{ route('project.main') }}" target="_blank"><h4><b>/project</b></h4></a>
+                                    <hr>
+                                </li>
+                                <li>
+                                    <h4>Purchase</h4>
+                                    <a href="{{ URL::to('#') }}" target=""><h4><b>/purchase</b></h4></a>
+                                    <hr>
+                                </li>
+                                <li>
+                                    <h4>Campaign</h4>
+                                    <a href="{{ route('project.campaign') }}"" target="_blank"><h4><b>/campaign</b></h4></a>
+                                    <hr>
+                                </li>
+                                <li>
+                                    <h4>Advertise</h4>
+                                    <a href="{{ route('page.advertise') }}"" target="_blank"><h4><b>/advertise</b></h4></a>
+                                    <hr>
+                                </li>
+                            </ol>
+                        </div>
 
-                        <ul>
-                            <li>
-                                <h4>Crowdfunding page from - Pingendo - 01_crowdfunding_page.html</h4>
-                                <a href="{{ url('/home') }}" target="_blank"><h4>Home to Login & Register</h4></a>
-                                <hr>
-                            </li>
-                            <li>
-                                <h4>Crowdfunding page from - Pingendo - 01_crowdfunding_page.html</h4>
-                                <a href="{{ route('project.main') }}" target="_blank"><h4>/project</h4></a>
-                                <hr>
-                            </li>
-                            <li>
-                                <h4>Crowdfunding page from - Pingendo - 02_campaigns_page.html</h4>
-                                <a href="{{ route('project.campaign') }}"" target="_blank"><h4>/campaign</h4></a>
-                                <hr>
-                            </li>
-                            <li>
-                                <h4>Front page from - Pingendo - 03_front_page.html</h4>
-                                <a href="{{ route('project.FrontPage') }}"" target="_blank"><h4>/front</h4></a>
-                                <hr>
-                            </li>
-                            <li>
-                                <h4>Overview page from - Pingendo - 04_overview_page.html</h4>
-                                <a href="{{ URL::to('projects/3') }}" target="_blank"><h4>/overview</h4></a>
-                                <hr>
-                            </li>
-                        </ul>
 
                         {{-- Route instances:
                             

@@ -21,14 +21,14 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-      <ul>
+      <ol>
         <li>Subscribe > Newsletter</li>
-        <li>What's popular</li>
+        <li>What's popolar</li>
         <li>Recommended for you</li>
         <li>Discover great projects with your Facebook friends./ Notification when a friend start a project</li>
         <li>Bring your creative project to life/ Motivation section</li>
         <li></li>
-      </ul>
+      </ol>
         <hr class="">
       </div>
     </div>

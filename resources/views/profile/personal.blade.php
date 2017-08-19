@@ -6,7 +6,7 @@
     <div class="row">
       <div class="col-md-12">
           <h1>Profile Page</h1>
-          <ul>
+          <ol>
             <li>My to do list</li>
             <li>My project(s)</li>
             <li>Photos</li>
@@ -14,7 +14,7 @@
             <li>Notes</li>
             <li>Rank/Stat</li>
             <li></li>
-          </ul>
+          </ol>
         </ol>
       </div>
     </div>
