@@ -26,30 +26,24 @@ Route::get('campaign', function() {
 })->name('project.campaign');
 
 Route::get('front', function() {
-    return view('page.front');
-})->name('page.front');
+    return view('project.FrontPage');
+})->name('project.FrontPage');
 
 Route::get('overview', function() {
     return view('project.overview');
 })->name('project.overview');
 
-Route::get('landing', function() {
-    return view('page.landing');
-})->name('page.landing');
-
-Route::get('advertise', function() {
-    return view('page.advertise');
-})->name('page.advertise');
-
-Route::get('personal', function() {
-    return view('profile.personal');
-})->name('profile.personal');
+Route::get('maker', function() {
+    return view('landing.maker');
+})->name('landing.maker');
 
 
 //Auth::routes();
 Route::post('/auth/login', 'LoginController@register');
 
 Route::get('/auth/login', 'LoginController@login');
+
+Route::get('/auth/logout', 'LoginController@logout');
 
 Route::get('/home', 'HomeController@index')->name('home');
 

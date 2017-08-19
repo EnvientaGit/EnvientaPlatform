@@ -26,13 +26,13 @@
         <button id="login_btn" class="btn btn-danger" data-toggle="modal" data-target="#login_dialog"> Log In </button>
 	       @else
         <div id="profile_block">
-        <img src="{{ URL::to('img/user_placeholder.png') }}" class="d-block float-left" height="40" width="40">
+        <img src="{{ "https://www.gravatar.com/avatar/" . md5( strtolower( trim( Auth::user()->email ) ) ) . "?s=40"}}" class="d-block float-left" height="40" width="40">
         <div class="btn-group text-left">
           <button class="btn dropdown-toggle btn-info" data-toggle="dropdown">Profile</button>
           <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Edit Profile</a>
+            <a class="dropdown-item" href="{{ "https://www.gravatar.com/" . md5( strtolower( trim( Auth::user()->email ) ) )}}" target="_blank">Go to Profile</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Log Out</a>
+            <a class="dropdown-item" href="{{ url('/auth/logout') }}">Log Out</a>
           </div>
         </div>
         </div>

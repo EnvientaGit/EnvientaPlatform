@@ -40,5 +40,10 @@ class LoginController extends Controller
       }
       return "invalid params";
     }
+
+    public function logout() {
+      Auth::logout();
+      return "logout";
+    }
     
 }
