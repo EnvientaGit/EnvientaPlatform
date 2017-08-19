@@ -30,20 +30,18 @@
 		<p class="btime">Uploaded 2016/06/15</p>
 	</div>
 </div>
+
 <div class="row">
 	<div class="container bg-warning m-3 p-0">
 		<div class="card">
-		  <div class="card-block">
-		    <h4 class="card-text" align="justify">
-		    	>> MarkDown Part(s) << 
-		    	<br>
-		    	Nem mellesleg ez a rész egy .md file-ból fog állni azaz egy MarkDown file, ami a "Blueprints" Tab alatt levő fájlban van s minden adandó alkalommal ahogy frissítve lesz a .md editor által (ami egy pop up ablakból jön fel), úgy a fájlok rész alatt is frissülni fog. Ez az editálás nem összetévesztendő a projekt az az fentebb látható szerkesztési gommbal, ez egy wiki itt, ami kihaszálja sőt mi több egyenesen ráépül a .md fájlra és rendszerére/működésére.
-		    </h4>
-		  </div>
+	        <div class="card-block">
+	          <p class="card-text">{!! $details !!}</p>
+	        </div>
 		</div>
 		<p class="btime">Modified 2017/03/07</p>
 	</div>
 </div>
+
 <div class="row">
 	<div class="container bg-warning mx-3 p-0">
 		<div class="card">

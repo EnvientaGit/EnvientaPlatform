@@ -7,6 +7,11 @@ use App\Project;
 
 class ProjectController extends Controller
 {
+    private function generate_details($id) {
+      $parsedown = new \Parsedown();
+      return $parsedown->text(file_get_contents(public_path() . "/repo/$id/details.md"));    
+    }
+
     private function generate_faq() {
       $parsedown = new \Parsedown();
       return $parsedown->text(file_get_contents(public_path() . "/repo/faq.md"));    
@@ -22,9 +27,10 @@ class ProjectController extends Controller
       $project = Project::findOrFail($id);
       
       return view('project.overview', array(
-	'project' => $project, 
-	'faq' => $this->generate_faq(),
-	'project_faq' => $this->generate_project_faq($id)));
+        'project' => $project, 
+        'details' => $this->generate_details($id),
+        'faq' => $this->generate_faq(),
+        'project_faq' => $this->generate_project_faq($id)));
     }
 
 }
