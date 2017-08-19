@@ -41,6 +41,10 @@ Route::get('advertise', function() {
     return view('page.advertise');
 })->name('page.advertise');
 
+Route::get('personal', function() {
+    return view('profile.personal');
+})->name('profile.personal');
+
 
 //Auth::routes();
 Route::post('/auth/login', function(Request $request) {

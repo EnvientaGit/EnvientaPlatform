@@ -5,10 +5,14 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-          <h1>bubu</h1>
+          <h1>Profile Page</h1>
           <ul>
-            <li>"It's happening Now!" ~ Commercial</li>
-            <li>Grid/montage/mockup background with photos</li>
+            <li>My to do list</li>
+            <li>My project(s)</li>
+            <li>Photos</li>
+            <li>Wiki(s)</li>
+            <li>Notes</li>
+            <li>Rank/Stat</li>
             <li></li>
           </ul>
         </ol>

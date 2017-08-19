@@ -21,7 +21,16 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <hr class=""> </div>
+      <ul>
+        <li>Subscribe > Newsletter</li>
+        <li>What's popular</li>
+        <li>Recommended for you</li>
+        <li>Discover great projects with your Facebook friends./ Notification when a friend start a project</li>
+        <li>Bring your creative project to life/ Motivation section</li>
+        <li></li>
+      </ul>
+        <hr class="">
+      </div>
     </div>
   </div>
   

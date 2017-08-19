@@ -16,7 +16,7 @@
           <li>Create Project box</li>
           <li>Project Library</li>
           <li>Envienta divisions (Prezi and/or Angular Carousel)</li>
-          <li>News Feed</li>
+          <li>News Feed + My Project Status(Pinned)</li>
           <li>Wish Wall</li>
           <li>Profile Widget</li>
           <li><i class="fa fa-star" aria-hidden="true"></i> Star/Popular Projects</li>
