@@ -19,7 +19,7 @@
         <!-- Custom CSS -->
         <link rel="stylesheet" href="{{ URL::to('css/platform.css') }}" type="text/css">
         <link rel="stylesheet" href="{{ URL::to('css/animate.css') }}" type="text/css">
-
+        
         {{-- reCAPTCHA --}}
         <script src='https://www.google.com/recaptcha/api.js'></script>
 

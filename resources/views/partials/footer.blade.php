@@ -102,8 +102,13 @@
 {{-- Disqus --}}
 <script id="dsq-count-scr" src="//localhost-ttb34uya0n.disqus.com/count.js" async></script>
 
+{{-- simplemde --}}
+<link rel="stylesheet" href="{{ URL::to('css/simplemde.min.css') }}" type="text/css">
+<script src='{{ URL::to('js/simplemde.min.js') }}'></script>
+
 <script>
   $(document).ready(function() {
+    var simplemde = new SimpleMDE({ element: document.getElementById("simplemde_edit") });
     $('#login_form_submit').click(function(e) {
       e.preventDefault();
       grecaptcha.execute();

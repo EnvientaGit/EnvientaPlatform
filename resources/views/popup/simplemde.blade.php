@@ -8,7 +8,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <textarea name="" id="" cols="30" rows="10"></textarea>
+        <textarea name="" id="simplemde_edit" cols="30" rows="10"></textarea>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-outline-info" data-dismiss="modal">Close</button>
