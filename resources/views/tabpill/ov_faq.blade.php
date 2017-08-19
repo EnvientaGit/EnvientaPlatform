@@ -11,6 +11,9 @@
         </div>
         </div>
         <div class="card-block">
+        <div class="pull-right e_pencil">
+          <i class="fa fa-pencil-square-o fa-2x" aria-hidden="true" data-toggle="modal" data-target="#simplemde"></i>
+        </div>
           <p class="card-text">{!! $faq !!}</p>
         </div>
     </div>
@@ -30,6 +33,9 @@
         </div>
         </div>
         <div class="card-block">
+        <div class="pull-right e_pencil">
+          <i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"  data-toggle="modal" data-target="#simplemde"></i>
+        </div>
           <p class="card-text">{!! $project_faq !!}</p>
         </div>
     </div>

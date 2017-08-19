@@ -35,7 +35,10 @@
 	<div class="container bg-warning m-3 p-0">
 		<div class="card">
 	        <div class="card-block">
-	          <p class="card-text">{!! $details !!}</p>
+				<div class="pull-right e_pencil">
+					<i class="fa fa-pencil-square-o fa-2x" aria-hidden="true" data-toggle="modal" data-target="#simplemde"></i>
+				</div>
+	        	<p class="card-text">{!! $details !!}</p>
 	        </div>
 		</div>
 		<p class="btime">Modified 2017/03/07</p>

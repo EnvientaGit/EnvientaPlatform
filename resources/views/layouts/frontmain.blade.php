@@ -35,6 +35,8 @@
 
         @yield('content')
 
+        @include('popup.simplemde')
+
         @include('partials.breadcrumbs')
         
         @include('partials.footer')
