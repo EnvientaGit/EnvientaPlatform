@@ -33,6 +33,10 @@ Route::get('overview', function() {
     return view('project.overview');
 })->name('project.overview');
 
+Route::get('maker', function() {
+    return view('landing.maker');
+})->name('landing.maker');
+
 
 //Auth::routes();
 Route::post('/auth/login', function(Request $request) {
