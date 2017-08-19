@@ -19,10 +19,7 @@
                   </div>
                   <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
                     <div class="card-block" align="justify">
-                      {!! $faq_gen !!}
-                      <br>
-                      Non aliquam viverra blandit, diamlorem, nunc error, ut! Est, sint quia mollitia sociosqu? Ratione, quasi, diam rhoncus cupidatat eaque molestiae, metus? Justo ducimus distinctio quia eligendi do, tempus dignissimos pariatur montes quod elementum soluta voluptates justo.
-                      <br>
+                      {!! $faq !!}
                     </div>
                   </div>
                 </div>
@@ -34,12 +31,8 @@
                   </div>
                   <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
                     <div class="card-block"> 
-                      {{-- {!! $faq_pro_0 !!} --}}
-                      <br>
-                      Non aliquam viverra blandit, diamlorem, nunc error, ut! Est, sint quia mollitia sociosqu? Ratione, quasi, diam rhoncus cupidatat eaque molestiae, metus? Justo ducimus distinctio quia eligendi do, tempus dignissimos pariatur montes quod
-                      elementum soluta voluptates justo. Morbi recusandae excepturi asperiores quia sit quam litora, eaque sem sed hac nostra, habitant, quasi recusandae neque aptent! Laboris fames faucibus, mattis est necessitatibus, consectetuer. Volutpat,
-                      faucibus delectus tellus quos nonummy nostrud litora rhoncus? Inceptos mollitia? Eiusmod consequat aliquid. At quam, mauris, quos mollit architecto ex, possimus exercitation, pretium luctus perspiciatis inventore, sapien montes! Illum
-                      quidem, semper semper tincidunt sodales, error incidunt aperiam porro. </div>
+                      {!! $project_faq !!}
+		    </div>
                   </div>
                 </div>
                 <div class="card">

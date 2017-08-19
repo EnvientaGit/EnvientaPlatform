@@ -43,7 +43,7 @@ Route::post('/auth/login', function(Request $request) {
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/projects/{id}', 'ProjectController@show_faq_gen');
+Route::get('/projects/{id}', 'ProjectController@show');
 
 // Route::get('/projects/{id}', 'ProjectController@show_faq_pro_0');
 
