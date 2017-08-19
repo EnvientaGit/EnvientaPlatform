@@ -26,16 +26,20 @@ Route::get('campaign', function() {
 })->name('project.campaign');
 
 Route::get('front', function() {
-    return view('project.FrontPage');
-})->name('project.FrontPage');
+    return view('page.front');
+})->name('page.front');
 
 Route::get('overview', function() {
     return view('project.overview');
 })->name('project.overview');
 
-Route::get('maker', function() {
-    return view('landing.maker');
-})->name('landing.maker');
+Route::get('landing', function() {
+    return view('page.landing');
+})->name('page.landing');
+
+Route::get('advertise', function() {
+    return view('page.advertise');
+})->name('page.advertise');
 
 
 //Auth::routes();
