@@ -30,7 +30,7 @@
         <div class="btn-group text-left">
           <button class="btn dropdown-toggle btn-info" data-toggle="dropdown">Profile</button>
           <div class="dropdown-menu">
-            <a class="dropdown-item" href="{{ "https://www.gravatar.com/" . md5( strtolower( trim( Auth::user()->email ) ) )}}" target="_blank">Go to Profile</a>
+            <a class="dropdown-item" href="{{ "https://www.gravatar.com/" . md5( strtolower( trim( Auth::user()->email ) ) )}}" target="_blank">My profile</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="{{ url('/auth/logout') }}">Log Out</a>
           </div>

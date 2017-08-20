@@ -100,17 +100,17 @@
                                 </li>
                                 <li>
                                     <h4>Front</h4>
-                                    <a href="{{ route('page.front') }}"" target="_blank"><h4><b>/front</b></h4></a>
+                                    <a href="{{ route('page.front') }}" target="_blank"><h4><b>/front</b></h4></a>
                                     <hr>
                                 </li>
                                 <li>
                                     <h4>Landing</h4>
-                                    <a href="{{ route('page.landing') }}"" target="_blank"><h4><b>/landing</b></h4></a>
+                                    <a href="{{ route('page.landing') }}" target="_blank"><h4><b>/landing</b></h4></a>
                                     <hr>
                                 </li>
                                 <li>
                                     <h4>Profile</h4>
-                                    <a href="{{ route('profile.personal') }}"" target="_blank"><h4><b>/personal</b></h4></a>
+                                    <a href="{{ route('profile.personal') }}" target="_blank"><h4><b>/personal</b></h4></a>
                                     <hr>
                                 </li>
                                 <li>
@@ -130,12 +130,12 @@
                                 </li>
                                 <li>
                                     <h4>Campaign</h4>
-                                    <a href="{{ route('project.campaign') }}"" target="_blank"><h4><b>/campaign</b></h4></a>
+                                    <a href="{{ route('project.campaign') }}" target="_blank"><h4><b>/campaign</b></h4></a>
                                     <hr>
                                 </li>
                                 <li>
                                     <h4>Advertise</h4>
-                                    <a href="{{ route('page.advertise') }}"" target="_blank"><h4><b>/advertise</b></h4></a>
+                                    <a href="{{ route('page.advertise') }}" target="_blank"><h4><b>/advertise</b></h4></a>
                                     <hr>
                                 </li>
                             </ol>
