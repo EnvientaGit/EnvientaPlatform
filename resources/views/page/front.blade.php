@@ -27,6 +27,7 @@
         <li>Recommended for you</li>
         <li>Discover great projects with your Facebook friends./ Notification when a friend start a project</li>
         <li>Bring your creative project to life/ Motivation section</li>
+        <li>Folyamatjelző(ábra) - Ki mit csinál/hogy/miként stb</li>
         <li></li>
       </ol>
         <hr class="">
