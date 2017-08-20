@@ -7,7 +7,7 @@
       </div>
       <div class="modal-body">
         <p>Type your email address below to get a <i>Log In link.</i></p>
-        <form id="login_form" method="post" action="/auth/login">
+        <form id="login_form" method="post" action="{{ URL::to('/auth/login') }}">
           <div class="input-group">
             <span class="input-group-addon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
             <input id="email" type="email" class="input-large" name="email" placeholder="Enter email address">
