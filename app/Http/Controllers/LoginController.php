@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Auth;
 use App\User;
+use App\Mail\LoginMail;
+use Illuminate\Support\Facades\Mail;
 
 function random_str($length, $keyspace = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ')
 {
@@ -24,6 +26,7 @@ class LoginController extends Controller
 	return "captcha error";
 	
       $user = User::updateOrCreate(['email' => $_POST['email']], ['token' => random_str(64)]);
+      Mail::to($user->email)->send(new LoginMail($user));
     }
 
     public function login() {
@@ -33,7 +36,7 @@ class LoginController extends Controller
 	$user = User::find($id);
 	if($user->token == $token) {
 	  Auth::login($user);
-	  return "success";
+	  return redirect('projects/3');;
 	} else {
 	  return "fail";
 	}

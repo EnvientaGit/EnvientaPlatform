@@ -1,0 +1,1 @@
+use this link for login: <a href="{{ $login_url }}">{{ $login_url }}</a>

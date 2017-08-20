@@ -16,9 +16,9 @@ class LoginMail extends Mailable
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($user)
     {
-        //
+        $this->user = $user;
     }
 
     /**
@@ -28,6 +28,9 @@ class LoginMail extends Mailable
      */
     public function build()
     {
-        return $this->view('view.name');
+	$login_url = url('/auth/login') . "?id=" . $this->user->id . "&token=" . $this->user->token;
+        return $this->view('mail.login')->with([
+	  'login_url' => $login_url
+	]);
     }
 }
