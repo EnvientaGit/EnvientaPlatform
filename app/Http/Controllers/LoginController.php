@@ -27,6 +27,7 @@ class LoginController extends Controller
 	
       $user = User::updateOrCreate(['email' => $_POST['email']], ['token' => random_str(64)]);
       Mail::to($user->email)->send(new LoginMail($user));
+      return redirect('advertise');
     }
 
     public function login() {
@@ -36,7 +37,7 @@ class LoginController extends Controller
 	$user = User::find($id);
 	if($user->token == $token) {
 	  Auth::login($user);
-	  return redirect('projects/3');;
+	  return redirect('projects/3');
 	} else {
 	  return "fail";
 	}
@@ -46,7 +47,7 @@ class LoginController extends Controller
 
     public function logout() {
       Auth::logout();
-      return "logout";
+      return redirect('advertise');
     }
     
 }
