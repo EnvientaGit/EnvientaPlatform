@@ -7,7 +7,7 @@
       <div class="col-md-12">
           <h1>bubu</h1>
           <ol>
-            <li>"It's happening Now!" ~ Commercial</li>
+            <li>"It's all happening Now!" ~ Commercial</li>
             <li>Grid/montage/mockup background with photos</li>
             <li></li>
           </ol>
