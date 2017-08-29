@@ -108,7 +108,7 @@
                     <td>
                       <div>
                         <a href="{{ $login_url }}"
-                        style="background-color:#18739f;border-radius:0;color:#ffffff;display:inline-block;font-family:Helvetica, Arial, sans-serif;font-size:16px;font-weight:bold;line-height:50px;text-align:center;text-decoration:none;width:240px;-webkit-text-size-adjust:none;">Activate your Token</a>
+                        style="background-color:#18739f;border-radius:0;color:#ffffff;display:inline-block;font-family:Helvetica, Arial, sans-serif;font-size:16px;font-weight:bold;line-height:50px;text-align:center;text-decoration:none;width:240px;-webkit-text-size-adjust:none;">Activate your token</a>
                       </div>
                       <br>
                       <br>
