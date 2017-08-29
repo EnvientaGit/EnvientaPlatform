@@ -46,6 +46,11 @@ Route::get('personal', function() {
 })->name('profile.personal');
 
 
+// Route::get('login', function() {
+//     return view('mail.login');
+// })->name('mail.login');
+
+
 //Auth::routes();
 Route::post('/auth/login', 'LoginController@register');
 
