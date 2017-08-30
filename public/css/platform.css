@@ -6377,6 +6377,15 @@ span.lns {
   -webkit-background-size: 3px 3px;
   -moz-background-size: 3px 3px;
   background-size: 3px 3px;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translateX(-50%) translateY(-50%);
 }
 
 /* Dotted Background */
@@ -6389,6 +6398,15 @@ span.lns {
   -webkit-background-size: 4px 4px;
   -moz-background-size: 4px 4px;
   background-size: 4px 4px;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translateX(-50%) translateY(-50%);
 }
 
 
