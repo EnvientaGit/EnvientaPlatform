@@ -1,32 +1,26 @@
-@extends('layouts.homemain')
+@extends('layouts.landingmain')
 
 @section('content')
 
   <div class="container">
     <div class="row">
+      <div class="container">
+    <div class="row">
       <div class="col-md-12">
-        <button>Lacigomb</button>
-        <br>
-        <br>
-        <div class="row">
-          <div class="col">
-            1 of 2
-          </div>
-          <div class="col">
-            2 of 2
-          </div>
-        </div>
-        <div class="row">
-          <div class="col">
-            1 of 3
-          </div>
-          <div class="col">
-            2 of 3
-          </div>
-          <div class="col">
-            3 of 3
-          </div>
-        </div>
+        <hr class=""> </div>
+    </div>
+  </div>
+  <div class="container p-3">
+    <div class="row">
+      <div class="col-md-8">
+        @include('block.landing_tabpill')
+      </div>
+      <div class="col-md-4">
+        @include('block.landing_perksidebar')
+      </div>
+    </div>
+  </div>
+
         <br>
         <br>
         <br>
