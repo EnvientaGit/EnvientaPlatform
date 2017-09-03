@@ -28,8 +28,6 @@
     <body class="bg-primary">
         @include('partials.navigation')
 
-        @include('partials.categories')
-
         @yield('content')
 
         @include('popup.simplemde')
