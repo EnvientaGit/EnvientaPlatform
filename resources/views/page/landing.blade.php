@@ -24,7 +24,7 @@
         <br>
         <br>
         <br>
-        <h4>Ezek fognak kerülni erre az oldalra:</h4>
+        <h4>To do:</h4>
         <ol>
           <li>Create Project box</li>
           <li>Project Library</li>

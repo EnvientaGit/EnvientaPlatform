@@ -21,31 +21,31 @@
             </ul>
             <div class="card-block card-warning pull-left">
               <h4 class="text-info"><b>REVIEWER</b></h4>
-              <h5>Gipsz Jakab</h5>
+              <h5>Lorem Ipsum</h5>
               <br>
               <h4 class="text-info"><b>CONTRIBUTORS</b></h4>
               <hr>
               <h6>CEO </h6>
-              <h4>Gipsz Jakab</h4>
+              <h4>Lorem Ipsum</h4>
               <br>
               <h6>SEO </h6>
-              <h4>Jóska Pista</h4>
+              <h4>Lorem Ipsum</h4>
               <br>
               <h6>GEO </h6>
-              <h4>Por Nóra</h4>
+              <h4>Lorem Ipsum</h4>
               <hr>
               <div class="pull-right">
                 <a href="#" data-toggle="collapse" data-target="#demo" class="btn btn-outline-info">See All</a>
               </div>
               <div id="demo" class="collapse">
                 <h6>TEO </h6>
-                <h4>Mikorka Kálmán</h4>
+                <h4>Lorem Ipsum</h4>
                 <br>
                 <h6>DEO </h6>
-                <h4>Gép Elek</h4>
+                <h4>Lorem Ipsum</h4>
                 <br>
                 <h6>REO </h6>
-                <h4>Pityi Palkó</h4>
+                <h4>Lorem Ipsum</h4>
                 <br> </div>
             </div>
           </div>

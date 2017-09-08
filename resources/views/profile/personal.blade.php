@@ -13,7 +13,7 @@
             <li>Wiki(s)</li>
             <li>Notes</li>
             <li>Rank/Stat</li>
-            <li>"mivel szeretnél érvényre jutni" /user tracking /activity - engedélyezés</li>
+            <li>"how do you wanna be senior" /user tracking /activity - permission</li>
             <li>Like & save</li>
             <li>Shop your own finished products /offer cryptocurrency for it</li>
             <li>File Manager - FreeCad</li>
