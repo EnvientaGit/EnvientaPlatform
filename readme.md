@@ -3,10 +3,10 @@
 ENVIENTA is a next generation sharing economy model, a DIY maker movement and community-based solution package for the 21st century, which provides share of know-how, blueprints, products and resources for the members. It's a P2P open source platform cooperative, sustainable, cost-effective, decentralized, literally scaled socioeconomic framework. ENVIENTA is a community controlled initiative with full transparency. As part of our purpose we're operating as a registered non-profit association.
 
 Join Envienta on Telegram:
-https://t.me/joinchat/Dn4edwyAmZcXasD...
+https://t.me/joinchat/Dn4edwyAmZcXasDt-y8T9A
 
 Our project on KickICO.com:
-https://www.kickico.com/campaigns/600...
+https://www.kickico.com/campaigns/6003/envienta-home-of-the-future-with-efficiency
 
 The ENVIENTA project provides cheap and well designed living for individuals, families and communities. Why pay household bills if there are existing technologies to reduce your dependencies? Renewable energy is free. Self-sustainable living requires alternative gardening solutions, based on effective water usage without dirt and farming knowledge. Custom designed interior elements made from 3D printed recycled materials can reduce industrial waste.
 
@@ -29,7 +29,7 @@ Google+: http://google.com/+EnvientaGlobal
 
 Instagram: https://instagram.com/envienta/
 
-Linkedin: https://www.linkedin.com/company/envienta
+Linkedin: https://www.linkedin.com/company/9379285/
 
 Minds: https://www.minds.com/channel/ENVIENTA/
 
