@@ -4,6 +4,17 @@
 
   <div class="container p-3">
     <div class="row">
+      <div class="col-md-8">
+        @include('block.landing_tabpill')
+      </div>
+      <div class="col-md-4">
+        @include('block.landing_perksidebar')
+      </div>
+    </div>
+  </div>
+
+  <div class="container p-3">
+    <div class="row">
       <div class="col-md-12">
       <h2>Wish wall</h2>
         <div class="row">
@@ -81,18 +92,7 @@
         </div>
       </div>
     </div>
-  </div>
-
- <div class="container p-3">
-    <div class="row">
-      <div class="col-md-8">
-        @include('block.landing_tabpill')
-      </div>
-      <div class="col-md-4">
-        @include('block.landing_perksidebar')
-      </div>
-    </div>
-      <br>
+    <br>
         <br>
         <br>
         <h4>To do:</h4>

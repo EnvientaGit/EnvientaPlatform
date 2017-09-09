@@ -6409,6 +6409,10 @@ span.lns {
   transform: translateX(-50%) translateY(-50%);
 }
 
-/* Wish list */
-
+/* News Feed */
+.sticky_profile {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 4.5em;
+}
 
