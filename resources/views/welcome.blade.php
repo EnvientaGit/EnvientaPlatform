@@ -125,7 +125,7 @@
                                 </li>
                                 <li>
                                     <h4>Purchase</h4>
-                                    <a href="{{ URL::to('#') }}" target=""><h4><b>/purchase</b></h4></a>
+                                    <a href="{{ route('project.purchase') }}" target="_blank"><h4><b>/purchase</b></h4></a>
                                     <hr>
                                 </li>
                                 <li>

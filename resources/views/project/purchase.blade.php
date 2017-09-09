@@ -9,28 +9,26 @@
           <a class="btn btn-block my-1 btn-warning" href="{{ url('/projects/3') }}" data-toggle=""><b>OVERVIEW</b></a>
         </div>
         <div class="col-md-4">
-          <a class="btn btn-block my-1 btn-info" href="{{ url('/project') }}" data-toggle=""><b>BACK THIS PROJECT</b></a>
+          <a class="btn btn-block my-1 btn-warning" href="{{ url('/project') }}" data-toggle=""><b>BACK THIS PROJECT</b></a>
         </div>
         <div class="col-md-4">
-          <a class="btn btn-block my-1 btn-warning" href="{{ url('/purchase') }}" data-toggle=""><b>PURCHASE</b></a>
+          <a class="btn btn-block my-1 btn-info" href="{{ url('/purchase') }}" data-toggle=""><b>PURCHASE</b></a>
         </div>
       </div>
     </div>
   </div>
-  
-  @include('block.btp_presenttable')
 
   <div class="">
     <div class="container p-3">
       <div class="row">
         <div class="col-md-8">
-          @include('block.btp_tabpill')
+          {{-- @include('block.ov_tabpill') --}}
         </div>
         <div class="col-md-4">
-          @include('block.btp_perksidebar')
+          {{-- @include('block.ov_perksidebar') --}}
         </div>
       </div>
     </div>
   </div>
-
+  
 @endsection 

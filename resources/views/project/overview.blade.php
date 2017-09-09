@@ -6,13 +6,13 @@
     <div class="container">
       <div class="row my-2">
         <div class="col-md-4">
-          <a class="btn btn-block my-1 btn-info" href="{{ url('/overview') }}" data-toggle=""><b>OVERVIEW</b></a>
+          <a class="btn btn-block my-1 btn-info" href="{{ url('/projects/3') }}" data-toggle=""><b>OVERVIEW</b></a>
         </div>
         <div class="col-md-4">
-          <a class="btn btn-block my-1 btn-warning" href="{{ url('/project/3') }}" data-toggle=""><b>BACK THIS PROJECT</b></a>
+          <a class="btn btn-block my-1 btn-warning" href="{{ url('/project') }}" data-toggle=""><b>BACK THIS PROJECT</b></a>
         </div>
         <div class="col-md-4">
-          <a class="btn btn-block my-1 btn-warning" href="#" data-toggle=""><b>PURCHASE</b></a>
+          <a class="btn btn-block my-1 btn-warning" href="{{ url('/purchase') }}" data-toggle=""><b>PURCHASE</b></a>
         </div>
       </div>
     </div>

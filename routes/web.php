@@ -45,6 +45,9 @@ Route::get('personal', function() {
     return view('profile.personal');
 })->name('profile.personal');
 
+Route::get('purchase', function() {
+    return view('project.purchase');
+})->name('project.purchase');
 
 // Route::get('login', function() {
 //     return view('mail.login');
