@@ -2,6 +2,8 @@
 
 ENVIENTA is a next generation sharing economy model, a DIY maker movement and community-based solution package for the 21st century, which provides share of know-how, blueprints, products and resources for the members. It's a P2P open source platform cooperative, sustainable, cost-effective, decentralized, literally scaled socioeconomic framework. ENVIENTA is a community controlled initiative with full transparency. As part of our purpose we're operating as a registered non-profit association.
 
+[![ENVIENTA Introduction](https://img.youtube.com/vi/G_VyOj4na7A/0.jpg)](https://www.youtube.com/watch?v=G_VyOj4na7A)
+
 Join Envienta on Telegram:
 https://t.me/joinchat/Dn4edwyAmZcXasDt-y8T9A
 
