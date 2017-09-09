@@ -1,4 +1,4 @@
-<div class="container">
+{{-- <div class="container">
   <div class="row">
     <div class="col-12">
       <div class="card">
@@ -39,129 +39,113 @@
     </div>
   </div> 
 </div>
-</br>
+</br> --}}
   <div>
     <ul class="list-group">
       <li class="list-group-item text-white px-2 bg-info">
         <i class="fa fa-list-alt fa-2x mx-1"></i>
-        <b class="style-backer">&nbsp;&nbsp;MY PROJECTS</b>
+        <b class="style-backer">&nbsp;&nbsp;News Feeds</b>
       </li>
     </ul>
   </div>
   <div class="my-2">
     <div class="container">
       <div class="row">
-        <div class="bg-warning col-md-6">
-          <img class="img-fluid d-block my-3" src="{{ URL::to('img/image_1.jpg') }}">
-          <h4 class="text-info"><b>THE FIRST PROJECT PAGE</b></h4>
-          <p class="">by Mate Molnar</p> <span class="badge badge-default my-1">Open </span> <span class="badge badge-default my-1">Source</span> <span class="badge badge-default my-1">Everything</span> <span class="badge badge-default my-1">House</span> <span class="badge badge-default my-1">Project</span>
-          <p class="text-left">Intelligently designed to pack a lot of hardware and software into a small body. See for yourself…</p>
-          <h5 class="">Completion</h5>
-          <div class="c_completion">
-            <div class="bg-success" role="progressbar" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100" style="width: 66%;">&nbsp;&nbsp;66%</div>
-          </div>
-          <div class="my-3">
-            <div class="row">
-              <div class="col-md-4">
-                {{-- <a href="#" class="btn btn-block btn-outline-info btn-sm my-1">FOLLOW</a> --}}
-              </div>
-              <div class="col-md-8">
-                <a href="#" class="btn btn-block btn-danger btn-sm my-1">CROWDFUNDING&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;56%</a>
+
+        <div class="col-md-12 bg-warning p-3">
+          <div class="row mx-0">
+            <div class="col-md-6 px-0">
+              <img class="img-fluid d-block" src="{{ URL::to('img/800x600_1.jpg') }}">
+              <h4 class="py-2">Completion</h4>
+              <div class="c_completion">
+                <div class="bg-success" role="progressbar" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100" style="width: 66%;">&nbsp;&nbsp;66%</div>
               </div>
             </div>
-            <a class="btn btn-block my-3 btn-outline-info" href="#">DONATIONS&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;$ 3.7K</a>
+            <div class="col-md-6">
+              <h3 class="text-info"> <b>3D printing</b> </h3>
+              <p class="">by Mate Molnar</p> 
+              <span class="badge badge-default my-1">Open</span> 
+              <span class="badge badge-default my-1">Source</span> 
+              <span class="badge badge-default my-1">Everything</span> 
+              <span class="badge badge-default my-1">House</span>                    
+              <span class="badge badge-default my-1">Project</span>
+              <p class="text-left"> 
+                Dolore torquent donec, ac justo ligula accusantium consequatur vestibulum a, maiores felis rerum iure modi praesentium fugit vulputate
+              </p>
+              <div class="my-3">
+                <div class="row">
+                  <div class="col-md-4">
+                    <a href="#" class="btn btn-block btn-outline-info btn-sm my-1">FOLLOW</a>
+                  </div>
+                  <div class="col-md-8">
+                    <a href="#" class="btn btn-block btn-danger btn-sm my-1">CROWDFUNDING&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;56%</a>
+                  </div>
+                </div>
+                <a class="btn btn-block my-3 btn-outline-info" href="#">DONATIONS&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;$ 3.7K</a>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div class="col-md-6 bg-warning">
-          <img class="img-fluid d-block my-3" src="{{ URL::to('img/image_2.jpg') }}">
-          <h4 class="text-info"><b>LOOKING FOR VALAMI</b></h4>
-          <p class="">by Mate Molnar</p> <span class="badge badge-default my-1">Open </span> <span class="badge badge-default my-1">Source</span> <span class="badge badge-default my-1">Everything</span> <span class="badge badge-default my-1">House</span> <span class="badge badge-default my-1">Project</span>
-          <p class="text-left">Intelligently designed to pack a lot of hardware and software into a small body. See for yourself…</p>
-          <h5 class="">Completion</h5>
-          <div class="c_completion">
-            <div class="bg-success" aria-valuemax="100" aria-valuemin="0" aria-valuenow="47" role="progressbar" style="width: 47%;">&nbsp;&nbsp;47%</div>
-          </div>
-          <div class="my-3">
-            <div class="row">
-              <div class="col-md-4">
-                {{-- <a href="#" class="btn btn-block btn-info btn-sm my-1">FOLLOW <i class="fa fa-check fa-fw"></i></a> --}}
-              </div>
-              <div class="col-md-8">
-                <a href="#" class="btn btn-block btn-danger btn-sm my-1">CROWDFUNDING&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;80%</a>
+        <div class="col-md-12 bg-warning p-3">
+          <div class="row mx-0">
+            <div class="col-md-6 px-0" align="center">
+              <i class="fa fa-file-text-o fa-5x" aria-hidden="true"></i>
+              <h4 class="py-2">New Blog</h4>
+            </div>
+            <div class="col-md-6">
+              <h3 class="text-info"> <b>How to do</b> </h3>
+              <p class="">by Mate Molnar</p> 
+              <span class="badge badge-default my-1">Open</span> 
+              <span class="badge badge-default my-1">Source</span> 
+              <span class="badge badge-default my-1">Everything</span> 
+              <span class="badge badge-default my-1">House</span>                    
+              <span class="badge badge-default my-1">Project</span>
+              <p class="text-left"> 
+                Dolore torquent donec, ac justo ligula accusantium consequatur vestibulum a, maiores felis rerum iure modi praesentium fugit vulputate
+              </p>
+              <div class="pull-right">
+                  <a class="btn my-3 btn-outline-info" href="#">Read</a>
               </div>
             </div>
-            <a class="btn btn-block my-3 btn-outline-info" href="#">DONATIONS&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;$ 1.2K</a>
           </div>
         </div>
 
-        <div class="col-md-6 bg-warning">
-          <img class="img-fluid d-block my-3" src="{{ URL::to('img/image_3.png') }}">
-          <h4 class="text-info"><b>THE FIRST PROJECT PAGE</b></h4>
-          <p class="">by Mate Molnar</p> <span class="badge badge-default my-1">Open </span> <span class="badge badge-default my-1">Source</span> <span class="badge badge-default my-1">Everything</span> <span class="badge badge-default my-1">House</span> <span class="badge badge-default my-1">Project</span>
-          <p class="text-left">Intelligently designed to pack a lot of hardware and software into a small body. See for yourself…</p>
-          <h5 class="">Completion</h5>
-          <div class="c_completion">
-            <div class="bg-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">&nbsp;&nbsp;100%</div>
-          </div>
-          <div class="my-3">
-            <div class="row">
-              <div class="col-md-4">
-                {{-- <a href="#" class="btn btn-block btn-info btn-sm my-1">FOLLOW <i class="fa fa-check fa-fw"></i></a> --}}
-              </div>
-              <div class="col-md-8">
-                <a href="#" class="btn btn-block btn-danger btn-sm my-1">CROWDFUNDED&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;101%</a>
+        <div class="col-md-12 bg-warning p-3">
+          <div class="row mx-0">
+            <div class="col-md-6 px-0">
+              <img class="img-fluid d-block" src="{{ URL::to('img/800x600_1.jpg') }}">
+              <h4 class="py-2">Completion</h4>
+              <div class="c_completion">
+                <div class="bg-success" role="progressbar" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100" style="width: 66%;">&nbsp;&nbsp;66%</div>
               </div>
             </div>
-            <a class="btn btn-block my-3 btn-outline-info" href="#">DONATIONS&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;$ 7.6K</a>
+            <div class="col-md-6">
+              <h3 class="text-info"> <b>3D printing</b> </h3>
+              <p class="">by Mate Molnar</p> 
+              <span class="badge badge-default my-1">Open</span> 
+              <span class="badge badge-default my-1">Source</span> 
+              <span class="badge badge-default my-1">Everything</span> 
+              <span class="badge badge-default my-1">House</span>                    
+              <span class="badge badge-default my-1">Project</span>
+              <p class="text-left"> 
+                Dolore torquent donec, ac justo ligula accusantium consequatur vestibulum a, maiores felis rerum iure modi praesentium fugit vulputate
+              </p>
+              <div class="my-3">
+                <div class="row">
+                  <div class="col-md-4">
+                    <a href="#" class="btn btn-block btn-outline-info btn-sm my-1">FOLLOW</a>
+                  </div>
+                  <div class="col-md-8">
+                    <a href="#" class="btn btn-block btn-danger btn-sm my-1">CROWDFUNDING&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;56%</a>
+                  </div>
+                </div>
+                <a class="btn btn-block my-3 btn-outline-info" href="#">DONATIONS&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;$ 3.7K</a>
+              </div>
+            </div>
           </div>
         </div>
 
       </div>
     </div>
   </div>
-
- 
-  <div>
-    <ul class="list-group">
-      <li class="list-group-item text-white px-2 bg-info">
-        <i class="fa fa-pencil-square-o fa-2x mx-1"></i>
-        <b class="style-backer">&nbsp;&nbsp;CREATE PROJECT BOX</b>
-      </li>
-    </ul>
-  </div>
-    <iframe src="https://3dwarehouse.sketchup.com/embed.html?mid=f9c78f177ea35a4bf5926f6cee661177&width=580&height=326" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" width="726.66" height="435" allowfullscreen class="dmodel"></iframe>
-    <table class="table table-hover table-responsive">
-      <thead class="thead-default">
-        <tr>
-          <th scope="row" class="text-center"><h5>№</h5></th>
-          <th class="text-center"><h5>Model</h5></th>
-          <th class="text-center"><h5>Version</h5></th>
-          <th class="text-center"><h5>Size</h5></th>
-          <th class="text-center"><h5>File</h5></th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr class="text-center">
-          <th scope="row" class="btn-danger text-center">3.</th>
-          <td><b>2017/03/07</b></td>
-          <td class="btn-outline-info">v1.1.2</td>
-          <td>3.8 MB</td>
-          <td><a href="https://3dwarehouse.sketchup.com/warehouse/getbinary?subjectId=f9c78f177ea35a4bf5926f6cee661177&subjectClass=entity&cache=1502744804219&fn=IBC%20Aquaponic%20system.skp&recordEvent=true&name=s17"><i class="fa fa-cloud-download fa-lg" aria-hidden="true"></i></a>&nbsp;<span class="dlc">- 2562x</span></td>
-        </tr>
-        <tr class="text-center">
-          <th scope="row" class="btn-danger text-center">2.</th>
-          <td><b>2017/01/22</b></td>
-          <td class="btn-outline-info">v0.5.7</td>
-          <td>2.7 MB</td>
-          <td><a href="https://3dwarehouse.sketchup.com/warehouse/getbinary?subjectId=f9c78f177ea35a4bf5926f6cee661177&subjectClass=entity&cache=1502744804220&fn=IBC%20Aquaponic%20system.skp&recordEvent=true&name=s16"><i class="fa fa-cloud-download fa-lg" aria-hidden="true"></i></a>&nbsp;<span class="dlc">- 2562x</span></td>
-        </tr>
-        <tr class="text-center">
-          <th scope="row" class="btn-danger text-center">1.</th>
-          <td><b>2016/06/15</b></td>
-          <td class="btn-outline-info">v0.1.3</td>
-          <td>1.6 MB</td>
-          <td><a href="https://3dwarehouse.sketchup.com/warehouse/getbinary?subjectId=f9c78f177ea35a4bf5926f6cee661177&subjectClass=entity&cache=1502744804220&fn=IBC%20Aquaponic%20system.skp&recordEvent=true&name=s15"><i class="fa fa-cloud-download fa-lg" aria-hidden="true"></i></a>&nbsp;<span class="dlc">- 2562x</span></td>
-        </tr>
-      </tbody>
-    </table>
