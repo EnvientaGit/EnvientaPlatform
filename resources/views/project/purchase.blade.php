@@ -18,17 +18,21 @@
     </div>
   </div>
 
-  <div class="">
+  @include('block.pur_presenttable')
+  <br>
+  @include('block.pur_map')
+
+{{--   <div class="">
     <div class="container p-3">
       <div class="row">
         <div class="col-md-8">
-          {{-- @include('block.ov_tabpill') --}}
+          
         </div>
         <div class="col-md-4">
-          {{-- @include('block.ov_perksidebar') --}}
+          
         </div>
       </div>
     </div>
-  </div>
+  </div> --}}
   
 @endsection 

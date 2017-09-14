@@ -57,12 +57,71 @@
     </div>
   </div>
 
-  <div class="container py-2"> 
+  <div class="container p-3 bg-warning">
     <div class="row">
-      <div class="col-md-12">
-        <div class="card">
-          <div class="card-block">
-            <h1>12-es</h1>
+      <div class="col-md-8 bg-warning">
+        <table class="table table-hover table-responsive">
+          <thead class="thead-default">
+            <tr>
+              <th scope="row" class="text-center"><h5>№</h5></th>
+              <th class="text-center"><h5>My projects</h5></th>
+              <th class="text-center"><h5>Versions</h5></th>
+              <th class="text-center"><h5>Dates</h5></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="text-center">
+              <th scope="row" class="btn-danger text-center">3.</th>
+              <td><b><a href="#">Original Prusa i3 3D Printer</a></b></td>
+              <td class="btn-outline-info">v1.1.2</td>
+              <td><b>2017/03/07</b></td>
+            </tr>
+            <tr class="text-center">
+              <th scope="row" class="btn-danger text-center">2.</th>
+              <td><b><a href="#">Kessels Wind Turbine</a></b></td>
+              <td class="btn-outline-info">v0.5.7</td>
+              <td><b>2017/01/22</b></td>
+            </tr>
+            <tr class="text-center">
+              <th scope="row" class="btn-danger text-center">1.</th>
+              <td><b><a href="#">Leigh Bureau Exclusive Robotics</a></b></td>
+              <td class="btn-outline-info">v0.1.3</td>
+              <td><b>2016/06/15</b></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col-md-4 bg-warning">
+        <div class="row">
+          <div class="col-md-6 col-sm-6">
+              <div class="progress blue">
+                  <span class="progress-left">
+                      <span class="progress-bar"></span>
+                  </span>
+                  <span class="progress-right">
+                      <span class="progress-bar"></span>
+                  </span>
+                  <div class="progress-value">90%</div>
+              </div>
+              <br>
+              <div class="text-center">
+                <h5 class="pbar-blue">Reputation</h5>
+              </div>
+          </div>
+          <div class="col-md-6 col-sm-6">
+              <div class="progress yellow">
+                  <span class="progress-left">
+                      <span class="progress-bar"></span>
+                  </span>
+                  <span class="progress-right">
+                      <span class="progress-bar"></span>
+                  </span>
+                  <div class="progress-value">75%</div>
+              </div>
+              <br>
+              <div class="text-center">
+                <h5 class="pbar-orange">Reliability</h5>
+              </div>
           </div>
         </div>
       </div>
@@ -71,14 +130,10 @@
 
   <br>
 
-  <div class="container"> 
+  <div class="container p-3 bg-warning">
     <div class="row">
-      <div class="col-md-12">
-        <div class="card">
-          <div class="card-block">
-            <h1>12-es</h1>
-          </div>
-        </div>
+      <div class="col-md-12 text-center">
+        <h1>To do list</h1>
       </div>
     </div>
     <br>
@@ -98,7 +153,6 @@
     </ol>
   </div>
 
-  
 @endsection 
 
 
