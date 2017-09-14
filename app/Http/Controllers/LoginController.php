@@ -21,7 +21,7 @@ class LoginController extends Controller
 {
 
     public function register() {
-      $response = json_decode(file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=6LdznCwUAAAAAEkHGSIIWFp2MCk4hpWFu-40yYNB&response=".$_POST['captcha_token']."&remoteip=".$_SERVER['REMOTE_ADDR']));
+      $response = json_decode(file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=YOUR_KEY=".$_POST['captcha_token']."&remoteip=".$_SERVER['REMOTE_ADDR']));
       if(!$response->success)
 	return "captcha error";
 	
