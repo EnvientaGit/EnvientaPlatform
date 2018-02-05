@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\Project;
 
 class DatabaseSeeder extends Seeder
 {
@@ -11,6 +12,14 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UsersTableSeeder::class);
+	$faker = \Faker\Factory::create();
+
+        Project::truncate();
+	for ($i = 0; $i < 50; $i++) {
+            Project::create([
+                'title' => $faker->sentence,
+                'description' => $faker->text,
+            ]);
+        }
     }
 }
