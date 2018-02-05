@@ -1,44 +1,28 @@
-<div class="row">
-  <div class="container bg-warning mx-3 p-0">
-    <div class="card">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="row">
-            <div class="col-md-12">
-              <h3 class="card-header dtitle">General informations about this project</h3>
-            </div>
-          </div>
-        </div>
-        </div>
-        <div class="card-block">
-        <div class="pull-right e_pencil">
-          <i class="fa fa-pencil-square-o fa-2x" aria-hidden="true" data-toggle="modal" data-target="#simplemde"></i>
-        </div>
-          <p class="card-text">{!! $faq !!}</p>
-        </div>
-    </div>
+<div class="row m-0 pb-3">
+  <div class="card w-100">
+    <h6 class="card-header dtitle p-2">General informations
+    <i class="fa fa-pencil-square-o env_edit pull-right" aria-hidden="true" data-toggle="modal" data-target="#simplemde"></i>
+    </h6>
+      <div class="card-body">
+        <p class="card-text text-justify">
+          {!! $faq !!}
+        </p>
+      </div>
   </div>
 </div>
 
-<div class="row">
-  <div class="container bg-warning m-3 p-0">
-    <div class="card">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="row">
-            <div class="col-md-12">
-              <h3 class="card-header dtitle">Individual informations about this project</h3>
-            </div>
-          </div>
-        </div>
-        </div>
-        <div class="card-block">
-        <div class="pull-right e_pencil">
-          <i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"  data-toggle="modal" data-target="#simplemde"></i>
-        </div>
-          <p class="card-text">{!! $project_faq !!}</p>
-        </div>
-    </div>
-    <p class="btime">Modified 2017/08/19</p>
+<div class="row m-0 pb-3">
+  <div class="card w-100">
+    <h6 class="card-header dtitle p-2">Individual informations
+    <i class="fa fa-pencil-square-o env_edit pull-right" aria-hidden="true" data-toggle="modal" data-target="#simplemde"></i>
+    </h6>
+      <div class="card-body">
+        <p class="card-text text-justify">
+          {!! $project_faq !!}
+        </p>
+      </div>
+      <div class="card-footer env_uploaded_div">
+        <p class="env_p">Uploaded at 2016/06/15</p>
+      </div>
   </div>
 </div>

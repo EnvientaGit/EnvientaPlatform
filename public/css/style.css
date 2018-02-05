@@ -36,15 +36,29 @@ footer p {
   margin-bottom: .25rem;
 }
 
-.box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+.box-shadow-bottom { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
 
 #env_paragraph{
   height: 8em;
+  overflow-y: hidden;
 }
 
 #env_link {
   text-decoration: none;
   color: inherit;
+}
+
+.env_uploaded_div {
+  height: 2em;
+  padding-top: 0.4em;
+}
+
+.env_p {
+  font-size: 0.8em;
+}
+
+.env_edit {
+  cursor: pointer;
 }
 
 /*#env_board {

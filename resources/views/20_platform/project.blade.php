@@ -4,7 +4,6 @@
   
   @include('70_tools.slider')
 
-  <div class="">
     <div class="container p-3">
       <div class="row">
         <div class="col-md-8">
@@ -15,6 +14,5 @@
         </div>
       </div>
     </div>
-  </div>
-
+    
 @endsection 

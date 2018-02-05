@@ -4,10 +4,12 @@
         <img class="d-block" src="{{ URL::to('img/logo_natural.svg') }}" height="64">
     </a>
     <p class="float-right">
-      <a href="#" class="text-success">Back to top</a>
+        <a id="env_link" href="#" class="text-success">
+            <i class="fa fa-arrow-up fa-2x p-2 rounded-circle border border-success" aria-hidden="true"></i>
+        </a>
     </p>
     <p>ENVIENTA™ - Open Source Everything <br>This is an Open Source Project! Read more at 
-        <a href="http://envienta.com" class="text-success">ENVIENTA</a> Official Site.</p>
+        <a id="env_link" href="http://envienta.com" class="text-success">ENVIENTA</a> Official Site.</p>
   </div>
 </div>
 

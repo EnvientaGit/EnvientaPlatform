@@ -1,6 +1,6 @@
     <div class="row sticky-top">
       <div class="col-md-12 px-0">
-          <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom box-shadow-bottom">
             <a href="{{ url('/') }}" class="mb-3">
               <img class="d-block" src="{{ URL::to('img/logo_natural.svg') }}" height="40">
             </a>
@@ -8,7 +8,7 @@
               <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav ml-2 mr-auto">
                 <li class="nav-item">
                   <a class="nav-link" href="{{ url('/') }}"><h5>Home</h5></a>
