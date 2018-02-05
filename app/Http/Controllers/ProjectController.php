@@ -22,16 +22,16 @@ class ProjectController extends Controller
       return $parsedown->text(file_get_contents(public_path() . "/repo/$id/faq.md"));    
     }
 
-    public function show($id)
+    public function show()
     {
       // $project = Project::findOrFail($id);
       $project = new Project();
 
-      return view('project.overview', array(
+      return view('20_platform.project', array(
         'project' => $project, 
-        'details' => $this->generate_details($id),
-        'faq' => $this->generate_faq(),
-        'project_faq' => $this->generate_project_faq($id)));
+        'details' => 'xxx',
+        'faq' => 'xxx',
+        'project_faq' => 'xxx'));
     }
 
 }

@@ -19,9 +19,7 @@ Route::get('/', function () {
     return view('20_platform.campaign');
 })->name('20_platform.campaign');
 
-Route::get('/project', function () {
-    return view('20_platform.project');
-})->name('20_platform.project');
+Route::get('/project', 'ProjectController@show')->name('20_platform.project');
 
 // Route::get('layouts', function() {
 //     return view('page.layouts');
