@@ -1,62 +1,59 @@
-/* Exclusive Media Queries/Operators */
-/* The Bigest MUST HAVE TO be the first */
-
-/* 425px - 476px */
-@media screen and (max-width:475px) {
-	p.miny,								/* Mail part */
-    p.my-2.miny,						/* Scpre Head */
-	a#nav-home-tab,						/* Home Tab */
-	a#nav-profiles-tab,					/* Profiles Tab */
-	a#nav-datas-tab,					/* Datas Tab */
-	a#nav-charts-tab,					/* Charts Tab  */
-	a.btn.btn-outline-primary.btn-sm {	/* Add Score Button */
-    	font-size: small;
-	}
+:root {
+  --jumbotron-padding-y: 3rem;
 }
 
-/* 375px - 425px */
-@media screen and (max-width:425px) {
-	p.miny,								/* Mail part */
-	p.my-2.miny,						/* Scpre Head */
-	a#nav-home-tab,						/* Home Tab */
-	a#nav-profiles-tab,					/* Profiles Tab */
-	a#nav-datas-tab,					/* Datas Tab */
-	a#nav-charts-tab,					/* Charts Tab  */
-	a.btn.btn-outline-primary.btn-sm {	/* Add Score Button */
-    	font-size: x-small;
-	}
+.jumbotron {
+  padding-top: var(--jumbotron-padding-y);
+  padding-bottom: var(--jumbotron-padding-y);
+  margin-bottom: 0;
+  background-color: #fff;
+}
+@media (min-width: 768px) {
+  .jumbotron {
+    padding-top: calc(var(--jumbotron-padding-y) * 2);
+    padding-bottom: calc(var(--jumbotron-padding-y) * 2);
+  }
 }
 
-/* 360px - 375px */
-@media screen and (max-width:375px) {
-	p.miny,								/* Mail part */
-    p.my-2.miny,						/* Scpre Head */
-	a#nav-home-tab,						/* Home Tab */
-	a#nav-profiles-tab,					/* Profiles Tab */
-	a#nav-datas-tab,					/* Datas Tab */
-	a#nav-charts-tab,					/* Charts Tab  */
-	a.btn.btn-outline-primary.btn-sm {	/* Add Score Button */
-    	font-size: xx-small;
-	}
+.jumbotron p:last-child {
+  margin-bottom: 0;
 }
 
-/* General Changes/Updates/Exclusives */
-
-body {
-	overflow-x: hidden;
+.jumbotron-heading {
+  font-weight: 300;
 }
 
-.row {
-	align-items: center;
+.jumbotron .container {
+  max-width: 40rem;
 }
 
-.row.openy {
-    cursor: pointer;
+footer {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
-.row.openy:hover {
-    background-color: #f0f2f5;
+footer p {
+  margin-bottom: .25rem;
 }
+
+.box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+
+#env_paragraph{
+  height: 8em;
+}
+
+#env_link {
+  text-decoration: none;
+  color: inherit;
+}
+
+/*#env_board {
+  height: 100%
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url('../img/water.jpg');
+}*/
 
 
 

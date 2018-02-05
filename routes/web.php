@@ -16,6 +16,10 @@
 // });
 
 Route::get('/', function () {
+    return view('20_platform.home');
+})->name('20_platform.home');
+
+Route::get('/campaign', function () {
     return view('20_platform.campaign');
 })->name('20_platform.campaign');
 

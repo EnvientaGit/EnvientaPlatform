@@ -13,23 +13,30 @@
         {{-- Title --}}
         <title>Envienta Water Crisis</title>
 
-        <!-- Default CSS -->
-        <link rel="stylesheet" href="{{ URL::to('css/font-awesome.css') }}">
+        <!-- CSS - CDN's -->
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" />
+        
+        <!-- Boostrap v4.0 -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 
         <!-- Custom CSS -->
-        <link rel="stylesheet" href="{{ URL::to('css/platform.css') }}" type="text/css">
+        {{-- <link rel="stylesheet" href="{{ URL::to('css/platform.css') }}" type="text/css"> --}}
         <link rel="stylesheet" href="{{ URL::to('css/animate.css') }}" type="text/css">
+        <link rel="stylesheet" href="{{ URL::to('css/style.css') }}" type="text/css">
 
         {{-- reCAPTCHA --}}
         <script src='https://www.google.com/recaptcha/api.js'></script>
 
     </head>
 
-    <body class="bg-primary">
-        @include('40_topbar.navigation')
+    <body>
+        <div class="container-fluid">
+            @include('40_topbar.navigation')
 
-        @yield('content')
-        
-        @include('90_footer.footer')
+            @yield('content')
+            
+            @include('90_footer.footer')
+        </div>
     </body>
 </html>
