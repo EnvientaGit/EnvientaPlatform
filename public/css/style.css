@@ -1,0 +1,78 @@
+/* Exclusive Media Queries/Operators */
+/* The Bigest MUST HAVE TO be the first */
+
+/* 425px - 476px */
+@media screen and (max-width:475px) {
+	p.miny,								/* Mail part */
+    p.my-2.miny,						/* Scpre Head */
+	a#nav-home-tab,						/* Home Tab */
+	a#nav-profiles-tab,					/* Profiles Tab */
+	a#nav-datas-tab,					/* Datas Tab */
+	a#nav-charts-tab,					/* Charts Tab  */
+	a.btn.btn-outline-primary.btn-sm {	/* Add Score Button */
+    	font-size: small;
+	}
+}
+
+/* 375px - 425px */
+@media screen and (max-width:425px) {
+	p.miny,								/* Mail part */
+	p.my-2.miny,						/* Scpre Head */
+	a#nav-home-tab,						/* Home Tab */
+	a#nav-profiles-tab,					/* Profiles Tab */
+	a#nav-datas-tab,					/* Datas Tab */
+	a#nav-charts-tab,					/* Charts Tab  */
+	a.btn.btn-outline-primary.btn-sm {	/* Add Score Button */
+    	font-size: x-small;
+	}
+}
+
+/* 360px - 375px */
+@media screen and (max-width:375px) {
+	p.miny,								/* Mail part */
+    p.my-2.miny,						/* Scpre Head */
+	a#nav-home-tab,						/* Home Tab */
+	a#nav-profiles-tab,					/* Profiles Tab */
+	a#nav-datas-tab,					/* Datas Tab */
+	a#nav-charts-tab,					/* Charts Tab  */
+	a.btn.btn-outline-primary.btn-sm {	/* Add Score Button */
+    	font-size: xx-small;
+	}
+}
+
+/* General Changes/Updates/Exclusives */
+
+body {
+	overflow-x: hidden;
+}
+
+.row {
+	align-items: center;
+}
+
+.row.openy {
+    cursor: pointer;
+}
+
+.row.openy:hover {
+    background-color: #f0f2f5;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
