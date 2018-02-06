@@ -1,4 +1,4 @@
-<div class="row m-0">
+<div class="row m-0 box-shadow-bottom border rounded">
 	<div class="container">
 		<div id="disqus_thread"></div>
 		<script>

@@ -1,4 +1,4 @@
-<div class="row m-0 pb-3">
+<div class="row m-0 mb-3 box-shadow-bottom">
 	<div class="card w-100">
 		<h6 class="card-header dtitle p-2">IBC Aquaponic system
 			<i class="fa fa-pencil-square-o env_edit pull-right" aria-hidden="true" data-toggle="modal" data-target="#simplemde"></i>
@@ -14,7 +14,7 @@
 	</div>
 </div>
 
-<div class="row m-0 pb-3">
+<div class="row m-0 mb-3 box-shadow-bottom">
 	<div class="card w-100">
 		<h6 class="card-header dtitle p-2">IBC Aquaponic system 
 			<i class="fa fa-pencil-square-o env_edit pull-right" aria-hidden="true" data-toggle="modal" data-target="#simplemde"></i>

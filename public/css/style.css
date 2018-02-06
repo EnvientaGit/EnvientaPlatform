@@ -61,6 +61,18 @@ footer p {
   cursor: pointer;
 }
 
+.w-50 {
+  width: 50% !important;
+}
+
+.w-20 {
+  width: 20% !important;
+}
+
+.w-15 {
+  width: 15% !important;
+}
+
 /*#env_board {
   height: 100%
   background-repeat: no-repeat;
