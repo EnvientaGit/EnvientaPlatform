@@ -21,230 +21,24 @@
         <div class="container">
           <div class="row">
 
+            @foreach ($projects as $project)
             <div class="col-md-4">
               <div class="card mb-4 box-shadow-bottom">
-                <a href="">
+                <a href="{{ URL::to('project/' . $project->id) }}">
                   <img class="card-img-top" src="{{ URL::to('img/hd_1.jpg') }}" alt="Project_XY">
                 </a>
                 <div class="card-body">
-                  <h5 class="card-title text-truncate">Lorep Ipsum</h5>
+                  <h5 class="card-title text-truncate">{{$project->title}}</h5>
                   <p id="env_paragraph" class="card-text text-justify">
-                    Iure diam bibendum nascetur aperiam sequi venenatis explicabo, tristique, mattis tincidunt, eveniet quisquam odit, eiusmod! Doloremque, quidem enim suspendisse ducimus. 
+                    {{$project->description}} 
                   </p>
                   <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-success">
-                        <a href="" id="env_link" target="_blank">View</a>
-                      </button>
-                      <button type="button" class="btn btn-sm btn-outline-success">
-                        <a href="" id="env_link" target="_blank">Edit</a>
-                      </button>
-                    </div>
                     <small class="text-muted">9 mins</small>
                   </div>
                 </div>
               </div>
             </div>
-
-            <div class="col-md-4">
-              <div class="card mb-4 box-shadow-bottom">
-                <a href="">
-                  <img class="card-img-top" src="{{ URL::to('img/hd_1.jpg') }}" alt="Project_XY">
-                </a>
-                <div class="card-body">
-                  <h5 class="card-title text-truncate">Lorep Ipsum</h5>
-                  <p id="env_paragraph" class="card-text text-justify">
-                    Iure diam bibendum nascetur aperiam sequi venenatis explicabo, tristique, mattis tincidunt, eveniet quisquam odit, eiusmod! Doloremque, quidem enim suspendisse ducimus. 
-                  </p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-success">
-                        <a href="" id="env_link" target="_blank">View</a>
-                      </button>
-                      <button type="button" class="btn btn-sm btn-outline-success">
-                        <a href="" id="env_link" target="_blank">Edit</a>
-                      </button>
-                    </div>
-                    <small class="text-muted">9 mins</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="card mb-4 box-shadow-bottom">
-                <a href="">
-                  <img class="card-img-top" src="{{ URL::to('img/hd_1.jpg') }}" alt="Project_XY">
-                </a>
-                <div class="card-body">
-                  <h5 class="card-title text-truncate">Lorep Ipsum</h5>
-                  <p id="env_paragraph" class="card-text text-justify">
-                    Iure diam bibendum nascetur aperiam sequi venenatis explicabo, tristique, mattis tincidunt, eveniet quisquam odit, eiusmod! Doloremque, quidem enim suspendisse ducimus. 
-                  </p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-success">
-                        <a href="" id="env_link" target="_blank">View</a>
-                      </button>
-                      <button type="button" class="btn btn-sm btn-outline-success">
-                        <a href="" id="env_link" target="_blank">Edit</a>
-                      </button>
-                    </div>
-                    <small class="text-muted">9 mins</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="card mb-4 box-shadow-bottom">
-                <a href="">
-                  <img class="card-img-top" src="{{ URL::to('img/hd_1.jpg') }}" alt="Project_XY">
-                </a>
-                <div class="card-body">
-                  <h5 class="card-title text-truncate">Lorep Ipsum</h5>
-                  <p id="env_paragraph" class="card-text text-justify">
-                    Iure diam bibendum nascetur aperiam sequi venenatis explicabo, tristique, mattis tincidunt, eveniet quisquam odit, eiusmod! Doloremque, quidem enim suspendisse ducimus. 
-                  </p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-success">
-                        <a href="" id="env_link" target="_blank">View</a>
-                      </button>
-                      <button type="button" class="btn btn-sm btn-outline-success">
-                        <a href="" id="env_link" target="_blank">Edit</a>
-                      </button>
-                    </div>
-                    <small class="text-muted">9 mins</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="card mb-4 box-shadow-bottom">
-                <a href="">
-                  <img class="card-img-top" src="{{ URL::to('img/hd_1.jpg') }}" alt="Project_XY">
-                </a>
-                <div class="card-body">
-                  <h5 class="card-title text-truncate">Lorep Ipsum</h5>
-                  <p id="env_paragraph" class="card-text text-justify">
-                    Iure diam bibendum nascetur aperiam sequi venenatis explicabo, tristique, mattis tincidunt, eveniet quisquam odit, eiusmod! Doloremque, quidem enim suspendisse ducimus. 
-                  </p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-success">
-                        <a href="" id="env_link" target="_blank">View</a>
-                      </button>
-                      <button type="button" class="btn btn-sm btn-outline-success">
-                        <a href="" id="env_link" target="_blank">Edit</a>
-                      </button>
-                    </div>
-                    <small class="text-muted">9 mins</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="card mb-4 box-shadow-bottom">
-                <a href="">
-                  <img class="card-img-top" src="{{ URL::to('img/hd_1.jpg') }}" alt="Project_XY">
-                </a>
-                <div class="card-body">
-                  <h5 class="card-title text-truncate">Lorep Ipsum</h5>
-                  <p id="env_paragraph" class="card-text text-justify">
-                    Iure diam bibendum nascetur aperiam sequi venenatis explicabo, tristique, mattis tincidunt, eveniet quisquam odit, eiusmod! Doloremque, quidem enim suspendisse ducimus. 
-                  </p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-success">
-                        <a href="" id="env_link" target="_blank">View</a>
-                      </button>
-                      <button type="button" class="btn btn-sm btn-outline-success">
-                        <a href="" id="env_link" target="_blank">Edit</a>
-                      </button>
-                    </div>
-                    <small class="text-muted">9 mins</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="card mb-4 box-shadow-bottom">
-                <a href="">
-                  <img class="card-img-top" src="{{ URL::to('img/hd_1.jpg') }}" alt="Project_XY">
-                </a>
-                <div class="card-body">
-                  <h5 class="card-title text-truncate">Lorep Ipsum</h5>
-                  <p id="env_paragraph" class="card-text text-justify">
-                    Iure diam bibendum nascetur aperiam sequi venenatis explicabo, tristique, mattis tincidunt, eveniet quisquam odit, eiusmod! Doloremque, quidem enim suspendisse ducimus. 
-                  </p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-success">
-                        <a href="" id="env_link" target="_blank">View</a>
-                      </button>
-                      <button type="button" class="btn btn-sm btn-outline-success">
-                        <a href="" id="env_link" target="_blank">Edit</a>
-                      </button>
-                    </div>
-                    <small class="text-muted">9 mins</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="card mb-4 box-shadow-bottom">
-                <a href="">
-                  <img class="card-img-top" src="{{ URL::to('img/hd_1.jpg') }}" alt="Project_XY">
-                </a>
-                <div class="card-body">
-                  <h5 class="card-title text-truncate">Lorep Ipsum</h5>
-                  <p id="env_paragraph" class="card-text text-justify">
-                    Iure diam bibendum nascetur aperiam sequi venenatis explicabo, tristique, mattis tincidunt, eveniet quisquam odit, eiusmod! Doloremque, quidem enim suspendisse ducimus. 
-                  </p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-success">
-                        <a href="" id="env_link" target="_blank">View</a>
-                      </button>
-                      <button type="button" class="btn btn-sm btn-outline-success">
-                        <a href="" id="env_link" target="_blank">Edit</a>
-                      </button>
-                    </div>
-                    <small class="text-muted">9 mins</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="card mb-4 box-shadow-bottom">
-                <a href="">
-                  <img class="card-img-top" src="{{ URL::to('img/hd_1.jpg') }}" alt="Project_XY">
-                </a>
-                <div class="card-body">
-                  <h5 class="card-title text-truncate">Lorep Ipsum</h5>
-                  <p id="env_paragraph" class="card-text text-justify">
-                    Iure diam bibendum nascetur aperiam sequi venenatis explicabo, tristique, mattis tincidunt, eveniet quisquam odit, eiusmod! Doloremque, quidem enim suspendisse ducimus. 
-                  </p>
-                  <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-sm btn-outline-success">
-                        <a href="" id="env_link" target="_blank">View</a>
-                      </button>
-                      <button type="button" class="btn btn-sm btn-outline-success">
-                        <a href="" id="env_link" target="_blank">Edit</a>
-                      </button>
-                    </div>
-                    <small class="text-muted">9 mins</small>
-                  </div>
-                </div>
-              </div>
-            </div>
+            @endforeach
 
           </div>
         </div>

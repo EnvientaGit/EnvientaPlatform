@@ -12,14 +12,18 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-	$faker = \Faker\Factory::create();
+	   $faker = \Faker\Factory::create();
 
         Project::truncate();
-	for ($i = 0; $i < 50; $i++) {
-            Project::create([
-                'title' => $faker->sentence,
-                'description' => $faker->text,
-            ]);
+    	for ($i = 0; $i < 50; $i++) {
+                $project = Project::create([
+                    'title' => $faker->sentence,
+                    'description' => $faker->text,
+                ]);
+
+                $project_path = public_path() . "/repo/" . $project->id;
+                @mkdir($project_path, 0700, TRUE);
+                file_put_contents($project_path . "/details.md", '**' . $faker->text . '**');
+            }
         }
-    }
 }
