@@ -46,3 +46,10 @@
     $('#login_form').submit();
   }
 </script>
+
+<script src="{{ URL::to('js/bootstrap-pincode-input.js') }}"></script>
+<script type="text/javascript">
+  $('document').ready(function(){
+    $('.pincode6').pincodeInput({inputs:6, hidedigits:false});
+  });
+</script>    
