@@ -7,25 +7,6 @@
 	    	<p class="card-text text-justify">
 	    		{{$project->description}}
 	    	</p>
-<<<<<<< HEAD
-			<p class="card-text text-justify">
-	    		{!! $details !!}
-	    	</p>
-	  	</div>
-	  	<div class="card-footer env_uploaded_div">
-	  		<p class="env_p">Uploaded at 2016/06/15</p>
-	  	</div>
-	</div>
-</div>
-
-{{-- <div class="row m-0 mb-3 box-shadow-bottom">
-	<div class="card w-100">
-		<h6 class="card-header dtitle p-2">IBC Aquaponic system 
-			<i class="fa fa-pencil-square-o env_edit pull-right" aria-hidden="true" data-toggle="modal" data-target="#simplemde"></i>
-		</h6>
-	  	<div class="card-body">
-=======
->>>>>>> watercrisis/master
 	    	<p class="card-text text-justify">
 	    		{!! $details !!}
 	    	</p>
@@ -34,7 +15,7 @@
 	  		<p class="env_p">Uploaded at 2016/06/15</p>
 	  	</div>
 	</div>
-</div> --}}
+</div>
 
 <div class="row m-0 pb-3">
 	<button class="btn btn-sm btn-outline-info mr-2 mb-2 badge badge-pill"><a id="env_link" href="#">#aquaponic</a></button>
