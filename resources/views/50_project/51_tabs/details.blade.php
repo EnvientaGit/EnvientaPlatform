@@ -1,12 +1,13 @@
 <div class="row m-0 mb-3 box-shadow-bottom">
 	<div class="card w-100">
-		<h6 class="card-header dtitle p-2">IBC Aquaponic system
+		<h6 class="card-header dtitle p-2">{{$project->title}}
 			<i class="fa fa-pencil-square-o env_edit pull-right" aria-hidden="true" data-toggle="modal" data-target="#simplemde"></i>
 		</h6>
 	  	<div class="card-body">
 	    	<p class="card-text text-justify">
-	    		Aperiam? Perferendis, cursus pellentesque autem auctor, luctus ducimus, a, dui atque turpis? Quasi! Wisi maecenas dictum vitae urna! Illo quibusdam earum risus varius fames vitae, deleniti vero. Felis harum. Mi. Molestiae repellendus nostrud aliquet beatae bibendum. Scelerisque ut hic optio? Dictumst vivamus, augue culpa, quo autem, incidunt nulla, tenetur unde.
+	    		{{$project->description}}
 	    	</p>
+<<<<<<< HEAD
 			<p class="card-text text-justify">
 	    		{!! $details !!}
 	    	</p>
@@ -23,6 +24,8 @@
 			<i class="fa fa-pencil-square-o env_edit pull-right" aria-hidden="true" data-toggle="modal" data-target="#simplemde"></i>
 		</h6>
 	  	<div class="card-body">
+=======
+>>>>>>> watercrisis/master
 	    	<p class="card-text text-justify">
 	    		{!! $details !!}
 	    	</p>
