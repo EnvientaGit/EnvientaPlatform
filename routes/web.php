@@ -23,6 +23,9 @@ Route::get('/campaign', 'CampaignController@show')->name('20_platform.campaign')
 
 Route::get('/project', 'ProjectController@show')->name('20_platform.project');
 
+//cache disabled for development 
+//Route::middleware('page-cache')->get('/project/{id}', 'ProjectController@show')->name('20_platform.project');
+
 Route::get('/project/{id}', 'ProjectController@show')->name('20_platform.project');
 
 // Route::get('layouts', function() {
