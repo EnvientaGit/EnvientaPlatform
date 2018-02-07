@@ -1,4 +1,4 @@
-<div class="row m-0 mb-3 box-shadow-bottom">
+{{-- <div class="row m-0 mb-3 box-shadow-bottom">
   <div class="card w-100">
     <h6 class="card-header dtitle p-2">General informations
     <i class="fa fa-pencil-square-o env_edit pull-right" aria-hidden="true" data-toggle="modal" data-target="#simplemde"></i>
@@ -9,11 +9,11 @@
         </p>
       </div>
   </div>
-</div>
+</div> --}}
 
 <div class="row m-0 mb-3 box-shadow-bottom">
   <div class="card w-100">
-    <h6 class="card-header dtitle p-2">Individual informations
+    <h6 class="card-header dtitle p-2">Informations
     <i class="fa fa-pencil-square-o env_edit pull-right" aria-hidden="true" data-toggle="modal" data-target="#simplemde"></i>
     </h6>
       <div class="card-body">

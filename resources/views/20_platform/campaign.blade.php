@@ -11,8 +11,8 @@
             “The city of Cape Town could conceivably become the first major city in the world to run out of water, and that could happen in the next four months,” said Dr. Anthony Turton, a professor at the Centre for Environmental Management at the University of the Free State. “It’s not an impending crisis — we’re deep, deep, deep in crisis.”
           </p>
           <p>
-            {{-- <a href="#" class="btn btn-primary my-2">Button_1</a>
-            <a href="#" class="btn btn-secondary my-2">Button_2</a> --}}
+            {{-- <a href="#" class="btn btn-primary my-2">Button_1</a> --}}
+            <a href="#" class="btn btn-lg btn-primary my-2">Create a Project</a>
           </p>
         </div>
       </section>
@@ -32,14 +32,14 @@
                     Iure diam bibendum nascetur aperiam sequi venenatis explicabo, tristique, mattis tincidunt, eveniet quisquam odit, eiusmod! Doloremque, quidem enim suspendisse ducimus. 
                   </p>
                   <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
+{{--                     <div class="btn-group">
                       <button type="button" class="btn btn-sm btn-outline-success">
                         <a href="" id="env_link" target="_blank">View</a>
                       </button>
                       <button type="button" class="btn btn-sm btn-outline-success">
                         <a href="" id="env_link" target="_blank">Edit</a>
                       </button>
-                    </div>
+                    </div> --}}
                     <small class="text-muted">9 mins</small>
                   </div>
                 </div>
