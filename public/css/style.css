@@ -36,8 +36,11 @@ footer p {
   margin-bottom: .25rem;
 }
 
-.box-shadow-bottom { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+.box-shadow-bottom { 
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); 
+}
 
+/* Env Custom Id's */
 #env_paragraph{
   height: 8em;
   overflow-y: hidden;
@@ -48,6 +51,15 @@ footer p {
   color: inherit;
 }
 
+#env_pagination li a {
+  color: #28a745!important;
+}
+
+#env_width_20 {
+  width: 20em;
+}
+
+/* Env Custom Class's */
 .env_uploaded_div {
   height: 2em;
   padding-top: 0.4em;
@@ -73,16 +85,32 @@ footer p {
   width: 15% !important;
 }
 
-/*#env_board {
-  height: 100%
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-image: url('../img/water.jpg');
-}*/
+/* Env Custom Hover */
+#env_unl {
+  text-decoration: none;
+}
+
+.env_link_grey {
+  background-color: #e9ecef;
+}
+
+.env_link_grey:hover {
+  background-color: #dfe3e8;
+}
+
+/* Env Custom Border */
+.env_border_rslim {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
 
 
-
+caption {
+  color: #6c757d;
+  text-align: left;
+  caption-side: top;
+  border-bottom: 1px solid #dee2e6;
+}
 
 
 

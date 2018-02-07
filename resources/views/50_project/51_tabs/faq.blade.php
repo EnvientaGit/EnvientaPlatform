@@ -21,7 +21,7 @@
           {!! $project_faq !!}
         </p>
       </div>
-      <div class="card-footer env_uploaded_div">
+      <div class="card-footer env_uploaded_div pl-2">
         <p class="env_p">Uploaded at 2016/06/15</p>
       </div>
   </div>

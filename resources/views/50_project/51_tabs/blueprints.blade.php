@@ -5,6 +5,7 @@
 	</iframe>
 	<div class="card box-shadow-bottom mb-3">
 		<table class="table table-hover table-responsive table-sm rounded mb-0">
+		<caption class="p-2">List of XXX</caption>
 		  <thead class="thead-default bg-light">
 		    <tr>
 		      <th class="border-0">№</th>
@@ -48,6 +49,7 @@
 <div class="row m-0">
 	<div class="card box-shadow-bottom mb-3">
 		<table class="table table-hover table-responsive table-sm rounded mb-0">
+		<caption class="p-2">List of YYY</caption>
 		  <thead class="thead-default bg-light">
 		    <tr>
 		      <th class="border-0">№</th>
@@ -91,6 +93,7 @@
 <div class="row m-0">
 	<div class="card box-shadow-bottom mb-3">
 		<table class="table table-hover table-responsive table-sm rounded mb-0">
+		<caption class="p-2">List of ZZZ</caption>
 		  <thead class="thead-default bg-light">
 		    <tr>
 		      <th class="border-0">№</th>
@@ -130,3 +133,22 @@
 		</table>
 	</div>
 </div>
+
+<div class="btn-toolbar justify-content-between" role="toolbar" aria-label="Toolbar with button groups">
+  <div class="input-group">
+    <div class="input-group-prepend">
+      	<a href="" class="text-secondary" id="env_unl">
+      		<div class="env_link_grey input-group-text env_border_rslim" id="btnGroupAddon2">Add</div>
+  		</a>
+    </div>
+    <input type="text" class="form-control" placeholder="New folder" aria-label="Input group example" aria-describedby="btnGroupAddon2">
+  </div>
+</div>
+
+
+
+
+
+
+
+

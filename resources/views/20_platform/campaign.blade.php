@@ -28,7 +28,9 @@
                   <img class="card-img-top" src="{{ URL::to('img/hd_1.jpg') }}" alt="Project_XY">
                 </a>
                 <div class="card-body">
-                  <h5 class="card-title text-truncate">{{$project->title}}</h5>
+                  <h5 class="card-title text-truncate">
+                    <a class="text-success" href="{{ URL::to('project/' . $project->id) }}">{{$project->title}}</a>
+                  </h5>
                   <p id="env_paragraph" class="card-text text-justify">
                     {{$project->description}} 
                   </p>
@@ -42,9 +44,11 @@
 
           </div>
         </div>
+
+        @include('70_tools.pagination')
+        
       </div>
-
+  
     </main>
-
   
 @endsection 

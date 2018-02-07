@@ -21,7 +21,7 @@
                 </li>
               </ul>
               <form class="form-inline ml-2">
-                <input class="form-control mr-sm-2 btn-sm" type="search" placeholder="Search" aria-label="Search">
+                <input class="form-control mr-sm-2 btn-sm" id="env_width_20" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-sm btn-outline-success my-2 my-sm-0" type="submit">Search</button>
 
                 @if(!Auth::check())
@@ -45,8 +45,6 @@
           </nav>
       </div>
     </div>
- 
-
 
 @include('10_login.login')
 
