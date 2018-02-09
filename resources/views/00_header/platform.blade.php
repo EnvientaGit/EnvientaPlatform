@@ -24,10 +24,12 @@
         {{-- <link rel="stylesheet" href="{{ URL::to('css/platform.css') }}" type="text/css"> --}}
         <link rel="stylesheet" href="{{ URL::to('css/animate.css') }}" type="text/css">
         <link rel="stylesheet" href="{{ URL::to('css/style.css') }}" type="text/css">
+        
+        <link rel="stylesheet" href="{{ URL::to('css/bootstrap-pincode-input.css') }}" type="text/css">
 
         {{-- reCAPTCHA --}}
         <script src='https://www.google.com/recaptcha/api.js'></script>
-
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     </head>
 
     <body>

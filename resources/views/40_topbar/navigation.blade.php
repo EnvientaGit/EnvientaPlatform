@@ -21,10 +21,11 @@
               <form class="form-inline ml-2">
                 <input class="form-control mr-sm-2 btn-sm" id="env_width_20" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-sm btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-
+              </form>
+                
                 @if(!Auth::check())
                 <button id="login_btn" class="btn btn-info ml-2" data-toggle="modal" data-target="#login_dialog"> Log In </button>
-                 @else
+                @else
                 <div id="profile_block">
                 <img src="{{ "https://www.gravatar.com/avatar/" . md5( strtolower( trim( Auth::user()->email ) ) ) . "?s=40"}}" class="d-block float-left" height="40" width="40">
                 <div class="btn-group text-left">
@@ -37,8 +38,7 @@
                 </div>
                 </div>
                 @endif
-                </form>
-
+                
             </div>
           </nav>
       </div>
