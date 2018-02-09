@@ -27,7 +27,7 @@ Route::post('/project/new', 'ProjectController@newProject');
 
 //cache disabled for development 
 //Route::middleware('page-cache')->get('/project/{id}', 'ProjectController@show');
-Route::get('/project/{id}', 'ProjectController@show');
+Route::get('/project/{slug}', 'ProjectController@show');
 
 
 Route::get('/auth/requestPin', 'LoginController@requestPin');

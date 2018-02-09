@@ -20,9 +20,9 @@
                 </li>
               --}}
               </ul>
-              <form class="form-inline ml-2">
-                <input class="form-control mr-sm-2 btn-sm" id="env_width_20" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-sm btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+              <form id='search_form' class="form-inline ml-2">
+                <input class="form-control mr-sm-2 btn-sm" id="search_edit" type="search" placeholder="Search" aria-label="Search" value="{{ $filter ? $filter : '' }}">
+                <button id="search_button" class="btn btn-sm btn-outline-success my-2 my-sm-0">Search</button>
               </form>
                 
                 @if(!Auth::check())
@@ -45,6 +45,21 @@
           </nav>
       </div>
     </div>
+
+<script type="text/javascript">
+  $('#search_form').on('submit', function(e){
+    e.preventDefault();
+    var expr = $('#search_edit').val();
+    if(expr) {
+      window.location = '{{ url('/s') }}' + '/' + encodeURI(expr);
+    } else {
+      window.location = '{{ url('/') }}';
+    }
+  });
+  //$('#search_button').click(function() {
+  //  window.location = '{{ url('/s/') }}' + encodeURI($('#search_edit').val());   
+  //});
+</script>
 
 @include('10_login.login')
 

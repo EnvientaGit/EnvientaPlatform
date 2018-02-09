@@ -14,12 +14,14 @@ class CreateProjectsTable extends Migration
     public function up()
     {
         Schema::create('projects', function (Blueprint $table) {
-        $table->increments('id');
-	    $table->string('title');
-	    $table->text('description');
-        $table->string('slug');
-	    $table->timestamps();
+            $table->increments('id');
+    	    $table->string('title', 128);
+    	    $table->text('description');
+            $table->string('slug', 128)->unique();
+    	    $table->timestamps();
         });
+
+        DB::statement('ALTER TABLE projects ADD FULLTEXT fulltext_index (title, description)');
     }
 
     /**

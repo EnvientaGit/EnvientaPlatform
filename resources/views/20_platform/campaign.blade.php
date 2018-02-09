@@ -6,9 +6,10 @@
 
       <section id="env_board" class="jumbotron text-center">
         <div class="container">
-          <h1 class="jumbotron-heading">Projects for Cape Town</h1>
+          {{--<h1 class="jumbotron-heading">Projects for Cape Town</h1>--}}
           <p class="lead text-muted">
-            “The city of Cape Town could conceivably become the first major city in the world to run out of water, and that could happen in the next four months,” said Dr. Anthony Turton, a professor at the Centre for Environmental Management at the University of the Free State. “It’s not an impending crisis — we’re deep, deep, deep in crisis.”
+            “We at ENVIENTA believe that technological progress can bring abundance and unlimited wealth to people.
+This is only possible if every human beings is able to access to technology.”
           </p>
           <p>
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#newProjectModal">Create new project</button>
