@@ -85,8 +85,8 @@
           </div>
         </div>
 
-        @include('70_tools.pagination')
-        
+        {{ $projects->links('70_tools.pagination') }}
+
       </div>
   
     </main>
