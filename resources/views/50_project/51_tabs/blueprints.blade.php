@@ -42,6 +42,14 @@
 		      <td class=""><a href="#"><i class="fa fa-cloud-download fa-lg" aria-hidden="true"></i></a></td>
 		    </tr>
 		  </tbody>
+		  <tfoot>
+		  	<td colspan="6">
+		  		<div style="position: relative; left: 0px; top: 0px; height: 40px;" class="mb-3">
+		  			<div class="btn btn-primary" style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%;">Drop your files here, or click this button to select them</div>
+		  			<input type="file" name="images" style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; opacity:0;">
+		  		</div>
+		  	</td>
+		  </tfoot>
 		</table>
 	</div>
 </div>
