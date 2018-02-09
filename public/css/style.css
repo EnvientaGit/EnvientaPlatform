@@ -112,8 +112,10 @@ caption {
   border-bottom: 1px solid #dee2e6;
 }
 
-
-
+/* Env Custom [atrr] */
+html[type=button] {
+  -webkit-appearance: button;
+}
 
 
 

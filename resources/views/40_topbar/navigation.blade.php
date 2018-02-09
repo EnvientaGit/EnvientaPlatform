@@ -4,15 +4,13 @@
             <a href="{{ url('/') }}" class="mb-3">
               <img class="d-block" src="{{ URL::to('img/logo_natural.svg') }}" height="40">
             </a>
+            <p><span class="badge badge-danger font-italic">Beta!</span></p>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav ml-2 mr-auto">
-                <li class="nav-item">
-                  <a class="nav-link" href="{{ url('/') }}"><h5>Home</h5></a>
-                </li>
                 <li class="nav-item">
                   <a class="nav-link" href="{{ url('/campaign') }}"><h5>Campaigns</h5></a>
                 </li>
