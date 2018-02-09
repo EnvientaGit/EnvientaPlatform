@@ -11,12 +11,14 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav ml-2 mr-auto">
+              {{--
                 <li class="nav-item">
                   <a class="nav-link" href="{{ url('/') }}"><h5>Campaigns</h5></a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#"><h5>About</h5></a>
                 </li>
+              --}}
               </ul>
               <form class="form-inline ml-2">
                 <input class="form-control mr-sm-2 btn-sm" id="env_width_20" type="search" placeholder="Search" aria-label="Search">

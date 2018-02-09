@@ -64,7 +64,7 @@
             @foreach ($projects as $project)
             <div class="col-md-4">
               <div class="card mb-4 box-shadow-bottom">
-                <a href="{{ URL::to('project/' . $project->id) }}">
+                <a href="{{ URL::to('project/' . $project->slug) }}">
                   <img class="card-img-top" src="{{ URL::to('img/hd_1.jpg') }}" alt="Project_XY">
                 </a>
                 <div class="card-body">
