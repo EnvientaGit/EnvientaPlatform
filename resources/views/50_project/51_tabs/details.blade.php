@@ -17,6 +17,7 @@
 	</div>
 </div>
 
+{{--
 <div class="row m-0 pb-3">
 	<button class="btn btn-sm btn-outline-info mr-2 mb-2 badge badge-pill"><a id="env_link" href="#">#aquaponic</a></button>
 	<button class="btn btn-sm btn-outline-info mr-2 mb-2 badge badge-pill"><a id="env_link" href="#">#container</a></button>
@@ -30,6 +31,7 @@
 	<button class="btn btn-sm btn-outline-info mr-2 mb-2 badge badge-pill"><a id="env_link" href="#">#gate</a></button>
 	<button class="btn btn-sm btn-outline-info mr-2 mb-2 badge badge-pill"><a id="env_link" href="#">#block</a></button>
 </div>
+--}}
 
 
 
