@@ -34,4 +34,12 @@ class ProjectController extends Controller
         'project_faq' => 'xxx'));
     }
 
+    public function newProject(Request $request) {
+      $project = new Project;
+      $project->title = $request->title;
+      $project->description = $request->description;
+      $project->save();
+      return redirect('/project/' . $project->id);
+    }
+
 }

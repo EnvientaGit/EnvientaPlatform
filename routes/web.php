@@ -19,18 +19,15 @@
 //    return view('20_platform.home');
 //})->name('20_platform.home');
 
-Route::get('/', 'CampaignController@show')->name('20_platform.campaign');
+Route::get('/', 'CampaignController@show');
 
-//Route::get('/project', 'ProjectController@show')->name('20_platform.project');
+Route::get('/project', 'ProjectController@show');
+Route::post('/project/new', 'ProjectController@newProject');
 
 //cache disabled for development 
-//Route::middleware('page-cache')->get('/project/{id}', 'ProjectController@show')->name('20_platform.project');
+//Route::middleware('page-cache')->get('/project/{id}', 'ProjectController@show');
+Route::get('/project/{id}', 'ProjectController@show');
 
-Route::get('/project/{?id}', 'ProjectController@show')->name('20_platform.project');
-
-// Route::get('layouts', function() {
-//     return view('page.layouts');
-// })->name('page.layouts');
 
 Route::get('/auth/requestPin', 'LoginController@requestPin');
 Route::get('/auth/login', 'LoginController@login');
