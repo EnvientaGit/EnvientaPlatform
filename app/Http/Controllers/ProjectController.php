@@ -8,9 +8,9 @@ use Illuminate\Support\Facades\DB;
 
 class ProjectController extends Controller
 {
-    private function generate_details($id) {
+    private function generate_details($slug) {
       $parsedown = new \Parsedown();
-      return $parsedown->text(file_get_contents(public_path() . "/repo/$id/details.md"));    
+      return $parsedown->text(file_get_contents(public_path() . "/repo/$slug/details.md"));    
     }
 
     private function generate_faq($id) {
@@ -22,7 +22,7 @@ class ProjectController extends Controller
     {
       if($slug) {
         $project = DB::table('projects')->where('slug', $slug)->first();;
-        $details = $this->generate_details($project->id);
+        $details = $this->generate_details($project->slug);
       } else {
         $project = new Project();
         $details = 'xxx';
