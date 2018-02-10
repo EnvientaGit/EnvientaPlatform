@@ -23,7 +23,7 @@
             <label for="images">Project images <small class="text-muted">(multiple images allowed, min. 1 required)</small></label>
             <div style="position: relative; left: 0px; top: 0px; height: 40px;" class="mb-3">
               <div class="btn btn-primary" style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%;">Drop files here or click to upload</div>
-              <input type="file" name="images" style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; opacity:0;" required="true" > 
+              <input type="file" name="images[]" style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; opacity:0;" required="true" multiple="true"> 
             </div>
           </div>
           <div class="form-group">
