@@ -44,10 +44,13 @@
 		  </tbody>
 		  <tfoot>
 		  	<td colspan="6">
+		  		<form action="" method="post" enctype="multipart/form-data">
 		  		<div style="position: relative; left: 0px; top: 0px; height: 40px;" class="mb-3">
-		  			<div class="btn btn-primary" style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%;">Drop your files here, or click this button to select them</div>
+		  			<div class="btn btn-primary" style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%;">
+    Drop files here or click to upload</div>
 		  			<input type="file" name="images" style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; opacity:0;">
 		  		</div>
+		  		</form>
 		  	</td>
 		  </tfoot>
 		</table>
