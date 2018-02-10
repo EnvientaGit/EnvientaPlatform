@@ -9,10 +9,11 @@
 		  <thead class="thead-default bg-light">
 		    <tr>
 		      <th class="border-0">№</th>
-		      <th class="border-0 w-50">Name</th>
+		      <th class="border-0 w-40">Name</th>
 		      <th class="border-0 w-20">Date</th>
 		      <th class="border-0 w-15">Version</th>
-		      <th class="border-0 w-20">Size</th>
+		      <th class="border-0 w-15">Size</th>
+		      <th class="border-0 w-15">Delete</th>
 		      <th class="border-0">File</th>
 		    </tr>
 		  </thead>
@@ -23,6 +24,7 @@
 		      <td class="text-left">2017-03-01</td>
 		      <td class="text-left">v1.1.2</td>
 		      <td class="text-left">3.8 MB</td>
+		      <td class="text-left">X</td>
 		      <td class=""><a href="#"><i class="fa fa-cloud-download fa-lg" aria-hidden="true"></i></a></td>
 		    </tr>
 		    <tr class="text-center">
@@ -31,6 +33,7 @@
 		      <td class="text-left">2017-03-01</td>
 		      <td class="text-left">v0.5.7</td>
 		      <td class="text-left">2.7 MB</td>
+		      <td class="text-left">X</td>
 		      <td class=""><a href="#"><i class="fa fa-cloud-download fa-lg" aria-hidden="true"></i></a></td>
 		    </tr>
 		    <tr class="text-center">
@@ -39,6 +42,7 @@
 		      <td class="text-left">2017-03-01</td>
 		      <td class="text-left">v0.1.3</td>
 		      <td class="text-left">1.6 MB</td>
+		      <td class="text-left">X</td>
 		      <td class=""><a href="#"><i class="fa fa-cloud-download fa-lg" aria-hidden="true"></i></a></td>
 		    </tr>
 		  </tbody>
