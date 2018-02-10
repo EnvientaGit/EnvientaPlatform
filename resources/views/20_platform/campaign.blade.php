@@ -17,8 +17,11 @@ But this is only possible if every human beings is able to access to the technol
           </p>
         </div>
       </section>
-
+@if(!Auth::check())
+@include('60_campaign.new_project_unauth')
+@else
 @include('60_campaign.new_project')
+@endif
 
       <div class="album py-5 bg-light" id="projects">
         @include('60_campaign.projects')
