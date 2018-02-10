@@ -18,6 +18,9 @@ class CreateProjectsTable extends Migration
     	    $table->string('title', 128);
     	    $table->text('description');
             $table->string('slug', 128)->unique();
+            $table->string('license', 128);
+            $table->integer('owner')->unsigned();
+            $table->foreign('owner')->references('id')->on('users');
     	    $table->timestamps();
         });
 

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Project;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 
 class ProjectController extends Controller
 {
@@ -57,12 +58,21 @@ class ProjectController extends Controller
     }
 
     public function newProject(Request $request) {
-      $project = new Project;
-      $project->title = $request->title;
-      $project->description = $request->description;
-      $project->slug = $this->slugify($request->title) . '-' . uniqid();
-      $project->save();
-      return redirect('/project/' . $project->id);
+      if (Auth::check()) {
+        $project = new Project;
+        $project->title = $request->title;
+        $project->description = $request->description;
+        $project->slug = $this->slugify($request->title) . '-' . uniqid();
+        $project->license = 'xxx'; //$request->license;
+        Auth::user()->projects()->save($project);
+        $project->save();
+
+        $project_path = public_path() . "/repo/" . $project->slug;
+        @mkdir($project_path, 0700, TRUE);
+        file_put_contents($project_path . "/details.md", '**test**');
+
+        return redirect('/project/' . $project->slug);
+      }
     }
 
 }
