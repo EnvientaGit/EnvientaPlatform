@@ -21,6 +21,7 @@
 
 Route::get('/', 'CampaignController@show');
 Route::get('/s/{filter}', 'CampaignController@show');
+Route::get('/u/{userId}', 'CampaignController@showByUser');
 
 Route::get('/project', 'ProjectController@show');
 Route::post('/project/new', 'ProjectController@newProject');
