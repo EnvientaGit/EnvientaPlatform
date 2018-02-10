@@ -59,6 +59,10 @@ footer p {
   width: 20em;
 }
 
+#env_point {
+  cursor: pointer;
+}
+
 /* Env Custom Class's */
 .env_uploaded_div {
   height: 2em;
@@ -93,6 +97,10 @@ footer p {
   width: 15% !important;
 }
 
+.env_drag {
+  border: 2px dashed;
+}
+
 /* Env Custom Hover */
 #env_unl {
   text-decoration: none;
@@ -104,6 +112,14 @@ footer p {
 
 .env_link_grey:hover {
   background-color: #dfe3e8;
+}
+
+.env_link_blue {
+  color: #343a40;
+}
+
+.env_link_blue:hover {
+  color: #007bff;
 }
 
 /* Env Custom Border */

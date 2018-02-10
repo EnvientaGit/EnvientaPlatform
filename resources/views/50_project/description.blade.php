@@ -1,18 +1,18 @@
 <div class="row">
   <div class="col-md-12">
     <ul class="nav nav-pills text-center">
-      <li class="nav-item col-md-3">
+      <li class="nav-item col-md-4">
         <a data-toggle="pill" href="#home" class="btn btn-sm btn-light bg-light nav-link active box-shadow-bottom">Details</a>
       </li>
-      <li class="nav-item col-md-3">
+      <li class="nav-item col-md-4">
         <a data-toggle="pill" href="#menu1" class="btn btn-sm btn-light bg-light nav-link box-shadow-bottom">Files</a>
       </li>
-      <li class="nav-item col-md-3">
+      <li class="nav-item col-md-4">
         <a data-toggle="pill" href="#menu2" class="btn btn-sm btn-light bg-light nav-link box-shadow-bottom">Comments</a>
       </li>
-      <li class="nav-item col-md-3">
+{{--       <li class="nav-item col-md-3">
         <a data-toggle="pill" href="#menu3" class="btn btn-sm btn-light bg-light nav-link box-shadow-bottom">FAQ</a>
-      </li>
+      </li> --}}
     </ul>
   </div>
 </div>

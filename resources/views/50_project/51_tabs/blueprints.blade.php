@@ -48,12 +48,15 @@
 		  </tbody>
 		  <tfoot>
 		  	<td colspan="7">
-		  		<form action="" method="post" enctype="multipart/form-data">
-			  		<div class="position-relative" style="height: 3em">
-			  			<div class="btn position-absolute border w-100 h-100">
-	    					<i class="fa fa-cloud-upload" aria-hidden="true"></i> Upload
+		  		<form action="" method="post" enctype="multipart/form-data" class="bg-light env_link_blue">
+			  		<div class="position-relative" style="height: 5.5em">
+			  			<div class="text-center rounded position-absolute w-100 h-100 env_drag">
+	    					<div class="mt-3">
+	    						<i class="fa fa-cloud-upload fa-2x text-primary" aria-hidden="true"></i>
+	    						<h6>Upload</h6>
+	    					</div>
 	    				</div>
-			  			<input type="file" name="images" class="position-absloute w-100 h-100" style="opacity:0;">
+			  			<input type="file" name="images" class="position-absloute w-100 h-100 env_edit" style="opacity:0;">
 			  		</div>
 		  		</form>
 		  	</td>
