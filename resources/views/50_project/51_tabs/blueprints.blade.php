@@ -24,7 +24,7 @@
 		      <td class="text-left">2017-03-01</td>
 		      <td class="text-left">v1.1.2</td>
 		      <td class="text-left">3.8 MB</td>
-		      <td class="text-left">X</td>
+		      <td class="text-left"><a href="" class="text-danger">Drop <i class="fa fa-times text-danger" aria-hidden="true"></i></a></td>
 		      <td class=""><a href="#"><i class="fa fa-cloud-download fa-lg" aria-hidden="true"></i></a></td>
 		    </tr>
 		    <tr class="text-center">
@@ -33,7 +33,7 @@
 		      <td class="text-left">2017-03-01</td>
 		      <td class="text-left">v0.5.7</td>
 		      <td class="text-left">2.7 MB</td>
-		      <td class="text-left">X</td>
+		      <td class="text-left"><a href="" class="text-danger">Drop <i class="fa fa-times text-danger" aria-hidden="true"></i></a></td>
 		      <td class=""><a href="#"><i class="fa fa-cloud-download fa-lg" aria-hidden="true"></i></a></td>
 		    </tr>
 		    <tr class="text-center">
@@ -42,7 +42,7 @@
 		      <td class="text-left">2017-03-01</td>
 		      <td class="text-left">v0.1.3</td>
 		      <td class="text-left">1.6 MB</td>
-		      <td class="text-left">X</td>
+		      <td class="text-left"><a href="" class="text-danger">Drop <i class="fa fa-times text-danger" aria-hidden="true"></i></a></td>
 		      <td class=""><a href="#"><i class="fa fa-cloud-download fa-lg" aria-hidden="true"></i></a></td>
 		    </tr>
 		  </tbody>
@@ -51,7 +51,7 @@
 		  		<form action="" method="post" enctype="multipart/form-data">
 		  		<div style="position: relative; left: 0px; top: 0px; height: 40px;" class="mb-3">
 		  			<div class="btn btn-primary" style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%;">
-    Drop files here or click to upload</div>
+    					Drop files here or click to upload</div>
 		  			<input type="file" name="images" style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; opacity:0;">
 		  		</div>
 		  		</form>
