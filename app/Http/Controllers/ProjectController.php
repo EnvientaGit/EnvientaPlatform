@@ -9,29 +9,28 @@ use Illuminate\Support\Facades\Auth;
 
 class ProjectController extends Controller
 {
-    private function generate_details($slug) {
-      $parsedown = new \Parsedown();
-      return $parsedown->text(file_get_contents(public_path() . "/repo/$slug/details.md"));    
-    }
-
-    private function generate_faq($id) {
-      $parsedown = new \Parsedown();
-      return $parsedown->text(file_get_contents(public_path() . "/repo/$id/faq.md"));    
-    }
 
     public function show($slug = NULL)
     {
-      if($slug) {
-        $project = DB::table('projects')->where('slug', $slug)->first();;
-        $details = $this->generate_details($project->slug);
-      } else {
-        $project = new Project();
-        $details = 'xxx';
-      }
+      $parsedown = new \Parsedown();
+
+      $project = DB::table('projects')->where('slug', $slug)->first();;
+
+      $project_path = public_path() . "/repo/" . $project->slug;
+      $images_path = $project_path . '/images';
+
+      $image_urls = array();
+      $images = scandir($images_path);
+      foreach ($images as $image) {
+        if($image=='.' || $image=='..')
+          continue;
+        $image_urls[] = url("/repo/" . $project->slug . '/images') . '/' . $image; 
+      }  
 
       return view('20_platform.project', array(
         'project' => $project, 
-        'details' => $details,
+        'details' => $parsedown->text(file_get_contents($project_path . "/details.md")),
+        'images' => $image_urls,
         'faq' => 'xxx',
         'project_faq' => 'xxx'));
     }
@@ -70,6 +69,13 @@ class ProjectController extends Controller
         $project_path = public_path() . "/repo/" . $project->slug;
         @mkdir($project_path, 0700, TRUE);
         file_put_contents($project_path . "/details.md", '**test**');
+
+        $images_path = $project_path . '/images';
+        @mkdir($images_path, 0700, TRUE); 
+        $images = $request->file('images');
+        foreach ($images as $image) {
+          $image->move($images_path, $image->getClientOriginalName());
+        }  
 
         return redirect('/project/' . $project->slug);
       }

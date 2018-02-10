@@ -18,6 +18,11 @@ class Project extends Model
         'description'
     ];
 
+    protected $dates = [
+        'created_at',
+        'updated_at'
+    ];
+
     public function owner()
     {
         return $this->belongsTo('App\User');

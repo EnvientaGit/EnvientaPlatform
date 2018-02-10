@@ -1,7 +1,7 @@
 <div class="modal fade" id="newProjectModal" tabindex="-1" role="dialog" aria-labelledby="newProjectModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
-    <form method="post" action="{{ URL::to('project/new') }}">
+    <form method="post" action="{{ URL::to('project/new') }}" enctype="multipart/form-data">
       {{ csrf_field() }}
       <div class="modal-header">
         <h5 class="modal-title" id="newProjectModalLabel">New project</h5>

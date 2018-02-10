@@ -6,58 +6,16 @@
           <div class="embed-responsive my-3">
             <div id="carousel" class="carousel slide carousel-fade" data-ride="carousel" data-interval="6000">
               <ol class="carousel-indicators">
-                <li data-target="#carousel" data-slide-to="0" class="active"></li>
-                <li data-target="#carousel" data-slide-to="1"></li>
-                <li data-target="#carousel" data-slide-to="2"></li>
+                @foreach($images as $idx => $image)
+                <li data-target="#carousel" data-slide-to="{{ $idx }}" class="{{ $idx == 0 ? 'active': ''}}"></li>
+                @endforeach  
               </ol>
               <div class="carousel-inner" role="listbox">
-                <div class="carousel-item active">
-                  <a href="#">
-                    <picture>
-                      <source srcset="{{ URL::to('img/hd_1.jpg') }}" media="(min-width: 1400px)">
-                      <source srcset="{{ URL::to('img/hd_1.jpg') }}" media="(min-width: 769px)">
-                      <source srcset="{{ URL::to('img/hd_1.jpg') }}" media="(min-width: 577px)">
-                      <img srcset="{{ URL::to('img/hd_1.jpg') }}" alt="project_xy" class="d-block img-fluid img-thumbnail"> </picture>
-                    <div class="carousel-caption">
-{{--                       <div class="text-left">
-                        <h4><span class="bg-info p-1">Farmbot</span></h4>
-                        <p><span class="bg-danger p-1">We meticously build each site to get results</span></p>
-                      </div> --}}
-                    </div>
-                  </a>
+                @foreach($images as $idx => $image)
+                <div class="carousel-item {{ $idx == 0 ? 'active': ''}}">
+                  <img src="{{ $image }}" alt="project_xy" class="d-block img-fluid img-thumbnail"> 
                 </div>
-                <!-- /.carousel-item -->
-                <div class="carousel-item">
-                  <a href="#">
-                    <picture>
-                      <source srcset="{{ URL::to('img/hd_2.jpg') }}" media="(min-width: 1400px)">
-                      <source srcset="{{ URL::to('img/hd_2.jpg') }}" media="(min-width: 769px)">
-                      <source srcset="{{ URL::to('img/hd_2.jpg') }}" media="(min-width: 577px)">
-                      <img srcset="{{ URL::to('img/hd_2.jpg') }}" alt="project_xy" class="d-block img-fluid img-thumbnail"> </picture>
-                    <div class="carousel-caption justify-content-center align-items-center">
-{{--                       <div class="text-center">
-                        <h4><span class="bg-info p-1">Farmbot2</span></h4>
-                        <p><span class="bg-danger p-1">We meticously build each site to get results</span></p>
-                      </div> --}}
-                    </div>
-                  </a>
-                </div>
-                <!-- /.carousel-item -->
-                <div class="carousel-item">
-                  <a href="#">
-                    <picture>
-                      <source srcset="{{ URL::to('img/hd_1.jpg') }}" media="(min-width: 1400px)">
-                      <source srcset="{{ URL::to('img/hd_1.jpg') }}" media="(min-width: 769px)">
-                      <source srcset="{{ URL::to('img/hd_1.jpg') }}" media="(min-width: 577px)">
-                      <img srcset="{{ URL::to('img/hd_1.jpg') }}" alt="project_xy" class="d-block img-fluid img-thumbnail"> </picture>
-                    <div class="carousel-caption justify-content-center align-items-center">
-{{--                       <div class="text-right">
-                        <h4><span class="bg-info p-1">farmbot</span></h4>
-                        <p><span class="bg-danger p-1">We meticously build each site to get results</span></p>
-                      </div> --}}
-                    </div>
-                  </a>
-                </div>
+                @endforeach  
               </div>
               <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev"> 
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span> 
