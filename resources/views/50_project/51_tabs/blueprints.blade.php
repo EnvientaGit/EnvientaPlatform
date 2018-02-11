@@ -17,8 +17,8 @@
 		      <th class="border-0">№</th>
 		      <th class="border-0 w-40">Name</th>
 		      <th class="border-0 w-20">Date</th>
-		      <th class="border-0 w-15">Version</th>
-		      <th class="border-0 w-15">Size</th>
+		      {{--<th class="border-0 w-15">Version</th>--}}
+		      <th class="border-0 w-30">Size</th>
 		      <th class="border-0 w-15">Delete</th>
 		      <th class="border-0">File</th>
 		    </tr>
@@ -29,7 +29,7 @@
 		      <td class="bg-danger text-white text-center ">{{ $idx - 1 }}.</td>
 		      <td class="text-left">{{$file}}</td>
 		      <td class="text-left">2017-03-01</td>
-		      <td class="text-left">v1.1.2</td>
+		      {{--<td class="text-left">v1.1.2</td>--}}
 		      <td class="text-left">3.8 MB</td>
 		      <td class="text-left"><a href="" class="text-danger">Drop <i class="fa fa-times text-danger" aria-hidden="true"></i></a></td>
 		      <td class=""><a href="{{ $repo_url . '/' . $folder['name'] . '/' . $file }}" target="_blank"><i class="fa fa-cloud-download fa-lg" aria-hidden="true"></i></a></td>
