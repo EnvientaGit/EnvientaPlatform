@@ -26,8 +26,10 @@
         <link rel="stylesheet" href="{{ URL::to('css/style.css') }}" type="text/css">
         
         {{-- reCAPTCHA --}}
+        {{--
         <script src='https://www.google.com/recaptcha/api.js'></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        --}}
 
         {{-- SimpleMDE --}}
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simplemde/1.11.2/simplemde.min.css" integrity="sha256-Is0XNfNX8KF/70J2nv8Qe6BWyiXrtFxKfJBHoDgNAEM=" crossorigin="anonymous" />

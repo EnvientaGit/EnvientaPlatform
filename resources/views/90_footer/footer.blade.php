@@ -13,12 +13,14 @@
   </div>
 </div>
 
+{{--
 <!--CAPTCHA CODE-->
 <div style="text-align:left;">
     <div class="g-recaptcha" data-sitekey="6LdznCwUAAAAAAblIY11zkroyvcBb2mir4AdQYHT"
          data-size="invisible" data-callback="onLoginSubmit"></div>
 </div>
 <!--CAPTCHA CODE-->
+--}}
 
 <!-- Bootstrap v4 -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
@@ -27,6 +29,7 @@
 {{-- Disqus --}}
 <script id="dsq-count-scr" src="//localhost-ttb34uya0n.disqus.com/count.js" async></script>
 
+{{--
 <script>
   $(document).ready(function() {
     //var simplemde = new SimpleMDE({ element: document.getElementById("simplemde_edit") });
@@ -41,3 +44,4 @@
     $('#login_form').submit();
   }
 </script>
+--}}
