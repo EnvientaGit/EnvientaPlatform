@@ -77,6 +77,10 @@ footer p {
   cursor: pointer;
 }
 
+.w-55 {
+  width: 55% !important;
+}
+
 .w-50 {
   width: 50% !important;
 }

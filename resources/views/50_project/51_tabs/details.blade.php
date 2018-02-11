@@ -4,7 +4,9 @@
 		{{ csrf_field() }}
 		<input type="hidden" name="redirect" value="true" />
 		<h6 class="card-header {{-- dtitle --}} p-2">{{$project->title}}
+			@if($mine)
 			<i class="fa fa-pencil-square-o env_edit pull-right" id="edit_details"></i>
+			@endif
 		</h6>
 	  	<div class="card-body">
 	  		<div id="details_content">

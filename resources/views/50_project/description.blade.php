@@ -31,6 +31,7 @@
   </div>
 </div>
 
+@if($mine)
 <iframe id="_blueprints_ajax_frame" name="_blueprints_ajax_frame" style="display: none;"></iframe>
 
 <script type="text/javascript">
@@ -38,3 +39,4 @@
       $('#project_files').load('{{ $project_url }}/files'); 
     });
 </script>
+@endif

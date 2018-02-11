@@ -15,12 +15,18 @@
 		  <thead class="thead-default bg-light">
 		    <tr>
 		      <th class="border-0">№</th>
+		      @if($mine)
 		      <th class="border-0 w-40">Name</th>
+		      @else
+		      <th class="border-0 w-55">Name</th>
+		      @endif
 		      <th class="border-0 w-20">Date</th>
 		      {{--<th class="border-0 w-15">Version</th>--}}
 		      <th class="border-0 w-30">Size</th>
+		      @if($mine)
 		      <th class="border-0 w-15">Delete</th>
 		      <th class="border-0">File</th>
+		      @endif
 		    </tr>
 		  </thead>
 		  <tbody>
@@ -31,12 +37,15 @@
 		      <td class="text-left">{{$file['lastmod']}}</td>
 		      {{--<td class="text-left">v1.1.2</td>--}}
 		      <td class="text-left">{{$file['size']}}</td>
+		      @if($mine)
 		      <td class="text-left"><a href="#" class="text-danger file_drop" data-folder="{{$folder['name']}}" data-file="{{$file['name']}}">Drop <i class="fa fa-times text-danger" aria-hidden="true"></i></a></td>
 		      <td class=""><a href="{{ $repo_url . '/' . $folder['name'] . '/' . $file['name'] }}" target="_blank"><i class="fa fa-cloud-download fa-lg" aria-hidden="true"></i></a></td>
+		      @endif
 		    </tr>
 		    @endforeach
 		  </tbody>
 		  <tfoot>
+		  	@if($mine)
 		  	<td colspan="7">
 		  		<form id="blueprints_add_files" method="post" target="_blueprints_ajax_frame" action="{{ $project_url }}" class="bg-light env_link_blue blueprints_autosubmit" enctype="multipart/form-data">
   					{{ csrf_field() }} 
@@ -53,6 +62,7 @@
 			  		</div>
 		  		</form>
 		  	</td>
+		  	@endif
 		  </tfoot>
 		</table>
 	</div>
@@ -84,6 +94,7 @@
     });
 </script>
 
+@if($mine)
 <div class="btn-toolbar justify-content-between" role="toolbar" aria-label="Toolbar with button groups">
   <form id="blueprints_add_folder" method="post" target="_blueprints_ajax_frame" action="{{ $project_url }}">
   {{ csrf_field() }}
@@ -95,3 +106,4 @@
   </div>
   </form>
 </div>
+@endif

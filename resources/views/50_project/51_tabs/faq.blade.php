@@ -18,7 +18,7 @@
     </h6>
       <div class="card-body">
         <p class="card-text text-justify">
-          {!! $project_faq !!}
+          {--!! $project_faq !!--}
         </p>
       </div>
       <div class="card-footer env_uploaded_div pl-2">

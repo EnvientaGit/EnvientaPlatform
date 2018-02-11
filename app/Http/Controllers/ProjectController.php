@@ -40,11 +40,13 @@ class ProjectController extends Controller
     }
 
     public function showFiles($slug) {
+      $project = DB::table('projects')->where('slug', $slug)->first();
       $project_path = public_path() . "/repo/" . $slug;
       return view('50_project.51_tabs.blueprints', array(
         'project_url' => url("/project") . '/' . $slug,
         'repo_url' => url("/repo") . '/' . $slug, 
-        'folders' => $this->getFolders($project_path)
+        'folders' => $this->getFolders($project_path),
+        'mine' => Auth::check() ? $project->owner == Auth::user()->id : false
       ));
     }
 
@@ -52,7 +54,7 @@ class ProjectController extends Controller
     {
       $parsedown = new \Parsedown();
 
-      $project = DB::table('projects')->where('slug', $slug)->first();;
+      $project = DB::table('projects')->where('slug', $slug)->first();
 
       $project_path = public_path() . "/repo/" . $project->slug;
       $images_path = $project_path . '/images';
@@ -73,8 +75,8 @@ class ProjectController extends Controller
         'details_raw' => file_get_contents($project_path . "/details.md"),
         'images' => $image_urls,
         'folders' => $this->getFolders($project_path),
-        'faq' => 'xxx',
-        'project_faq' => 'xxx'));
+        'mine' => Auth::check() ? $project->owner == Auth::user()->id : false
+      ));
     }
 
     private function slugify($string, $replace = array(), $delimiter = '-') {
