@@ -26,13 +26,13 @@
 		  <tbody>
 		    @foreach($folder['files'] as $idx => $file)
 		    <tr class="text-center">
-		      <td class="bg-danger text-white text-center ">{{ $idx - 1 }}.</td>
-		      <td class="text-left">{{$file}}</td>
-		      <td class="text-left">2017-03-01</td>
+		      <td class="bg-danger text-white text-center ">{{ $idx + 1 }}.</td>
+		      <td class="text-left">{{$file['name']}}</td>
+		      <td class="text-left">{{$file['lastmod']}}</td>
 		      {{--<td class="text-left">v1.1.2</td>--}}
-		      <td class="text-left">3.8 MB</td>
-		      <td class="text-left"><a href="#" class="text-danger file_drop" data-folder="{{$folder['name']}}" data-file="{{$file}}">Drop <i class="fa fa-times text-danger" aria-hidden="true"></i></a></td>
-		      <td class=""><a href="{{ $repo_url . '/' . $folder['name'] . '/' . $file }}" target="_blank"><i class="fa fa-cloud-download fa-lg" aria-hidden="true"></i></a></td>
+		      <td class="text-left">{{$file['size']}}</td>
+		      <td class="text-left"><a href="#" class="text-danger file_drop" data-folder="{{$folder['name']}}" data-file="{{$file['name']}}">Drop <i class="fa fa-times text-danger" aria-hidden="true"></i></a></td>
+		      <td class=""><a href="{{ $repo_url . '/' . $folder['name'] . '/' . $file['name'] }}" target="_blank"><i class="fa fa-cloud-download fa-lg" aria-hidden="true"></i></a></td>
 		    </tr>
 		    @endforeach
 		  </tbody>

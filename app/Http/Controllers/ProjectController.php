@@ -20,9 +20,20 @@ class ProjectController extends Controller
         $folder_path = $project_path . '/' . $folder_name;
         if(!is_dir($folder_path))
           continue;
+        $files = array();
+        $file_names = scandir($folder_path);
+        foreach($file_names as $file_name) {
+          if($file_name == '.' || $file_name == '..')
+            continue;
+          $files[] = array(
+            'name' => $file_name,
+            'lastmod' => date ("Y-m-d", filemtime($folder_path . '/' . $file_name)),
+            'size' => Utils::bytesToHuman(filesize($folder_path . '/' . $file_name))
+          );
+        }
         $folders[] = array(
           'name' => $folder_name,
-          'files' => array_diff(scandir($folder_path), array('..', '.'))
+          'files' => $files
         );
       }
       return $folders;
