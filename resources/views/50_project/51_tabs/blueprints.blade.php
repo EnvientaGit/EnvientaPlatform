@@ -1,9 +1,11 @@
+{{--
 <div class="row m-0">
 	<iframe src="https://3dwarehouse.sketchup.com/embed.html?mid=f9c78f177ea35a4bf5926f6cee661177&width=580&height=326" 
 		frameborder="0" scrolling="no" marginheight="0" marginwidth="0" width="726.66" height="435" allowfullscreen 
 		class="dmodel border rounded box-shadow-bottom p-2 mb-3" style="display: none;">
 	</iframe>
 </div>
+--}}
 
 @foreach($folders as $folder)
 <div class="row m-0">

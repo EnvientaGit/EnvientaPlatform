@@ -1,21 +1,40 @@
 <div class="row m-0 mb-3 box-shadow-bottom">
 	<div class="card w-100">
 		<h6 class="card-header {{-- dtitle --}} p-2">{{$project->title}}
-			<i class="fa fa-pencil-square-o env_edit pull-right" aria-hidden="true" data-toggle="modal" data-target="#simplemde"></i>
+			<i class="fa fa-pencil-square-o env_edit pull-right" id="edit_details"></i>
 		</h6>
 	  	<div class="card-body">
-	    	<p class="card-text text-justify">
-	    		{{$project->description}}
-	    	</p>
-	    	<p class="card-text text-justify">
-	    		{!! $details !!}
-	    	</p>
+	  		<div id="details_content">
+		    	<p class="card-text text-justify">
+		    		{{$project->description}}
+		    	</p>
+		    	<p class="card-text text-justify">
+		    		{!! $details !!}
+		    	</p>
+	    	</div>
+	    	<div id="details_editor" style="display: none;">
+		  		<div class="form-group">
+		            <textarea name="description" class="form-control" id="description" aria-describedby="descriptionHelp" placeholder="Enter description" rows="3" required="required"></textarea>
+	          	</div>
+	          	<div class="form-group">
+	    			<textarea id="details_editor_area" rows="200" cols="100"></textarea>
+	    		</div>
+	    	</div>
 	  	</div>
 	  	<div class="card-footer env_uploaded_div pl-2">
 	  		<p class="env_p">Uploaded at {{ $project->created_at }}</p>
 	  	</div>
 	</div>
 </div>
+
+<script type="text/javascript">
+  new SimpleMDE({ element: document.getElementById("details_editor_area") });
+  $('#edit_details').click(function() {
+  	console.log('xxx');
+  	$('#details_content').hide();
+  	$('#details_editor').show();
+  });
+</script>
 
 {{--
 <div class="row m-0 pb-3">
