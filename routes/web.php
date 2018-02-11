@@ -23,12 +23,13 @@ Route::get('/', 'CampaignController@show');
 Route::get('/s/{filter}', 'CampaignController@show');
 Route::get('/u/{userId}', 'CampaignController@showByUser');
 
-Route::get('/project', 'ProjectController@show');
 Route::post('/project/new', 'ProjectController@newProject');
 
 //cache disabled for development 
 //Route::middleware('page-cache')->get('/project/{id}', 'ProjectController@show');
 Route::get('/project/{slug}', 'ProjectController@show');
+Route::get('/project/{slug}/files', 'ProjectController@showFiles');
+Route::post('/project/{slug}', 'ProjectController@update');
 
 
 Route::get('/auth/requestPin', 'LoginController@requestPin');

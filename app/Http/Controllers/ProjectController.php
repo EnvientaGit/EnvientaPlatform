@@ -10,6 +10,31 @@ use Illuminate\Support\Facades\Auth;
 class ProjectController extends Controller
 {
 
+    private function getFolders($project_path) {
+      $folders = array();  
+      $folder_names = scandir($project_path);
+      foreach ($folder_names as $folder_name) {
+        if($folder_name == '.' || $folder_name == '..')
+          continue;
+        $folder_path = $project_path . '/' . $folder_name;
+        if(!is_dir($folder_path))
+          continue;
+        $folders[] = array(
+          'name' => $folder_name,
+          'files' => array_diff(scandir($folder_path), array('..', '.'))
+        );
+      }
+      return $folders;
+    }
+
+    public function showFiles($slug) {
+      $project_path = public_path() . "/repo/" . $slug;
+      return view('50_project.51_tabs.blueprints', array(
+        'project_url' => url("/project") . '/' . $slug,
+        'folders' => $this->getFolders($project_path)
+      ));
+    }
+
     public function show($slug = NULL)
     {
       $parsedown = new \Parsedown();
@@ -22,15 +47,17 @@ class ProjectController extends Controller
       $image_urls = array();
       $images = scandir($images_path);
       foreach ($images as $image) {
-        if($image=='.' || $image=='..')
+        if($image == '.' || $image == '..')
           continue;
         $image_urls[] = url("/repo/" . $project->slug . '/images') . '/' . $image; 
       }  
 
       return view('20_platform.project', array(
         'project' => $project, 
+        'project_url' => url("/project") . '/' . $project->slug, 
         'details' => $parsedown->text(file_get_contents($project_path . "/details.md")),
         'images' => $image_urls,
+        'folders' => $this->getFolders($project_path),
         'faq' => 'xxx',
         'project_faq' => 'xxx'));
     }
@@ -79,6 +106,30 @@ class ProjectController extends Controller
 
         return redirect('/project/' . $project->slug);
       }
+    }
+
+    public function update(Request $request, $slug) {
+      if (!Auth::check())
+        return;
+
+      $project = Project::where('slug', $slug)->first();
+      if($project->owner()->first()->id != Auth::user()->id)
+        return;
+
+      $project_path = public_path() . "/repo/" . $project->slug;
+      if ($request->has('folder')) {
+        $folder = $request->input('folder');
+        @mkdir($project_path . '/' . $folder, 0700, TRUE);
+
+        if ($request->has('files')) {
+          $files = $request->file('files');
+          foreach ($files as $file) {
+            $file->move($project_path . '/' . $folder, $file->getClientOriginalName());
+          }
+        }
+      }
+
+      return 'done';
     }
 
 }
