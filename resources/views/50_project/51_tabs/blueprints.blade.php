@@ -61,7 +61,6 @@
 
 <script type="text/javascript">
 	$('.blueprints_autosubmit').change(function() {
-      console.log('xxx');
       $(this).closest("form").submit();
     });
 </script>

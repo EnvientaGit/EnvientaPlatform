@@ -59,6 +59,7 @@ class ProjectController extends Controller
         'project_url' => url("/project") . '/' . $project->slug,
         'repo_url' => url("/repo") . '/' . $project->slug, 
         'details' => $parsedown->text(file_get_contents($project_path . "/details.md")),
+        'details_raw' => file_get_contents($project_path . "/details.md"),
         'images' => $image_urls,
         'folders' => $this->getFolders($project_path),
         'faq' => 'xxx',
@@ -133,6 +134,19 @@ class ProjectController extends Controller
           }
         }
       }
+
+      if($request->has('description')) {
+        $project->description = $request->input('description');
+        $project->save();
+      }
+
+      if($request->has('details')) {
+        $details = $request->input('details');
+        file_put_contents($project_path . "/details.md", $details);        
+      }
+
+      if($request->has('redirect'))
+        return redirect('/project/' . $project->slug);
 
       return 'done';
     }
