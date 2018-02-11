@@ -30,7 +30,7 @@
 		      <td class="text-left">v1.1.2</td>
 		      <td class="text-left">3.8 MB</td>
 		      <td class="text-left"><a href="" class="text-danger">Drop <i class="fa fa-times text-danger" aria-hidden="true"></i></a></td>
-		      <td class=""><a href="#"><i class="fa fa-cloud-download fa-lg" aria-hidden="true"></i></a></td>
+		      <td class=""><a href="{{ $repo_url . '/' . $folder['name'] . '/' . $file }}" target="_blank"><i class="fa fa-cloud-download fa-lg" aria-hidden="true"></i></a></td>
 		    </tr>
 		    @endforeach
 		  </tbody>
@@ -46,7 +46,8 @@
 	    					</div>
 	    				</div>
 	    				<input type="hidden" name="folder" value="{{ $folder['name'] }}">
-			  			<input type="file" name="files[]" class="position-absloute w-100 h-100 env_edit" style="opacity:0;" multiple="true">
+			  			<input type="file" name="files[]" class="position-absloute w-100 h-100 env_edit" style="opacity:0;" multiple="true
+			  			">
 			  		</div>
 		  		</form>
 		  	</td>

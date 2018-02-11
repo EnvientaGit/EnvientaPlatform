@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Project;
+use App\Utils;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 
@@ -31,6 +32,7 @@ class ProjectController extends Controller
       $project_path = public_path() . "/repo/" . $slug;
       return view('50_project.51_tabs.blueprints', array(
         'project_url' => url("/project") . '/' . $slug,
+        'repo_url' => url("/repo") . '/' . $slug, 
         'folders' => $this->getFolders($project_path)
       ));
     }
@@ -54,7 +56,8 @@ class ProjectController extends Controller
 
       return view('20_platform.project', array(
         'project' => $project, 
-        'project_url' => url("/project") . '/' . $project->slug, 
+        'project_url' => url("/project") . '/' . $project->slug,
+        'repo_url' => url("/repo") . '/' . $project->slug, 
         'details' => $parsedown->text(file_get_contents($project_path . "/details.md")),
         'images' => $image_urls,
         'folders' => $this->getFolders($project_path),
@@ -101,7 +104,8 @@ class ProjectController extends Controller
         @mkdir($images_path, 0700, TRUE); 
         $images = $request->file('images');
         foreach ($images as $image) {
-          $image->move($images_path, $image->getClientOriginalName());
+          if(Utils::checkFile($image))
+            $image->move($images_path, $image->getClientOriginalName());
         }  
 
         return redirect('/project/' . $project->slug);
@@ -124,7 +128,8 @@ class ProjectController extends Controller
         if ($request->has('files')) {
           $files = $request->file('files');
           foreach ($files as $file) {
-            $file->move($project_path . '/' . $folder, $file->getClientOriginalName());
+            if(Utils::checkFile($file))
+              $file->move($project_path . '/' . $folder, $file->getClientOriginalName());
           }
         }
       }
