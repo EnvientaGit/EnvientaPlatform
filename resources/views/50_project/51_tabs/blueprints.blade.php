@@ -31,7 +31,7 @@
 		      <td class="text-left">2017-03-01</td>
 		      {{--<td class="text-left">v1.1.2</td>--}}
 		      <td class="text-left">3.8 MB</td>
-		      <td class="text-left"><a href="" class="text-danger">Drop <i class="fa fa-times text-danger" aria-hidden="true"></i></a></td>
+		      <td class="text-left"><a href="#" class="text-danger file_drop" data-folder="{{$folder['name']}}" data-file="{{$file}}">Drop <i class="fa fa-times text-danger" aria-hidden="true"></i></a></td>
 		      <td class=""><a href="{{ $repo_url . '/' . $folder['name'] . '/' . $file }}" target="_blank"><i class="fa fa-cloud-download fa-lg" aria-hidden="true"></i></a></td>
 		    </tr>
 		    @endforeach
@@ -62,6 +62,25 @@
 <script type="text/javascript">
 	$('.blueprints_autosubmit').change(function() {
       $(this).closest("form").submit();
+    });
+
+    $('.file_drop').click(function(e) {
+    	$.ajax({
+		    url: '{{ $project_url }}',
+		    type: 'post',
+		    data: {
+	    		'delete': true, 
+	    		'folder': $(this).attr('data-folder'),
+	    		'file': $(this).attr('data-file')
+		    },
+		    headers: {
+	          'X-CSRF-TOKEN': '{{ csrf_token() }}'
+	    	}
+		}).done(function(data) {
+		    console.log(data);
+		    $('#project_files').load('{{ $project_url }}/files');			
+		});
+    	e.preventDefault();
     });
 </script>
 

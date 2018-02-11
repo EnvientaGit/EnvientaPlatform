@@ -11,4 +11,12 @@ class Utils
     return true;
   }
 
+  public static function clearFileName($filename) {
+    return preg_replace('/[^a-zA-Z0-9_.-]/', '', $filename);
+  }
+
+  public static function clearFolderName($filename) {
+    return preg_replace('/[^a-zA-Z0-9_-]/', '', $filename);
+  }
+
 }

@@ -118,12 +118,13 @@ class ProjectController extends Controller
         return;
 
       $project = Project::where('slug', $slug)->first();
-      if($project->owner()->first()->id != Auth::user()->id)
+      if($project->owner != Auth::user()->id)
         return;
 
       $project_path = public_path() . "/repo/" . $project->slug;
-      if ($request->has('folder')) {
-        $folder = $request->input('folder');
+      
+      if ($request->has('folder') && !$request->has('delete')) {
+        $folder = Utils::clearFolderName($request->input('folder'));
         @mkdir($project_path . '/' . $folder, 0700, TRUE);
 
         if ($request->has('files')) {
@@ -143,6 +144,12 @@ class ProjectController extends Controller
       if($request->has('details')) {
         $details = $request->input('details');
         file_put_contents($project_path . "/details.md", $details);        
+      }
+
+      if($request->has('delete')) {
+        $folder = Utils::clearFolderName($request->input('folder'));
+        $file = Utils::clearFileName($request->input('file'));
+        @unlink($project_path . '/' . $folder. '/' . $file);
       }
 
       if($request->has('redirect'))
