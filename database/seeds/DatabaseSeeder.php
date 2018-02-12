@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use App\Project;
+use App\User;
 
 class DatabaseSeeder extends Seeder
 {
@@ -37,16 +38,27 @@ class DatabaseSeeder extends Seeder
 	   $faker = \Faker\Factory::create();
 
       Project::truncate();
+      User::truncate();
+      
+      $user = User::create([
+        'email' => 'platform@envienta.org',
+        'pin' => ''
+      ]);
+
     	for ($i = 0; $i < 50; $i++) {
         $title = $faker->sentence;
         $project = Project::create([
             'title' => $title,
             'description' => $faker->text,
+            'license' => $faker->sentence,
+            'owner' => $user->id,
             'slug' => $this->slugify($title) . '-' . uniqid()
         ]);
 
         $project_path = public_path() . "/repo/" . $project->slug;
         @mkdir($project_path, 0700, TRUE);
+        $images_path = $project_path . '/images';
+        @mkdir($images_path, 0700, TRUE);
         file_put_contents($project_path . "/details.md", '**' . $faker->text . '**');
       }
     }
