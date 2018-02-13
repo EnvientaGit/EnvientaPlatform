@@ -71,8 +71,8 @@ class ProjectController extends Controller
         'project' => $project, 
         'project_url' => url("/project") . '/' . $project->slug,
         'repo_url' => url("/repo") . '/' . $project->slug, 
-        'details' => $parsedown->text(file_get_contents($project_path . "/details.md")),
-        'details_raw' => file_get_contents($project_path . "/details.md"),
+        'details' => $parsedown->text(file_get_contents($project_path . "/readme.md")),
+        'details_raw' => file_get_contents($project_path . "/readme.md"),
         'images' => $image_urls,
         'folders' => $this->getFolders($project_path),
         'mine' => Auth::check() ? $project->owner == Auth::user()->id : false
@@ -112,7 +112,7 @@ class ProjectController extends Controller
 
         $project_path = public_path() . "/repo/" . $project->slug;
         @mkdir($project_path, 0700, TRUE);
-        file_put_contents($project_path . "/details.md", '**test**');
+        file_put_contents($project_path . "/readme.md", 'Project details');
 
         $images_path = $project_path . '/images';
         @mkdir($images_path, 0700, TRUE); 
@@ -156,7 +156,7 @@ class ProjectController extends Controller
 
       if($request->has('details')) {
         $details = $request->input('details');
-        file_put_contents($project_path . "/details.md", $details);        
+        file_put_contents($project_path . "/readme.md", $details);        
       }
 
       if($request->has('delete')) {
