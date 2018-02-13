@@ -109,6 +109,22 @@ footer p {
   border: 2px dashed;
 }
 
+.env_right {
+  margin-right: 0em;
+  margin-left: auto;
+}
+
+.env_left {
+  margin-right: auto;
+  margin-left: 0em;
+}
+
+.env_center {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+
 /* Env Custom Hover */
 #env_unl {
   text-decoration: none;
