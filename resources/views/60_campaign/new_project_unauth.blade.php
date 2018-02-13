@@ -1,16 +1,19 @@
 <div class="modal fade" id="newProjectModal" tabindex="-1" role="dialog" aria-labelledby="newProjectModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="newProjectModalLabel">New project</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-          
-      <strong>Please login to add new project!</strong> No registration is needed for login. You can simply use your e-mail address, and we will send you a login pin. That is all. 
-
+      <h6 class="card-header dtitle p-2">New project
+        <i class="fa fa-times env_edit pull-right text-secondary" aria-hidden="true" data-dismiss="modal" aria-label="Close"></i>
+      </h6>
+      <div class="card-body">
+        <div class="card-title">
+          <h5 class="text-center">
+            <strong class="text-success">Please login to add a new project!</strong>
+          </h5>
+        </div>
+        <p class="card-text text-justify text-center">
+           <u>No registration is needed to login.</u><br> Simply just type your email address, <br> and we will send you a login pin. <br> That's all! 
+           <i class="fa fa-smile-o fa-2x text-success" aria-hidden="true"></i>
+        </p>
       </div>
     </div>
   </div>

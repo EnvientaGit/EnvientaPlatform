@@ -8,8 +8,8 @@
         <div class="container">
           {{--<h1 class="jumbotron-heading">Projects for Cape Town</h1>--}}
           <p class="lead text-muted">
-            “We, at ENVIENTA believe, technological progress can bring abundance and unlimited wealth to people.
-But this is only possible if every human beings is able to access to the technology.”
+            “We, at the ENVIENTA™ believe that technological progress can bring abundance and unlimited wealth to the people.
+            But this is only possible if every human beings are able to access to the technology.”
           </p>
           <p>
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#newProjectModal">Create new project</button>
@@ -17,11 +17,12 @@ But this is only possible if every human beings is able to access to the technol
           </p>
         </div>
       </section>
-@if(!Auth::check())
-@include('60_campaign.new_project_unauth')
-@else
-@include('60_campaign.new_project')
-@endif
+      
+        @if(!Auth::check())
+        @include('60_campaign.new_project_unauth')
+        @else
+        @include('60_campaign.new_project')
+        @endif
 
       <div class="album py-5 bg-light" id="projects">
         @include('60_campaign.projects')

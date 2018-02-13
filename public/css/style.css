@@ -124,6 +124,9 @@ footer p {
   margin-left: auto;
 }
 
+.form-inline .env_width_20 {
+  width: 20em;
+}
 
 /* Env Custom Hover */
 #env_unl {

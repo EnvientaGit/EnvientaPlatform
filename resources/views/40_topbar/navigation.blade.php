@@ -21,7 +21,7 @@
               --}}
               </ul>
               <form id='search_form' class="form-inline ml-2">
-                <input class="form-control mr-sm-2 btn-sm" id="search_edit" type="search" placeholder="Search" aria-label="Search" value="{{ empty($filter) ? '' : $filter }}">
+                <input class="form-control mr-sm-2 btn-sm env_width_20" id="search_edit" type="search" placeholder="Search" aria-label="Search" value="{{ empty($filter) ? '' : $filter }}">
                 <button id="search_button" class="btn btn-sm btn-outline-success my-2 my-sm-0">Search</button>
               </form>
                 
