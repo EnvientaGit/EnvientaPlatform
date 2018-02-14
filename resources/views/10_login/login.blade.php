@@ -24,7 +24,7 @@
           </div>
 
           <div class="input-group mb-3">
-            <button id="request_pin_submit" class="btn btn-sm btn-info env_right">Send pin code</button>
+            <button id="request_pin_submit" class="btn btn-sm btn-success env_right">Send pin code</button>
             <input type="hidden" name="_token" value="{{{ csrf_token() }}}" />
             <input type="hidden" name="captcha_token" id="login_form_token" />
           </div>
@@ -42,7 +42,7 @@
           </div>
           
           <div class="input-group mb-3">
-            <button id="login_submit" class="btn btn-sm btn-info env_right">Log in</button>
+            <button id="login_submit" class="btn btn-sm btn-success env_right">Log in</button>
             <input type="hidden" name="_token" value="{{{ csrf_token() }}}" />
             <input type="hidden" name="captcha_token" id="login_form_token" />
           </div>
@@ -51,7 +51,7 @@
       </div>
 
       <div class="card-footer p-2">
-          <button type="button" class="btn btn-sm btn-outline-info pull-right" data-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-sm btn-outline-secondary pull-right" data-dismiss="modal">Cancel</button>
       </div>
       
     </div><!-- /.modal-content -->

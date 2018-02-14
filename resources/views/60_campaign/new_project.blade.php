@@ -3,21 +3,18 @@
     <div class="modal-content">
     <form method="post" action="{{ URL::to('project/new') }}" enctype="multipart/form-data">
       {{ csrf_field() }}
-      <div class="modal-header">
-        <h5 class="modal-title" id="newProjectModalLabel">New project</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
+      <h6 class="card-header dtitle p-2">New project
+        <i class="fa fa-times env_edit pull-right text-secondary" aria-hidden="true" data-toggle="modal" data-target="#simplemde"></i>
+      </h6>
+      <div class="card-body">
           
           <div class="form-group">
             <label for="title">Title</label>
-            <input name="title" type="text" class="form-control" id="title" placeholder="Enter title" required="required">
+            <input name="title" type="text" class="btn-sm form-control" id="title" placeholder="Enter title" required="required">
           </div>
           <div class="form-group">
             <label for="description">Description <small id="descriptionHelp" class="text-muted">(short project description)</small></label>
-            <textarea name="description" class="form-control" id="description" aria-describedby="descriptionHelp" placeholder="Enter description" rows="3" required="required"></textarea>
+            <textarea name="description" class="btn-sm form-control" id="description" aria-describedby="descriptionHelp" placeholder="Enter description" rows="3" required="required"></textarea>
           </div>
           <div class="form-group">
             <label for="images">Project images <small class="text-muted">(multiple images allowed, min. 1 required)</small></label>
@@ -27,16 +24,44 @@
             </div>
           </div>
           <div class="form-group">
-            <label for="license">License</label>
-            <select name="license" class="form-control" id="license" required="true">
+            <label for="license">License 
+              <small class="text-muted">(Regularly used <a href="https://creativecommons.org/" class="env_link text-success" target="_blank">Creative Commons</a> license)</small>
+            </label>
+            <select name="license" class="btn-sm form-control" id="license" required="true">
+              <option>CC-PD</option>
+              {{-- Public Domain --}}
+
+              <option>CC-0-PD</option>
+              {{-- Freeing content globally without restrictions --}}
+
+              <option>CC-BY</option>
+              {{-- Attribution alone --}}
+
+              <option>CC-BY-SA</option>
+              {{-- Attribution + ShareAlike --}}
+
+              <option>CC-BY-NC</option>
+              {{-- Attribution + Noncommercial --}}
+
+              <option>CC-BY-ND</option>
+              {{-- Attribution + NoDerivatives --}}
+
               <option>CC-BY-NC-SA</option>
+              {{-- Attribution + Noncommercial + ShareAlike --}}
+
+              <option>CC-BY-NC-ND</option>
+              {{-- Attribution + Noncommercial + NoDerivatives --}}
+
             </select>
+            <label for="" class="mt-2" style="display: none;">
+              <small class="text-secondary">CC Description.. </small>
+            </label>
           </div>
           
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn-primary">Create project</button>
+      <div class="card-footer p-2 text-right">
+        <button type="button" class="btn btn-outline-secondary btn-sm" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-sm btn-success">Create project</button>
       </div>
     </form>
     </div>

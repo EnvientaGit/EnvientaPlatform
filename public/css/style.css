@@ -64,6 +64,11 @@ footer p {
 }
 
 /* Env Custom Class's */
+.env_link {
+  text-decoration: none;
+  color: inherit;
+}
+
 .env_uploaded_div {
   height: 2em;
   padding-top: 0.4em;
@@ -176,7 +181,10 @@ html[type=button] {
   -webkit-appearance: button;
 }
 
-
+select.form-control:not([size]):not([multiple]) {
+    height: calc(1.5rem + 2px);
+    cursor: pointer;
+}
 
 
 

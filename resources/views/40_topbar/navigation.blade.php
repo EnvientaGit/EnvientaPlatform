@@ -24,16 +24,16 @@
               </ul>
               <form id='search_form' class="form-inline ml-2">
                 <input class="form-control mr-sm-2 btn-sm env_width_20" id="search_edit" type="search" placeholder="Search" aria-label="Search" value="{{ empty($filter) ? '' : $filter }}">
-                <button id="search_button" class="btn btn-sm btn-outline-success my-2 my-sm-0">Search</button>
+                <button id="search_button" class="btn btn-sm btn-outline-secondary my-2 my-sm-0">Search</button>
               </form>
                 
                 @if(!Auth::check())
-                <button id="login_btn" class="btn btn-info ml-2" data-toggle="modal" data-target="#login_dialog"> Log In </button>
+                <button id="login_btn" class="btn btn-success ml-2" data-toggle="modal" data-target="#login_dialog"> Log In </button>
                 @else
                 <div id="profile_block">
                 <img src="{{ "https://www.gravatar.com/avatar/" . md5( strtolower( trim( Auth::user()->email ) ) ) . "?s=40"}}" class="d-block float-left" height="40" width="40">
                 <div class="btn-group text-left">
-                  <button class="btn dropdown-toggle btn-info" data-toggle="dropdown">Profile</button>
+                  <button class="btn dropdown-toggle btn-success" data-toggle="dropdown">Profile</button>
                   <div class="dropdown-menu">
                     <a class="dropdown-item" href="{{ "https://www.gravatar.com/" . md5( strtolower( trim( Auth::user()->email ) ) )}}" target="_blank">My profile</a>
                     <div class="dropdown-divider"></div>
