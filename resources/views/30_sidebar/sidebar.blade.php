@@ -22,7 +22,7 @@
 <div class="row mb-3 box-shadow-bottom">
   <div class="card w-100">
     <h6 class="card-header dtitle p-2">
-      <i class="fa fa-info-circle fa-fw text-success"></i>Informations
+      <i class="fa fa-info-circle fa-fw mr-1 text-success"></i>Owner
     </h6>
       <div class="card-body">
         <p class="card-text text-justify">

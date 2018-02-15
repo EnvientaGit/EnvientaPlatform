@@ -64,6 +64,10 @@ footer p {
 }
 
 /* Env Custom Class's */
+.env_point {
+  cursor: pointer;
+}
+
 .env_link {
   text-decoration: none;
   color: inherit;
@@ -168,6 +172,14 @@ footer p {
   border-bottom-right-radius: 0;
 }
 
+.env_border:hover {
+  border: 1px solid #f8f9fa;
+}
+
+#profile_block .dropdown-menu {
+  left: unset;
+  right: 0;
+}
 
 caption {
   color: #6c757d;
@@ -186,8 +198,14 @@ select.form-control:not([size]):not([multiple]) {
     cursor: pointer;
 }
 
+/* Env Custom Env Query */
+@media only screen and (max-width: 991px) {
 
-
+    #profile_block .dropdown-menu {
+      left: 0.5em;
+      right: unset;
+    }
+}
 
 
 

@@ -31,17 +31,15 @@
                 <button id="login_btn" class="btn btn-success ml-2" data-toggle="modal" data-target="#login_dialog"> Log In </button>
                 @else
                 <div id="profile_block">
-                <img src="{{ "https://www.gravatar.com/avatar/" . md5( strtolower( trim( Auth::user()->email ) ) ) . "?s=40"}}" class="d-block float-left" height="40" width="40">
-                <div class="btn-group text-left">
-                  <button class="btn dropdown-toggle btn-success" data-toggle="dropdown">Profile</button>
-                  <div class="dropdown-menu">
-                    <a class="dropdown-item" href="{{ "https://www.gravatar.com/" . md5( strtolower( trim( Auth::user()->email ) ) )}}" target="_blank">My profile</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="{{ url('/u') . '/' . Auth::user()->id }}">My projects</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="{{ url('/auth/logout') }}">Log Out</a>
+                  <div class="btn-group text-left">
+                    <img src="{{ "https://www.gravatar.com/avatar/" . md5( strtolower( trim( Auth::user()->email ) ) ) . "?s=40"}}" 
+                      class="dropdown-toggle env_point d-block float-left ml-2 rounded env_border" height="40" width="40"  data-toggle="dropdown">
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="{{ "https://www.gravatar.com/" . md5( strtolower( trim( Auth::user()->email ) ) )}}" target="_blank">Profile</a>
+                        <a class="dropdown-item" href="{{ url('/u') . '/' . Auth::user()->id }}">Projects</a>
+                        <a class="dropdown-item" href="{{ url('/auth/logout') }}">Log Out</a>
+                    </div>
                   </div>
-                </div>
                 </div>
                 @endif
                 
