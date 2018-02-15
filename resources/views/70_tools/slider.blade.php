@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
 
-    <div class="col-md-8">
+    <div class="col-md-9">
       <div class="card mt-3 bg-light box-shadow-bottom">
         <div class="col-md-12">
           <div class="embed-responsive my-3">
@@ -54,7 +54,7 @@
       </div>
     </div>
 
-    <div class="col-md-4">
+    <div class="col-md-3">
       @include('30_sidebar.sidebar')
     </div>
 

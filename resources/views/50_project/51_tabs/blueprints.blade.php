@@ -8,7 +8,7 @@
 --}}
 
 <div class="row">
-	<div class="col-md-8">
+	<div class="col-md-7">
 		@foreach($folders as $folder)
 			<div class="row m-0">
 				<div class="card box-shadow-bottom mb-3">
@@ -35,7 +35,7 @@
 					    @foreach($folder['files'] as $idx => $file)
 					    <tr class="text-center">
 					      <td class="bg-danger text-white text-center ">{{ $idx + 1 }}.</td>
-					      <td class="text-left">{{$file['name']}}</td>
+					      <td class="text-left"><a href="">{{$file['name']}}</a></td>
 					      <td class="text-left">{{$file['lastmod']}}</td>
 					      {{--<td class="text-left">v1.1.2</td>--}}
 					      <td class="text-left">{{$file['size']}}</td>
@@ -86,7 +86,7 @@
 		@endif
 	</div>
 
-	<div class="col-md-4">
+	<div class="col-md-5">
 		<div class="row box-shadow-bottom">
 		  <div class="card w-100">
 		    <h6 class="card-header dtitle p-2">
