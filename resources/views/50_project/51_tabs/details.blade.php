@@ -21,12 +21,12 @@
 		  		<div class="form-group">
 		            <textarea name="description" class="form-control" id="description" aria-describedby="descriptionHelp" placeholder="Enter description" rows="3" required="required">{{$project->description}}</textarea>
 	          	</div>
-	          	<div class="form-group">
+	          	<div class="form-group my-0">
 	    			<textarea name="details" id="details_editor_area" rows="200" cols="100">{{$details_raw}}</textarea>
 	    		</div>
-	    		<div class="form-group">
-	    			<button type="button" class="btn btn-secondary" id="details_editor_close">Close</button>
-        			<button type="submit" class="btn btn-primary">Save changes</button>
+	    		<div class="form-group my-0">
+	    			<button type="button" class="btn btn-sm btn-outline-secondary" id="details_editor_close">Close</button>
+        			<button type="submit" class="btn btn-sm btn-success">Save changes</button>
 	    		</div>
 	    	</div>
 	  	</div>
