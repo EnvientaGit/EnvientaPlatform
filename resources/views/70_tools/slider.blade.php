@@ -30,12 +30,24 @@
           </div>
           <div class="row px-3 mb-3 text-center">
             <div class="col-md-12">
-              <a class="btn btn-outline-info btn-sm" href="#"><i class="fa fa-facebook-square"></i>&nbsp;&nbsp;Facebook</a>
-              <a class="btn btn-outline-info btn-sm" href="#"><i class="fa fa-twitter-square"></i>&nbsp;&nbsp;Twitter</a>
-              <a class="btn btn-outline-info btn-sm" href="#"><i class="fa fa-google-plus-square"></i>&nbsp;&nbsp;Google +</a>
-              <a class="btn btn-outline-info btn-sm" href="#"><i class="fa fa-linkedin-square"></i>&nbsp;&nbsp;LinkedIn</a>
-              <a class="btn btn-outline-info btn-sm" href="#"><i class="fa fa-pinterest-square"></i>&nbsp;&nbsp;Pinterest</a>
-              <a class="btn btn-outline-info btn-sm" href="#"><i class="fa fa-reddit-square"></i>&nbsp;&nbsp;Reddit</a>
+              <a class="btn btn-outline-info btn-sm" href="https://www.facebook.com/sharer/sharer.php?u=example.org" target="_blank">
+                <i class="fa fa-facebook-square"></i> Facebook
+              </a>
+              <a class="btn btn-outline-info btn-sm" href="https://twitter.com/intent/tweet?url=example.org" target="_blank">
+                <i class="fa fa-twitter-square"></i> Twitter
+              </a>
+              <a class="btn btn-outline-info btn-sm" href="https://plus.google.com/share?url=example.org" target="_blank">
+                <i class="fa fa-google-plus-square"></i> Google+
+              </a>
+              <a class="btn btn-outline-info btn-sm" href="https://www.linkedin.com/shareArticle?url=example.org" target="_blank">
+                <i class="fa fa-linkedin-square"></i> LinkedIn
+              </a>
+              <a class="btn btn-outline-info btn-sm" href="https://www.pinterest.com/sharer/sharer.php?u=example.org" target="_blank">
+                <i class="fa fa-pinterest-square"></i> Pinterest
+              </a>
+              <a class="btn btn-outline-info btn-sm" href="https://www.pinterest.ca/pin/create/button/?url=example.org" target="_blank">
+                <i class="fa fa-reddit-square"></i> Reddit
+              </a>
             </div>
           </div>
         </div>
