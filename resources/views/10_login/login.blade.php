@@ -6,7 +6,7 @@
         <i class="fa fa-times env_edit pull-right text-secondary" aria-hidden="true" data-dismiss="modal" aria-label="Close"></i>
       </h6>
 
-      <div class="card-body">
+      <div class="card-body p-3">
         
         {{-- Enter mail part --}}
         <div id="mail_block">

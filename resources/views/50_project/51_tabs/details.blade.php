@@ -8,7 +8,7 @@
 			<i class="fa fa-pencil-square-o env_edit pull-right" id="edit_details"></i>
 			@endif
 		</h6>
-	  	<div class="card-body">
+	  	<div class="card-body p-3">
 	  		<div id="details_content">
 		    	<p class="card-text text-justify">
 		    		{{$project->description}}

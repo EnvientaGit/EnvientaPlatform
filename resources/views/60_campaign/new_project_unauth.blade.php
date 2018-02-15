@@ -4,7 +4,7 @@
       <h6 class="card-header dtitle p-2">New project
         <i class="fa fa-times env_edit pull-right text-secondary" aria-hidden="true" data-dismiss="modal" aria-label="Close"></i>
       </h6>
-      <div class="card-body">
+      <div class="card-body p-3">
         <div class="card-title">
           <h5 class="text-center">
             <strong class="text-success">Please login to add a new project!</strong>

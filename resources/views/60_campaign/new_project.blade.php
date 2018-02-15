@@ -6,7 +6,7 @@
       <h6 class="card-header dtitle p-2">New project
         <i class="fa fa-times env_edit pull-right text-secondary" aria-hidden="true" data-toggle="modal" data-target="#simplemde"></i>
       </h6>
-      <div class="card-body">
+      <div class="card-body p-3">
           
           <div class="form-group">
             <label for="title" class="mb-0">Title</label>

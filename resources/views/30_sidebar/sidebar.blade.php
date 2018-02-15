@@ -7,7 +7,7 @@
 <div class="row mb-3 box-shadow-bottom">
   <div class="card">
     <h6 class="card-header dtitle p-2">License type </h6>
-      <div class="card-body">
+      <div class="card-body p-3">
         <h4><i class="fa fa-creative-commons fa-fw text-success"></i> BY-NC-SA</h4>
         <p class="card-text text-justify">
           This project belongs to Creative Common License, which means you have no right to copy this product behind the project without any given permission from the owner/creator!
@@ -24,7 +24,7 @@
     <h6 class="card-header dtitle p-2">
       <i class="fa fa-info-circle fa-fw mr-1 text-success"></i>Owner
     </h6>
-      <div class="card-body">
+      <div class="card-body p-3">
         <p class="card-text text-justify">
           Gravatar stuff comes here!
         </p>

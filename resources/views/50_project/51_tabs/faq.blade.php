@@ -3,7 +3,7 @@
     <h6 class="card-header dtitle p-2">General informations
     <i class="fa fa-pencil-square-o env_edit pull-right" aria-hidden="true" data-toggle="modal" data-target="#simplemde"></i>
     </h6>
-      <div class="card-body">
+      <div class="card-body p-3">
         <p class="card-text text-justify">
           {!! $faq !!}
         </p>
@@ -16,7 +16,7 @@
     <h6 class="card-header dtitle p-2">Informations
     <i class="fa fa-pencil-square-o env_edit pull-right" aria-hidden="true" data-toggle="modal" data-target="#simplemde"></i>
     </h6>
-      <div class="card-body">
+      <div class="card-body p-3">
         <p class="card-text text-justify">
           {--!! $project_faq !!--}
         </p>
