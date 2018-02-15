@@ -14,7 +14,6 @@
 				<div class="card box-shadow-bottom mb-3">
 					<table class="table table-hover table-responsive table-sm rounded mb-0">
 					<caption class="p-2 text-dark">List of <strong class="text-success">{{ $folder['name'] }}</strong></caption>
-					<caption class="p-2">List of <strong>{{ $folder['name'] }}</strong></caption>
 					  <thead class="thead-default bg-light">
 					    <tr>
 					      <th class="border-0">№</th>
