@@ -87,7 +87,7 @@
 		@endif
 	</div>
 
-	<div class="col-md-4" id="vs_iframe_holder" style="display: none;">
+	<div class="col-md-5" id="vs_iframe_holder" style="display: none;">
 		<div class="row box-shadow-bottom">
 		  <div class="card w-100">
 		    <h6 class="card-header dtitle p-2">
