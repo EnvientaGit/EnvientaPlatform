@@ -1,4 +1,4 @@
-<div class="row m-0 mb-3 box-shadow-bottom">
+<div class="row m-0 my-3 box-shadow-bottom">
   <div class="card w-100 border-0">
     <img src="{{ URL::to('img/CC_BY_NC_SA_green.svg') }}" alt="CC_BY_NC" class="img-fluid p-0 rounded">
   </div>

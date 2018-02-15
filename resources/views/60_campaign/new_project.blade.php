@@ -20,7 +20,7 @@
             <label for="images">Project images <small class="text-muted">(multiple images allowed, min. 1 required)</small></label>
             <div style="position: relative; left: 0px; top: 0px; height: 40px;" class="mb-3">
               <div class="btn btn-primary" style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%;">Drop files here or click to upload</div>
-              <input type="file" name="images[]" style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; opacity:0;" required="true" multiple="true"> 
+              <input id="env_point" type="file" name="images[]" style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; opacity:0;" required="true" multiple="true"> 
             </div>
           </div>
           <div class="form-group">
@@ -28,32 +28,32 @@
               <small class="text-muted">(Regularly used <a href="https://creativecommons.org/" class="env_link text-success" target="_blank">Creative Commons</a> license)</small>
             </label>
             <select name="license" class="btn-sm form-control" id="license" required="true">
-              <option>CC-PD</option>
-              {{-- Public Domain --}}
+              <option>Public Domain</option>
+              {{-- CC-PD --}}
 
-              <option>CC-0-PD</option>
-              {{-- Freeing content globally without restrictions --}}
+              <option>Freeing content globally without restrictions</option>
+              {{-- CC-0-PD --}}
 
-              <option>CC-BY</option>
-              {{-- Attribution alone --}}
+              <option>Attribution alone</option>
+              {{-- CC-BY --}}
 
-              <option>CC-BY-SA</option>
-              {{-- Attribution + ShareAlike --}}
+              <option>Attribution + ShareAlike</option>
+              {{-- CC-BY-SA --}}
 
-              <option>CC-BY-NC</option>
-              {{-- Attribution + Noncommercial --}}
+              <option>Attribution + Noncommercial</option>
+              {{-- CC-BY-NC --}}
 
-              <option>CC-BY-ND</option>
-              {{-- Attribution + NoDerivatives --}}
+              <option>Attribution + NoDerivatives</option>
+              {{-- CC-BY-ND --}}
 
-              <option>CC-BY-NC-SA</option>
-              {{-- Attribution + Noncommercial + ShareAlike --}}
+              <option>Attribution + Noncommercial + ShareAlike</option>
+              {{-- CC-BY-NC-SA --}}
 
-              <option>CC-BY-NC-ND</option>
-              {{-- Attribution + Noncommercial + NoDerivatives --}}
+              <option>Attribution + Noncommercial + NoDerivatives</option>
+              {{-- CC-BY-NC-ND --}}
 
             </select>
-            <label for="" class="mt-2" style="display: none;">
+            <label for="license" class="mt-2" style="display: ;">
               <small class="text-secondary">CC Description.. </small>
             </label>
           </div>

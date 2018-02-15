@@ -1,20 +1,21 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-12">
+
+    <div class="col-md-8">
       <div class="card mt-3 bg-light box-shadow-bottom">
         <div class="col-md-12">
           <div class="embed-responsive my-3">
             <div id="carousel" class="carousel slide carousel-fade" data-ride="carousel" data-interval="6000">
               <ol class="carousel-indicators">
                 @foreach($images as $idx => $image)
-                <li data-target="#carousel" data-slide-to="{{ $idx }}" class="{{ $idx == 0 ? 'active': ''}}"></li>
+                  <li data-target="#carousel" data-slide-to="{{ $idx }}" class="{{ $idx == 0 ? 'active': ''}}"></li>
                 @endforeach  
               </ol>
               <div class="carousel-inner" role="listbox">
                 @foreach($images as $idx => $image)
-                <div class="carousel-item {{ $idx == 0 ? 'active': ''}}">
-                  <img src="{{ $image }}" alt="project_xy" class="d-block img-fluid img-thumbnail"> 
-                </div>
+                  <div class="carousel-item {{ $idx == 0 ? 'active': ''}}">
+                    <img src="{{ $image }}" alt="project_xy" class="d-block img-fluid img-thumbnail"> 
+                  </div>
                 @endforeach  
               </div>
               <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev"> 
@@ -40,6 +41,11 @@
         </div>
       </div>
     </div>
+
+    <div class="col-md-4">
+      @include('30_sidebar.sidebar')
+    </div>
+
   </div>
 </div>
     

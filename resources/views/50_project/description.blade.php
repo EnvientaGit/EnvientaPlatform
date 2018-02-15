@@ -17,16 +17,16 @@
   </div>
 </div>
 <div class="tab-content mt-3">
-  <div id="project_details" class="tab-pane animated fadeInRight active">
+  <div id="project_details" class="tab-pane animated fadeIn active">
       @include('50_project.51_tabs.details')
   </div>
-  <div id="project_files" class="tab-pane animated fadeInRight">
+  <div id="project_files" class="tab-pane animated fadeIn">
       @include('50_project.51_tabs.blueprints')
   </div>
-  <div id="menu2" class="tab-pane animated fadeInRight">
+  <div id="menu2" class="tab-pane animated fadeIn">
       @include('50_project.51_tabs.comments')
   </div>
-  <div id="menu3" class="tab-pane animated fadeInRight">
+  <div id="menu3" class="tab-pane animated fadeIn">
       @include('50_project.51_tabs.faq')
   </div>
 </div>
