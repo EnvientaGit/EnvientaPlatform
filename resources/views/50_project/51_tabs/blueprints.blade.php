@@ -77,7 +77,7 @@
 			  {{ csrf_field() }}
 			  <div class="input-group">
 			    <div class="input-group-prepend">
-			      	<button class="env_link_grey input-group-text env_border_rslim" id="btnGroupAddon2" type="submit">Add</button>
+			      	<button class="env_link_grey env_point input-group-text env_border_rslim" id="btnGroupAddon2" type="submit">Add</button>
 			    </div>
 			    <input name="folder" type="text" class="form-control" placeholder="New folder" aria-label="Input group example" aria-describedby="btnGroupAddon2">
 			  </div>

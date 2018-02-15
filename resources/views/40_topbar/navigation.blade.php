@@ -35,9 +35,9 @@
                     <img src="{{ "https://www.gravatar.com/avatar/" . md5( strtolower( trim( Auth::user()->email ) ) ) . "?s=40"}}" 
                       class="dropdown-toggle env_point d-block float-left ml-2 rounded env_border" height="40" width="40"  data-toggle="dropdown">
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="{{ "https://www.gravatar.com/" . md5( strtolower( trim( Auth::user()->email ) ) )}}" target="_blank">Profile</a>
-                        <a class="dropdown-item" href="{{ url('/u') . '/' . Auth::user()->id }}">Projects</a>
-                        <a class="dropdown-item" href="{{ url('/auth/logout') }}">Log Out</a>
+                        <a class="dropdown-item text-success" href="{{ "https://www.gravatar.com/" . md5( strtolower( trim( Auth::user()->email ) ) )}}" target="_blank">Profile</a>
+                        <a class="dropdown-item text-success" href="{{ url('/u') . '/' . Auth::user()->id }}">Projects</a>
+                        <a class="dropdown-item text-secondary" href="{{ url('/auth/logout') }}">Log Out</a>
                     </div>
                   </div>
                 </div>
