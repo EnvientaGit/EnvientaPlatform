@@ -94,7 +94,7 @@
 		      <i class="fa fa-cube fa-fw mr-1 text-success"></i>3D Model
 		    </h6>
 		      <div class="card-body">
-		        <iframe id="vs_iframe" src="https://www.viewstl.com/?embedded" style="border:0;margin:0;width:100%;height:100%;"></iframe>
+		        <iframe id="vs_iframe" src="https://www.viewstl.com/?embedded" class="w-100 h-100 border-0 m-0"></iframe>
 		      </div>
 		      {{--
 		      <div class="card-footer env_uploaded_div pl-2">
