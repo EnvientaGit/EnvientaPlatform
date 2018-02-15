@@ -14,6 +14,7 @@
 				<div class="card box-shadow-bottom mb-3">
 					<table class="table table-hover table-responsive table-sm rounded mb-0">
 					<caption class="p-2 text-dark">List of <strong class="text-success">{{ $folder['name'] }}</strong></caption>
+					<caption class="p-2">List of <strong>{{ $folder['name'] }}</strong></caption>
 					  <thead class="thead-default bg-light">
 					    <tr>
 					      <th class="border-0">№</th>
@@ -35,7 +36,7 @@
 					    @foreach($folder['files'] as $idx => $file)
 					    <tr class="text-center">
 					      <td class="bg-danger text-white text-center ">{{ $idx + 1 }}.</td>
-					      <td class="text-left"><a href="">{{$file['name']}}</a></td>
+					      <td class="text-left"><span class="file_view" data-url="{{ $repo_url . '/' . $folder['name'] . '/' . $file['name'] }}" style="cursor: pointer;">{{$file['name']}}</span></td>
 					      <td class="text-left">{{$file['lastmod']}}</td>
 					      {{--<td class="text-left">v1.1.2</td>--}}
 					      <td class="text-left">{{$file['size']}}</td>
@@ -86,20 +87,20 @@
 		@endif
 	</div>
 
-	<div class="col-md-5">
+	<div class="col-md-4" id="vs_iframe_holder" style="display: none;">
 		<div class="row box-shadow-bottom">
 		  <div class="card w-100">
 		    <h6 class="card-header dtitle p-2">
-		      <i class="fa fa-cube fa-fw mr-1 text-success"></i>3D Model - "Name: Current one"
+		      <i class="fa fa-cube fa-fw mr-1 text-success"></i>3D Model
 		    </h6>
-		      <div class="card-body p-3">
-		        <p class="card-text text-justify">
-		          3D stuff comes here!
-		        </p>
+		      <div class="card-body">
+		        <iframe id="vs_iframe" src="https://www.viewstl.com/?embedded" style="border:0;margin:0;width:100%;height:100%;"></iframe>
 		      </div>
+		      {{--
 		      <div class="card-footer env_uploaded_div pl-2">
 		        <p class="env_p">Uploaded at XXX</p>
 		      </div>
+		      --}}
 		  </div>
 		</div>
 	</div>
@@ -128,6 +129,15 @@
 		    $('#project_files').load('{{ $project_url }}/files');			
 		});
     	e.preventDefault();
+    });
+
+    $('.file_view').click(function(e) {
+    	var url = $(this).attr('data-url');
+    	if(url.endsWith('.stl')) {
+    		if(!$('#vs_iframe_holder').is(":visible"))
+    			 $('#vs_iframe_holder').show();
+    		document.getElementById('vs_iframe').contentWindow.postMessage({msg_type:'load', url:url}, '*');
+    	}
     });
 </script>
 
