@@ -54,12 +54,14 @@
 	"|",
 	"link",
 	"image",
+	/*
 	{
         name: "embed",
         action: drawEmbed,
         className: "fa fa-code",
         title: "Embed (http://embed.ly/)",
     },
+    */
 	"|",
 	"preview",
 	"side-by-side",
