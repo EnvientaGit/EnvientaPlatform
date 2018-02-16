@@ -10,9 +10,13 @@
 		</h6>
 	  	<div class="card-body p-3">
 	  		<div id="details_content">
-		    	<p class="card-text text-justify">
-		    		<i>{{$project->description}}</i>
-		    	</p>
+	  			<div class="card bg-light">
+  					<div class="card-body">
+		    			<p class="card-text text-justify">
+		    				<i>{{$project->description}}</i>
+		    			</p>
+		    		</div>
+		    	</div>
 		    	<p class="card-text text-justify">
 		    		{!! $details !!}
 		    	</p>
