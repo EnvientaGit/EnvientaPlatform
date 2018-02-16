@@ -24,10 +24,10 @@
             </div>
           </div>
           <div class="form-group">
-            <label for="license" class="mb-0">License 
-              <small class="text-muted">(Regularly used <a href="https://creativecommons.org/" class="env_link text-success" target="_blank">Creative Commons</a> license)</small>
+            <label for="license" class="mb-0"><b>License:</b> Creative Commons - Attribution + ShareAlike
+              <small class="text-muted" style="display: none;">(Regularly used <a href="https://creativecommons.org/" class="env_link text-success" target="_blank">Creative Commons</a> license)</small>
             </label>
-            <select name="license" class="btn-sm form-control" id="license" required="true">
+            <select name="license" class="btn-sm form-control" id="license" required="true" style="display: none;">
               <option>Public Domain</option>
               {{-- CC-PD --}}
 
@@ -53,8 +53,11 @@
               {{-- CC-BY-NC-ND --}}
 
             </select>
-            <label for="license" class="mt-2" style="display: ;">
-              <small class="text-secondary">CC Description.. </small>
+            <label for="license" class="mt-2 text-justify" style="display: ;">
+              <small class="text-secondary">
+                CC-BY-SA <br>
+                This license lets others remix, tweak, and build upon your work even for commercial purposes, as long as they credit you and license their new creations under the identical terms. This license is often compared to “copyleft” free and open source software licenses. All new works based on yours will carry the same license, so any derivatives will also allow commercial use. This is the license used by Wikipedia, and is recommended for materials that would benefit from incorporating content from Wikipedia and similarly licensed projects.
+              </small>
             </label>
           </div>
           
