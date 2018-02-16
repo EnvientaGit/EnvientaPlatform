@@ -42,7 +42,7 @@
     </head>
 
     <body>
-        <div class="container-fluid">
+        <div class="">
             @include('40_topbar.navigation')
 
             @yield('content')

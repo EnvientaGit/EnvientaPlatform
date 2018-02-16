@@ -64,7 +64,7 @@
       </div>
       <div class="card-footer p-2 text-right">
         <button type="button" class="btn btn-outline-secondary btn-sm" data-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn-sm btn-success">Create project</button>
+        <button type="submit" class="btn btn-sm env_button">Create project</button>
       </div>
     </form>
     </div>

@@ -14,7 +14,7 @@
             Invalid <strong>pin code</strong>! Please try again and/or stop hacking!
           </div>
 
-          <p class="card-text text-justify">Type your email address below to get a <b class="text-success">pin code</b> to log in.</p>
+          <p class="card-text text-justify">Type your email address below to get a <b class="env_color">pin code</b> to log in.</p>
 
           <div class="input-group mb-3">
             <div class="input-group-prepend">
@@ -24,7 +24,7 @@
           </div>
 
           <div class="input-group mb-3">
-            <button id="request_pin_submit" class="btn btn-sm btn-success env_right">Send pin code</button>
+            <button id="request_pin_submit" class="btn btn-sm env_button env_right">Send pin code</button>
             <input type="hidden" name="_token" value="{{{ csrf_token() }}}" />
             <input type="hidden" name="captcha_token" id="login_form_token" />
           </div>
@@ -32,7 +32,7 @@
         
         {{-- Enter Pin part --}}
         <div id="pin_block" style="display: none;">
-          <p class="card-text text-justify">Type your <b class="text-success">pin code</b> to log in.</p>
+          <p class="card-text text-justify">Type your <b class="env_color">pin code</b> to log in.</p>
 
           <div class="input-group mb-3">
             <div class="input-group-prepend">
@@ -42,7 +42,7 @@
           </div>
           
           <div class="input-group mb-3">
-            <button id="login_submit" class="btn btn-sm btn-success env_right">Log in</button>
+            <button id="login_submit" class="btn btn-sm env_button env_right">Log in</button>
             <input type="hidden" name="_token" value="{{{ csrf_token() }}}" />
             <input type="hidden" name="captcha_token" id="login_form_token" />
           </div>

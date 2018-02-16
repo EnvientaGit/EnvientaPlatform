@@ -1,15 +1,15 @@
-<div class="text-muted">
+<div class="text-muted env_bg pb-4">
   <div class="container">
     <a href="{{ url('/') }}" class="mr-1">
-        <img class="d-block" src="{{ URL::to('img/logo_lightbubble_green.svg') }}" height="64">
+        <img class="d-block" src="{{ URL::to('img/logo_lightbubble_white.svg') }}" height="64">
     </a>
     <p class="float-right">
-        <a id="env_link" href="#" class="text-success">
-            <i class="fa fa-arrow-up fa-2x p-2 rounded-circle border border-success" aria-hidden="true"></i>
+        <a id="env_link" href="#" class="text-white">
+            <i class="fa fa-arrow-up fa-2x p-2 rounded-circle border border-white" aria-hidden="true"></i>
         </a>
     </p>
-    <p>ENVIENTA™ - Open Source Everything <br>This is an Open Source Project! Read more at 
-        <a id="env_link" href="http://envienta.com" class="text-success">ENVIENTA</a> Official Site.</p>
+    <p class="text-white">ENVIENTA™ - Open Source Everything <br>This is an Open Source Project! Read more at 
+        <a id="env_link" href="http://envienta.com" class="text-light">ENVIENTA</a> Official Site.</p>
   </div>
 </div>
 

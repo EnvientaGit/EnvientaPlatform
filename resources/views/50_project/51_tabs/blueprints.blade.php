@@ -13,7 +13,7 @@
 			<div class="row m-0">
 				<div class="card box-shadow-bottom mb-3">
 					<table class="table table-hover table-responsive table-sm rounded mb-0">
-					<caption class="p-2 text-dark">List of <strong class="text-success">{{ $folder['name'] }}</strong>
+					<caption class="p-2 text-dark">List of <strong class="env_color">{{ $folder['name'] }}</strong>
 						<a href=""><i class="fa fa-window-close text-danger env_edit p-1 pull-right"></i></a>
 					</caption>
 					  <thead class="thead-default bg-light">
@@ -92,7 +92,7 @@
 		<div class="row box-shadow-bottom">
 		  <div class="card w-100">
 		    <h6 class="card-header dtitle p-2">
-		      <i class="fa fa-cube fa-fw mr-1 text-success"></i>3D Model
+		      <i class="fa fa-cube fa-fw mr-1 env_color"></i>3D Model
 		    </h6>
 		      <div class="card-body p-0">
 		        <iframe id="vs_iframe" src="https://www.viewstl.com/?embedded" class="w-100 h-100 border-0 m-0"></iframe>

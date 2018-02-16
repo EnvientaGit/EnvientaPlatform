@@ -7,12 +7,12 @@
       <div class="card-body p-3">
         <div class="card-title">
           <h5 class="text-center">
-            <strong class="text-success">Please login to add a new project!</strong>
+            <strong class="env_color">Please login to add a new project!</strong>
           </h5>
         </div>
         <p class="card-text text-justify text-center">
            <u>No registration is needed to login.</u><br> Simply just type your email address, <br> and we will send you a login pin. <br> That's all! 
-           <i class="fa fa-smile-o fa-2x text-success" aria-hidden="true"></i>
+           <i class="fa fa-smile-o fa-2x env_color" aria-hidden="true"></i>
         </p>
       </div>
     </div>

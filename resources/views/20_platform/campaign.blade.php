@@ -12,7 +12,7 @@
             But this is only possible if every human beings are able to access to the technology.”
           </p>
           <p>
-            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#newProjectModal">Create new project</button>
+            <button type="button" class="btn btn-primary env_button" data-toggle="modal" data-target="#newProjectModal">Create new project</button>
             {{-- <a href="#" class="btn btn-secondary my-2">Button_2</a> --}}
           </p>
         </div>

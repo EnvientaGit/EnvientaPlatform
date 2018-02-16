@@ -30,7 +30,7 @@
 	    		</div>
 	    		<div class="form-group my-0">
 	    			<button type="button" class="btn btn-sm btn-outline-secondary" id="details_editor_close">Close</button>
-        			<button type="submit" class="btn btn-sm btn-success">Save changes</button>
+        			<button type="submit" class="btn btn-sm env_button">Save changes</button>
 	    		</div>
 	    	</div>
 	  	</div>

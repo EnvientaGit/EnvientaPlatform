@@ -154,6 +154,34 @@ footer p {
   object-position: center;
 }
 
+.env_color {
+  color: #18739f;
+}
+
+.env_link_color {
+  color: #18739f;
+}
+
+.env_link_color:hover {
+  color: #146186;
+}
+
+.env_bg {
+  background-color:  #18739f;
+}
+
+.env_button {
+  background-color: #18739f;
+  border-color: #18739f;
+  color: white;
+}
+
+.env_button:hover {
+  background-color: #146186;
+  border-color: #146186;
+  color: white;
+}
+
 /* Env Custom Hover */
 #env_unl {
   text-decoration: none;
