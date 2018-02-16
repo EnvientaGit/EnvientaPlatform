@@ -148,8 +148,10 @@ footer p {
 }
 
 .env_slide_img_h {
-  width: 793px;
-  height: 401.5px;
+  width: 50em !important;
+  height: 25em !important;
+  object-fit: cover;
+  object-position: center;
 }
 
 /* Env Custom Hover */
