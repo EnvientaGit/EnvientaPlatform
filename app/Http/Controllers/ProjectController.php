@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Project;
 use App\Utils;
+use App\ParsedownExtra;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 
@@ -52,7 +53,7 @@ class ProjectController extends Controller
 
     public function show($slug = NULL)
     {
-      $parsedown = new \Parsedown();
+      $parsedown = new ParsedownExtra();
 
       $project = DB::table('projects')->where('slug', $slug)->first();
 
