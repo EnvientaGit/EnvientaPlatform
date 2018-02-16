@@ -4,11 +4,9 @@
       <i class="fa fa-info-circle fa-fw mr-1 env_color"></i>The creator of the project
     </h6>
       <div class="card-body p-3">
-        <img src="{{ URL::to('img/user_placeholder.png') }}" class="img-fluid img-thumbnail mb-2" height="100" width="100">
-        <h6 class="card-title font-weight-bold mb-2">Mate Molnar</h6>
-        <p class="card-text text-justify">
-          Gravatar description
-        </p>
+        <img src="{{ "https://www.gravatar.com/avatar/" . $avatar_hash . "?s=100"}}" class="img-fluid img-thumbnail mb-2" height="100" width="100">
+        <h6 id="avatar_name" class="card-title font-weight-bold mb-2"></h6>
+        <p id="avatar_description" class="card-text text-justify"></p>
       </div>
 {{--       <div class="card-footer env_uploaded_div pl-2">
         <p class="env_p">Uploaded at XXX</p>
@@ -34,4 +32,16 @@
   </div>
 </div> --}}
 
+<script type="text/javascript">
+  $.ajax({
+    url: "http://hu.gravatar.com/{{$avatar_hash}}.json",
+    jsonp: "callback",
+    dataType: "jsonp", 
+    success: function( response ) {
+        $('#avatar_name').html(response.entry[0].name.formatted);
+        $('#avatar_description').html(response.entry[0].aboutMe);
+        console.log( response );
+    }
+  });
+</script>
 
