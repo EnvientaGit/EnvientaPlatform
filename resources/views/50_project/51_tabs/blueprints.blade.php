@@ -86,7 +86,7 @@
 		@endif
 	</div>
 
-	<div class="col-md-5" id="vs_iframe_holder" style="display: none;">
+	<div class="col-md-5" id="vs_iframe_holder" style="display: ;">
 		<div class="row box-shadow-bottom">
 		  <div class="card w-100">
 		    <h6 class="card-header dtitle p-2">
@@ -107,6 +107,13 @@
 
 
 <script type="text/javascript">
+	var iframe = document.getElementById('vs_iframe'), iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+
+	$(iframeDoc).ready(function (event) {
+	    $('#cjcwrap').css('border', 'none');
+	    $('.vslink').css('display', 'none');
+	});
+
 	$('.blueprints_autosubmit').change(function() {
       $(this).closest("form").submit();
     });
