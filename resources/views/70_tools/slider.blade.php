@@ -42,10 +42,10 @@
               <a class="btn btn-outline-info btn-sm" href="https://www.linkedin.com/shareArticle?url={{ URL::current() }}" target="_blank">
                 <i class="fa fa-linkedin-square"></i> LinkedIn
               </a>
-              <a class="btn btn-outline-info btn-sm" href="https://www.pinterest.com/sharer/sharer.php?u={{ URL::current() }}" target="_blank">
+              <a class="btn btn-outline-info btn-sm" href="http://pinterest.com/pin/create/button/?url={{ URL::current() }}" target="_blank">
                 <i class="fa fa-pinterest-square"></i> Pinterest
               </a>
-              <a class="btn btn-outline-info btn-sm" href="https://www.pinterest.ca/pin/create/button/?url={{ URL::current() }}" target="_blank">
+              <a class="btn btn-outline-info btn-sm" href="https://reddit.com/submit?url={{ URL::current() }}" target="_blank">
                 <i class="fa fa-reddit-square"></i> Reddit
               </a>
             </div>

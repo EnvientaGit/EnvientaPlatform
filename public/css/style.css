@@ -143,6 +143,13 @@ footer p {
 
 .env_card_img_h {
   height: 13em;
+  object-fit: cover;
+  object-position: center;
+}
+
+.env_slide_img_h {
+  width: 793px;
+  height: 401.5px;
 }
 
 /* Env Custom Hover */
@@ -206,6 +213,23 @@ select.form-control:not([size]):not([multiple]) {
       right: unset;
     }
 }
+
+/* Env Custom Crop images */
+.env_crop {
+  object-fit: none; /* Do not scale the image */
+  object-position: center; /* Center the image within the element */
+  height: 100px;
+  width: 100px;
+}
+
+.env_shrink {
+  background-size: cover;
+}
+
+
+
+
+
 
 
 
