@@ -13,7 +13,9 @@
 			<div class="row m-0">
 				<div class="card box-shadow-bottom mb-3">
 					<table class="table table-hover table-responsive table-sm rounded mb-0">
-					<caption class="p-2 text-dark">List of <strong class="text-success">{{ $folder['name'] }}</strong></caption>
+					<caption class="p-2 text-dark">List of <strong class="text-success">{{ $folder['name'] }}</strong>
+						<a href=""><i class="fa fa-window-close text-danger env_edit p-1 pull-right"></i></a>
+					</caption>
 					  <thead class="thead-default bg-light">
 					    <tr>
 					      <th class="border-0">№</th>
@@ -107,13 +109,6 @@
 
 
 <script type="text/javascript">
-	var iframe = document.getElementById('vs_iframe'), iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
-
-	$(iframeDoc).ready(function (event) {
-	    $('#cjcwrap').css('border', 'none');
-	    $('.vslink').css('display', 'none');
-	});
-
 	$('.blueprints_autosubmit').change(function() {
       $(this).closest("form").submit();
     });

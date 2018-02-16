@@ -11,7 +11,7 @@
 	  	<div class="card-body p-3">
 	  		<div id="details_content">
 		    	<p class="card-text text-justify">
-		    		{{$project->description}}
+		    		<i>{{$project->description}}</i>
 		    	</p>
 		    	<p class="card-text text-justify">
 		    		{!! $details !!}
