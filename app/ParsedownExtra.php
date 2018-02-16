@@ -53,6 +53,12 @@ class ParsedownExtra extends \Parsedown
 	        $Inline = array(
 	            'extent' => $Link['extent'] + 1,
 	            'markup' => '<div class="embedly-card"><div class="embedly-card-hug" style="max-width: 600px; padding: 0px; position: relative; min-width: 200px; margin: 5px auto;"><iframe src="https://www.viewstl.com/?embedded&url='. $url .'" style="border:0;margin:0;width:100%;height:100%;"></iframe></div></div>'
+	        );
+	    } elseif (substr($url, 0, 39) == 'https://3dwarehouse.sketchup.com/model/') {
+	    	$mid = substr($url, 39, 37);
+	    	$Inline = array(
+	            'extent' => $Link['extent'] + 1,
+	            'markup' => '<div class="embedly-card"><div class="embedly-card-hug" style="max-width: 600px; padding: 0px; position: relative; min-width: 200px; margin: 5px auto;"><iframe src="https://3dwarehouse.sketchup.com/embed.html?mid=' . $mid . '&width=580&height=326" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" width="580" height="326" allowfullscreen></iframe></div></div>'
 	        );        	
         } else {
 	        $Inline = array(
