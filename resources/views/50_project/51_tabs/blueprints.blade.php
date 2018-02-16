@@ -92,7 +92,7 @@
 		    <h6 class="card-header dtitle p-2">
 		      <i class="fa fa-cube fa-fw mr-1 text-success"></i>3D Model
 		    </h6>
-		      <div class="card-body">
+		      <div class="card-body p-0">
 		        <iframe id="vs_iframe" src="https://www.viewstl.com/?embedded" class="w-100 h-100 border-0 m-0"></iframe>
 		      </div>
 		      {{--
