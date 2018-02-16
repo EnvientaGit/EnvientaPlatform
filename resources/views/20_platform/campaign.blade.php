@@ -7,6 +7,7 @@
       <section id="env_board" class="jumbotron text-center">
         <div class="container">
           {{--<h1 class="jumbotron-heading">Projects for Cape Town</h1>--}}
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/wokSwsu3-0o?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
           <p class="lead text-muted">
             “We, at the ENVIENTA™ believe that technological progress can bring abundance and unlimited wealth to the people.
             But this is only possible if every human beings are able to access to the technology.”
