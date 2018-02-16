@@ -41,10 +41,50 @@
   var details_editor = new SimpleMDE({ 
   	element: document.getElementById("details_editor_area"),
   	forceSync: true,
+  	toolbar: [
+	"heading-1",
+	"heading-2",
+	"heading-3",
+  	"bold","italic",	
+	"|",
+	"quote",
+	"unordered-list",
+	"ordered-list",
+	"clean-block",
+	"|",
+	"link",
+	"image",
+	{
+        name: "embed",
+        action: drawEmbed,
+        className: "fa fa-code",
+        title: "Embed (http://embed.ly/)",
+    },
+	"|",
+	"preview",
+	"side-by-side",
+	"fullscreen",
+	"|",
+	"undo",
+	"redo",
+	"|",
+	"guide"
+    ],
   	previewRender: function(plainText) {
 		return this.parent.markdown(plainText);
 	}
   });
+
+	function drawEmbed(editor) {
+	    var cm = editor.codemirror;
+	    var output = '';
+	    var selectedText = cm.getSelection();
+	    var text = selectedText || 'YouTube url, image url, etc.';
+
+	    output = '[[' + text + ']]';
+	    cm.replaceSelection(output);
+	}
+
   $('#edit_details').click(function() {
   	$('#details_content').hide();
   	$('#details_editor').show();
