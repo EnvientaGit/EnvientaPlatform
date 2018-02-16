@@ -2,7 +2,7 @@
       <div class="col-md-12 px-0">
           <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom box-shadow-bottom">
             <a href="{{ url('/') }}" class="mb-3">
-              <img class="d-block" src="{{ URL::to('img/logo_natural.svg') }}" height="40">
+              <img class="d-block" src="{{ URL::to('img/logo_lightbubble_green.svg') }}" height="40">
             </a>
             <p class="env_left">
               <span class="badge badge-danger font-italic">Beta!</span>

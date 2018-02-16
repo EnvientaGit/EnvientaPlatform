@@ -13,7 +13,7 @@
 	  			<div class="card bg-light">
   					<div class="card-body">
 		    			<p class="card-text text-justify">
-		    				<i>{{$project->description}}</i>
+		    				{{$project->description}}
 		    			</p>
 		    		</div>
 		    	</div>

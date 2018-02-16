@@ -1,7 +1,7 @@
 <div class="text-muted">
   <div class="container">
     <a href="{{ url('/') }}" class="mr-1">
-        <img class="d-block" src="{{ URL::to('img/logo_natural.svg') }}" height="64">
+        <img class="d-block" src="{{ URL::to('img/logo_lightbubble_green.svg') }}" height="64">
     </a>
     <p class="float-right">
         <a id="env_link" href="#" class="text-success">
