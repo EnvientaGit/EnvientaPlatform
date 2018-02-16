@@ -29,6 +29,13 @@
 {{-- Disqus --}}
 <script id="dsq-count-scr" src="//localhost-ttb34uya0n.disqus.com/count.js" async></script>
 
+<script type="text/javascript">
+  $('.taglist').tagEditor({
+    maxTags: 6,
+    delimiter: ' '
+  });
+</script>
+
 {{--
 <script>
   $(document).ready(function() {

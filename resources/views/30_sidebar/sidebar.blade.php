@@ -3,8 +3,8 @@
     <h6 class="card-header dtitle p-2">
       <i class="fa fa-info-circle fa-fw mr-1 env_color"></i>The creator of the project
     </h6>
-      <div class="card-body p-3">
-        <img src="{{ "https://www.gravatar.com/avatar/" . $avatar_hash . "?s=100"}}" class="img-fluid img-thumbnail mb-2" height="100" width="100">
+      <div class="card-body p-3"><a href="https://www.gravatar.com/{{$avatar_hash}}" target="_blank">
+        <img src="{{ "https://www.gravatar.com/avatar/" . $avatar_hash . "?s=100"}}" class="img-fluid img-thumbnail mb-2" height="100" width="100"></a>
         <h6 id="avatar_name" class="card-title font-weight-bold mb-2"></h6>
         <p id="avatar_description" class="card-text text-justify"></p>
       </div>

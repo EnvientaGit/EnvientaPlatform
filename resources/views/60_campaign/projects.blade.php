@@ -21,10 +21,18 @@
                     <a class="env_link_color" href="{{ URL::to('project/' . $project->slug) }}">{{$project->title}}</a>
                   </h5>
                   <p id="env_paragraph" class="card-text text-justify">
-                    {{$project->description}} 
+                    {{$project->description}}
                   </p>
+                    <p>
+                      <?php $tags = $project->tags ? explode(' ', $project->tags) : array(); ?>
+                      @foreach($tags as $tag)
+                      <button class="btn btn-sm btn-outline-info mr-2 mb-2 badge badge-pill"><a id="env_link" href="#">{{$tag}}</a></button>
+                      @endforeach
+                    </p>
                   <div class="d-flex justify-content-between align-items-center">
-                    <small class="text-muted">{{ Carbon\Carbon::parse($project->created_at)->diffForHumans() }}</small>
+                    
+                      <small class="text-muted">{{ Carbon\Carbon::parse($project->created_at)->diffForHumans() }}</small>
+                    
                   </div>
                 </div>
               </div>

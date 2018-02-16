@@ -17,6 +17,7 @@ class CreateProjectsTable extends Migration
             $table->increments('id');
     	    $table->string('title', 128);
     	    $table->text('description');
+            $table->string('tags', 128)->nullable();
             $table->string('slug', 128)->unique();
             $table->string('license', 128);
             $table->integer('owner')->unsigned();
@@ -25,6 +26,7 @@ class CreateProjectsTable extends Migration
         });
 
         DB::statement('ALTER TABLE projects ADD FULLTEXT fulltext_index (title, description)');
+        DB::statement('ALTER TABLE projects ADD FULLTEXT fulltext_index_tags (tags)');
     }
 
     /**

@@ -4,7 +4,7 @@
     <form method="post" action="{{ URL::to('project/new') }}" enctype="multipart/form-data">
       {{ csrf_field() }}
       <h6 class="card-header dtitle p-2">New project
-        <i class="fa fa-times env_edit pull-right text-secondary" aria-hidden="true" data-toggle="modal" data-target="#simplemde"></i>
+        <i class="fa fa-times env_edit pull-right text-secondary" aria-hidden="true" data-toggle="modal" data-target="#newProjectModal"></i>
       </h6>
       <div class="card-body p-3">
           
@@ -15,6 +15,10 @@
           <div class="form-group">
             <label for="description" class="mb-0">Description <small id="descriptionHelp" class="text-muted">(short project description)</small></label>
             <textarea name="description" class="btn-sm form-control" id="description" aria-describedby="descriptionHelp" placeholder="Enter description" rows="3" required="required"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="tags" class="mb-0">Tags <small id="descriptionHelp" class="text-muted">(max. 6)</small></label>
+            <input name="tags" type="text" class="btn-sm form-control taglist" id="tags" placeholder="Enter tags">
           </div>
           <div class="form-group">
             <label for="images" class="mb-0">Project images <small class="text-muted">(multiple images allowed, min. 1 required)</small></label>

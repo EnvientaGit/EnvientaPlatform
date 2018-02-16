@@ -77,6 +77,7 @@ class ProjectController extends Controller
         'images' => $image_urls,
         'folders' => $this->getFolders($project_path),
         'avatar_hash' => md5( strtolower( trim( $project->owner()->first()->email ) ) ),
+        'tags' => $project->tags ? explode(' ', $project->tags) : array(), 
         'mine' => Auth::check() ? $project->owner == Auth::user()->id : false
       ));
     }
@@ -107,6 +108,7 @@ class ProjectController extends Controller
         $project = new Project;
         $project->title = $request->title;
         $project->description = $request->description;
+        $project->tags = $request->tags;
         $project->slug = $this->slugify($request->title) . '-' . uniqid();
         $project->license = 'xxx'; //$request->license;
         Auth::user()->projects()->save($project);
