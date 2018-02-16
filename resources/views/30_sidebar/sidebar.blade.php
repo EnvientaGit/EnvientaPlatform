@@ -1,11 +1,13 @@
 <div class="row my-3 box-shadow-bottom">
   <div class="card w-100">
     <h6 class="card-header dtitle p-2">
-      <i class="fa fa-info-circle fa-fw mr-1 text-success"></i>Owner
+      <i class="fa fa-info-circle fa-fw mr-1 text-success"></i>The creator of the project
     </h6>
       <div class="card-body p-3">
+        <img src="{{ URL::to('img/user_placeholder.png') }}" class="img-fluid img-thumbnail mb-2" height="100" width="100">
+        <h6 class="card-title font-weight-bold mb-2">Mate Molnar</h6>
         <p class="card-text text-justify">
-          Gravatar stuff comes here!
+          Gravatar description
         </p>
       </div>
 {{--       <div class="card-footer env_uploaded_div pl-2">

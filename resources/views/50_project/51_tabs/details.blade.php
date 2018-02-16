@@ -11,7 +11,7 @@
 	  	<div class="card-body p-3">
 	  		<div id="details_content">
 	  			<div class="card bg-light">
-  					<div class="card-body">
+  					<div class="card-body p-2">
 		    			<p class="card-text text-justify">
 		    				{{$project->description}}
 		    			</p>
