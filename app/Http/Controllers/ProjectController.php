@@ -55,7 +55,7 @@ class ProjectController extends Controller
     {
       $parsedown = new ParsedownExtra();
 
-      $project = DB::table('projects')->where('slug', $slug)->first();
+      $project = Project::where('slug', $slug)->first();
 
       $project_path = public_path() . "/repo/" . $project->slug;
       $images_path = $project_path . '/images';
@@ -76,6 +76,7 @@ class ProjectController extends Controller
         'details_raw' => file_get_contents($project_path . "/readme.md"),
         'images' => $image_urls,
         'folders' => $this->getFolders($project_path),
+        'avatar_hash' => md5( strtolower( trim( $project->owner()->first()->email ) ) ),
         'mine' => Auth::check() ? $project->owner == Auth::user()->id : false
       ));
     }
