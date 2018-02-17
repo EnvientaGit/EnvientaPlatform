@@ -20,6 +20,11 @@
 		    	<p class="card-text text-justify">
 		    		{!! $details !!}
 		    	</p>
+		    	<p class="card-text text-justify">
+	@foreach($tags as $tag)
+	<button class="btn btn-sm btn-outline-info mr-2 mb-2 badge badge-pill"><a id="env_link" href="#">{{$tag}}</a></button>
+	@endforeach
+		    	</p>
 	    	</div>
 	    	<div id="details_editor" style="display: none;">
 		  		<div class="form-group">
@@ -27,6 +32,9 @@
 	          	</div>
 	          	<div class="form-group my-0">
 	    			<textarea name="details" id="details_editor_area" rows="200" cols="100">{{$details_raw}}</textarea>
+	    		</div>
+	    		<div class="form-group">
+	    			<input name="tags" type="text" class="btn-sm form-control taglist" id="tags" value="{{$project->tags}}">
 	    		</div>
 	    		<div class="form-group my-0">
 	    			<button type="button" class="btn btn-sm btn-outline-secondary" id="details_editor_close">Close</button>
@@ -101,13 +109,6 @@
   	$('#details_editor').hide();
   });	
 </script>
-
-<div class="row m-0 pb-3">
-	@foreach($tags as $tag)
-	<button class="btn btn-sm btn-outline-info mr-2 mb-2 badge badge-pill"><a id="env_link" href="#">{{$tag}}</a></button>
-	@endforeach
-</div>
-
 
 
 

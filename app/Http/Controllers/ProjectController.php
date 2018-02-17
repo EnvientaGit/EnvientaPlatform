@@ -16,6 +16,8 @@ class ProjectController extends Controller
     private function getFolders($project_path) {
       $folders = array();  
       $folder_names = scandir($project_path);
+      unset($folder_names[array_search('images', $folder_names)]);
+      array_unshift($folder_names, 'images');
       foreach ($folder_names as $folder_name) {
         if(substr($folder_name, 0, 1) == '.')
           continue;
@@ -157,6 +159,11 @@ class ProjectController extends Controller
 
       if($request->has('description')) {
         $project->description = $request->input('description');
+        $project->save();
+      }
+      
+      if($request->has('tags')) {
+        $project->tags = $request->input('tags');
         $project->save();
       }
 

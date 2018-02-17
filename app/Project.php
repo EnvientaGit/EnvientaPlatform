@@ -15,7 +15,8 @@ class Project extends Model
 
     protected $searchable = [
         'title',
-        'description'
+        'description',
+        'tags'
     ];
 
     protected $dates = [

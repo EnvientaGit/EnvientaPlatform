@@ -13,9 +13,16 @@
 			<div class="row m-0">
 				<div class="card box-shadow-bottom mb-3">
 					<table class="table table-hover table-responsive table-sm rounded mb-0">
-					<caption class="p-2 text-dark">List of <strong class="env_color">{{ $folder['name'] }}</strong>
-						<a href=""><i class="fa fa-window-close text-danger env_edit p-1 pull-right"></i></a>
+					@if($folder['name'] == 'images')
+					<caption class="p-2 text-dark">Slider images</strong>
 					</caption>
+					@else	
+					<caption class="p-2 text-dark">List of <strong class="env_color">{{ $folder['name'] }}</strong>
+						@if($mine)
+						<a href=""><i class="fa fa-window-close text-danger env_edit p-1 pull-right"></i></a>
+						@endif
+					</caption>
+					@endif
 					  <thead class="thead-default bg-light">
 					    <tr>
 					      <th class="border-0">№</th>
@@ -88,7 +95,7 @@
 		@endif
 	</div>
 
-	<div class="col-md-5" id="vs_iframe_holder" style="display: ;">
+	<div class="col-md-5" id="vs_iframe_holder">
 		<div class="row box-shadow-bottom">
 		  <div class="card w-100">
 		    <h6 class="card-header dtitle p-2">

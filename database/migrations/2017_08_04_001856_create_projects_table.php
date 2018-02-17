@@ -25,8 +25,7 @@ class CreateProjectsTable extends Migration
     	    $table->timestamps();
         });
 
-        DB::statement('ALTER TABLE projects ADD FULLTEXT fulltext_index (title, description)');
-        DB::statement('ALTER TABLE projects ADD FULLTEXT fulltext_index_tags (tags)');
+        DB::statement('ALTER TABLE projects ADD FULLTEXT fulltext_index (title, description, tags)');
     }
 
     /**
