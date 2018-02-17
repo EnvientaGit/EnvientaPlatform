@@ -17,7 +17,7 @@ class ProjectController extends Controller
       $folders = array();  
       $folder_names = scandir($project_path);
       foreach ($folder_names as $folder_name) {
-        if($folder_name == '.' || $folder_name == '..')
+        if(substr($folder_name, 0, 1) == '.')
           continue;
         $folder_path = $project_path . '/' . $folder_name;
         if(!is_dir($folder_path))
