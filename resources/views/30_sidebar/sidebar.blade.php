@@ -16,7 +16,7 @@
 
 <div class="row my-3 box-shadow-bottom">
   <div class="card w-100 border-0">
-    <img src="{{ URL::to('img/CC_BY_SA_blue.svg') }}" alt="CC_BY_SA" class="img-fluid p-0 rounded">
+    <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank"><img src="{{ URL::to('img/CC_BY_SA_blue.svg') }}" alt="CC_BY_SA" class="img-fluid p-0 rounded"></a>
   </div>
 </div>
 

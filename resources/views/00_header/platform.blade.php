@@ -11,7 +11,7 @@
         <link rel="icon" href="{{ URL::to('img/favicon_img.jpg') }}">
 
         {{-- Title --}}
-        <title>Envienta Water Crisis</title>
+        <title>Envienta Platform</title>
 
         <!-- CSS - CDN's -->
         <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
