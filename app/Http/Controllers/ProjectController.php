@@ -25,7 +25,7 @@ class ProjectController extends Controller
         $files = array();
         $file_names = scandir($folder_path);
         foreach($file_names as $file_name) {
-          if($file_name == '.' || $file_name == '..')
+          if(substr($file_name, 0, 1) == '.')
             continue;
           $files[] = array(
             'name' => $file_name,
