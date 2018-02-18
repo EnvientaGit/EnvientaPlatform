@@ -9,8 +9,8 @@
           {{--<h1 class="jumbotron-heading">Projects for Cape Town</h1>--}}
           {{--<iframe width="560" height="315" src="https://www.youtube.com/embed/wokSwsu3-0o?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>--}}
           <p class="lead" style="color: #efefef; font-size: 20px; font-weight: 400;">
-            “We, at ENVIENTA™ believe that technological progress can bring abundance and unlimited wealth to the people.
-            But this is only possible if every human beings are able to access to the technology.”
+            “We, at ENVIENTA™ believe that technological progress can bring abundance and unlimited wealth to people,
+            but this is only possible if every human beings are able to access to technology.”
           </p>
           <p>
             <button type="button" class="btn btn-lg" data-toggle="modal" data-target="#newProjectModal">Create new project</button>
