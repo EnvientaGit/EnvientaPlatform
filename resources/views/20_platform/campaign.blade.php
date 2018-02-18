@@ -4,7 +4,7 @@
 
     <main role="main">
 
-      <section id="env_board" class="jumbotron text-center" style="background-image: url('http://hackthewatercrisis.org/assets/images/cape-town-2000x1333.jpg'); background-size:cover; background-position: 0px -150px; border-radius: 0;">
+      <section id="env_board" class="jumbotron text-center" style="background-image: url('http://hackthewatercrisis.org/assets/images/cape-town-2000x1333.jpg'); background-position: 0px -300px; border-radius: 0;">
         <div class="container">
           {{--<h1 class="jumbotron-heading">Projects for Cape Town</h1>--}}
           {{--<iframe width="560" height="315" src="https://www.youtube.com/embed/wokSwsu3-0o?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>--}}
