@@ -7,8 +7,8 @@
             <p class="env_left">
               <span class="badge badge-danger font-italic">Beta!</span>
             </p>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="background-color: #f8f8f8;">
-              <span class="navbar-toggler-icon"></span>
+            <button class="navbar-toggler fa fa-bars" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="background-color: #f8f8f8;">
+              
             </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
