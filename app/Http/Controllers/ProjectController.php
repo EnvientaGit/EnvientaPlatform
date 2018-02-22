@@ -122,6 +122,8 @@ class ProjectController extends Controller
         GitRepository::init($project_path);
         file_put_contents($project_path . "/readme.md", 'Click on the pencil on the right top side to edit this content.');
 
+        $blueprints_path = $project_path . '/blueprints';
+        @mkdir($blueprints_path, 0700, TRUE); 
         $images_path = $project_path . '/images';
         @mkdir($images_path, 0700, TRUE); 
         $images = $request->file('images');
