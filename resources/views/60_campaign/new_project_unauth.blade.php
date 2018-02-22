@@ -14,6 +14,9 @@
            <u>No registration is needed to login.</u><br> Simply just type your email address, <br> and we will send you a login pin. <br> That's all! 
            <i class="fa fa-smile-o fa-2x env_color" aria-hidden="true"></i>
         </p>
+        <p class="text-center">
+          <button id="login_btn" class="btn btn-light ml-2" data-toggle="modal" data-target="#login_dialog" data-dismiss="modal"> Log In </button>
+        </p>
       </div>
     </div>
   </div>
