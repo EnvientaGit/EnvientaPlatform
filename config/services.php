@@ -34,5 +34,9 @@ return [
         'key' => env('STRIPE_KEY'),
         'secret' => env('STRIPE_SECRET'),
     ],
-
+    'facebook' => [
+        'client_id' => '548015295569874',
+        'client_secret' => '217eecc4808949b8146d6988c71cf19c',
+        'redirect' => 'http://osce:8000/fb_callback',
+    ],
 ];

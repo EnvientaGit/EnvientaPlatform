@@ -7,6 +7,7 @@ use App\User;
 use App\Mail\LoginMail;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Http\Request;
+use Socialite;
 
 function random_str($length, $keyspace = '0123456789')
 {
@@ -41,6 +42,25 @@ class LoginController extends Controller
     public function logout() {
       Auth::logout();
       return redirect('/');
+    }
+
+    public function loginWithFacebook(Request $request)
+    {
+      $token = $request->input('token');
+      $fb_user = Socialite::driver('facebook')->userFromToken($token);
+      if($fb_user) {
+        $user = User::updateOrCreate(
+          ['email' => $fb_user->getEmail()], 
+          [ 
+            'pin' => random_str(6), 
+            'avatarUrl' => $fb_user->getAvatar(), 
+            'profileUrl' => 'https://www.facebook.com/' . $fb_user->getId()
+          ]
+        );
+        Auth::login($user, true);
+        return "success";
+      } 
+      return "fail";  
     }
 
 }

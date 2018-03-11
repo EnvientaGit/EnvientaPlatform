@@ -1,3 +1,6 @@
+<?php
+    use App\Utils;
+?>    
 <!doctype html>
 <html>
     <head>
@@ -24,6 +27,7 @@
         {{-- <link rel="stylesheet" href="{{ URL::to('css/platform.css') }}" type="text/css"> --}}
         <link rel="stylesheet" href="{{ URL::to('css/animate.css') }}" type="text/css">
         <link rel="stylesheet" href="{{ URL::to('css/style.css') }}" type="text/css">
+        <link rel="stylesheet" href="{{ Utils::themePath('style.css') }}" type="text/css">
         
         {{-- reCAPTCHA --}}
         {{--

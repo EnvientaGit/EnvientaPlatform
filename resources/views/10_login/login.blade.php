@@ -1,4 +1,14 @@
 <div id="login_dialog" class="modal animated fade" tabindex="-1" role="dialog" aria-labelledby="modalLabelLarge" aria-hidden="true">
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.12&appId=548015295569874&autoLogAppEvents=1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       
@@ -28,6 +38,12 @@
             <input type="hidden" name="_token" value="{{{ csrf_token() }}}" />
             <input type="hidden" name="captcha_token" id="login_form_token" />
           </div>
+
+          <div class="text-center">
+            <p>-- OR --</p>
+            <p><div class="fb-login-button" data-max-rows="1" data-size="medium" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false" onlogin="checkFBLoginState();"></div></p>
+          </div>
+
         </div>
         
         {{-- Enter Pin part --}}
@@ -48,10 +64,6 @@
           </div>
         </div>
 
-      </div>
-
-      <div class="card-footer p-2">
-          <button type="button" class="btn btn-sm btn-outline-secondary pull-right" data-dismiss="modal">Cancel</button>
       </div>
       
     </div><!-- /.modal-content -->
@@ -77,4 +89,17 @@
       }
     }); 
   });
+  function checkFBLoginState() {
+    FB.getLoginStatus(function(response) {
+      $.get("/auth/fb_login", {token: response.authResponse.accessToken}).done(function(data) {
+        if(data == 'success') {
+          location.reload();
+        } else {
+          $('#pin_block').hide();
+          $('#mail_block').show();  
+          $('#email_alert').show();
+        }
+      });
+    });
+  }
 </script>

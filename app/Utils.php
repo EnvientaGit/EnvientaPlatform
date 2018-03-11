@@ -2,6 +2,8 @@
 
 namespace App;
 
+use Auth;
+
 class Utils
 {
   
@@ -30,4 +32,20 @@ class Utils
         return round($bytes, 2) . ' ' . $units[$i];
     }
     
+  public static function themeResPath($name) {
+    return url('/themes/' . $_SERVER['HTTP_HOST'] . '/' . config('themes.' . $_SERVER['HTTP_HOST'] . '.' . $name));
+  }
+
+  public static function themePath($name) {
+    return url('/themes/' . $_SERVER['HTTP_HOST'] . '/' . $name);
+  }
+
+  public static function userAvatar() {
+    return Auth::user()->avatarUrl ? Auth::user()->avatarUrl : "https://www.gravatar.com/avatar/" . md5( strtolower( trim( Auth::user()->email ) ) ) . "?s=40";
+  }
+
+  public static function userProfile() {
+    return Auth::user()->profileUrl ? Auth::user()->profileUrl : "https://www.gravatar.com/" . md5( strtolower( trim( Auth::user()->email ) ) );
+  }
+
 }
