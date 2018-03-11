@@ -33,7 +33,7 @@ class Utils
     }
     
   public static function themeResPath($name) {
-    return url('/themes/' . $_SERVER['HTTP_HOST'] . '/' . config('themes.' . $_SERVER['HTTP_HOST'] . '.' . $name));
+    return url('/themes/' . $_SERVER['HTTP_HOST'] . '/' . config('themes.' . str_replace('.', '_', $_SERVER['HTTP_HOST']) . '.' . $name));
   }
 
   public static function themePath($name) {
