@@ -41,7 +41,7 @@
 
           <div class="text-center">
             <p>-- OR --</p>
-            <p><div class="fb-login-button" data-max-rows="1" data-size="medium" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false" onlogin="checkFBLoginState();"></div></p>
+            <p><div class="fb-login-button" data-max-rows="1" data-size="medium" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false" data-scope="public_profile,email" onlogin="checkFBLoginState();"></div></p>
           </div>
 
         </div>
