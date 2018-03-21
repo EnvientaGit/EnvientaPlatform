@@ -19,6 +19,10 @@
 //    return view('20_platform.home');
 //})->name('20_platform.home');
 
+Route::get('/map', function () {
+    return view('80_Pages.map');
+});
+
 Route::get('/', 'CampaignController@show');
 Route::get('/s/{filter}', 'CampaignController@show');
 Route::get('/u/{userId}', 'CampaignController@showByUser');

@@ -16,10 +16,14 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav ml-2 mr-auto">
-              {{--
                 <li class="nav-item">
-                  <a class="nav-link" href="{{ url('/') }}"><h5>Campaigns</h5></a>
+                  <a class="nav-link text-white" href="{{ url('/map') }}">
+                    <h5>Makerspace Map 
+                      <i class="fa fa-map-o" aria-hidden="true"></i>
+                    </h5>
+                  </a>
                 </li>
+              {{--
                 <li class="nav-item">
                   <a class="nav-link" href="#"><h5>About</h5></a>
                 </li>
