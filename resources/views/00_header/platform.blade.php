@@ -57,7 +57,7 @@
     <body>
         <div class="">
             @include('40_topbar.navigation')
-            test-kolbász
+            
             @yield('content')
             
             @include('90_footer.footer')
