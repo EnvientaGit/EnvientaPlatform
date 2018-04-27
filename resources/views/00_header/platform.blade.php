@@ -52,10 +52,11 @@
         <link rel="stylesheet" href="{{ URL::to('css/jquery.tag-editor.css') }}">
         <script src="{{ URL::to('js/jquery.caret.min.js') }}"></script>
         <script src="{{ URL::to('js/jquery.tag-editor.min.js') }}"></script>
+
     </head>
 
     <body>
-        <div class="">
+        <div>
             @include('40_topbar.navigation')
             
             @yield('content')

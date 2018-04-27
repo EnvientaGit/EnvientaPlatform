@@ -1,7 +1,7 @@
 <?php
     use App\Utils;
 ?>    
-    <div class="row sticky-top">
+    <div class="sticky-top">
       <div class="col-md-12 px-0">
           <nav class="navbar navbar-expand-lg env_bg box-shadow-bottom px-4">
             <a href="{{ url('/') }}" class="mb-3">
