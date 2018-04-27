@@ -289,7 +289,19 @@ select.form-control:not([size]):not([multiple]) {
     opacity: 1;
 } 
 
-
+/* Create new project tooltip */
+.tooltip .arrow::before {
+  position: absolute;
+  content: "";
+  border-color: transparent;
+  border-style: solid;
+}
+.tooltip > .tooltip-inner {
+  color: #000;
+  background-color: #fff;
+  border: 1px solid rgba(0,0,0,.125);
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
 
 
 

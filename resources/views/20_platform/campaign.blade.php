@@ -12,10 +12,7 @@
             “We, at ENVIENTA™ believe that technological progress can bring abundance and unlimited wealth to people,
             but this is only possible if every human beings are able to access to technology.”
           </p>
-          <p>
-            <button type="button" class="btn btn-lg" data-toggle="modal" data-target="#newProjectModal">Create new project</button>
-            {{-- <a href="#" class="btn btn-secondary my-2">Button_2</a> --}}
-          </p>
+          
         </div>
       </section>
 

@@ -43,7 +43,36 @@
             @endforeach
 
           </div>
+          <div class="row">
+            <div class="col-md-12 text-right mt-3">
+                <i class="fa fa-plus-square fa-3x env_edit pull-right text-info" 
+                          data-toggle="modal"
+                          data-toggler="tooltip"
+                          data-placement="left" 
+                          title="Create new project" 
+                          data-target="#newProjectModal">
+                </i>
+            </div>
+          </div>
         </div>
 
         {{ $projects->links('70_tools.pagination') }}
+
+<script>
+  $(function () {
+    $('[data-toggler="tooltip"]').tooltip()
+  })
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
 
