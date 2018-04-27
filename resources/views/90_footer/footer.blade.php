@@ -3,16 +3,36 @@
 ?>    
 <div class="text-muted env_bg pb-4">
   <div class="container">
-    <a href="{{ url('/') }}" class="mr-1">
+    <div class="row my-3">
+      <a href="{{ url('/') }}" class="my-4">
         <img class="d-block" src="{{ Utils::themeResPath('footer_logo') }}" height="64">
-    </a>
+      </a>
+    </div>
     <p class="float-right">
         <a id="env_link" href="#" class="text-white">
             <i class="fa fa-arrow-up fa-2x p-2 rounded-circle border border-white" aria-hidden="true"></i>
         </a>
     </p>
     <p class="text-white">ENVIENTA™ - Open Source Everything <br>This is an Open Source Project! Read more at 
-        <a id="env_link" href="http://envienta.com" class="text-light">ENVIENTA</a> Official Site.</p>
+        <a id="env_link" href="http://envienta.com" class="text-light">ENVIENTA</a> Official Site.
+    </p>
+    <p>
+      <a href="https://www.facebook.com/envienta" class="text-white">
+        <i class="fa fa-facebook mr-3" aria-hidden="true"></i>
+      </a>
+      <a href="https://twitter.com/envienta" class="text-white">
+        <i class="fa fa-twitter mr-3" aria-hidden="true"></i>
+      </a>
+      <a href="https://plus.google.com/+EnvientaGlobal" class="text-white">
+        <i class="fa fa-google-plus mr-3" aria-hidden="true"></i>
+      </a>
+      <a href="https://medium.com/envienta-open-source-everything" class="text-white">
+        <i class="fa fa-medium mr-3" aria-hidden="true"></i>
+      </a>
+      <a href="https://www.youtube.com/channel/UCbS_n6qVwLtyVlwFYMjq4og" class="text-white">
+        <i class="fa fa-youtube-play mr-3" aria-hidden="true"></i>
+      </a>
+    </p>
   </div>
 </div>
 

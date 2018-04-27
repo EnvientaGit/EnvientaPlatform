@@ -19,7 +19,7 @@
                 <div class="card-body">
                   <h5 class="card-title text-truncate">
                     <a class="env_link_color" href="{{ URL::to('project/' . $project->slug) }}">{{$project->title}}</a>
-                  </h5>
+                  </h5>                  
                   <p id="env_paragraph" class="card-text text-justify">
                     {{$project->description}}
                   </p>
