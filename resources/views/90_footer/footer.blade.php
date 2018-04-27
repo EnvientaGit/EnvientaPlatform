@@ -13,7 +13,7 @@
             <i class="fa fa-arrow-up fa-2x p-2 rounded-circle border border-white" aria-hidden="true"></i>
         </a>
     </p>
-    <p class="text-white">ENVIENTA™ - Open Source Everything <br>This is an Open Source Project! Read more at 
+    <p class="text-white">Copyright &copy; 2018 ENVIENTA Association
         <a id="env_link" href="http://envienta.com" class="text-light">ENVIENTA</a> Official Site.
     </p>
     <p>
