@@ -13,9 +13,7 @@
             <i class="fa fa-arrow-up fa-2x p-2 rounded-circle border border-white" aria-hidden="true"></i>
         </a>
     </p>
-    <p class="text-white">Copyright &copy; 2018 ENVIENTA Association
-        <a id="env_link" href="http://envienta.com" class="text-light">ENVIENTA</a> Official Site.
-    </p>
+    <p class="text-white">Copyright &copy; 2018 ENVIENTA Association</p>
     <p>
       <a href="https://www.facebook.com/envienta" class="text-white">
         <i class="fa fa-facebook mr-3" aria-hidden="true"></i>
