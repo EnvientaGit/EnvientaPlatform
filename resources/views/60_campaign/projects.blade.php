@@ -23,16 +23,19 @@
                   <p id="env_paragraph" class="card-text text-justify">
                     {{$project->description}}
                   </p>
-                    <p>
-                      <?php $tags = $project->tags ? explode(' ', $project->tags) : array(); ?>
-                      @foreach($tags as $tag)
-                      <button class="btn btn-sm btn-outline-info mr-2 mb-2 badge badge-pill"><a id="env_link" href="#">{{$tag}}</a></button>
-                      @endforeach
-                    </p>
                   <div class="d-flex justify-content-between align-items-center">
-                    
-                      <small class="text-muted">{{ Carbon\Carbon::parse($project->created_at)->diffForHumans() }}</small>
-                    
+                    <small class="text-muted">{{ Carbon\Carbon::parse($project->created_at)->diffForHumans() }}</small>
+                    <div class="env_tooltip">
+                      <i class="fa fa-tags fa-lg text-right text-info env_point" aria-hidden="true"></i>
+                      <span class="env_tooltiptext">
+                        <?php $tags = $project->tags ? explode(' ', $project->tags) : array(); ?>
+                        @foreach($tags as $tag)
+                          <button class="btn btn-sm btn-outline-info mr-2 mb-2 badge badge-pill">
+                            <a id="env_link" href="#">{{$tag}}</a>
+                          </button>
+                        @endforeach
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>

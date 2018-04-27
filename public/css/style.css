@@ -253,6 +253,58 @@ select.form-control:not([size]):not([multiple]) {
 }
 
 
+ /* env_Tooltip container */
+.env_tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+/* env_Tooltip text */
+.env_tooltip .env_tooltiptext {
+    visibility: hidden;
+    width: 16.3em;
+    background-color: #fff;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+    position: absolute;
+    z-index: 1;
+    top: 5%;
+    right: 100%;
+    margin-left: -60px;
+
+    /* Fade in env_tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
+    
+    /* Inherited box-shadow from card */
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+/* Show the env_tooltip text when you mouse over the env_tooltip container */
+.env_tooltip:hover .env_tooltiptext {
+    visibility: visible;
+    opacity: 1;
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
