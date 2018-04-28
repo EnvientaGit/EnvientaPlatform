@@ -1,7 +1,7 @@
+{{-- Posted section --}}
 <div class="row m-0 mb-3 box-shadow-bottom">
   <div class="card w-100">
     <h6 class="card-header dtitle p-2 bg-white border-0">
-
       <!-- Split dropleft button -->
       <div class="btn-group pull-right">
         <div class="btn-group dropleft" role="group">
@@ -16,11 +16,12 @@
             <a class="dropdown-item" href="#">Embed</a>
             <a class="dropdown-item" href="#">Turn on notifications for this post</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Report post</a>
+            <a class="dropdown-item" href="#">
+              <i class="fa fa-exclamation" aria-hidden="true"></i> Report post
+            </a>
           </div>
         </div>
       </div>
-
       <div class="mr-3">
         <a href="https://www.gravatar.com/{{$avatar_hash}}" target="_blank" class="pull-left">
         <img src="{{ "https://www.gravatar.com/avatar/" . $avatar_hash . "?s=100"}}" 
@@ -29,12 +30,12 @@
         </a>
         <div class="pull-left ml-3 mt-2">
           <a href="https://www.gravatar.com/{{$avatar_hash}}" class="env_link text-info">
-            <strong>Mate Molnar</strong></a><br>
+            <strong>Mate Molnar</strong>
+          </a><br>
           <small>41 mins</small>
         </div>
       </div>
     </h6>
-      {{-- Post section --}}
       <div class="card-body p-3 env_wrap">
           <div class="form-group w-100 mb-0">
             <p class="text-justify">
@@ -50,6 +51,16 @@
             </span>
           </div>
       </div>
+      
+      {{-- Commented Section --}}
+      @include('50_project.52_newsfeed.comments')
+
+      {{-- Replied Section --}}
+      @include('50_project.52_newsfeed.replied')
+
+      {{-- Re-Replied Section --}}
+      @include('50_project.52_newsfeed.re_replied')
+
       {{-- Comment section --}}
       <div class="card-footer pb-1">
           <div class="env_wrap">
@@ -67,5 +78,19 @@
               </div>
           </div>
       </div>
+
   </div>
 </div>
+
+<script>
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+
+
+
+
+
+

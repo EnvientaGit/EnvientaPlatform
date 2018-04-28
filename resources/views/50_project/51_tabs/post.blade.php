@@ -49,14 +49,12 @@
               </div>
           </div>
       </div>
+
   </div>
 </div>
 
 @include('50_project.52_newsfeed.feeds')
 
-<script>
-
-</script>
 
 
 

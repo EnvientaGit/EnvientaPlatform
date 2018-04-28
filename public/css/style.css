@@ -349,6 +349,11 @@ select.form-control:not([size]):not([multiple]) {
   grid-template-columns: auto 1fr auto;
 }
 
+.env_wrap_reply{
+  display: grid;
+  grid-template-columns: 5% auto 1fr auto;
+}
+
 textarea.form-control{
   height: 3.1em;
 }
