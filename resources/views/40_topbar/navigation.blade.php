@@ -44,7 +44,7 @@
                     <div class="dropdown-menu">
                         <a class="dropdown-item env_color" href="{{ Utils::userProfile() }}" target="_blank">Profile</a>
                         <a class="dropdown-item env_color" href="{{ url('/u') . '/' . Auth::user()->id }}">Projects</a>
-                        <a class="dropdown-item text-secondary" href="{{ url('/auth/logout') }}">Log Out</a>
+                        <a class="dropdown-item env_color" href="{{ url('/auth/logout') }}">Log Out</a>
                     </div>
                   </div>
                 </div>

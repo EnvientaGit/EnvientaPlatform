@@ -327,6 +327,12 @@ select.form-control:not([size]):not([multiple]) {
 }
 
 
+/* gAvatar dropdown menu */
+.dropdown-item:focus, .dropdown-item:hover {
+    color: #18739f;
+    text-decoration: none;
+    background-color: #f8f9fa;
+}
 
 
 
