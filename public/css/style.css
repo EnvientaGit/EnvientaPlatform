@@ -63,6 +63,16 @@ footer p {
   cursor: pointer;
 }
 
+#env_board{
+  background-image: url('http://hackthewatercrisis.org/assets/images/cape-town-2000x1333.jpg');
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  border-radius: 0;
+}
+
 /* Env Custom Class's */
 .env_point {
   cursor: pointer;
