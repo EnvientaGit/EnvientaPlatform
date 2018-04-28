@@ -79,7 +79,7 @@ footer p {
 }
 
 .env_link {
-  text-decoration: none;
+  text-decoration: none !important;
   color: inherit;
 }
 
@@ -335,16 +335,28 @@ select.form-control:not([size]):not([multiple]) {
 }
 
 
+/* Contributors namelist */
+.env_contr_del{
+  color: red;
+  margin-top: 0.25em;
+  cursor: pointer;
+}
 
 
+/* Custom Textarea */
+.env_wrap{
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+}
 
+textarea.form-control{
+  height: 3.1em;
+}
 
-
-
-
-
-
-
+/* Custom post button */
+.env_pspace{
+  margin-bottom: -1em;
+}
 
 
 
