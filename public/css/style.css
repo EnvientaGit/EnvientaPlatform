@@ -52,7 +52,7 @@ footer p {
 }
 
 #env_pagination li a {
-  color: #28a745!important;
+  color: #a37d7d!important;
 }
 
 #env_width_20 {
@@ -70,7 +70,7 @@ footer p {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  border-radius: 0;
+  border-radius: 0 ;
 }
 
 /* Env Custom Class's */
@@ -314,11 +314,17 @@ select.form-control:not([size]):not([multiple]) {
 }
 
 
+/* Pagination Custom */
+.page-item.active .page-link {
+    z-index: 1;
+    color: #fff;
+    background-color: #f0f0f0;
+    border-color: #dee2e6;
+}
 
-
-
-
-
+.page-item.disabled{
+  cursor: no-drop;
+}
 
 
 
