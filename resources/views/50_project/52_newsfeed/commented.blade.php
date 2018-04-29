@@ -42,7 +42,23 @@
           <span class="text-primary btn-sm pull-left mb-3">
             <i class="fa fa-thumbs-up" aria-hidden="true"></i> 8
           </span>
-          <button type="button" class="btn btn-light btn-sm pull-right border">Reply</button>
+          <button type="button" id="reveal_write_commented" class="btn btn-light btn-sm pull-right border">Reply</button>
         </div>
     </div>
 </div>
+
+{{-- Write_reply --}}
+<div id="show_write_commented" class="card-footer grady pb-1 d-none animated fadeIn">
+  @include('50_project.52_newsfeed.write_reply')
+</div>
+
+<script>
+    // Reply to the Comment
+   $('#reveal_write_commented').click(function() {
+       $('#show_write_commented').toggleClass("d-none d-print-block");
+   });
+</script>
+
+
+
+

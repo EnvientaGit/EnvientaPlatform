@@ -35,7 +35,7 @@
           <br>
           <small>41 mins</small>
           <p class="text-justify mt-3">
-            According the Original - Replied ipsum dolor sit amet, consectetur adipisicing elit. Assumenda harum blanditiis minus minima sequi adipisci? Ex incidunt sunt hic temporibus quos nesciunt nobis aliquid ipsam illum, libero nihil voluptatem iste provident, veritatis laborum quidem autem, suscipit pariatur ipsum non. Sapiente distinctio incidunt doloremque quod. Doloremque sunt, fugiat eveniet fugit officia.
+            According the First Commented - Replied ipsum dolor sit amet, consectetur adipisicing elit. Assumenda harum blanditiis minus minima sequi adipisci? Ex incidunt sunt hic temporibus quos nesciunt nobis aliquid ipsam illum, libero nihil voluptatem iste provident, veritatis laborum quidem autem, suscipit pariatur ipsum non. Sapiente distinctio incidunt doloremque quod. Doloremque sunt, fugiat eveniet fugit officia.
           </p>
           <button type="button" class="btn btn-outline-primary btn-sm pull-left">
             <i class="fa fa-thumbs-o-up" aria-hidden="true"></i> Like
@@ -43,7 +43,25 @@
           <span class="text-primary btn-sm pull-left mb-3">
             <i class="fa fa-thumbs-up" aria-hidden="true"></i> 12
           </span>
-          <button type="button" class="btn btn-light btn-sm pull-right border">Reply</button>
+          <button type="button" id="reveal_write_reply" class="btn btn-light btn-sm pull-right border">Reply</button>
         </div>
     </div>
 </div>
+
+
+{{-- Write_reply --}}
+<div id="show_write_reply" class="card-footer grady pb-1 d-none animated fadeIn">
+  @include('50_project.52_newsfeed.write_reply')
+</div>
+
+<script>
+    // Reply to the reply
+   $('#reveal_write_reply').click(function() {
+       $('#show_write_reply').toggleClass("d-none d-print-block");
+   });
+</script>
+
+
+
+
+

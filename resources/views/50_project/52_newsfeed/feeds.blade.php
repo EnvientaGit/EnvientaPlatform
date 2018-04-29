@@ -47,13 +47,18 @@
                 <i class="fa fa-thumbs-o-up" aria-hidden="true"></i> Like</button>
               <span class="text-primary btn-sm pull-left my-3 ml-2">
                 <i class="fa fa-thumbs-up" aria-hidden="true"></i> 4</span>
-              <button type="button" class="btn btn-light btn-sm pull-right my-3 border">Share</button>
+              <button type="button" id="reveal_write_back" class="btn btn-light btn-sm pull-right my-3 border">Reply</button>
             </span>
           </div>
       </div>
+
+      {{-- Write_reply --}}
+      <div id="show_write_back" class="card-footer grady pb-1 d-none animated fadeIn">
+        @include('50_project.52_newsfeed.write_reply')
+      </div>
       
       {{-- Commented Section --}}
-      @include('50_project.52_newsfeed.comments')
+      @include('50_project.52_newsfeed.commented')
 
       {{-- Replied Section --}}
       @include('50_project.52_newsfeed.replied')
@@ -62,7 +67,7 @@
       @include('50_project.52_newsfeed.re_replied')
 
       {{-- Comment section --}}
-      <div class="card-footer pb-1">
+{{--       <div class="card-footer pb-1">
           <div class="env_wrap">
               <div class="mr-3">
                 <a href="https://www.gravatar.com/{{$avatar_hash}}" target="_blank">
@@ -74,10 +79,10 @@
                 <textarea  class="form-control" placeholder="Write a comment…"></textarea>
               </div>
               <div class="ml-3">
-                <button type="button" class="btn btn-light border btn-sm" style="margin-right: -0.3em;">Post</button>
+                <button type="button" class="btn btn-light border btn-sm" style="margin-right: -0.3em;">Reply</button>
               </div>
           </div>
-      </div>
+      </div> --}}
 
   </div>
 </div>
@@ -86,8 +91,18 @@
   $(function () {
     $('[data-toggle="tooltip"]').tooltip()
   })
-</script>
 
+   // Reply to the Post
+   $('#reveal_write_back').click(function() {
+       $('#show_write_back').toggleClass("d-none d-print-block");
+   });
+
+  $(document).ready(function(){
+      $('#reveal_write_back').click(function(){         
+          $(this).html($('#reveal_write_back').text() == 'Reply' ? 'Cancel' : 'Reply');
+      });
+  })
+</script>
 
 
 

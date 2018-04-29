@@ -363,6 +363,8 @@ textarea.form-control{
   margin-bottom: -1em;
 }
 
-
-
+/* Gradient background to "write_reply" */
+.grady{
+  background: linear-gradient(rgba(0,0,0,.03), rgba(0,0,0,0));
+}
 
