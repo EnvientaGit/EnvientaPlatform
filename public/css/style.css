@@ -368,3 +368,39 @@ textarea.form-control{
   background: linear-gradient(rgba(0,0,0,.03), rgba(0,0,0,0));
 }
 
+/* Envienta Intro Section */
+.env_t{
+    font-family: "Days One";
+}
+
+.env_p{
+  font-family: "Armata";
+}
+
+.env_wrapper{
+  display: grid;
+  grid-template-columns: 4fr 6fr;
+  grid-gap: 2em;
+}
+
+.env_wrapper2{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 2em;
+}
+
+.env_intro_image{
+  justify-self: end;
+}
+
+.env_intro_text{
+  align-self: center;
+  width: 30em;
+}
+
+
+
+
+
+
+

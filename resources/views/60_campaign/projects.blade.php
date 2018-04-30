@@ -6,6 +6,7 @@
     return url("/repo/" . $slug . '/images') . '/' . $images[2];
   }
 ?>
+        @include('60_campaign.61_intro.knowhow')
 
         <div class="container">
           <div class="row">

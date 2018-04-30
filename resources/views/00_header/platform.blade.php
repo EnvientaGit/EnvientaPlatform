@@ -17,6 +17,7 @@
         <title>Envienta Platform</title>
 
         <!-- CSS - CDN's -->
+        <link href="https://fonts.googleapis.com/css?family=Armata|Days+One" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" />
         
