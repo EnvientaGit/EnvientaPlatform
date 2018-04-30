@@ -48,15 +48,17 @@
 </div>
 
 {{-- Write_reply --}}
-<div id="show_write_commented" class="card-footer grady pb-1 d-none animated fadeIn">
+<div id="show_write_commented" class="card-footer grady pb-1" style="display: none;">
   @include('50_project.52_newsfeed.write_reply')
 </div>
 
 <script>
-    // Reply to the Comment
-   $('#reveal_write_commented').click(function() {
-       $('#show_write_commented').toggleClass("d-none d-print-block");
-   });
+  $(document).ready(function(){
+    $('#reveal_write_commented').click(function(){
+      $(this).html($('#reveal_write_commented').text() == 'Reply' ? 'Cancel' : 'Reply');
+      $('#show_write_commented').slideToggle("fast");
+    });
+  });
 </script>
 
 

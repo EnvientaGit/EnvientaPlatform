@@ -53,14 +53,16 @@
 
 
 {{-- Write_reply --}}
-<div id="show_write_replied" class="card-footer grady pb-1 d-none animated fadeIn">
+<div id="show_write_replied" class="card-footer grady pb-1" style="display: none;">
   @include('50_project.52_newsfeed.write_reply')
 </div>
 
 <script>
-    // Reply to the reply
-   $('#reveal_write_replied').click(function() {
-       $('#show_write_replied').toggleClass("d-none d-print-block");
-   });
+  $(document).ready(function(){
+    $('#reveal_write_replied').click(function(){
+      $(this).html($('#reveal_write_replied').text() == 'Reply' ? 'Cancel' : 'Reply');
+      $('#show_write_replied').slideToggle("fast");
+    });
+  });
 </script>
 

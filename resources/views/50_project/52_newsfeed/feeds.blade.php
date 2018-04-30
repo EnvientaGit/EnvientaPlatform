@@ -53,7 +53,7 @@
       </div>
 
       {{-- Write_reply --}}
-      <div id="show_write_back" class="card-footer grady pb-1 d-none animated fadeIn">
+      <div id="show_write_back" class="card-footer grady pb-1" style="display: none;">
         @include('50_project.52_newsfeed.write_reply')
       </div>
       
@@ -92,16 +92,13 @@
     $('[data-toggle="tooltip"]').tooltip()
   })
 
-   // Reply to the Post
-   $('#reveal_write_back').click(function() {
-       $('#show_write_back').toggleClass("d-none d-print-block");
-   });
-
   $(document).ready(function(){
-      $('#reveal_write_back').click(function(){         
-          $(this).html($('#reveal_write_back').text() == 'Reply' ? 'Cancel' : 'Reply');
-      });
-  })
+    $('#reveal_write_back').click(function(){
+      $(this).html($('#reveal_write_back').text() == 'Reply' ? 'Cancel' : 'Reply');
+      $('#show_write_back').slideToggle("fast");
+    });
+  });
+  
 </script>
 
 
