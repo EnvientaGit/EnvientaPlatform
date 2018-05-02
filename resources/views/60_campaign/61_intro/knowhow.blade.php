@@ -13,7 +13,7 @@
 	<div class="row my-3">
 		<div class="col-md-12">
 			<div class="env_outro text-center">
-				<img src="img/platform.svg" height="150" width="150" alt="">
+				<img src="{{ URL::to('img/platform.svg') }}" height="150" width="150" alt="">
 				<h4 class="my-4 env_t env_color text-uppercase">STARTUP ACCELERATOR FOR CLOUD BASED MANUFACTURING</h4>
 				<p class="text-center env_p">
 					The core element of this framework is the ​envienta.org platform. This is the first, blockchain based system aims to speed up the collaborative open source hardware development, from ideas to prototypes, through manufacturing, sales and distribution, based on local circular economy principles. The built-in ICO based crowdfunding helps projects to find their investors at the beginning and the marketplace to deliver products at the end of the process.
@@ -26,7 +26,7 @@
 	<div class="row my-5">
 		<div class="col-md-5 offset-md-1 mb-5">
 			<div class="text-center ">
-				<img src="img/have_an_idea.svg" height="150" width="150" alt=""
+				<img src="{{ URL::to('img/have_an_idea.svg') }}" height="150" width="150" alt=""
 						data-toggler="tooltip"
                         data-placement="left" 
                         title="Maker">
@@ -38,7 +38,7 @@
 		</div>
 		<div class="col-md-5 offset-md-1 mb-5">
 			<div class="text-center pull-left">
-				<img src="img/want_to_invest_2.svg" height="150" width="150" alt=""
+				<img src="{{ URL::to('img/want_to_invest_2.svg') }}" height="150" width="150" alt=""
 						data-toggler="tooltip"
                         data-placement="right" 
                         title="Investor">
@@ -52,7 +52,7 @@
 	<div class="row my-5">
 		<div class="col-md-5 offset-md-1 mb-5">
 			<div class="text-center">
-				<img src="img/want_to_deliver_3.svg" height="150" width="150" alt=""
+				<img src="{{ URL::to('img/want_to_deliver_3.svg') }}" height="150" width="150" alt=""
 						data-toggler="tooltip"
                         data-placement="left" 
                         title="Manifacturer & Distributor">
@@ -64,7 +64,7 @@
 		</div>
 		<div class="col-md-5 offset-md-1 mb-5">
 			<div class="text-center pull-left">
-				<img src="img/need_a_solution.svg" height="150" width="150" alt=""
+				<img src="{{ URL::to('img/need_a_solution.svg') }}" height="150" width="150" alt=""
 						data-toggler="tooltip"
                         data-placement="right" 
                         title="Consumer">
@@ -80,7 +80,7 @@
 	<div class="row my-3">
 		<div class="col-md-12">
 			<div class="env_outro text-center">
-				<img src="img/cooperation.svg" height="150" width="150" alt="">
+				<img src="{{ URL::to('img/cooperation.svg') }}" height="150" width="150" alt="">
 				<h4 class="my-4 env_t env_color text-uppercase">PLATFORM COOPERATIVISM</h4>
 				<p class="text-center env_p">
 					Platform cooperativism is well known excercise in open source software communities, but ENVIENTA creates an ecosystem for social and economic innovation also. Based on the platform, we are building the real collaborative commons, where DIY innovators, hardware maker communities,, manufacturers, distributors, consumers and investors get together in one place.
@@ -132,10 +132,10 @@
 	<div class="row my-3">
 		<div class="col-md-12">
 			<div class="env_outro text-center">
-				<img src="img/grow.svg" height="150" width="150" alt="">
+				<img src="{{ URL::to('img/grow.svg') }}" height="150" width="150" alt="">
 				<h4 class="my-4 env_t env_color text-uppercase">REVENUE MODEL</h4>
 				<p class="text-center env_p">
-					Th​ e ultimate goal of the platform is the creation of value and transfer of goods/services through interactions between inventors, makers, investors, manufacturers, distributors and consumers and the capture of some part of this created value. In a given interaction, the consumer pays the producer using some form of currency. This currency may be attention, reputation, influence, or some other form of non-monetary currency but it may also be money. All transfers occur on the platform, so we take a small transaction cut.
+					Th​e ultimate goal of the platform is the creation of value and transfer of goods/services through interactions between inventors, makers, investors, manufacturers, distributors and consumers and the capture of some part of this created value. In a given interaction, the consumer pays the producer using some form of currency. This currency may be attention, reputation, influence, or some other form of non-monetary currency but it may also be money. All transfers occur on the platform, so we take a small transaction cut.
 				</p>
 			</div>
 		</div>

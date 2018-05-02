@@ -1,6 +1,6 @@
 <div class="row my-5 env_wrapper">
 	<div class="env_intro_image">
-		<img src="img/idea.svg" height="80" width="80" alt="">
+		<img src="{{ URL::to('img/idea.svg') }}" height="80" width="80" alt="">
 	</div>
 	<div class="env_intro_text text-justify">
 		<h6 class="my-3 font-weight-bold env_t env_color">HAVE AN IDEA?</h6>
@@ -11,7 +11,7 @@
 </div>
 <div class="row my-5 env_wrapper">
 	<div class="env_intro_image">
-		<img src="img/campaign.svg" height="80" width="80" alt="">
+		<img src="{{ URL::to('img/campaign.svg') }}" height="80" width="80" alt="">
 	</div>
 	<div class="env_intro_text text-justify">
 		<h6 class="my-3 font-weight-bold env_t env_color">START A CAMPAIGN</h6>
@@ -22,7 +22,7 @@
 </div>
 <div class="row my-5 env_wrapper">
 	<div class="env_intro_image">
-		<img src="img/download.svg" height="80" width="80" alt="">
+		<img src="{{ URL::to('img/download.svg') }}" height="80" width="80" alt="">
 	</div>
 	<div class="env_intro_text text-justify">
 		<h6 class="my-3 font-weight-bold env_t env_color">DOWNLOAD FOR FREE</h6>
@@ -33,7 +33,7 @@
 </div>
 <div class="row my-5 env_wrapper">
 	<div class="env_intro_image">
-		<img src="img/globe.svg" height="80" width="80" alt="">
+		<img src="{{ URL::to('img/globe.svg') }}" height="80" width="80" alt="">
 	</div>
 	<div class="env_intro_text text-justify">
 		<h6 class="my-3 font-weight-bold env_t env_color">FROM PROTOTYPES TO DELIVERED PRODUCTS</h6>
