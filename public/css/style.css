@@ -381,11 +381,12 @@ textarea.form-control{
   display: grid;
   grid-template-columns: 4fr 6fr;
   grid-gap: 2em;
+  align-items: center;
 }
 
 .env_wrapper2{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-gap: 2em;
 }
 

@@ -4,41 +4,74 @@
 	<div class="row my-3">
 		<div class="col-md-12">
 			<div class="env_t env_color text-uppercase text-center">
-				<h3>Lorem ipsum dolor sit amet, consectetu</h3>
+				<h3>ENVIENTA FRAMEWORK</h3>
+			</div>
+		</div>
+	</div>
+
+	{{-- Third-second Section --}}
+	<div class="row my-3">
+		<div class="col-md-12">
+			<div class="env_outro text-center">
+				<img src="img/platform.svg" height="150" width="150" alt="">
+				<h4 class="my-4 env_t env_color text-uppercase">STARTUP ACCELERATOR FOR CLOUD BASED MANUFACTURING</h4>
+				<p class="text-center env_p">
+					The core element of this framework is the ​envienta.org platform. This is the first, blockchain based system aims to speed up the collaborative open source hardware development, from ideas to prototypes, through manufacturing, sales and distribution, based on local circular economy principles. The built-in ICO based crowdfunding helps projects to find their investors at the beginning and the marketplace to deliver products at the end of the process.
+				</p>
 			</div>
 		</div>
 	</div>
 
 	{{-- Second Section --}}
-	<div class="row mt-5">
-		<div class="col-md-6">
-			<div class="env_p text-center ">
-				<img src="http://via.placeholder.com/350x150" alt="">
-				<h6 class="my-3 font-weight-bold">Lorem ipsum dolor sit.</h6>
-				<p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum deserunt fugiat magni dignissimos totam vero, qui, sit et harum quod at distinctio! <br>  Similique expedita recusandae voluptate itaque ab sapiente fugiat, quos aperiam deserunt, culpa ad perferendis nisi dolor distinctio repudiandae.</p>
+	<div class="row my-5">
+		<div class="col-md-5 offset-md-1 mb-5">
+			<div class="text-center ">
+				<img src="img/have_an_idea.svg" height="150" width="150" alt=""
+						data-toggler="tooltip"
+                        data-placement="left" 
+                        title="Maker">
+				<h6 class="my-3 text-uppercase env_t env_color">I have a solution</h6>
+{{-- 				<p class="text-justify">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum deserunt fugiat magni dignissimos totam vero, qui, sit et harum quod at distinctio! <br>  Similique expedita recusandae voluptate itaque ab sapiente fugiat, quos aperiam deserunt, culpa ad perferendis nisi dolor distinctio repudiandae.
+				</p> --}}
 			</div>
 		</div>
-		<div class="col-md-6">
-			<div class="env_p text-center ">
-				<img src="http://via.placeholder.com/350x150" alt="">
-				<h6 class="my-3 font-weight-bold">Lorem ipsum dolor sit.</h6>
-				<p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque velit porro sit iusto nulla repudiandae odit itaque perspiciatis facilis, conseq <br> uuntur, vero maxime quibusdam at similique praesentium quisquam vel temporibus earum aspernatur ab corporis culpa dolorum! Assumenda provident voluptas magni doloremque?</p>
+		<div class="col-md-5 offset-md-1 mb-5">
+			<div class="text-center pull-left">
+				<img src="img/want_to_invest_2.svg" height="150" width="150" alt=""
+						data-toggler="tooltip"
+                        data-placement="right" 
+                        title="Investor">
+				<h6 class="my-3 text-uppercase env_t env_color">I want to invest</h6>
+{{-- 				<p class="text-justify">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum deserunt fugiat magni dignissimos totam vero, qui, sit et harum quod at distinctio! <br>  Similique expedita recusandae voluptate itaque ab sapiente fugiat, quos aperiam deserunt, culpa ad perferendis nisi dolor distinctio repudiandae.
+				</p> --}}
 			</div>
 		</div>
 	</div>
 	<div class="row my-5">
-		<div class="col-md-6">
-			<div class="env_p text-center ">
-				<img src="http://via.placeholder.com/350x150" alt="">
-				<h6 class="my-3 font-weight-bold">Lorem ipsum dolor sit.</h6>
-				<p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero at aperiam libero laboriosam hic ipsum ab, nostrum a ipsam, sed qui. Maxime unde  <br> quos, at totam sed aperiam beatae neque blanditiis voluptates. Ipsam excepturi at temporibus atque aut sequi, officia!</p>
+		<div class="col-md-5 offset-md-1 mb-5">
+			<div class="text-center">
+				<img src="img/want_to_deliver_3.svg" height="150" width="150" alt=""
+						data-toggler="tooltip"
+                        data-placement="left" 
+                        title="Manifacturer & Distributor">
+				<h6 class="my-3 text-uppercase env_t env_color">I want to deliver</h6>
+{{-- 				<p class="text-justify">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum deserunt fugiat magni dignissimos totam vero, qui, sit et harum quod at distinctio! <br>  Similique expedita recusandae voluptate itaque ab sapiente fugiat, quos aperiam deserunt, culpa ad perferendis nisi dolor distinctio repudiandae.
+				</p> --}}
 			</div>
 		</div>
-		<div class="col-md-6">
-			<div class="env_p text-center ">
-				<img src="http://via.placeholder.com/350x150" alt="">
-				<h6 class="my-3 font-weight-bold">Lorem ipsum dolor sit.</h6>
-				<p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, saepe? Debitis nobis, commodi sequi distinctio maiores tenetur maxime tempora autem <br>  nam. Ipsum iure, corporis pariatur minus cupiditate similique, quisquam consectetur delectus consequatur, recusandae neque quod quo harum ea. Culpa, fuga.</p>
+		<div class="col-md-5 offset-md-1 mb-5">
+			<div class="text-center pull-left">
+				<img src="img/need_a_solution.svg" height="150" width="150" alt=""
+						data-toggler="tooltip"
+                        data-placement="right" 
+                        title="Consumer">
+				<h6 class="my-3 text-uppercase env_t env_color">I need a solution</h6>
+{{-- 				<p class="text-justify">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum deserunt fugiat magni dignissimos totam vero, qui, sit et harum quod at distinctio! <br>  Similique expedita recusandae voluptate itaque ab sapiente fugiat, quos aperiam deserunt, culpa ad perferendis nisi dolor distinctio repudiandae.
+				</p> --}}
 			</div>
 		</div>
 	</div>
@@ -46,9 +79,12 @@
 	{{-- Third Section --}}
 	<div class="row my-3">
 		<div class="col-md-12">
-			<div class="env_outro text-uppercase text-center">
-				<img src="http://via.placeholder.com/350x150" alt="">
-				<h4 class="my-4 env_t env_color">Lorem ipsum dolor sit amet, consectetur <br> adipisicing elit. Sapiente, commodi?</h4>
+			<div class="env_outro text-center">
+				<img src="img/cooperation.svg" height="150" width="150" alt="">
+				<h4 class="my-4 env_t env_color text-uppercase">PLATFORM COOPERATIVISM</h4>
+				<p class="text-center env_p">
+					Platform cooperativism is well known excercise in open source software communities, but ENVIENTA creates an ecosystem for social and economic innovation also. Based on the platform, we are building the real collaborative commons, where DIY innovators, hardware maker communities,, manufacturers, distributors, consumers and investors get together in one place.
+				</p>
 			</div>
 		</div>
 	</div>
@@ -57,9 +93,11 @@
 	{{-- Fourth Section --}}
 	<div class="row my-3">
 		<div class="col-md-12">
-			<div class="env_outro text-uppercase text-center">
-				<h4 class="my-4 env_t env_color">Lorem ipsum dolor sit amet, consectetur <br> adipisicing elit. Sapiente, commodi?</h4>
-				<p class="env_p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa doloribus officiis sequi.</p>
+			<div class="env_outro text-center">
+				<h4 class="my-4 env_t env_color text-uppercase">HOW THE ​PLATFORM WORKS</h4>
+{{-- 				<p class="env_p">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium magni quos beatae expedita sit consequatur maxime, autem possimus quo pariatur placeat soluta earum. Totam libero cumque harum perspiciatis recusandae ex! Dolores velit nesciunt aut consequuntur temporibus officiis, quaerat quos repudiandae non. Sed dolore provident aut sequi saepe nulla fugiat voluptates.
+				</p> --}}
 			</div>
 		</div>
 	</div>
@@ -71,7 +109,7 @@
 	<div class="row my-3">
 		<div class="col-md-12">
 			<div class="env_outro text-uppercase text-center">
-				<h5 class="my-4 env_t env_color">Lorem ipsum dolor sit amet, consectetur <br> adipisicing elit. Sapiente, commodi?</h5>
+				<h5 class="my-4 env_t env_color">OPEN BUSINESS MODEL</h5>
 				<button class="btn btn-sm env_button">Read the white paper</button>
 			</div>
 		</div>
@@ -82,7 +120,7 @@
 	<div class="row my-3">
 		<div class="col-md-12">
 			<div class="env_outro text-uppercase text-center">
-				<h3 class="my-4 env_t env_color">Lorem ipsum dolor sit amet, consectetur</h3>
+				<h3 class="my-4 env_t env_color">​COMPONENTS OF THE PLATFORM</h3>
 			</div>
 		</div>
 	</div>
@@ -90,13 +128,26 @@
 	{{-- Eighth Section --}}
 	@include('60_campaign.61_intro.62_knowledge.features')
 
+	{{-- Third Section --}}
+	<div class="row my-3">
+		<div class="col-md-12">
+			<div class="env_outro text-center">
+				<img src="img/grow.svg" height="150" width="150" alt="">
+				<h4 class="my-4 env_t env_color text-uppercase">REVENUE MODEL</h4>
+				<p class="text-center env_p">
+					Th​ e ultimate goal of the platform is the creation of value and transfer of goods/services through interactions between inventors, makers, investors, manufacturers, distributors and consumers and the capture of some part of this created value. In a given interaction, the consumer pays the producer using some form of currency. This currency may be attention, reputation, influence, or some other form of non-monetary currency but it may also be money. All transfers occur on the platform, so we take a small transaction cut.
+				</p>
+			</div>
+		</div>
+	</div>
+
 	<hr class="my-5">
 
 	{{-- Nineth Section --}}
 	<div class="row my-5">
 		<div class="col-md-12">
 			<div class="env_outro text-uppercase text-center">
-				<h5 class="my-4 env_t env_color">Lorem ipsum dolor sit amet, consectetur</h5>
+				<h5 class="my-4 env_t env_color">Crowdfunding campaigns</h5>
 			</div>
 		</div>
 	</div>
