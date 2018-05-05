@@ -24,7 +24,7 @@
 
 	{{-- Second Section --}}
 	<div class="row my-5">
-		<div class="col-md-5 offset-md-1 mb-5">
+		<div class="col-md-6">
 			<div class="text-center ">
 				<img src="{{ URL::to('img/have_an_idea.svg') }}" height="150" width="150" alt=""
 						data-toggler="tooltip"
@@ -36,8 +36,8 @@
 				</p> --}}
 			</div>
 		</div>
-		<div class="col-md-5 offset-md-1 mb-5">
-			<div class="text-center pull-left">
+		<div class="col-md-6">
+			<div class="text-center">
 				<img src="{{ URL::to('img/want_to_invest_2.svg') }}" height="150" width="150" alt=""
 						data-toggler="tooltip"
                         data-placement="right" 
@@ -50,7 +50,7 @@
 		</div>
 	</div>
 	<div class="row my-5">
-		<div class="col-md-5 offset-md-1 mb-5">
+		<div class="col-md-6">
 			<div class="text-center">
 				<img src="{{ URL::to('img/want_to_deliver_3.svg') }}" height="150" width="150" alt=""
 						data-toggler="tooltip"
@@ -62,8 +62,8 @@
 				</p> --}}
 			</div>
 		</div>
-		<div class="col-md-5 offset-md-1 mb-5">
-			<div class="text-center pull-left">
+		<div class="col-md-6">
+			<div class="text-center">
 				<img src="{{ URL::to('img/need_a_solution.svg') }}" height="150" width="150" alt=""
 						data-toggler="tooltip"
                         data-placement="right" 
