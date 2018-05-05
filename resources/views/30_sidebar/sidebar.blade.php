@@ -16,6 +16,7 @@
   </div>
 </div>
 
+{{--
 <div class="row my-3 box-shadow-bottom">
   <div class="card w-100">
     <h6 class="card-header dtitle p-2">
@@ -23,7 +24,7 @@
       <i class="fa fa-pencil-square-o pull-right" style="display: block;"></i>
     </h6>
       <div class="card-body p-3">
-        {{-- Cotributors namelist - or members --}}
+        
         <div class="card bg-light mb-1">
             <div class="mx-1">
               <i class="fa fa-times pull-right env_contr_del" aria-hidden="true"></i>
@@ -61,6 +62,7 @@
       </div>
   </div>
 </div>
+--}}
 
 <div class="row my-3 box-shadow-bottom">
   <div class="card w-100 border-0">
