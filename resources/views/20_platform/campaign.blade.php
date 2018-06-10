@@ -20,6 +20,8 @@
         @include('60_campaign.new_project')
         @endif
 
+        @include('60_campaign.62_front.front')
+
       <div class="album py-5 bg-light" id="projects">
         @include('60_campaign.projects')
       </div>
