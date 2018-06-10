@@ -10,7 +10,8 @@
                 <h1 class="mbr-section-title mbr-bold pb-3 mbr-fonts-style display-1"><span style="font-weight: normal;"><br></span><br><span style="font-weight: normal;">STARTUP ACCELERATOR FOR CLOUD-BASED MANUFACTURING</span></h1>
                 
                 <p class="mbr-text pb-3 mbr-fonts-style display-5">The first, blockchain based system aims to speed up the collaborative open source hardware development, from ideas to prototypes, through manufacturing, sales and distribution, based on local circular economy principles.</p>
-                <div class="mbr-section-btn"><a class="btn btn-md btn-white-outline display-4" href="https://mobirise.com">SIGN UP HERE</a></div>
+                <div class="mbr-section-btn"><a class="btn btn-md btn-white-outline display-4" href="#" data-toggle="modal" 
+                          data-target="#newProjectModal">CREATE NEW PROJECT</a></div>
             </div>
         </div>
     </div>
