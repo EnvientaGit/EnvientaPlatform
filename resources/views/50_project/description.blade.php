@@ -2,10 +2,10 @@
   <div class="col-md-12">
     <ul class="nav nav-pills text-center">
       <li class="nav-item col-md-3">
-        <a data-toggle="pill" href="#project_details" class="btn btn-sm btn-light bg-light nav-link box-shadow-bottom">Details</a>
+        <a data-toggle="pill" href="#project_details" class="btn btn-sm btn-light bg-light nav-link active box-shadow-bottom">Details</a>
       </li>
       <li class="nav-item col-md-3">
-        <a data-toggle="pill" href="#project_files" class="btn btn-sm btn-light bg-light nav-link active box-shadow-bottom">Files</a>
+        <a data-toggle="pill" href="#project_files" class="btn btn-sm btn-light bg-light nav-link box-shadow-bottom">Files</a>
       </li>
       {{--
       <li class="nav-item col-md-3">

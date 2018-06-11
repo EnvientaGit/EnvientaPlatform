@@ -7,7 +7,7 @@
     <div class="container align-center">
         <div class="row justify-content-md-center">
             <div class="mbr-white col-md-10">
-                <h1 class="mbr-section-title mbr-bold pb-3 mbr-fonts-style display-1"><span style="font-weight: normal;">STARTUP ACCELERATOR FOR CLOUD-BASED MANUFACTURING</span></h1>
+                <h1 class="mbr-section-title mbr-bold pb-3 mbr-fonts-style display-1"><span style="font-weight: normal;"><br/>STARTUP ACCELERATOR FOR CLOUD-BASED MANUFACTURING</span></h1>
                 
                 <p class="mbr-text pb-3 mbr-fonts-style display-5">The first, blockchain based system aims to speed up the collaborative open source hardware development, from ideas to prototypes, through manufacturing, sales and distribution, based on local circular economy principles.</p>
                 <div class="mbr-section-btn"><a class="btn btn-md btn-primary display-4" href="#" data-toggle="modal"
@@ -210,16 +210,9 @@
                     </p>
                 </div>
 
-                <div class="media-container-column" data-form-type="formoid">
-                    <div data-form-alert="" hidden="">Thanks for filling out the form!</div>
-                    <form class="form-inline" action="https://mobirise.com/" method="post" data-form-title="Mobirise Form">
-                        <input type="hidden" value="f+uvC+GLiza6jC3I7joTjmwkYNUlxRZ6w8Gk2JlNs/z+kgnQWdpcNsJL1N9bALmkzfsIZMD8ZtAG/QCwSRAA4RCd/kKmDcSUs/ReqMF7G0KbjYTvE0vBMMJNv0Ll/ATr" data-form-email="true">
-                        <div class="form-group">
-                            <input type="email" class="form-control input-sm input-inverse" name="email" required="" data-form-field="Email" placeholder="Email" id="email-header14-7w">
-                        </div>
-                        <div class="buttons-wrap"><button href="" class="btn btn-primary display-4" type="submit" role="button">SIGN UP</button></div>
-                    </form>
-                </div>
+                <div class="mbr-section-btn"><a class="btn btn-md btn-primary display-4" href="#" data-toggle="modal"
+                           
+                          data-target="#newProjectModal">CREATE NEW PROJECT</a></div>
             </div>
         </div>
     </div>
