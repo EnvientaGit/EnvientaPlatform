@@ -26,6 +26,32 @@
         @include('60_campaign.projects')
       </div>
 
+
+<section class="mbr-section form3 cid-qUCSa8RrlP" id="form3-7y">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="title col-12 col-lg-8">
+                <h2 class="align-center pb-2 mbr-fonts-style display-2">DON'T MISS A THING</h2>
+                <h3 class="mbr-section-subtitle align-center pb-5 mbr-light mbr-fonts-style display-5">Sign up for our newsletter</h3>
+            </div>
+        </div>
+
+        <div class="row py-2 justify-content-center">
+            <div class="col-12 col-lg-6  col-md-8 " data-form-type="formoid">
+                <div data-form-alert="" hidden="">
+                        Thanks for filling out the form!
+                </div>
+                <form class="mbr-form" action="https://mobirise.com/" method="post" data-form-title="Mobirise Form"><input type="hidden" name="email" data-form-email="true" value="UWqeNtaH2CkgEHs3dCWgbeL4PGViO65xxwiKohvcROlFHjQmHxqjY7EImIhac/KgEQk01aIgxApcdWnZLySuL3scFFGMYeQcai7Fy0jbGxdqYsX+bD8/pxTl4esgK42+" data-form-field="Email">
+                    <div class="mbr-subscribe input-group">
+                        <input class="form-control" type="email" name="email" placeholder="Email" data-form-field="Email" required="" id="email-form3-7y">
+                        <span class="input-group-btn"><button href="" type="submit" class="btn  btn-primary display-4">SUBSCRIBE</button></span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
     </main>
 
     <script type="text/javascript">

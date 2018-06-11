@@ -1,15 +1,30 @@
 <?php
     use App\Utils;
-?>    
+?>  
+  <section class="menu cid-qUpCFG09UN" once="menu" id="menu1-7e">
+
     <div class="sticky-top">
       <div class="col-md-12 px-0">
-          <nav class="navbar navbar-expand-lg env_bg box-shadow-bottom px-4">
-            <a href="{{ url('/') }}" class="mb-3">
+          <nav class="navbar navbar-expand beta-menu navbar-dropdown align-items-center navbar-fixed-top navbar-toggleable-sm">
+            <!--a href="{{ url('/') }}" class="mb-3">
               <img class="d-block" src="{{ Utils::themeResPath('header_logo') }}" height="40">
-            </a>
+            </a-->
+            <div class="menu-logo">
+              <div class="navbar-brand">
+                  <span class="navbar-logo">
+                      <a href="{{ url('/') }}">
+                           <img src="{{ url('assets/images/envienta-platform-logo-small-1000x275.png') }}" alt="Mobirise" title="" style="height: 4.3rem;">
+                      </a>
+                  </span>
+                  
+              </div>
+            </div>
+
+{{--
             <p class="env_left">
               <span class="badge badge-danger font-italic">Beta!</span>
             </p>
+--}}            
             <button class="navbar-toggler fa fa-bars" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="background-color: #f8f8f8;">
               
             </button>
@@ -31,11 +46,11 @@
               </ul>
               <form id='search_form' class="form-inline ml-2">
                 <input class="form-control mr-sm-2 btn-sm env_width_20" id="search_edit" type="search" placeholder="Search" aria-label="Search" value="{{ empty($filter) ? '' : $filter }}">
-                <button id="search_button" class="btn btn-sm my-2 my-sm-0">Search</button>
+                <button id="search_button" class="btn btn-sm btn-primary my-2 my-sm-0">Search</button>
               </form>
                 
                 @if(!Auth::check())
-                <button id="login_btn" class="btn btn-sm ml-2" data-toggle="modal" data-target="#login_dialog"> Log In </button>
+                <button id="login_btn" class="btn btn-sm btn-primary ml-2" data-toggle="modal" data-target="#login_dialog"> Log In </button>
                 @else
                 <div id="profile_block">
                   <div class="btn-group text-left">
@@ -55,6 +70,7 @@
       </div>
     </div>
 
+  </section>  
 <script type="text/javascript">
   $('#search_form').on('submit', function(e){
     e.preventDefault();

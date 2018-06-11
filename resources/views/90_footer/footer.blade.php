@@ -1,8 +1,21 @@
 <?php
     use App\Utils;
 ?>    
-<div class="text-muted env_bg pb-4">
+<section class="cid-qUpG10sFw7" id="footer5-7i">
   <div class="container">
+    <div class="media-container-row">
+            <div class="col-md-3">
+                <div class="media-wrap">
+                    <a href="{{ url('/') }}">
+                       <img src="{{ url('assets/images/envienta-platform-logo-footer-1-1000x380.png') }}" alt="" title="">
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-9">
+            </div>
+    </div>
+
+{{--
     <div class="row my-3">
       <a href="{{ url('/') }}" class="my-4">
         <img class="d-block" src="{{ Utils::themeResPath('footer_logo') }}" height="64">
@@ -31,8 +44,56 @@
         <i class="fa fa-youtube-play mr-3" aria-hidden="true"></i>
       </a>
     </p>
+--}}    
+          <div class="footer-lower">
+            <div class="media-container-row">
+                <div class="col-md-12">
+                    <hr>
+                </div>
+            </div>
+            <div class="media-container-row mbr-white">
+                <div class="col-md-6 copyright">
+                    <p class="mbr-text mbr-fonts-style display-7"></p>
+                </div>
+                <div class="col-md-6">
+                    <div class="social-list align-right">
+                        <div class="soc-item">
+                            <a href="https://www.facebook.com/envienta" target="_blank">
+                                <span class="mbr-iconfont mbr-iconfont-social socicon-facebook socicon" style="color: rgb(255, 255, 255);"></span>
+                            </a>
+                        </div>
+                        <div class="soc-item">
+                            <a href="https://twitter.com/envienta" target="_blank">
+                                <span class="mbr-iconfont mbr-iconfont-social socicon-twitter socicon" style="color: rgb(255, 255, 255);"></span>
+                            </a>
+                        </div>
+                        <div class="soc-item">
+                            <a href="https://www.youtube.com/channel/UCbS_n6qVwLtyVlwFYMjq4og/videos" target="_blank">
+                                <span class="mbr-iconfont mbr-iconfont-social socicon-youtube socicon" style="color: rgb(255, 255, 255);"></span>
+                            </a>
+                        </div>
+                        <div class="soc-item">
+                            <a href="https://www.youtube.com/channel/UCbS_n6qVwLtyVlwFYMjq4og/videos" target="_blank">
+                                <span class="mbr-iconfont mbr-iconfont-social socicon-telegram socicon" style="color: rgb(255, 255, 255);"></span>
+                            </a>
+                        </div>
+                        <div class="soc-item">
+                            <a href="https://medium.com/envienta-open-source-everything" target="_blank">
+                                <span class="mbr-iconfont mbr-iconfont-social socicon-medium socicon" style="color: rgb(255, 255, 255);"></span>
+                            </a>
+                        </div>
+                        <div class="soc-item">
+                            <a href="https://github.com/EnvientaGit" target="_blank">
+                                <span class="mbr-iconfont mbr-iconfont-social socicon-github socicon" style="color: rgb(255, 255, 255);"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+  
   </div>
-</div>
+</section>
 
 {{--
 <!--CAPTCHA CODE-->
