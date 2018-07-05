@@ -6,12 +6,27 @@ use Illuminate\Database\Eloquent\Model;
 
 class Project extends Model
 {
+	use FullTextSearch;
 
-    protected $fillable = ['title'];
+    protected $fillable = [
+    	'title', 
+    	'description'
+    ];
 
-    public function owners()
+    protected $searchable = [
+        'title',
+        'description',
+        'tags'
+    ];
+
+    protected $dates = [
+        'created_at',
+        'updated_at'
+    ];
+
+    public function owner()
     {
-        return $this->belongsToMany('App\User');
+        return $this->belongsTo('App\User', 'owner');
     }
     
 }

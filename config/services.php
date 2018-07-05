@@ -34,11 +34,9 @@ return [
         'key' => env('STRIPE_KEY'),
         'secret' => env('STRIPE_SECRET'),
     ],
-
-    'github' => [
-	'client_id' => env('GITHUB_ID'),
-	'client_secret' => env('GITHUB_SECRET'),
-	'redirect' => env('GITHUB_URL'),
+    'facebook' => [
+        'client_id' => '548015295569874',
+        'client_secret' => '217eecc4808949b8146d6988c71cf19c',
+        'redirect' => 'http://osce:8000/fb_callback',
     ],
-
 ];

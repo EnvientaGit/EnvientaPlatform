@@ -1,0 +1,407 @@
+:root {
+  --jumbotron-padding-y: 3rem;
+}
+
+.jumbotron {
+  padding-top: var(--jumbotron-padding-y);
+  padding-bottom: var(--jumbotron-padding-y);
+  margin-bottom: 0;
+  background-color: #fff;
+}
+@media (min-width: 768px) {
+  .jumbotron {
+    padding-top: calc(var(--jumbotron-padding-y) * 2);
+    padding-bottom: calc(var(--jumbotron-padding-y) * 2);
+  }
+}
+
+.jumbotron p:last-child {
+  margin-bottom: 0;
+}
+
+.jumbotron-heading {
+  font-weight: 300;
+}
+
+.jumbotron .container {
+  max-width: 40rem;
+}
+
+footer {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+footer p {
+  margin-bottom: .25rem;
+}
+
+.box-shadow-bottom { 
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); 
+}
+
+/* Env Custom Id's */
+#env_paragraph{
+  height: 8em;
+  overflow-y: hidden;
+}
+
+#env_link {
+  text-decoration: none;
+  color: inherit;
+}
+
+#env_pagination li a {
+  color: #a37d7d!important;
+}
+
+#env_width_20 {
+  width: 20em;
+}
+
+#env_point {
+  cursor: pointer;
+}
+
+#env_board{
+  background-image: url('http://hackthewatercrisis.org/assets/images/cape-town-2000x1333.jpg');
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  border-radius: 0 ;
+}
+
+/* Env Custom Class's */
+.env_point {
+  cursor: pointer;
+}
+
+.env_link {
+  text-decoration: none !important;
+  color: inherit;
+}
+
+.env_uploaded_div {
+  height: 2em;
+  padding-top: 0.4em;
+}
+
+.env_p {
+  font-size: 0.8em;
+}
+
+.env_edit {
+  cursor: pointer;
+}
+
+.w-55 {
+  width: 55% !important;
+}
+
+.w-50 {
+  width: 50% !important;
+}
+
+.w-40 {
+  width: 40% !important;
+}
+
+.w-30 {
+  width: 30% !important;
+}
+
+.w-35 {
+  width: 35% !important;
+}
+
+.w-20 {
+  width: 20% !important;
+}
+
+.w-15 {
+  width: 15% !important;
+}
+
+.env_drag {
+  border: 2px dashed;
+}
+
+.env_right {
+  margin-right: 0em;
+  margin-left: auto;
+}
+
+.env_left {
+  margin-right: auto;
+  margin-left: 0em;
+}
+
+.env_center {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.form-inline .env_width_20 {
+  width: 20em;
+}
+
+.env_card_h {
+  height: 28em;
+}
+
+.env_card_img_h {
+  height: 13em;
+  object-fit: cover;
+  object-position: center;
+}
+
+.env_slide_img_h {
+  width: 50em !important;
+  height: 25em !important;
+  object-fit: cover;
+  object-position: center;
+}
+
+.env_color {
+  color: #18739f;
+}
+
+.env_link_color {
+  color: #18739f;
+}
+
+.env_link_color:hover {
+  color: #146186;
+}
+
+.env_button {
+  background-color: #18739f;
+  border-color: #18739f;
+  color: white;
+}
+
+.env_button:hover {
+  background-color: #146186;
+  border-color: #146186;
+  color: white;
+}
+
+/* Env Custom Hover */
+#env_unl {
+  text-decoration: none;
+}
+
+.env_link_grey {
+  background-color: #e9ecef;
+}
+
+.env_link_grey:hover {
+  background-color: #dfe3e8;
+}
+
+.env_link_blue {
+  color: #343a40;
+}
+
+.env_link_blue:hover {
+  color: #007bff;
+}
+
+/* Env Custom Border */
+.env_border_rslim {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.env_border:hover {
+  border: 1px solid #f8f9fa;
+}
+
+#profile_block .dropdown-menu {
+  left: unset;
+  right: 0;
+}
+
+caption {
+  color: #6c757d;
+  text-align: left;
+  caption-side: top;
+  border-bottom: 1px solid #dee2e6;
+}
+
+/* Env Custom [atrr] */
+html[type=button] {
+  -webkit-appearance: button;
+}
+
+select.form-control:not([size]):not([multiple]) {
+    height: calc(1.5rem + 2px);
+    cursor: pointer;
+}
+
+/* Env Custom Env Query */
+@media only screen and (max-width: 991px) {
+
+    #profile_block .dropdown-menu {
+      left: 0.5em;
+      right: unset;
+    }
+}
+
+/* Env Custom Crop images */
+.env_crop {
+  object-fit: none; /* Do not scale the image */
+  object-position: center; /* Center the image within the element */
+  height: 100px;
+  width: 100px;
+}
+
+.env_shrink {
+  background-size: cover;
+}
+
+
+ /* env_Tooltip container */
+.env_tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+/* env_Tooltip text */
+.env_tooltip .env_tooltiptext {
+    visibility: hidden;
+    width: 16.3em;
+    background-color: #fff;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+    position: absolute;
+    z-index: 1;
+    top: 5%;
+    right: 100%;
+    margin-left: -60px;
+
+    /* Fade in env_tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
+    
+    /* Inherited box-shadow from card */
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+/* Show the env_tooltip text when you mouse over the env_tooltip container */
+.env_tooltip:hover .env_tooltiptext {
+    visibility: visible;
+    opacity: 1;
+} 
+
+/* Create new project tooltip */
+.tooltip .arrow::before {
+  position: absolute;
+  content: "";
+  border-color: transparent;
+  border-style: solid;
+}
+.tooltip > .tooltip-inner {
+  color: #000;
+  background-color: #fff;
+  border: 1px solid rgba(0,0,0,.125);
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+
+/* Pagination Custom */
+.page-item.active .page-link {
+    z-index: 1;
+    color: #fff;
+    background-color: #f0f0f0;
+    border-color: #dee2e6;
+}
+
+.page-item.disabled{
+  cursor: no-drop;
+}
+
+
+/* gAvatar dropdown menu */
+.dropdown-item:focus, .dropdown-item:hover {
+    color: #18739f;
+    text-decoration: none;
+    background-color: #f8f9fa;
+}
+
+
+/* Contributors namelist */
+.env_contr_del{
+  color: red;
+  margin-top: 0.25em;
+  cursor: pointer;
+}
+
+
+/* Custom Textarea */
+.env_wrap{
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+}
+
+.env_wrap_reply{
+  display: grid;
+  grid-template-columns: 5% auto 1fr auto;
+}
+
+textarea.form-control{
+  height: 3.1em;
+}
+
+/* Custom post button */
+.env_pspace{
+  margin-bottom: -1em;
+}
+
+/* Gradient background to "write_reply" */
+.grady{
+  background: linear-gradient(rgba(0,0,0,.03), rgba(0,0,0,0));
+}
+
+/* Envienta Intro Section */
+.env_t{
+    font-family: "Days One";
+}
+
+.env_p{
+  font-family: "Armata";
+}
+
+.env_wrapper{
+  display: grid;
+  grid-template-columns: 4fr 6fr;
+  grid-gap: 2em;
+  align-items: center;
+}
+
+.env_wrapper2{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2em;
+}
+
+.env_intro_image{
+  justify-self: end;
+}
+
+.env_intro_text{
+  align-self: center;
+  width: 30em;
+}
+
+
+
+
+
+
+

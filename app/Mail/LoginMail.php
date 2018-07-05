@@ -28,9 +28,11 @@ class LoginMail extends Mailable
      */
     public function build()
     {
-	$login_url = url('/auth/login') . "?id=" . $this->user->id . "&token=" . $this->user->token;
-        return $this->view('mail.login')->with([
-	  'login_url' => $login_url
-	]);
+        return $this->view('mail.login')
+        ->from('info@envienta.org', 'ENVIENTA platform')
+        ->subject('ENVIENTA Platform login pin')
+        ->with([
+	       'pin' => $this->user->pin
+	    ]);
     }
 }

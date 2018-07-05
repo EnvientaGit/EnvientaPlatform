@@ -6,8 +6,10 @@ use Auth;
 use App\User;
 use App\Mail\LoginMail;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Http\Request;
+use Socialite;
 
-function random_str($length, $keyspace = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ')
+function random_str($length, $keyspace = '0123456789')
 {
     $str = '';
     $max = mb_strlen($keyspace, '8bit') - 1;
@@ -20,34 +22,45 @@ function random_str($length, $keyspace = '0123456789abcdefghijklmnopqrstuvwxyzAB
 class LoginController extends Controller
 {
 
-    public function register() {
-      $response = json_decode(file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=YOUR_KEY=".$_POST['captcha_token']."&remoteip=".$_SERVER['REMOTE_ADDR']));
-      if(!$response->success)
-	return "captcha error";
-	
-      $user = User::updateOrCreate(['email' => $_POST['email']], ['token' => random_str(64)]);
+    public function requestPin(Request $request) {
+      $user = User::updateOrCreate(['email' => $request->input('email')], ['pin' => random_str(6)]);
       Mail::to($user->email)->send(new LoginMail($user));
-      return redirect('advertise');
+      return "sent";
     }
 
-    public function login() {
-      $token = $_GET['token'];
-      $id = $_GET['id'];
-      if($token && $id) {
-	$user = User::find($id);
-	if($user->token == $token) {
-	  Auth::login($user);
-	  return redirect('projects/3');
-	} else {
-	  return "fail";
-	}
-      }
-      return "invalid params";
-    }
-
-    public function logout() {
-      Auth::logout();
-      return redirect('front');
+    public function login(Request $request) {
+      $user = User::where('email', $request->input('email'))->where('pin', $request->input('pin'))->first();
+      // always update to prevent reuse and brute force attacs
+      User::updateOrCreate(['email' => $request->input('email')], ['pin' => random_str(6)]); 
+      if($user) {
+        Auth::login($user, true);
+        return "success";
+      } 
+      return "fail";
     }
     
+    public function logout() {
+      Auth::logout();
+      return redirect('/');
+    }
+
+    public function loginWithFacebook(Request $request)
+    {
+      $token = $request->input('token');
+      $fb_user = Socialite::driver('facebook')->userFromToken($token);
+      if($fb_user) {
+        $user = User::updateOrCreate(
+          ['email' => $fb_user->getEmail()], 
+          [ 
+            'pin' => random_str(6), 
+            'avatarUrl' => $fb_user->getAvatar(), 
+            'profileUrl' => 'https://www.facebook.com/' . $fb_user->getId()
+          ]
+        );
+        Auth::login($user, true);
+        return "success";
+      } 
+      return "fail";  
+    }
+
 }

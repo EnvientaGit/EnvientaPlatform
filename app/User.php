@@ -15,7 +15,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'email', 'token',
+        'email', 'pin', 'avatarUrl', 'profileUrl'
     ];
 
     /**
@@ -24,6 +24,11 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'token',
+        'pin',
     ];
+
+    public function projects()
+    {
+        return $this->hasMany('App\Project', 'owner');
+    }
 }

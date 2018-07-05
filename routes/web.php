@@ -11,64 +11,33 @@
 |
 */
 
-/* Static Links */
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
-Route::get('/', function () {
-    return view('welcome');
+//Route::get('/', function () {
+//    return view('20_platform.home');
+//})->name('20_platform.home');
+
+Route::get('/map', function () {
+    return view('80_Pages.map');
 });
 
-Route::get('project', function() {
-    return view('project.main');
-})->name('project.main');
+Route::get('/', 'CampaignController@show');
+Route::get('/s/{filter}', 'CampaignController@show');
+Route::get('/u/{userId}', 'CampaignController@showByUser');
 
-Route::get('campaign', function() {
-    return view('project.campaign');
-})->name('project.campaign');
+Route::post('/project/new', 'ProjectController@newProject');
 
-Route::get('front', function() {
-    return view('page.front');
-})->name('page.front');
-
-Route::get('overview', function() {
-    return view('project.overview');
-})->name('project.overview');
-
-Route::get('landing', function() {
-    return view('page.landing');
-})->name('page.landing');
-
-Route::get('advertise', function() {
-    return view('page.advertise');
-})->name('page.advertise');
-
-Route::get('personal', function() {
-    return view('profile.personal');
-})->name('profile.personal');
-
-Route::get('purchase', function() {
-    return view('project.purchase');
-})->name('project.purchase');
-
-// Route::get('login', function() {
-//     return view('mail.login');
-// })->name('mail.login');
+//cache disabled for development 
+//Route::middleware('page-cache')->get('/project/{id}', 'ProjectController@show');
+Route::get('/project/{slug}', 'ProjectController@show');
+Route::get('/project/{slug}/files', 'ProjectController@showFiles');
+Route::post('/project/{slug}', 'ProjectController@update');
 
 
-//Auth::routes();
-Route::post('/auth/login', 'LoginController@register');
-
+Route::get('/auth/requestPin', 'LoginController@requestPin');
 Route::get('/auth/login', 'LoginController@login');
-
 Route::get('/auth/logout', 'LoginController@logout');
 
-Route::get('/home', 'HomeController@index')->name('home');
-
-Route::get('/projects/{id}', 'ProjectController@show');
-
-
-
-
-
-
-
-
+Route::get('/auth/fb_login', 'LoginController@loginWithFacebook');
