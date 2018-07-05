@@ -1,6 +1,8 @@
 # ENVIENTA Platform
 
-... desc ...
+Imagine if people from different fields of expertise worked together to open source everything around us. This way, technological breakthroughs will appear much faster in our daily life, instead of just in patent-protected R&D environments.
+
+For more info, please visit our webpage at: [https://envienta.com/](https://envienta.com/)
 
 ## Get started
 
