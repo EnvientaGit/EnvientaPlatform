@@ -22,7 +22,7 @@
 
         @include('60_campaign.62_front.front')
 
-      <div class="album py-5 bg-light" id="projects">
+      <div class="album py-5" id="projects">
         @include('60_campaign.projects')
       </div>
 
@@ -38,7 +38,7 @@
 
         <div class="row py-2 justify-content-center">
             <div class="col-12 col-lg-6  col-md-8 " data-form-type="formoid">
-                <form class="mbr-form" action="https://envienta.us12.list-manage.com/subscribe/post?u=1cfb2999615d57f7f085b1680&amp;id=da900f432b" method="post">
+                <form class="mbr-form" action="https://envienta.us12.list-manage.com/subscribe/post?u=1cfb2999615d57f7f085b1680&amp;id=da900f432b" method="post" target="_blank">
                     <div class="mbr-subscribe input-group">
                         <input class="form-control" type="email" name="EMAIL" placeholder="Email" data-form-field="Email" required="" id="email-form3-7y">
                         <span class="input-group-btn"><button name="subscribe" type="submit" class="btn  btn-primary display-4">SUBSCRIBE</button></span>
