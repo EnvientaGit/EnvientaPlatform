@@ -36,8 +36,8 @@ footer p {
   margin-bottom: .25rem;
 }
 
-.box-shadow-bottom { 
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); 
+.box-shadow-bottom {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
 }
 
 /* Env Custom Id's */
@@ -288,7 +288,7 @@ select.form-control:not([size]):not([multiple]) {
     /* Fade in env_tooltip */
     opacity: 0;
     transition: opacity 0.3s;
-    
+
     /* Inherited box-shadow from card */
     box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
 }
@@ -297,7 +297,7 @@ select.form-control:not([size]):not([multiple]) {
 .env_tooltip:hover .env_tooltiptext {
     visibility: visible;
     opacity: 1;
-} 
+}
 
 /* Create new project tooltip */
 .tooltip .arrow::before {
@@ -399,9 +399,9 @@ textarea.form-control{
   width: 30em;
 }
 
-
-
-
-
-
-
+._clr{
+  color: #fe6700;
+}
+._bg_clr{
+  background-color: #fe6700;
+}

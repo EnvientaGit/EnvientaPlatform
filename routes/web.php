@@ -23,13 +23,17 @@ Route::get('/map', function () {
     return view('80_Pages.map');
 });
 
+Route::get('/profile', function () {
+    return view('80_Pages.profile');
+});
+
 Route::get('/', 'CampaignController@show');
 Route::get('/s/{filter}', 'CampaignController@show');
 Route::get('/u/{userId}', 'CampaignController@showByUser');
 
 Route::post('/project/new', 'ProjectController@newProject');
 
-//cache disabled for development 
+//cache disabled for development
 //Route::middleware('page-cache')->get('/project/{id}', 'ProjectController@show');
 Route::get('/project/{slug}', 'ProjectController@show');
 Route::get('/project/{slug}/files', 'ProjectController@showFiles');
