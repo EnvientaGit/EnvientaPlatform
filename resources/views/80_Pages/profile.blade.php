@@ -27,7 +27,7 @@
                 <div class="card-body text-center">
                   <i class="fa fa-cogs fa-3x _clr mb-3" aria-hidden="true"></i>
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                    <input class="form-check-input" type="checkbox" id="maker_check" value="1" onchange="valueChanged()">
                     <label class="form-check-label" for="defaultCheck1">
                       <h5 class="card-text">Maker</h5>
                       <small class="_clr">Available</small>
@@ -155,8 +155,9 @@
                     <hr>
                     <form>
                       <div class="form-group mb-0">
-                        <label for="upload_photo">Upload photo</label>
-                        <input type="file" class="form-control-file" id="upload_photo">
+                        <label for="upload_photo">Your Gravatar profile</label>
+                        <!-- <label for="upload_photo">Upload photo</label> -->
+                        <!-- <input type="file" class="form-control-file" id="upload_photo"> -->
                       </div>
                     </form>
                   </div>
@@ -231,7 +232,7 @@
 
         <hr>
 
-        <div class="row mb-4 animated fadeIn" style="display: block;"><!-- Begin of the Maker Section -->
+        <div class="row mb-4 animated fadeIn" id="_maker" style="display: none;"><!-- Begin of the Maker Section -->
           <div class="col-md-12">
             <div class="card border border-dark">
               <div class="card-body text-left">
@@ -256,7 +257,7 @@
           </div>
         </div><!-- End of the Maker Section -->
 
-        <div class="row mb-4 animated fadeIn" style="display: block;"><!-- Begin of the Manifacturer Section -->
+        <div class="row mb-4 animated fadeIn" id="_manifacturer" style="display: none;"><!-- Begin of the Manifacturer Section -->
           <div class="col-md-12">
             <div class="card border border-dark">
               <div class="card-body text-left">
@@ -429,7 +430,7 @@
           </div>
         </div><!-- End of the Manifacturer Section -->
 
-        <div class="row mb-4 animated fadeIn" style="display: block;"><!-- Begin of the Customer Section -->
+        <div class="row mb-4 animated fadeIn" id="_customer" style="display: none;"><!-- Begin of the Customer Section -->
           <div class="col-md-12">
             <div class="card border border-dark">
               <div class="card-body text-left">
@@ -488,5 +489,15 @@
         </div>
 
       </div><!-- End of the container -->
+
+      <script type="text/javascript">
+        function valueChanged()
+        {
+          if($('#maker_check').is(":checked"))
+          $("#_maker").show();
+          else
+          $("#_maker").hide();
+        }
+      </script>
 
 @endsection

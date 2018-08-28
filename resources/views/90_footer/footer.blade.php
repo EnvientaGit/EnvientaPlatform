@@ -1,6 +1,6 @@
 <?php
     use App\Utils;
-?>    
+?>
 <section class="cid-qUpG10sFw7" id="footer5-7i">
   <div class="container">
     <div class="media-container-row">
@@ -44,16 +44,21 @@
         <i class="fa fa-youtube-play mr-3" aria-hidden="true"></i>
       </a>
     </p>
---}}    
+--}}
           <div class="footer-lower">
             <div class="media-container-row">
                 <div class="col-md-12">
-                    <hr>
+                  <p class="mbr-text mbr-fonts-style display-7 float-right">© Copyright 2018 - Envienta</p>
+                  <hr>
                 </div>
             </div>
             <div class="media-container-row mbr-white">
                 <div class="col-md-6 copyright">
-                    <p class="mbr-text mbr-fonts-style display-7"></p>
+                    <p>
+                      <a href="{{ URL::to('/terms') }}" class="text-white mr-2">Terms & conditions </a>
+                      <a href="{{ URL::to('/privacy') }}" class="text-white mr-2">Privacy policy </a>
+                      <a href="{{ URL::to('/cookies') }}" class="text-white">Cookies </a>
+                    </p>
                 </div>
                 <div class="col-md-6">
                     <div class="social-list align-right">
@@ -91,7 +96,7 @@
                 </div>
             </div>
         </div>
-  
+
   </div>
 </section>
 
@@ -128,7 +133,7 @@
   <script src="{{ URL::to('assets/vimeoplayer/jquery.mb.vimeo_player.js') }}"></script>
   <script src="{{ URL::to('assets/dropdown/js/script.min.js') }}"></script>
   <script src="{{ URL::to('assets/theme/js/script.js') }}"></script>
-  
+
 {{--
 <script>
   $(document).ready(function() {
@@ -138,7 +143,7 @@
       grecaptcha.execute();
     });
   });
-  
+
   function onLoginSubmit(token) {
     $('#login_form_token').val(token);
     $('#login_form').submit();

@@ -27,6 +27,18 @@ Route::get('/profile', function () {
     return view('80_Pages.profile');
 });
 
+Route::get('/terms', function () {
+    return view('80_Pages.terms');
+});
+
+Route::get('/privacy', function () {
+    return view('80_Pages.privacy');
+});
+
+Route::get('/cookies', function () {
+    return view('80_Pages.cookies');
+});
+
 Route::get('/', 'CampaignController@show');
 Route::get('/s/{filter}', 'CampaignController@show');
 Route::get('/u/{userId}', 'CampaignController@showByUser');
