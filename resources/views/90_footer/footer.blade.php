@@ -121,6 +121,13 @@
     maxTags: 6,
     delimiter: ' '
   });
+  $('.proplist').each(function() {
+    var placeholder = $(this).attr('placeholder');
+    $(this).tagEditor({
+      delimiter: ' ',
+      placeholder: placeholder   
+    });
+  });
 </script>
 
 {{-- mobi --}}

@@ -50,7 +50,7 @@
               </form>
 
                 @if(!Auth::check())
-                <button id="login_btn" class="btn btn-sm btn-primary ml-2" data-toggle="modal" data-target="#login_dialog"> Log In </button>
+                <button id="login_btn" class="btn btn-sm btn-primary ml-2" data-toggle="modal" data-target="#login_dialog"> Sign in / Sign up </button>
                 @else
                 <div id="profile_block">
                   <div class="btn-group text-left">
@@ -58,9 +58,9 @@
                       class="dropdown-toggle env_point d-block float-left ml-2 rounded env_border" height="40" width="40"  data-toggle="dropdown">
                     <div class="dropdown-menu">
                         <a class="dropdown-item env_color" href="{{ URL::to('/profile') }}">Profile</a>
-                        <a class="dropdown-item env_color" href="{{ Utils::userProfile() }}" target="_blank">Gravatar</a>
+                        <!--a class="dropdown-item env_color" href="{{ Utils::userProfile() }}" target="_blank">Gravatar</a-->
                         <a class="dropdown-item env_color" href="{{ url('/u') . '/' . Auth::user()->id }}">Projects</a>
-                        <a class="dropdown-item env_color" href="{{ URL::to('/map') }}">Map</a>
+                        <!--a class="dropdown-item env_color" href="{{ URL::to('/map') }}">Map</a-->
                         <a class="dropdown-item env_color" href="{{ url('/auth/logout') }}">Log Out</a>
                     </div>
                   </div>

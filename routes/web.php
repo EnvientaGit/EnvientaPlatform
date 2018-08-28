@@ -23,9 +23,8 @@ Route::get('/map', function () {
     return view('80_Pages.map');
 });
 
-Route::get('/profile', function () {
-    return view('80_Pages.profile');
-});
+Route::get('/profile', 'ProfileController@show');
+Route::post('/profile', 'ProfileController@update');
 
 Route::get('/terms', function () {
     return view('80_Pages.terms');

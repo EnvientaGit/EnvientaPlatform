@@ -1,11 +1,19 @@
+<?php
+    use App\Utils;
+?>
+
 @extends('00_header.platform')
 
 @section('content')
 
     <div class="container p-3"><!-- Begin of the container -->
+      <form method="post">
+        {{ csrf_field() }}
       <div class="row mb-4"><!-- Begin of the Row -->
         <div class="col-md-12"><!-- Begin of the Main colum -->
           <div class="" style="height: 100px;"></div>
+
+<!--
 
           <div class="row my-5">
             <div class="col-md-12">
@@ -21,7 +29,7 @@
 
           <hr>
 
-          <div class="row my-5"><!-- Begin of the - Maker/Projects/Investor -->
+          <div class="row my-5"><!- Begin of the - Maker/Projects/Investor ->
             <div class="col-md-4">
               <div class="card border border-dark" style="width: 18rem;">
                 <div class="card-body text-center">
@@ -66,9 +74,9 @@
                 </div>
               </div>
             </div>
-          </div><!-- End of the - Maker/Projects/Investor -->
+          </div><!- End of the - Maker/Projects/Investor ->
 
-          <div class="row mb-5"><!-- Begin of the - Manifacturer/Distributor/Customer -->
+          <div class="row mb-5"><!- Begin of the - Manifacturer/Distributor/Customer ->
             <div class="col-md-4">
               <div class="card border border-dark" style="width: 18rem;">
                 <div class="card-body text-center">
@@ -113,25 +121,26 @@
                 </div>
               </div>
             </div>
-          </div><!-- End of the - Manifacturer/Distributor/Customer -->
+          </div><!- End of the - Manifacturer/Distributor/Customer ->
 
           <hr>
 
+-->
           <div class="row my-5"><!-- Begin of the Fill-form -->
 
               <div class="col-md-4">
                 <div class="form-group">
                   <label for="email">
                     <i class="fa fa-envelope-o" aria-hidden="true"></i> Email address</label>
-                  <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
-                  <small id="emailHelp" class="form-text text-muted">Please enter a valid email addres</small>
+                  <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" value="{{$user->email}}" readonly="true">
+                  <!--small id="emailHelp" class="form-text text-muted">Please enter a valid email addres</small-->
                 </div>
               </div>
               <div class="col-md-4">
                 <div class="form-group">
                   <label for="username">
                     <i class="fa fa-user" aria-hidden="true"></i> Username</label>
-                  <input type="text" class="form-control" id="user_name" aria-describedby="emailHelp" placeholder="Enter username">
+                  <input type="text" class="form-control" name="username" id="username" aria-describedby="emailHelp" placeholder="Enter username" value="{{$user->username}}">
                   <small id="emailHelp" class="form-text text-muted">Please enter a valid username</small>
                 </div>
               </div>
@@ -139,7 +148,7 @@
                 <div class="form-group">
                   <label for="real_name">
                     <i class="fa fa-id-card-o" aria-hidden="true"></i> Real name</label>
-                  <input type="text" class="form-control" id="real_name" aria-describedby="emailHelp" placeholder="Enter real name">
+                  <input type="text" class="form-control" name="realname" id="real_name" aria-describedby="emailHelp" placeholder="Enter real name" value="{{$user->realname}}">
                   <small id="emailHelp" class="form-text text-muted">Please enter a valid real name</small>
                 </div>
               </div>
@@ -149,17 +158,19 @@
               <div class="col-md-3">
                 <div class="card border border-dark">
                   <div class="card-body text-center">
-                    <div class="bg-secondary rounded" style="height: 8.3em;">
-                      <i class="fa fa-camera fa-2x py-5 text-light" aria-hidden="true"></i>
-                    </div>
+                    <!-- div class="bg-secondary rounded" style="height: 8.3em;" -->
+                      <img class="fa fa-camera text-light" aria-hidden="true" src="{{ Utils::userAvatarBig() }}"/>
+                    <!-- /div-->
+                    <!--
                     <hr>
                     <form>
                       <div class="form-group mb-0">
                         <label for="upload_photo">Your Gravatar profile</label>
-                        <!-- <label for="upload_photo">Upload photo</label> -->
-                        <!-- <input type="file" class="form-control-file" id="upload_photo"> -->
+                        <!- <label for="upload_photo">Upload photo</label> ->
+                        <!- <input type="file" class="form-control-file" id="upload_photo"> ->
                       </div>
                     </form>
+                  -->
                   </div>
                 </div>
               </div>
@@ -172,7 +183,7 @@
                           <i class="fa fa-facebook" aria-hidden="true"></i>
                         </div>
                       </div>
-                      <input type="text" class="form-control" id="" placeholder="Facebook link">
+                      <input type="text" class="form-control" id="" name="profileUrl" placeholder="Facebook link" value="{{$user->profileUrl}}">
                     </div>
                   </div>
 
@@ -183,7 +194,7 @@
                           <i class="fa fa-twitter" aria-hidden="true"></i>
                         </div>
                       </div>
-                      <input type="text" class="form-control" id="" placeholder="Twitter link">
+                      <input type="text" class="form-control" name="twitterUrl" id="" placeholder="Twitter link" value="{{$user->twitterUrl}}">
                     </div>
                   </div>
 
@@ -194,7 +205,7 @@
                           <i class="fa fa-linkedin" aria-hidden="true"></i>
                         </div>
                       </div>
-                      <input type="text" class="form-control" id="" placeholder="LinkedIn link">
+                      <input type="text" class="form-control" name="linkedinUrl" id="" placeholder="LinkedIn link" value="{{$user->linkedinUrl}}">
                     </div>
                   </div>
                 </div>
@@ -207,7 +218,7 @@
                           <i class="fa fa-linkedin" aria-hidden="true"></i>
                         </div>
                       </div>
-                      <input type="text" class="form-control" id="" placeholder="ERC-20">
+                      <input type="text" class="form-control" name="walletAddress" id="" placeholder="ERC-20" value="{{$user->walletAddress}}">
                     </div>
                   </div>
                 </div>
@@ -219,7 +230,7 @@
                         <div class="form-group mb-0">
                           <label for="exampleFormControlTextarea1"><h6>Biography</h6>
                           <small class="text-muted">Short description about you</small></label>
-                          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                          <textarea class="form-control" name="bio" id="exampleFormControlTextarea1" rows="3">{{$user->bio}}</textarea>
                         </div>
                       </div>
                     </div>
@@ -232,25 +243,28 @@
 
         <hr>
 
-        <div class="row mb-4 animated fadeIn" id="_maker" style="display: none;"><!-- Begin of the Maker Section -->
+        <div class="row mb-4 animated fadeIn" id="_maker"><!-- Begin of the Maker Section -->
           <div class="col-md-12">
             <div class="card border border-dark">
               <div class="card-body text-left">
+                <!--
                 <h6 class="text-left mb-3">
                   You picked the <b class="_clr">Maker</b> user type,
                   then please add a few tag about your skills
                 </h6>
+                -->
+
                 <div class="input-group mb-2">
                   <div class="input-group-prepend">
                     <div class="input-group-text">Skills</div>
                   </div>
-                  <input type="text" class="form-control" id="" placeholder="Php, 3D printing.. etc">
+                  <input type="text" class="form-control proplist" name="skills" id="" placeholder="Php, 3D printing.. etc" value="{{$user->skills}}">
                 </div>
                 <div class="input-group">
                   <div class="input-group-prepend">
                     <div class="input-group-text">Interests</div>
                   </div>
-                  <input type="text" class="form-control" id="" placeholder="Robotics, AI.. etc">
+                  <input type="text" class="form-control proplist" name="interests" id="" placeholder="Robotics, AI.. etc" value="{{$user->interests}}">
                 </div>
               </div>
             </div>
@@ -477,17 +491,20 @@
 
         <div class="row mb-5">
           <div class="col-md-12">
+            
             <a href="{{ url('/') }}">
               <button type="button" class="btn btn-sm btn-secondary">
-                <i class="fa fa-chevron-left mr-1" aria-hidden="true"></i> Back</button>
+                <i class="fa fa-chevron-left mr-1" aria-hidden="true"></i> Back to the front page</button>
             </a>
+            
             <a href="#">
-              <button type="button" class="btn btn-sm btn-primary float-right">
+              <button type="submit" class="btn btn-sm btn-primary float-right">
                 Save <i class="fa fa-floppy-o ml-1" aria-hidden="true"></i></button>
             </a>
           </div>
         </div>
 
+      </form>
       </div><!-- End of the container -->
 
       <script type="text/javascript">
