@@ -12,7 +12,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       
-      <h6 class="card-header dtitle p-2">Log In - Simply with an email!
+      <h6 class="card-header dtitle p-2">Sign in / Sign up
         <i class="fa fa-times env_edit pull-right text-secondary" aria-hidden="true" data-dismiss="modal" aria-label="Close"></i>
       </h6>
 
@@ -24,7 +24,7 @@
             Invalid <strong>pin code</strong>! Please try again and/or stop hacking!
           </div>
 
-          <p class="card-text text-justify">Type your email address below to get a <b class="env_color">pin code</b> to log in.</p>
+          <p class="card-text text-justify">Type your email address below and push the <b class="env_color">next</b> button.</p>
 
           <div class="input-group mb-3">
             <div class="input-group-prepend">
@@ -34,7 +34,7 @@
           </div>
 
           <div class="input-group mb-3">
-            <button id="request_pin_submit" class="btn btn-sm env_button env_right">Send pin code</button>
+            <button id="email_next_submit" class="btn btn-sm env_button env_right">Next</button>
             <input type="hidden" name="_token" value="{{{ csrf_token() }}}" />
             <input type="hidden" name="captcha_token" id="login_form_token" />
           </div>
@@ -48,7 +48,7 @@
         
         {{-- Enter Pin part --}}
         <div id="pin_block" style="display: none;">
-          <p class="card-text text-justify">Type your <b class="env_color">pin code</b> to log in.</p>
+          <p class="card-text text-justify">If you already have a <b class="env_color">pin code</b>, sign in with it. If you haven't or forgot it, use the <b class="env_color">request pin code</b> button.</p>
 
           <div class="input-group mb-3">
             <div class="input-group-prepend">
@@ -58,7 +58,8 @@
           </div>
           
           <div class="input-group mb-3">
-            <button id="login_submit" class="btn btn-sm env_button env_right">Log in</button>
+            <button id="request_pin_submit" class="btn btn-sm env_button env_right">Request pin code</button>
+            <button id="login_submit" class="btn btn-sm env_button env_right">Sign in</button>
             <input type="hidden" name="_token" value="{{{ csrf_token() }}}" />
             <input type="hidden" name="captcha_token" id="login_form_token" />
           </div>
@@ -71,21 +72,27 @@
 </div><!-- /.modal -->
 
 <script type="text/javascript">
-  $('#request_pin_submit').click(function() {
-    $.get("/auth/requestPin", {email: $('#request_pin_email').val()}).done(function() {
+  $('#email_next_submit').click(function() {
+    //$.get("/auth/requestPin", {email: $('#request_pin_email').val()}).done(function() {
       $('#mail_block').hide();
       $('#pin_block').show();
+    //});
+  });
+  $('#request_pin_submit').click(function() {
+    $.get("/auth/requestPin", {email: $('#request_pin_email').val()}).done(function() {
+      alert("New pincode generated, and sent to your e-mail address!");
     });
   });
   $('#login_submit').click(function() {
     $.get("/auth/login", {email: $('#request_pin_email').val(), pin: $('#login_pin').val()}).done(function(data) {
       $('#login_pin').val('');
       if(data == 'success') {
-        location.reload();
+        location.replace('/profile');
       } else {
-        $('#pin_block').hide();
-        $('#mail_block').show();  
-        $('#email_alert').show();
+        //$('#pin_block').hide();
+        //$('#mail_block').show();  
+        //$('#email_alert').show();
+        alert("Wrong pin code! New pincode generated, and sent to your e-mail address!");
       }
     }); 
   });

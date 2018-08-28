@@ -44,6 +44,10 @@ class Utils
     return Auth::user()->avatarUrl ? Auth::user()->avatarUrl : "https://www.gravatar.com/avatar/" . md5( strtolower( trim( Auth::user()->email ) ) ) . "?s=40";
   }
 
+  public static function userAvatarBig() {
+    return Auth::user()->avatarUrl ? Auth::user()->avatarUrl : "https://www.gravatar.com/avatar/" . md5( strtolower( trim( Auth::user()->email ) ) ) . "?s=200";
+  }
+
   public static function userProfile() {
     return Auth::user()->profileUrl ? Auth::user()->profileUrl : "https://www.gravatar.com/" . md5( strtolower( trim( Auth::user()->email ) ) );
   }

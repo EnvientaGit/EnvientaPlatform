@@ -1,6 +1,6 @@
 <?php
     use App\Utils;
-?>    
+?>
 <!doctype html>
 <html>
     <head>
@@ -19,8 +19,8 @@
         <!-- CSS - CDN's -->
         <link href="https://fonts.googleapis.com/css?family=Armata|Days+One" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
-        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" />
-        
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
         <!-- Boostrap v4.0 -->
         {{-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"> --}}
         <link rel="stylesheet" href="{{ URL::to('css/bootstrap_4.1.0.min.css') }}" type="text/css">
@@ -30,7 +30,7 @@
         <link rel="stylesheet" href="{{ URL::to('css/animate.css') }}" type="text/css">
         <link rel="stylesheet" href="{{ URL::to('css/style.css') }}" type="text/css">
         <link rel="stylesheet" href="{{ Utils::themePath('style.css') }}" type="text/css">
-        
+
         {{-- reCAPTCHA --}}
         {{--
         <script src='https://www.google.com/recaptcha/api.js'></script>
@@ -38,7 +38,7 @@
 
         {{-- jQuery --}}
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        
+
         {{-- jQuery UI --}}
         <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
@@ -76,9 +76,9 @@
     <body>
         <div>
             @include('40_topbar.navigation')
-            
+
             @yield('content')
-            
+
             @include('90_footer.footer')
         </div>
     </body>

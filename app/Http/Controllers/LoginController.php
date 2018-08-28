@@ -30,12 +30,12 @@ class LoginController extends Controller
 
     public function login(Request $request) {
       $user = User::where('email', $request->input('email'))->where('pin', $request->input('pin'))->first();
-      // always update to prevent reuse and brute force attacs
-      User::updateOrCreate(['email' => $request->input('email')], ['pin' => random_str(6)]); 
       if($user) {
         Auth::login($user, true);
         return "success";
       } 
+      // always update to prevent brute force attacs
+      User::updateOrCreate(['email' => $request->input('email')], ['pin' => random_str(6)]); 
       return "fail";
     }
     
