@@ -159,7 +159,7 @@
                 <div class="card border border-dark">
                   <div class="card-body text-center">
                     <!-- div class="bg-secondary rounded" style="height: 8.3em;" -->
-                      <img class="fa fa-camera text-light" aria-hidden="true" src="{{ Utils::userAvatarBig() }}"/>
+                      <img class="fa fa-camera text-light img-thumbnail" width="250" aria-hidden="true" src="{{ Utils::userAvatarBig() }}"/>
                     <!-- /div-->
                     <!--
                     <hr>
@@ -256,15 +256,16 @@
 
                 <div class="input-group mb-2">
                   <div class="input-group-prepend">
-                    <div class="input-group-text">Skills</div>
+                    <span class="input-group-text" id="basic-addon3">Skills</span>
                   </div>
-                  <input type="text" class="form-control proplist" name="skills" id="" placeholder="Php, 3D printing.. etc" value="{{$user->skills}}">
+                  <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" placeholder="Php, 3D printing.. etc" value="{{$user->skills}}">
                 </div>
+
                 <div class="input-group">
                   <div class="input-group-prepend">
-                    <div class="input-group-text">Interests</div>
+                    <span class="input-group-text" id="basic-addon3">Interests</span>
                   </div>
-                  <input type="text" class="form-control proplist" name="interests" id="" placeholder="Robotics, AI.. etc" value="{{$user->interests}}">
+                  <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" placeholder="Robotics, AI.. etc" value="{{$user->interests}}">
                 </div>
               </div>
             </div>
@@ -491,12 +492,12 @@
 
         <div class="row mb-5">
           <div class="col-md-12">
-            
+
             <a href="{{ url('/') }}">
               <button type="button" class="btn btn-sm btn-secondary">
                 <i class="fa fa-chevron-left mr-1" aria-hidden="true"></i> Back to the front page</button>
             </a>
-            
+
             <a href="#">
               <button type="submit" class="btn btn-sm btn-primary float-right">
                 Save <i class="fa fa-floppy-o ml-1" aria-hidden="true"></i></button>
