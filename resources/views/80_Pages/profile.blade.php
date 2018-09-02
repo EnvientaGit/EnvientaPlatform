@@ -228,7 +228,7 @@
                     <div class="card border border-dark">
                       <div class="card-body text-left">
                         <div class="form-group mb-0">
-                          <label for="exampleFormControlTextarea1"><h6>Biography</h6>
+                          <label for="exampleFormControlTextarea1"><h6>Description</h6>
                           <small class="text-muted">Short description about you</small></label>
                           <textarea class="form-control" name="bio" id="exampleFormControlTextarea1" rows="3">{{$user->bio}}</textarea>
                         </div>
