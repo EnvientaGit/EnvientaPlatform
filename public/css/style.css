@@ -413,4 +413,7 @@ textarea.form-control{
 .tag-editor{
   font: unset !important;
   line-height: unset !important;
+  border-top-right-radius: .25rem;
+  border-bottom-right-radius: .25rem;
+    
 }
