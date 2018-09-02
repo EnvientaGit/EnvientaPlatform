@@ -11,13 +11,13 @@
 
   <div class="modal-dialog" role="document">
     <div class="modal-content">
-      
+
       <h6 class="card-header dtitle p-2">Sign in / Sign up
         <i class="fa fa-times env_edit pull-right text-secondary" aria-hidden="true" data-dismiss="modal" aria-label="Close"></i>
       </h6>
 
       <div class="card-body p-3">
-        
+
         {{-- Enter mail part --}}
         <div id="mail_block">
           <div id="email_alert" class="alert alert-danger" style="display: none;">
@@ -45,7 +45,7 @@
           </div>
 
         </div>
-        
+
         {{-- Enter Pin part --}}
         <div id="pin_block" style="display: none;">
           <p class="card-text text-justify">If you already have a <b class="env_color">pin code</b>, sign in with it. If you haven't or forgot it, use the <b class="env_color">request pin code</b> button.</p>
@@ -56,17 +56,17 @@
             </div>
             <input id="login_pin" type="text" name="pin" maxlength="6" placeholder="Enter pin code" class="form-control btn-sm">
           </div>
-          
+
           <div class="input-group mb-3">
             <button id="request_pin_submit" class="btn btn-sm env_button env_right">Request pin code</button>
-            <button id="login_submit" class="btn btn-sm env_button env_right">Sign in</button>
+            <button id="login_submit" class="btn btn-sm env_button ml-2">Sign in</button>
             <input type="hidden" name="_token" value="{{{ csrf_token() }}}" />
             <input type="hidden" name="captcha_token" id="login_form_token" />
           </div>
         </div>
 
       </div>
-      
+
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
@@ -90,11 +90,11 @@
         location.replace('/profile');
       } else {
         //$('#pin_block').hide();
-        //$('#mail_block').show();  
+        //$('#mail_block').show();
         //$('#email_alert').show();
         alert("Wrong pin code! New pincode generated, and sent to your e-mail address!");
       }
-    }); 
+    });
   });
   function checkFBLoginState() {
     FB.getLoginStatus(function(response) {
@@ -103,7 +103,7 @@
           location.reload();
         } else {
           $('#pin_block').hide();
-          $('#mail_block').show();  
+          $('#mail_block').show();
           $('#email_alert').show();
         }
       });

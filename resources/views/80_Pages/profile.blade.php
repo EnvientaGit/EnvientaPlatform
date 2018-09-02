@@ -258,14 +258,14 @@
                   <div class="input-group-prepend">
                     <span class="input-group-text" id="basic-addon3">Skills</span>
                   </div>
-                  <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" placeholder="Php, 3D printing.. etc" value="{{$user->skills}}">
+                  <input type="text" class="form-control proplist" id="basic-url" aria-describedby="basic-addon3" placeholder="Php, 3D printing.. etc" value="{{$user->skills}}">
                 </div>
 
                 <div class="input-group">
                   <div class="input-group-prepend">
                     <span class="input-group-text" id="basic-addon3">Interests</span>
                   </div>
-                  <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" placeholder="Robotics, AI.. etc" value="{{$user->interests}}">
+                  <input type="text" class="form-control proplist" id="basic-url" aria-describedby="basic-addon3" placeholder="Robotics, AI.. etc" value="{{$user->interests}}">
                 </div>
               </div>
             </div>

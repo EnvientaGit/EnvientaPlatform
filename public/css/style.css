@@ -405,3 +405,8 @@ textarea.form-control{
 ._bg_clr{
   background-color: #fe6700;
 }
+
+/* Tag editor plugin */
+.tag-editor li {
+    margin: .5rem auto !important;
+}
