@@ -248,7 +248,7 @@
 
         <hr>
 
-        <div class="row mb-4 animated fadeIn" id="_maker" style="display: none;"><!-- Begin of the Maker Section -->
+        <div class="row mb-4 animated fadeIn _hide" id="_maker"><!-- Begin of the Maker Section -->
           <div class="col-md-12">
             <div class="card border border-dark">
               <div class="card-body text-left">
@@ -277,7 +277,7 @@
           </div>
         </div><!-- End of the Maker Section -->
 
-        <div class="row mb-4 animated fadeIn" id="_manifacturer" style="display: none;"><!-- Begin of the Manifacturer Section -->
+        <div class="row mb-4 animated fadeIn _hide" id="_manifacturer"><!-- Begin of the Manifacturer Section -->
           <div class="col-md-12">
             <div class="card border border-dark">
               <div class="card-body text-left">
@@ -450,7 +450,7 @@
           </div>
         </div><!-- End of the Manifacturer Section -->
 
-        <div class="row mb-4 animated fadeIn" id="_customer" style="display: none;"><!-- Begin of the Customer Section -->
+        <div class="row mb-4 animated fadeIn _hide" id="_customer"><!-- Begin of the Customer Section -->
           <div class="col-md-12">
             <div class="card border border-dark">
               <div class="card-body text-left">
@@ -519,19 +519,19 @@
         // Maker Checkbox
         $('#maker_check').click(function(){
           $(this).toggleClass("_pulse");
-          $("#_maker").show();
+          $("#_maker").toggleClass("_hide");
         });
 
         // Manifacturer Checkbox
         $('#manifacturer_check').click(function(){
           $(this).toggleClass("_pulse");
-          $("#_manifacturer").show();
+          $("#_manifacturer").toggleClass("_hide");
         });
 
         // Customer Checkbox
         $('#customer_check').click(function(){
           $(this).toggleClass("_pulse");
-          $("#_customer").show();
+          $("#_customer").toggleClass("_hide");
         });
 
       </script>
