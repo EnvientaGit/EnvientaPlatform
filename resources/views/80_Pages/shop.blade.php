@@ -25,8 +25,9 @@
                 <p class="card-text text-justify">
                   Some quick example text to build on the card title and make up the bulk of the card's content.
                 </p>
+                <h5 class="float-left my-2">Price_here</h5>
                 <!-- Button trigger modal -->
-                <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                <a href="#" class="btn btn-primary float-right" data-toggle="modal" data-target="#exampleModalCenter">
                   Buy now
                 </a>
               </div>
@@ -41,8 +42,9 @@
                 <p class="card-text text-justify">
                   Some quick example text to build on the card title and make up the bulk of the card's content.
                 </p>
+                <h5 class="float-left my-2">Price_here</h5>
                 <!-- Button trigger modal -->
-                <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                <a href="#" class="btn btn-primary float-right" data-toggle="modal" data-target="#exampleModalCenter">
                   Buy now
                 </a>
               </div>
@@ -57,8 +59,9 @@
                 <p class="card-text text-justify">
                   Some quick example text to build on the card title and make up the bulk of the card's content.
                 </p>
+                <h5 class="float-left my-2">Price_here</h5>
                 <!-- Button trigger modal -->
-                <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                <a href="#" class="btn btn-primary float-right" data-toggle="modal" data-target="#exampleModalCenter">
                   Buy now
                 </a>
               </div>
@@ -75,8 +78,9 @@
                 <p class="card-text text-justify">
                   Some quick example text to build on the card title and make up the bulk of the card's content.
                 </p>
+                <h5 class="float-left my-2">Price_here</h5>
                 <!-- Button trigger modal -->
-                <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                <a href="#" class="btn btn-primary float-right" data-toggle="modal" data-target="#exampleModalCenter">
                   Buy now
                 </a>
               </div>
@@ -91,8 +95,9 @@
                 <p class="card-text text-justify">
                   Some quick example text to build on the card title and make up the bulk of the card's content.
                 </p>
+                <h5 class="float-left my-2">Price_here</h5>
                 <!-- Button trigger modal -->
-                <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                <a href="#" class="btn btn-primary float-right" data-toggle="modal" data-target="#exampleModalCenter">
                   Buy now
                 </a>
               </div>
@@ -107,8 +112,9 @@
                 <p class="card-text text-justify">
                   Some quick example text to build on the card title and make up the bulk of the card's content.
                 </p>
+                <h5 class="float-left my-2">Price_here</h5>
                 <!-- Button trigger modal -->
-                <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                <a href="#" class="btn btn-primary float-right" data-toggle="modal" data-target="#exampleModalCenter">
                   Buy now
                 </a>
               </div>
@@ -154,6 +160,7 @@
                     </p>
                   </div>
                   <div class="card-footer">
+                    <h5 class="float-left my-2">Price_here</h5>
                     <a href="#" class="btn btn-primary float-right">Select</a>
                   </div>
                 </div>
@@ -174,6 +181,7 @@
                     </p>
                   </div>
                   <div class="card-footer">
+                    <h5 class="float-left my-2">Price_here</h5>
                     <a href="#" class="btn btn-primary float-right">Select</a>
                   </div>
                 </div>
