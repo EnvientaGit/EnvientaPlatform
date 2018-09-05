@@ -13,7 +13,7 @@
         <div class="col-md-12"><!-- Begin of the Main colum -->
           <div class="" style="height: 100px;"></div>
 
-<!--
+
 
           <div class="row my-5">
             <div class="col-md-12">
@@ -29,16 +29,17 @@
 
           <hr>
 
-          <div class="row my-5"><!- Begin of the - Maker/Projects/Investor ->
+          <div class="row my-5"><!-- Begin of the - Maker/Projects/Investor -->
             <div class="col-md-4">
               <div class="card border border-dark" style="width: 18rem;">
                 <div class="card-body text-center">
                   <i class="fa fa-cogs fa-3x _clr mb-3" aria-hidden="true"></i>
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="maker_check" value="1" onchange="valueChanged()">
+                    <input class="form-check-input _pulse" type="checkbox" id="maker_check" value="1" onchange="valueChanged()">
                     <label class="form-check-label" for="defaultCheck1">
                       <h5 class="card-text">Maker</h5>
                       <small class="_clr">Available</small>
+                      <!-- <small><i>Unavailable</i> </small> -->
                     </label>
                   </div>
                 </div>
@@ -48,12 +49,13 @@
             <div class="col-md-4">
               <div class="card border border-dark" style="width: 18rem;">
                 <div class="card-body text-center">
-                  <i class="fa fa-briefcase fa-3x text-dark mb-3" aria-hidden="true"></i>
+                  <i class="fa fa-briefcase fa-3x text-dark /*_clr*/ mb-3" aria-hidden="true"></i>
                   <div class="form-check">
                     <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" disabled="disabled">
                     <label class="form-check-label" for="defaultCheck1">
                       <h5 class="card-text">Projects</h5>
                       <small><i>Unavailable</i> </small>
+                      <!-- <small><i>Unavailable</i> </small> -->
                     </label>
                   </div>
                 </div>
@@ -63,29 +65,31 @@
             <div class="col-md-4">
               <div class="card border border-dark" style="width: 18rem;">
                 <div class="card-body text-center">
-                  <i class="fa fa-money fa-3x text-dark mb-3" aria-hidden="true"></i>
+                  <i class="fa fa-money fa-3x text-dark /*_clr*/ mb-3" aria-hidden="true"></i>
                   <div class="form-check">
                     <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" disabled="disabled">
                     <label class="form-check-label" for="defaultCheck1">
                       <h5 class="card-text">Investor</h5>
                       <small><i>Unavailable</i> </small>
+                      <!-- <small><i>Unavailable</i> </small> -->
                     </label>
                   </div>
                 </div>
               </div>
             </div>
-          </div><!- End of the - Maker/Projects/Investor ->
+          </div><!-- End of the - Maker/Projects/Investor -->
 
-          <div class="row mb-5"><!- Begin of the - Manifacturer/Distributor/Customer ->
+          <div class="row mb-5"><!-- Begin of the - Manifacturer/Distributor/Customer -->
             <div class="col-md-4">
               <div class="card border border-dark" style="width: 18rem;">
                 <div class="card-body text-center">
-                  <i class="fa fa-industry fa-3x text-dark mb-3" aria-hidden="true"></i>
+                  <i class="fa fa-industry fa-3x _clr mb-3" aria-hidden="true"></i>
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" disabled="disabled">
+                    <input class="form-check-input _pulse" type="checkbox" id="manifacturer_check" value="1" onchange="valueChanged()">
                     <label class="form-check-label" for="defaultCheck1">
                       <h5 class="card-text">Manufacturer</h5>
-                      <small><i>Unavailable</i> </small>
+                      <small class="_clr">Available</small>
+                      <!-- <small><i>Unavailable</i> </small> -->
                     </label>
                   </div>
                 </div>
@@ -110,22 +114,23 @@
             <div class="col-md-4">
               <div class="card border border-dark" style="width: 18rem;">
                 <div class="card-body text-center">
-                  <i class="fa fa-shopping-basket fa-3x text-dark mb-3" aria-hidden="true"></i>
+                  <i class="fa fa-shopping-basket fa-3x _clr mb-3" aria-hidden="true"></i>
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" disabled="disabled">
+                    <input class="form-check-input _pulse" type="checkbox" id="customer_check" value="1" onchange="valueChanged()">
                     <label class="form-check-label" for="defaultCheck1">
                       <h5 class="card-text">Customer</h5>
-                      <small><i>Unavailable</i> </small>
+                      <small class="_clr">Available</small>
+                      <!-- <small><i>Unavailable</i> </small> -->
                     </label>
                   </div>
                 </div>
               </div>
             </div>
-          </div><!- End of the - Manifacturer/Distributor/Customer ->
+          </div><!-- End of the - Manifacturer/Distributor/Customer -->
 
           <hr>
 
--->
+
           <div class="row my-5"><!-- Begin of the Fill-form -->
 
               <div class="col-md-4">
@@ -159,7 +164,7 @@
                 <div class="card border border-dark">
                   <div class="card-body text-center">
                     <!-- div class="bg-secondary rounded" style="height: 8.3em;" -->
-                      <img class="fa fa-camera text-light" aria-hidden="true" src="{{ Utils::userAvatarBig() }}"/>
+                      <img class="fa fa-camera text-light img-thumbnail" width="250" aria-hidden="true" src="{{ Utils::userAvatarBig() }}"/>
                     <!-- /div-->
                     <!--
                     <hr>
@@ -228,7 +233,7 @@
                     <div class="card border border-dark">
                       <div class="card-body text-left">
                         <div class="form-group mb-0">
-                          <label for="exampleFormControlTextarea1"><h6>Biography</h6>
+                          <label for="exampleFormControlTextarea1"><h6>Description</h6>
                           <small class="text-muted">Short description about you</small></label>
                           <textarea class="form-control" name="bio" id="exampleFormControlTextarea1" rows="3">{{$user->bio}}</textarea>
                         </div>
@@ -243,35 +248,36 @@
 
         <hr>
 
-        <div class="row mb-4 animated fadeIn" id="_maker"><!-- Begin of the Maker Section -->
+        <div class="row mb-4 animated fadeIn _hide" id="_maker"><!-- Begin of the Maker Section -->
           <div class="col-md-12">
             <div class="card border border-dark">
               <div class="card-body text-left">
-                <!--
+
                 <h6 class="text-left mb-3">
                   You picked the <b class="_clr">Maker</b> user type,
                   then please add a few tag about your skills
                 </h6>
-                -->
+
 
                 <div class="input-group mb-2">
                   <div class="input-group-prepend">
-                    <div class="input-group-text">Skills</div>
+                    <span class="input-group-text" id="basic-addon3">Skills</span>
                   </div>
-                  <input type="text" class="form-control proplist" name="skills" id="" placeholder="Php, 3D printing.. etc" value="{{$user->skills}}">
+                  <input type="text" class="form-control proplist" id="basic-url" aria-describedby="basic-addon3" placeholder="Php, 3D printing.. etc" value="{{$user->skills}}">
                 </div>
+
                 <div class="input-group">
                   <div class="input-group-prepend">
-                    <div class="input-group-text">Interests</div>
+                    <span class="input-group-text" id="basic-addon3">Interests</span>
                   </div>
-                  <input type="text" class="form-control proplist" name="interests" id="" placeholder="Robotics, AI.. etc" value="{{$user->interests}}">
+                  <input type="text" class="form-control proplist" id="basic-url" aria-describedby="basic-addon3" placeholder="Robotics, AI.. etc" value="{{$user->interests}}">
                 </div>
               </div>
             </div>
           </div>
         </div><!-- End of the Maker Section -->
 
-        <div class="row mb-4 animated fadeIn" id="_manifacturer" style="display: none;"><!-- Begin of the Manifacturer Section -->
+        <div class="row mb-4 animated fadeIn _hide" id="_manifacturer"><!-- Begin of the Manifacturer Section -->
           <div class="col-md-12">
             <div class="card border border-dark">
               <div class="card-body text-left">
@@ -444,7 +450,7 @@
           </div>
         </div><!-- End of the Manifacturer Section -->
 
-        <div class="row mb-4 animated fadeIn" id="_customer" style="display: none;"><!-- Begin of the Customer Section -->
+        <div class="row mb-4 animated fadeIn _hide" id="_customer"><!-- Begin of the Customer Section -->
           <div class="col-md-12">
             <div class="card border border-dark">
               <div class="card-body text-left">
@@ -491,15 +497,16 @@
 
         <div class="row mb-5">
           <div class="col-md-12">
-            
+
             <a href="{{ url('/') }}">
               <button type="button" class="btn btn-sm btn-secondary">
                 <i class="fa fa-chevron-left mr-1" aria-hidden="true"></i> Back to the front page</button>
             </a>
-            
+
             <a href="#">
               <button type="submit" class="btn btn-sm btn-primary float-right">
-                Save <i class="fa fa-floppy-o ml-1" aria-hidden="true"></i></button>
+                Save <i class="fa fa-floppy-o ml-1" aria-hidden="true"></i>
+              </button>
             </a>
           </div>
         </div>
@@ -508,13 +515,25 @@
       </div><!-- End of the container -->
 
       <script type="text/javascript">
-        function valueChanged()
-        {
-          if($('#maker_check').is(":checked"))
-          $("#_maker").show();
-          else
-          $("#_maker").hide();
-        }
+
+        // Maker Checkbox
+        $('#maker_check').click(function(){
+          $(this).toggleClass("_pulse");
+          $("#_maker").toggleClass("_hide");
+        });
+
+        // Manifacturer Checkbox
+        $('#manifacturer_check').click(function(){
+          $(this).toggleClass("_pulse");
+          $("#_manifacturer").toggleClass("_hide");
+        });
+
+        // Customer Checkbox
+        $('#customer_check').click(function(){
+          $(this).toggleClass("_pulse");
+          $("#_customer").toggleClass("_hide");
+        });
+
       </script>
 
 @endsection

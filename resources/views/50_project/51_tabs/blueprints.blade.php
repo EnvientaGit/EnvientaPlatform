@@ -1,7 +1,7 @@
 {{--
 <div class="row m-0">
-	<iframe src="https://3dwarehouse.sketchup.com/embed.html?mid=f9c78f177ea35a4bf5926f6cee661177&width=580&height=326" 
-		frameborder="0" scrolling="no" marginheight="0" marginwidth="0" width="726.66" height="435" allowfullscreen 
+	<iframe src="https://3dwarehouse.sketchup.com/embed.html?mid=f9c78f177ea35a4bf5926f6cee661177&width=580&height=326"
+		frameborder="0" scrolling="no" marginheight="0" marginwidth="0" width="726.66" height="435" allowfullscreen
 		class="dmodel border rounded box-shadow-bottom p-2 mb-3" style="display: none;">
 	</iframe>
 </div>
@@ -16,7 +16,7 @@
 					@if($folder['name'] == 'images')
 					<caption class="p-2 text-dark">Slider images</strong>
 					</caption>
-					@else	
+					@else
 					<caption class="p-2 text-dark">List of <strong class="env_color">{{ $folder['name'] }}</strong>
 						@if($mine)
 						<a href=""><i class="fa fa-window-close text-danger env_edit p-1 pull-right"></i></a>
@@ -59,7 +59,7 @@
 					  	@if($mine)
 					  	<td colspan="7">
 					  		<form id="blueprints_add_files" method="post" target="_blueprints_ajax_frame" action="{{ $project_url }}" class="bg-light env_link_blue blueprints_autosubmit" enctype="multipart/form-data">
-			  					{{ csrf_field() }} 
+			  					{{ csrf_field() }}
 						  		<div class="position-relative" style="height: 5.5em">
 						  			<div class="text-center rounded position-absolute w-100 h-100 env_drag">
 				    					<div class="mt-3">
@@ -101,7 +101,7 @@
 		    <h6 class="card-header dtitle p-2">
 		      <i class="fa fa-cube fa-fw mr-1 env_color"></i>3D Model
 		    </h6>
-		      <div class="card-body p-0">
+		      <div class="card-body p-0" style="height: 400px;">
 		        <iframe id="vs_iframe" src="https://www.viewstl.com/?embedded" class="w-100 h-100 border-0 m-0"></iframe>
 		      </div>
 		      {{--
@@ -125,7 +125,7 @@
 		    url: '{{ $project_url }}',
 		    type: 'post',
 		    data: {
-	    		'delete': true, 
+	    		'delete': true,
 	    		'folder': $(this).attr('data-folder'),
 	    		'file': $(this).attr('data-file')
 		    },
@@ -134,7 +134,7 @@
 	    	}
 		}).done(function(data) {
 		    console.log(data);
-		    $('#project_files').load('{{ $project_url }}/files');			
+		    $('#project_files').load('{{ $project_url }}/files');
 		});
     	e.preventDefault();
     });
@@ -148,4 +148,3 @@
     	}
     });
 </script>
-
