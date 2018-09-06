@@ -24,8 +24,16 @@ class ProfileController extends Controller
 		$user->linkedinUrl = $request->linkedinUrl;
 		$user->walletAddress = $request->walletAddress;
 		$user->bio = $request->bio;
+
+		$user->isMaker = isset($request->isMaker); 
 		$user->skills = $request->skills;
 		$user->interests = $request->interests;
+		
+		$user->isCustomer = isset($request->isCustomer);
+		$user->customerAddress = $request->customerAddress;
+		$user->customerPhone = $request->customerPhone;
+		$user->customerBillingAddress = $request->customerBillingAddress;
+
 		$user->save();	
 
 		return redirect('/profile');

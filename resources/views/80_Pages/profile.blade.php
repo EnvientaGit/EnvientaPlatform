@@ -35,7 +35,7 @@
                 <div class="card-body text-center">
                   <i class="fa fa-cogs fa-3x _clr mb-3" aria-hidden="true"></i>
                   <div class="form-check">
-                    <input class="form-check-input _pulse" type="checkbox" id="maker_check" value="1" onchange="valueChanged()">
+                    <input name="isMaker" class="form-check-input" type="checkbox" id="maker_check" {{$user->isMaker ? 'checked="true"' : ''}}>
                     <label class="form-check-label" for="defaultCheck1">
                       <h5 class="card-text">Maker</h5>
                       <small class="_clr">Available</small>
@@ -83,13 +83,13 @@
             <div class="col-md-4">
               <div class="card border border-dark" style="width: 18rem;">
                 <div class="card-body text-center">
-                  <i class="fa fa-industry fa-3x _clr mb-3" aria-hidden="true"></i>
+                  <i class="fa fa-industry fa-3x text-dark /*_clr*/ mb-3" aria-hidden="true"></i>
                   <div class="form-check">
-                    <input class="form-check-input _pulse" type="checkbox" id="manifacturer_check" value="1" onchange="valueChanged()">
+                    <input class="form-check-input" type="checkbox" id="manifacturer_check" value="1" 
                     <label class="form-check-label" for="defaultCheck1">
                       <h5 class="card-text">Manufacturer</h5>
-                      <small class="_clr">Available</small>
-                      <!-- <small><i>Unavailable</i> </small> -->
+                      <!-- <small class="_clr">Available</small> -->
+                      <small><i>Unavailable</i> </small>
                     </label>
                   </div>
                 </div>
@@ -116,7 +116,7 @@
                 <div class="card-body text-center">
                   <i class="fa fa-shopping-basket fa-3x _clr mb-3" aria-hidden="true"></i>
                   <div class="form-check">
-                    <input class="form-check-input _pulse" type="checkbox" id="customer_check" value="1" onchange="valueChanged()">
+                    <input name="isCustomer" class="form-check-input" type="checkbox" id="customer_check" {{$user->isCustomer ? 'checked="true"' : ''}} >
                     <label class="form-check-label" for="defaultCheck1">
                       <h5 class="card-text">Customer</h5>
                       <small class="_clr">Available</small>
@@ -248,7 +248,7 @@
 
         <hr>
 
-        <div class="row mb-4 animated fadeIn _hide" id="_maker"><!-- Begin of the Maker Section -->
+        <div class="row mb-4 animated fadeIn {{$user->isMaker ? '' : '_hide'}}" id="_maker"><!-- Begin of the Maker Section -->
           <div class="col-md-12">
             <div class="card border border-dark">
               <div class="card-body text-left">
@@ -263,14 +263,14 @@
                   <div class="input-group-prepend">
                     <span class="input-group-text" id="basic-addon3">Skills</span>
                   </div>
-                  <input type="text" class="form-control proplist" id="basic-url" aria-describedby="basic-addon3" placeholder="Php, 3D printing.. etc" value="{{$user->skills}}">
+                  <input name="skills" type="text" class="form-control proplist" id="basic-url" aria-describedby="basic-addon3" placeholder="Php, 3D printing.. etc" value="{{$user->skills}}">
                 </div>
 
                 <div class="input-group">
                   <div class="input-group-prepend">
                     <span class="input-group-text" id="basic-addon3">Interests</span>
                   </div>
-                  <input type="text" class="form-control proplist" id="basic-url" aria-describedby="basic-addon3" placeholder="Robotics, AI.. etc" value="{{$user->interests}}">
+                  <input name="interests" type="text" class="form-control proplist" id="basic-url" aria-describedby="basic-addon3" placeholder="Robotics, AI.. etc" value="{{$user->interests}}">
                 </div>
               </div>
             </div>
@@ -450,7 +450,7 @@
           </div>
         </div><!-- End of the Manifacturer Section -->
 
-        <div class="row mb-4 animated fadeIn _hide" id="_customer"><!-- Begin of the Customer Section -->
+        <div class="row mb-4 animated fadeIn {{$user->isCustomer ? '' : '_hide'}}" id="_customer"><!-- Begin of the Customer Section -->
           <div class="col-md-12">
             <div class="card border border-dark">
               <div class="card-body text-left">
@@ -462,15 +462,15 @@
                   <div class="col-md-6">
                     <div class="input-group mb-2">
                       <div class="input-group-prepend">
-                        <div class="input-group-text">Address</div>
+                        <div class="input-group-text">Delivery address</div>
                       </div>
-                      <input type="text" class="form-control" id="" placeholder="Your address">
+                      <input name="customerAddress" type="text" class="form-control" id="customerAddress" placeholder="Your delivery address" value="{{$user->customerAddress}}">
                     </div>
                     <div class="input-group">
                       <div class="input-group-prepend">
                         <div class="input-group-text">Phone number</div>
                       </div>
-                      <input type="text" class="form-control" id="" placeholder="Your phone number">
+                      <input name="customerPhone" type="text" class="form-control" id="" placeholder="Your phone number" value="{{$user->customerPhone}}">
                     </div>
                   </div>
                   <div class="col-md-6">
@@ -478,13 +478,7 @@
                       <div class="input-group-prepend">
                         <div class="input-group-text">Billing address</div>
                       </div>
-                      <input type="text" class="form-control" id="" placeholder="Your billing address">
-                    </div>
-                    <div class="input-group">
-                      <div class="input-group-prepend">
-                        <div class="input-group-text">Delivery address</div>
-                      </div>
-                      <input type="text" class="form-control" id="" placeholder="Your delivery address">
+                      <input name="customerBillingAddress" type="text" class="form-control" id="" placeholder="Your billing address" value="{{$user->customerBillingAddress}}">
                     </div>
                   </div>
                 </div>
@@ -518,21 +512,25 @@
 
         // Maker Checkbox
         $('#maker_check').click(function(){
-          $(this).toggleClass("_pulse");
+          //$(this).toggleClass("_pulse");
           $("#_maker").toggleClass("_hide");
         });
 
+        /*  
         // Manifacturer Checkbox
         $('#manifacturer_check').click(function(){
           $(this).toggleClass("_pulse");
           $("#_manifacturer").toggleClass("_hide");
         });
+        */
 
         // Customer Checkbox
         $('#customer_check').click(function(){
-          $(this).toggleClass("_pulse");
+          //$(this).toggleClass("_pulse");
           $("#_customer").toggleClass("_hide");
         });
+
+        //var autocomplete = new google.maps.places.Autocomplete(document.getElementById('customerAddress'));
 
       </script>
 
