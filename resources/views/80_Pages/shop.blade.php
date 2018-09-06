@@ -145,32 +145,11 @@
               </div>
               <div class="modal-body pb-0 _scroll">
 
-                <!-- Makerspace card/part -->
-                <div class="card w-100 border border-secondary mb-3">
-                  <div class="card-header">
-                    <div class="float-left mr-3">
-                      <img class="card-img-top img-fluid img-thumbnail rounded" style="width: 150px;" src="img/800x600_1.jpg" alt="Card image cap">
-                    </div>
-                    <h5 class="card-title text-truncate">Makerspace_here</h5>
-                    <p class="card-text mb-0 text-truncat">Address_here</p>
-                    <p class="card-text mb-0 text-truncat">Phone_here</p>
-                    <p class="card-text mb-0 text-truncat">Mail_here</p>
-                  </div>
-                  <div class="card-body">
-                    <p class="card-text text-justify">
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius esse eveniet velit at voluptatibus earum accusantium sed aliquam, iusto consequuntur?
-                    </p>
-                  </div>
-                  <div class="card-footer">
-                    <h5 class="float-left my-2">Price_here</h5>
-                    <a href="#" class="btn btn-primary float-right">Order/buy</a>
-                  </div>
-                </div><!-- End of the Makerspace card/part -->
-
+                @if(!Auth::check())  
                 <!-- Sign In part -->
                 <div class="card w-100 border border-secondary mb-3">
                   <div class="card-header text-truncat text-center">
-                    <h4 class="card-title text-truncate ">Oops..
+                    <h4 class="card-title text-truncate ">Not signed in
                       <i class="fa fa-frown-o" aria-hidden="true"></i>
                     </h4>
                     <p class="card-text mb-0 text-truncat">
@@ -183,30 +162,54 @@
                     </p>
                   </div>
                   <div class="card-footer text-center">
-                    <a href="#" class="btn btn-primary">Sign in / Sign up</a>
+                    <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#login_dialog" data-dismiss="modal">Sign in / Sign up</a>
                   </div>
                 </div><!-- End of the Sign In part -->
+                @elseif(!Auth::user()->isCustomer)  
 
                 <!-- "fill out profile" part -->
                 <div class="card w-100 border border-secondary mb-3">
                   <div class="card-header text-truncat text-center">
-                    <h4 class="card-title text-truncate ">Oops..
-                      <i class="fa fa-frown-o" aria-hidden="true"></i>
+                    <h4 class="card-title text-truncate ">Customer profile missing
                     </h4>
                     <p class="card-text mb-0 text-truncat">
-                      You have not yet filled out your Profile.
+                      You have not yet filled out your Customer Profile.
                     </p>
                   </div>
                   <div class="card-body">
                     <p class="card-text text-center">
-                      You have to fill out your <b class="_clr">Profile</b> to able to buy in the Shop
+                      You have to fill out the customer part of your <b class="_clr">Profile</b> to able to buy in the Shop
                     </p>
                   </div>
                   <div class="card-footer text-center">
-                    <a href="#" class="btn btn-primary">Got to profile</a>
+                    <a href="{{ URL::to('/profile') }}" class="btn btn-primary">Go to profile</a>
                   </div>
                 </div><!-- End of the "fill out profile" part -->
+                @else
 
+                <!-- Makerspace card/part -->
+                <div class="card w-100 border border-secondary mb-3">
+                  <div class="card-header">
+                    <div class="float-left mr-3">
+                      <img class="card-img-top img-fluid img-thumbnail rounded" style="width: 150px;" src="img/kollabor.jpg" alt="Card image cap">
+                    </div>
+                    <h5 class="card-title text-truncate">Kollabor</h5>
+                    <p class="card-text mb-0 text-truncat">Békéscsaba, Kiss Ernő u. 3, 5600 Hungary</p>
+                    <p class="card-text mb-0 text-truncat">+36 70 315 0797</p>
+                    <p class="card-text mb-0 text-truncat">hello@kollabor.hu</p>
+                  </div>
+                  <div class="card-body">
+                    <p class="card-text text-justify">
+                      KOLLABOR, the natural science experimental center and common creative place in Békéscsaba (Hungary). KOLLABOR is supported by ENVIENTA and is the first place where ENV tokens will be tested.
+                    </p>
+                  </div>
+                  <div class="card-footer">
+                    <h5 class="float-left my-2">Price_here</h5>
+                    <a href="#" class="btn btn-primary float-right">Order/buy</a>
+                  </div>
+                </div><!-- End of the Makerspace card/part -->
+                @endif
+                
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
