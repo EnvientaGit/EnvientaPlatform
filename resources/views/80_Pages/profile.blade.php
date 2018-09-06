@@ -85,7 +85,7 @@
                 <div class="card-body text-center">
                   <i class="fa fa-industry fa-3x text-dark /*_clr*/ mb-3" aria-hidden="true"></i>
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="manifacturer_check" value="1" 
+                    <input class="form-check-input" type="checkbox" id="manifacturer_check" value="1"  disabled="disabled">
                     <label class="form-check-label" for="defaultCheck1">
                       <h5 class="card-text">Manufacturer</h5>
                       <!-- <small class="_clr">Available</small> -->
@@ -516,7 +516,7 @@
           $("#_maker").toggleClass("_hide");
         });
 
-        /*  
+        /*
         // Manifacturer Checkbox
         $('#manifacturer_check').click(function(){
           $(this).toggleClass("_pulse");
