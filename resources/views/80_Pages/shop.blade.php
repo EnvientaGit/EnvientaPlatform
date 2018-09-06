@@ -19,13 +19,13 @@
         <div class="row">
           <div class="col-md-4 my-3">
             <div class="card border border-secondary">
-              <img class="card-img-top img-fluid" height="60" src="img/800x600_1.jpg" alt="Card image cap">
+              <img class="card-img-top img-fluid" height="60" src="img/desk_lamp.jpg" alt="Card image cap">
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
+                <h5 class="card-title">Modular 3D printed DESK LED LAMP</h5>
                 <p class="card-text text-justify">
-                  Some quick example text to build on the card title and make up the bulk of the card's content.
+                  Make brightness in your room or office - cheap, easy to print, biodegradable from PLA, and only 4 watts :))
                 </p>
-                <h5 class="float-left my-2">Price_here</h5>
+                <h5 class="float-left my-2">30 USD</h5>
                 <!-- Button trigger modal -->
                 <a href="#" class="btn btn-primary float-right" data-toggle="modal" data-target="#exampleModalCenter">
                   Buy now
@@ -36,13 +36,13 @@
 
           <div class="col-md-4 my-3">
             <div class="card border border-secondary">
-              <img class="card-img-top img-fluid" height="60" src="img/800x600_1.jpg" alt="Card image cap">
+              <img class="card-img-top img-fluid" height="60" src="img/chair.jpg" alt="Card image cap">
               <div class="card-body">
                 <h5 class="card-title">Card title</h5>
                 <p class="card-text text-justify">
-                  Some quick example text to build on the card title and make up the bulk of the card's content.
+                  This is a chair everyone with a printer and some nGen_FLEX filament can make at home!
                 </p>
-                <h5 class="float-left my-2">Price_here</h5>
+                <h5 class="float-left my-2">89 USD</h5>
                 <!-- Button trigger modal -->
                 <a href="#" class="btn btn-primary float-right" data-toggle="modal" data-target="#exampleModalCenter">
                   Buy now
