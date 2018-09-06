@@ -19,7 +19,7 @@
         <div class="row">
           <div class="col-md-4 my-3">
             <div class="card border border-secondary">
-              <img class="card-img-top img-fluid" height="60" src="img/desk_lamp.jpg" alt="Card image cap">
+              <a href="http://platform.envienta.org/project/modular-3d-printed-desk-led-lamp-easy-to-print-5b911e7705e95" target="_blank"><img class="card-img-top img-fluid" height="60" src="img/desk_lamp.jpg" alt="Card image cap"></a>
               <div class="card-body">
                 <h5 class="card-title">Modular 3D printed DESK LED LAMP</h5>
                 <p class="card-text text-justify">
@@ -36,9 +36,9 @@
 
           <div class="col-md-4 my-3">
             <div class="card border border-secondary">
-              <img class="card-img-top img-fluid" height="60" src="img/chair.jpg" alt="Card image cap">
+              <a href="http://platform.envienta.org/project/3d-chair-5b44db3bc3de3" target="_blank"><img class="card-img-top img-fluid" height="60" src="img/chair.jpg" alt="Card image cap"></a>
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
+                <h5 class="card-title">3D printed chair</h5>
                 <p class="card-text text-justify">
                   This is a chair everyone with a printer and some nGen_FLEX filament can make at home!
                 </p>
@@ -53,13 +53,13 @@
 
           <div class="col-md-4 my-3">
             <div class="card border border-secondary">
-              <img class="card-img-top img-fluid" height="60" src="img/800x600_1.jpg" alt="Card image cap">
+              <a href="http://platform.envienta.org/project/house-cooling-with-a-used-car-heat-exchanger-5b3b50cb5d920" target="_blank"><img class="card-img-top img-fluid" height="60" src="img/cooler.jpg" alt="Card image cap"></a>
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
+                <h5 class="card-title">House cooling with a used car heat exchanger</h5>
                 <p class="card-text text-justify">
-                  Some quick example text to build on the card title and make up the bulk of the card's content.
+                  More and more households are using air conditioning system. But this way is not going to be sustainable in the future.
                 </p>
-                <h5 class="float-left my-2">Price_here</h5>
+                <h5 class="float-left my-2">90 USD</h5>
                 <!-- Button trigger modal -->
                 <a href="#" class="btn btn-primary float-right" data-toggle="modal" data-target="#exampleModalCenter">
                   Buy now
@@ -72,13 +72,13 @@
 
           <div class="col-md-4 my-3">
             <div class="card border border-secondary">
-              <img class="card-img-top img-fluid" height="60" src="img/800x600_1.jpg" alt="Card image cap">
+              <a href="http://platform.envienta.org/project/diy-pallet-furniture-with-3d-printed-glass-holder-phone-stand-5b70afe2aca41" target="_blank"><img class="card-img-top img-fluid" height="60" src="img/furniture.jpg" alt="Card image cap"></a>
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
+                <h5 class="card-title">DIY pallet furniture with 3D printed glass holder & phone stand</h5>
                 <p class="card-text text-justify">
-                  Some quick example text to build on the card title and make up the bulk of the card's content.
+                  Garden furnitures are very expensive today, but you can easily make your own furniture from pallets. This solution is very cheap and unique with these 3d printed glass holder and phone stands.
                 </p>
-                <h5 class="float-left my-2">Price_here</h5>
+                <h5 class="float-left my-2">175 USD</h5>
                 <!-- Button trigger modal -->
                 <a href="#" class="btn btn-primary float-right" data-toggle="modal" data-target="#exampleModalCenter">
                   Buy now
@@ -89,13 +89,13 @@
 
           <div class="col-md-4 my-3">
             <div class="card border border-secondary">
-              <img class="card-img-top img-fluid" height="60" src="img/800x600_1.jpg" alt="Card image cap">
+              <a href="http://platform.envienta.org/project/automatic-watering-system-5b71787b52008" target="_blank"><img class="card-img-top img-fluid" height="60" src="img/watering_system.png" alt="Card image cap"></a>
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
+                <h5 class="card-title">Automatic watering system</h5>
                 <p class="card-text text-justify">
-                  Some quick example text to build on the card title and make up the bulk of the card's content.
+                  It's a simple aplication to watering flowers at home.
                 </p>
-                <h5 class="float-left my-2">Price_here</h5>
+                <h5 class="float-left my-2">75 USD</h5>
                 <!-- Button trigger modal -->
                 <a href="#" class="btn btn-primary float-right" data-toggle="modal" data-target="#exampleModalCenter">
                   Buy now
@@ -106,13 +106,13 @@
 
           <div class="col-md-4 my-3">
             <div class="card border border-secondary">
-              <img class="card-img-top img-fluid" height="60" src="img/800x600_1.jpg" alt="Card image cap">
+              <a href="http://platform.envienta.org/project/3d-printed-mosquito-trap-5b4608b328c67" target="_blank"><img class="card-img-top img-fluid" height="60" src="img/mosq_trap.jpg" alt="Card image cap"></a>
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
+                <h5 class="card-title">3D printed - Mosquito trap</h5>
                 <p class="card-text text-justify">
-                  Some quick example text to build on the card title and make up the bulk of the card's content.
+                  Non-toxic biodegradable mosquito trap. Printed from PLA, works without any propellant.
                 </p>
-                <h5 class="float-left my-2">Price_here</h5>
+                <h5 class="float-left my-2">30 USD</h5>
                 <!-- Button trigger modal -->
                 <a href="#" class="btn btn-primary float-right" data-toggle="modal" data-target="#exampleModalCenter">
                   Buy now
@@ -204,7 +204,7 @@
                     </p>
                   </div>
                   <div class="card-footer">
-                    <h5 class="float-left my-2">Price_here</h5>
+                    <!--<h5 class="float-left my-2">Price_here</h5>-->
                     <a href="#" class="btn btn-primary float-right">Order/buy</a>
                   </div>
                 </div><!-- End of the Makerspace card/part -->
