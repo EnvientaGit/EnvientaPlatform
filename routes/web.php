@@ -38,6 +38,10 @@ Route::get('/cookies', function () {
     return view('80_Pages.cookies');
 });
 
+Route::get('/shop', function () {
+    return view('80_Pages.shop');
+});
+
 Route::get('/', 'CampaignController@show');
 Route::get('/s/{filter}', 'CampaignController@show');
 Route::get('/u/{userId}', 'CampaignController@showByUser');
