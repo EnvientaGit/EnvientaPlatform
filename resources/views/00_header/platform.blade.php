@@ -19,11 +19,21 @@
         <!-- CSS - CDN's -->
         <link href="https://fonts.googleapis.com/css?family=Armata|Days+One" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
-        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+        <!-- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" /> -->
 
         <!-- Boostrap v4.0 -->
         {{-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"> --}}
         <link rel="stylesheet" href="{{ URL::to('css/bootstrap_4.1.0.min.css') }}" type="text/css">
+
+        <!-- Font-Awesoem v5.2.0 -->
+        <link rel="stylesheet" type="text/css" href="css/all.css">
+        <link rel="stylesheet" type="text/css" href="css/brands.css">
+        <link rel="stylesheet" type="text/css" href="css/fontawesome.css">
+        <link rel="stylesheet" type="text/css" href="css/light.css">
+        <link rel="stylesheet" type="text/css" href="css/regular.css">
+        <link rel="stylesheet" type="text/css" href="css/solid.css">
+        <link rel="stylesheet" type="text/css" href="css/svg-with-js.css">
+        <link rel="stylesheet" type="text/css" href="css/v4-shims.css">
 
         <!-- Custom CSS -->
         {{-- <link rel="stylesheet" href="{{ URL::to('css/platform.css') }}" type="text/css"> --}}

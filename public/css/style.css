@@ -355,7 +355,7 @@ select.form-control:not([size]):not([multiple]) {
 }
 
 textarea.form-control{
-  height: 3.1em;
+  height: 6em;
 }
 
 /* Custom post button */

@@ -217,13 +217,16 @@
 
                 <div class="row">
                   <div class="col-md-12">
-                    <div class="input-group mb-4">
+                    <div class="input-group">
                       <div class="input-group-prepend">
                         <div class="input-group-text">
-                          <i class="fa fa-linkedin" aria-hidden="true"></i>
+                          <i class="fab fa-ethereum"></i>
                         </div>
                       </div>
                       <input type="text" class="form-control" name="walletAddress" id="" placeholder="ERC-20" value="{{$user->walletAddress}}">
+                    </div>
+                    <div class="mb-4 ml-1">
+                      <small>Please be sure this is an ERC-20 wallet address. Otherwise your transaction could be lost.</small>
                     </div>
                   </div>
                 </div>
