@@ -19,10 +19,10 @@
         <div class="row">
 
           <div class="col-md-4 my-3">
-            <div class="card border border-secondary" style="height: 32rem;">
+            <div class="card border border-secondary" style="height: 33rem;">
               <div class="">
                 <a href="http://platform.envienta.org/project/modular-3d-printed-desk-led-lamp-easy-to-print-5b911e7705e95" target="_blank">
-                  <img class="card-img-top img-fluid" height="60" src="img/desk_lamp.jpg" alt="Card image cap">
+                  <img class="env_card_img_h card-img-top img-fluid" height="60" src="img/desk_lamp.jpg" alt="Card image cap">
                 </a>
               </div>
               <div class="card-body">
@@ -42,10 +42,10 @@
           </div>
 
           <div class="col-md-4 my-3">
-            <div class="card border border-secondary" style="height: 32rem;">
+            <div class="card border border-secondary" style="height: 33rem;">
               <div class="">
                 <a href="http://platform.envienta.org/project/3d-chair-5b44db3bc3de3" target="_blank">
-                  <img class="card-img-top img-fluid" height="60" src="img/chair.jpg" alt="Card image cap">
+                  <img class="env_card_img_h card-img-top img-fluid" height="60" src="img/chair.jpg" alt="Card image cap">
                 </a>
               </div>
               <div class="card-body">
@@ -65,10 +65,10 @@
           </div>
 
           <div class="col-md-4 my-3">
-            <div class="card border border-secondary" style="height: 32rem;">
+            <div class="card border border-secondary" style="height: 33rem;">
               <div class="">
                 <a href="http://platform.envienta.org/project/house-cooling-with-a-used-car-heat-exchanger-5b3b50cb5d920" target="_blank">
-                  <img class="card-img-top img-fluid" height="60" src="img/cooler.jpg" alt="Card image cap">
+                  <img class="env_card_img_h card-img-top img-fluid" height="60" src="img/cooler.jpg" alt="Card image cap">
                 </a>
               </div>
               <div class="card-body">
@@ -90,10 +90,10 @@
           <div class="" style="height: 500px;"></div>
 
           <div class="col-md-4 my-3">
-            <div class="card border border-secondary" style="height: 32rem;">
+            <div class="card border border-secondary" style="height: 33rem;">
               <div class="">
                 <a href="http://platform.envienta.org/project/diy-pallet-furniture-with-3d-printed-glass-holder-phone-stand-5b70afe2aca41" target="_blank">
-                  <img class="card-img-top img-fluid" height="60" src="img/furniture.jpg" alt="Card image cap">
+                  <img class="env_card_img_h card-img-top img-fluid" height="60" src="img/furniture.jpg" alt="Card image cap">
                 </a>
               </div>
               <div class="card-body">
@@ -113,10 +113,10 @@
           </div>
 
           <div class="col-md-4 my-3">
-            <div class="card border border-secondary" style="height: 32rem;">
+            <div class="card border border-secondary" style="height: 33rem;">
               <div class="">
                 <a href="http://platform.envienta.org/project/automatic-watering-system-5b71787b52008" target="_blank">
-                  <img class="card-img-top img-fluid" height="60" src="img/watering_system.png" alt="Card image cap">
+                  <img class="env_card_img_h card-img-top img-fluid" height="60" src="img/watering_system.png" alt="Card image cap">
                 </a>
               </div>
               <div class="card-body">
@@ -136,10 +136,10 @@
           </div>
 
           <div class="col-md-4 my-3">
-            <div class="card border border-secondary" style="height: 32rem;">
+            <div class="card border border-secondary" style="height: 33rem;">
               <div class="">
                 <a href="http://platform.envienta.org/project/3d-printed-mosquito-trap-5b4608b328c67" target="_blank">
-                  <img class="card-img-top img-fluid" height="60" src="img/mosq_trap.jpg" alt="Card image cap">
+                  <img class="env_card_img_h card-img-top img-fluid" height="60" src="img/mosq_trap.jpg" alt="Card image cap">
                 </a>
               </div>
               <div class="card-body">
