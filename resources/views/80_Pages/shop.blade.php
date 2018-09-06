@@ -19,10 +19,10 @@
         <div class="row">
 
           <div class="col-md-4 my-3">
-            <div class="card border border-secondary" style="height: 32rem;">
+            <div class="card border border-secondary" style="height: 33rem;">
               <div class="">
                 <a href="http://platform.envienta.org/project/modular-3d-printed-desk-led-lamp-easy-to-print-5b911e7705e95" target="_blank">
-                  <img class="card-img-top img-fluid" height="60" src="img/desk_lamp.jpg" alt="Card image cap">
+                  <img class="env_card_img_h card-img-top img-fluid" height="60" src="img/desk_lamp.jpg" alt="Card image cap">
                 </a>
               </div>
               <div class="card-body">
@@ -34,7 +34,7 @@
               <div class="card-footer text-center">
                 <h5 class="float-left my-2">30 USD</h5>
                 <!-- Button trigger modal -->
-                <a href="#" class="btn btn-primary float-right" data-toggle="modal" data-target="#exampleModalCenter">
+                <a href="#" class="btn btn-primary float-right buy" data-toggle="modal" data-target="#exampleModalCenter" data-product="modular-3d-printed-desk-led-lamp-easy-to-print-5b911e7705e95" data-product-name="Modular 3D printed DESK LED LAMP">
                   Buy now
                 </a>
               </div>
@@ -42,10 +42,10 @@
           </div>
 
           <div class="col-md-4 my-3">
-            <div class="card border border-secondary" style="height: 32rem;">
+            <div class="card border border-secondary" style="height: 33rem;">
               <div class="">
                 <a href="http://platform.envienta.org/project/3d-chair-5b44db3bc3de3" target="_blank">
-                  <img class="card-img-top img-fluid" height="60" src="img/chair.jpg" alt="Card image cap">
+                  <img class="env_card_img_h card-img-top img-fluid" height="60" src="img/chair.jpg" alt="Card image cap">
                 </a>
               </div>
               <div class="card-body">
@@ -57,7 +57,7 @@
               <div class="card-footer text-center">
                 <h5 class="float-left my-2">89 USD</h5>
                 <!-- Button trigger modal -->
-                <a href="#" class="btn btn-primary float-right" data-toggle="modal" data-target="#exampleModalCenter">
+                <a href="#" class="btn btn-primary float-right buy" data-toggle="modal" data-target="#exampleModalCenter" data-product="3d-chair-5b44db3bc3de3" data-product-name="3D printed chair">
                   Buy now
                 </a>
               </div>
@@ -65,10 +65,10 @@
           </div>
 
           <div class="col-md-4 my-3">
-            <div class="card border border-secondary" style="height: 32rem;">
+            <div class="card border border-secondary" style="height: 33rem;">
               <div class="">
                 <a href="http://platform.envienta.org/project/house-cooling-with-a-used-car-heat-exchanger-5b3b50cb5d920" target="_blank">
-                  <img class="card-img-top img-fluid" height="60" src="img/cooler.jpg" alt="Card image cap">
+                  <img class="env_card_img_h card-img-top img-fluid" height="60" src="img/cooler.jpg" alt="Card image cap">
                 </a>
               </div>
               <div class="card-body">
@@ -80,7 +80,7 @@
               <div class="card-footer text-center">
                 <h5 class="float-left my-2">90 USD</h5>
                 <!-- Button trigger modal -->
-                <a href="#" class="btn btn-primary float-right" data-toggle="modal" data-target="#exampleModalCenter">
+                <a href="#" class="btn btn-primary float-right buy" data-toggle="modal" data-target="#exampleModalCenter" data-product="house-cooling-with-a-used-car-heat-exchanger-5b3b50cb5d920" data-product-name="House cooling with a used car heat exchanger">
                   Buy now
                 </a>
               </div>
@@ -90,10 +90,10 @@
           <div class="" style="height: 500px;"></div>
 
           <div class="col-md-4 my-3">
-            <div class="card border border-secondary" style="height: 32rem;">
+            <div class="card border border-secondary" style="height: 33rem;">
               <div class="">
                 <a href="http://platform.envienta.org/project/diy-pallet-furniture-with-3d-printed-glass-holder-phone-stand-5b70afe2aca41" target="_blank">
-                  <img class="card-img-top img-fluid" height="60" src="img/furniture.jpg" alt="Card image cap">
+                  <img class="env_card_img_h card-img-top img-fluid" height="60" src="img/furniture.jpg" alt="Card image cap">
                 </a>
               </div>
               <div class="card-body">
@@ -105,7 +105,7 @@
               <div class="card-footer text-center">
                 <h5 class="float-left my-2">175 USD</h5>
                 <!-- Button trigger modal -->
-                <a href="#" class="btn btn-primary float-right" data-toggle="modal" data-target="#exampleModalCenter">
+                <a href="#" class="btn btn-primary float-right buy" data-toggle="modal" data-target="#exampleModalCenter" data-product="diy-pallet-furniture-with-3d-printed-glass-holder-phone-stand-5b70afe2aca41" data-product-name="DIY pallet furniture with 3D printed glass holder & phone stand">
                   Buy now
                 </a>
               </div>
@@ -113,10 +113,10 @@
           </div>
 
           <div class="col-md-4 my-3">
-            <div class="card border border-secondary" style="height: 32rem;">
+            <div class="card border border-secondary" style="height: 33rem;">
               <div class="">
                 <a href="http://platform.envienta.org/project/automatic-watering-system-5b71787b52008" target="_blank">
-                  <img class="card-img-top img-fluid" height="60" src="img/watering_system.png" alt="Card image cap">
+                  <img class="env_card_img_h card-img-top img-fluid" height="60" src="img/watering_system.png" alt="Card image cap">
                 </a>
               </div>
               <div class="card-body">
@@ -128,7 +128,7 @@
               <div class="card-footer text-center">
                 <h5 class="float-left my-2">75 USD</h5>
                 <!-- Button trigger modal -->
-                <a href="#" class="btn btn-primary float-right" data-toggle="modal" data-target="#exampleModalCenter">
+                <a href="#" class="btn btn-primary float-right buy" data-toggle="modal" data-target="#exampleModalCenter" data-product="automatic-watering-system-5b71787b52008" data-product-name="Automatic watering system">
                   Buy now
                 </a>
               </div>
@@ -136,10 +136,10 @@
           </div>
 
           <div class="col-md-4 my-3">
-            <div class="card border border-secondary" style="height: 32rem;">
+            <div class="card border border-secondary" style="height: 33rem;">
               <div class="">
                 <a href="http://platform.envienta.org/project/3d-printed-mosquito-trap-5b4608b328c67" target="_blank">
-                  <img class="card-img-top img-fluid" height="60" src="img/mosq_trap.jpg" alt="Card image cap">
+                  <img class="env_card_img_h card-img-top img-fluid" height="60" src="img/mosq_trap.jpg" alt="Card image cap">
                 </a>
               </div>
               <div class="card-body">
@@ -151,7 +151,7 @@
               <div class="card-footer text-center">
                 <h5 class="float-left my-2">30 USD</h5>
                 <!-- Button trigger modal -->
-                <a href="#" class="btn btn-primary float-right" data-toggle="modal" data-target="#exampleModalCenter">
+                <a href="#" class="btn btn-primary float-right buy" data-toggle="modal" data-target="#exampleModalCenter" data-product="3d-printed-mosquito-trap-5b4608b328c67" data-product-name="3D printed - Mosquito trap">
                   Buy now
                 </a>
               </div>
@@ -242,7 +242,7 @@
                   </div>
                   <div class="card-footer">
                     <!--<h5 class="float-left my-2">Price_here</h5>-->
-                    <a href="#" class="btn btn-primary float-right">Order/buy</a>
+                    <a href="#" class="btn btn-primary float-right" id="order_button" data-dismiss="modal">Order/buy</a>
                   </div>
                 </div><!-- End of the Makerspace card/part -->
                 @endif
@@ -257,7 +257,7 @@
         </div><!-- End of the modal -->
 
         <!-- Verification Modal -->
-        <div class="modal fade" id="exampleModalCenterVerify" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal fade" id="orderDonePopup" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
               <div class="modal-header">
@@ -295,4 +295,19 @@
     </div>
   </div>
 
+<script type="text/javascript">
+  $('.buy').click(function() {
+    var product = $(this).attr('data-product');
+    $('#order_button').attr('data-product-url', 'http://platform.envienta.org/project/' + product);    
+    $('#order_button').attr('data-product-name', $(this).attr('data-product-name'));
+  });
+
+  $('#order_button').click(function() {
+    var productUrl = $('#order_button').attr('data-product-url');
+    var productName = $('#order_button').attr('data-product-name');
+    $.get("/shop/sendOrder", {productName: productName, productUrl: productUrl}).done(function() {
+      $("#orderDonePopup").modal()
+    });
+  });
+</script>
 @endsection
