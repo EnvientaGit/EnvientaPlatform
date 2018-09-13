@@ -31,18 +31,20 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav ml-2 mr-auto">
-              <li class="nav-item mt-3">
+                <li class="nav-item mt-3">
                   <a class="nav-link text-white" href="{{ url('/shop') }}">
                     <h5>Shop
                       <i class="fa fa-shopping-basket _clr" aria-hidden="true"></i>
                     </h5>
                   </a>
                 </li>
-              {{--
-                <li class="nav-item">
-                  <a class="nav-link" href="#"><h5>About</h5></a>
+                <li class="nav-item mt-3">
+                  <a class="nav-link text-white" href="https://t.me/envienta" target="_blank">
+                    <h5>Telegram
+                      <i class="fab fa-telegram-plane _blue"></i>
+                    </h5>
+                  </a>
                 </li>
-              --}}
               </ul>
               <form id='search_form' class="form-inline ml-2">
                 <input class="form-control mr-sm-2 btn-sm env_width_20" id="search_edit" type="search" placeholder="Search" aria-label="Search" value="{{ empty($filter) ? '' : $filter }}">

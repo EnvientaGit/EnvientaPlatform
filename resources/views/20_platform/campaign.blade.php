@@ -26,6 +26,22 @@
         @include('60_campaign.projects')
       </div>
 
+      <div class="container"><!-- Telegram attention -->
+        <div class="row">
+          <div class="col-md-12">
+            <a href="https://t.me/envienta" target="_blank">
+              <div class="card border border-dark mb-5 _bpulse">
+                <div class="card-body">
+                  <h6 class="text-center mb-0">
+                    For up to date news! Please visit our channel on Telegram <i class="fab fa-telegram-plane _blue"></i>
+                  </h6>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div><!-- End of  Telegram attention -->
+
 
 <section class="mbr-section form3 cid-qUCSa8RrlP" id="form3-7y">
     <div class="container">
@@ -85,5 +101,5 @@
         });
       }
     </script>
-  
-@endsection 
+
+@endsection
