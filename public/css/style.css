@@ -433,6 +433,19 @@ textarea.form-control{
   @-ms-keyframes pulse {to {box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);}}
   @keyframes pulse {to {box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);}}
 
+  ._bpulse {
+    box-shadow: 0 0 0 0 rgb(0, 123, 255);
+    cursor: pointer;
+    -webkit-animation: _bpulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+    -moz-animation: _bpulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+    -ms-animation: _bpulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+    animation: _bpulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);  
+  }
+    @-webkit-keyframes _bpulse {to {box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);}}
+    @-moz-keyframes _bpulse {to {box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);}}
+    @-ms-keyframes _bpulse {to {box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);}}
+    @keyframes _bpulse {to {box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);}}
+
 
 /* Shop page Settings */
 ._scroll{
@@ -443,6 +456,9 @@ textarea.form-control{
 ._card{
   height: 29rem !important;
   min-height: auto !important;
+}
+._blue{
+  color: #007bff;
 }
 
 

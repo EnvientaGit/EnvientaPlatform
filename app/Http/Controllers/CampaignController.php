@@ -17,7 +17,7 @@ class CampaignController extends Controller
         $user = User::findOrFail($userId);
         $projects = $user->projects()->paginate(6);  
       } else {
-    		$projects = DB::table('projects')->orderBy('id', 'desc')->paginate(6);
+    		$projects = DB::table('projects')->orderBy('quality', 'updated_at')->paginate(6);
     	}
 
 		  if ($request->ajax()) {
