@@ -33,7 +33,7 @@
               <div class="card border border-dark mb-5 _bpulse">
                 <div class="card-body">
                   <h6 class="text-center mb-0">
-                    For up to date news! Please visit our channel on Telegram <i class="fab fa-telegram-plane _blue"></i>
+                    Hi everyone. In order to further develop our platform, we need your feedback and help. Also if you have any questions, don't hesitate to ask. We are waiting for you in our Telegram channel. Click here: <a href="https://t.me/envienta" target="_blank"></a> <i class="fab fa-telegram-plane _blue"></i>
                   </h6>
                 </div>
               </div>

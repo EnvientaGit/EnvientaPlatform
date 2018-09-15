@@ -6,6 +6,22 @@
 
 @section('content')
 
+  <div class="container"><!-- Telegram attention -->
+    <div class="row">
+      <div class="col-md-12">
+        <a href="https://t.me/envienta" target="_blank">
+          <div class="card border border-dark mb-5 _bpulse">
+            <div class="card-body">
+              <h6 class="text-center mb-0">
+                Hi everyone. In order to further develop our platform, we need your feedback and help. Also if you have any questions, don't hesitate to ask. We are waiting for you in our Telegram channel. Click here: <a href="https://t.me/envienta" target="_blank"></a> <i class="fab fa-telegram-plane _blue"></i>
+              </h6>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div><!-- End of  Telegram attention -->
+
     <div class="container p-3"><!-- Begin of the container -->
       <form method="post">
         {{ csrf_field() }}
@@ -510,22 +526,6 @@
 
       </form>
       </div><!-- End of the container -->
-
-      <div class="container"><!-- Telegram attention -->
-        <div class="row">
-          <div class="col-md-12">
-            <a href="https://t.me/envienta" target="_blank">
-              <div class="card border border-dark mb-5 _bpulse">
-                <div class="card-body">
-                  <h6 class="text-center mb-0">
-                    For up to date news! Please visit our channel on Telegram <i class="fab fa-telegram-plane _blue"></i>
-                  </h6>
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div><!-- End of  Telegram attention -->
 
       <script type="text/javascript">
 

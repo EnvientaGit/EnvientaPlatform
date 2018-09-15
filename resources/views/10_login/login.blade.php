@@ -44,6 +44,20 @@
             <p><div class="fb-login-button" data-max-rows="1" data-size="medium" data-button-type="login_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false" data-scope="public_profile,email" onlogin="checkFBLoginState();"></div></p>
           </div>
 
+          <div class="row">
+            <div class="col-md-12">
+              <a href="https://t.me/envienta" target="_blank">
+                <div class="card border border-dark mb-5 _bpulse">
+                  <div class="card-body">
+                    <h6 class="text-center mb-0">
+                      Hi everyone. In order to further develop our platform, we need your feedback and help. Also if you have any questions, don't hesitate to ask. We are waiting for you in our Telegram channel. Click here: <a href="https://t.me/envienta" target="_blank"></a> <i class="fab fa-telegram-plane _blue"></i>
+                    </h6>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
         </div>
 
         {{-- Enter Pin part --}}

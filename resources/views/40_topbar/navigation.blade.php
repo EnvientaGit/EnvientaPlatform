@@ -40,7 +40,7 @@
                 </li>
                 <li class="nav-item mt-3">
                   <a class="nav-link text-white" href="https://t.me/envienta" target="_blank">
-                    <h5>Telegram
+                    <h5>Need help? Click here 
                       <i class="fab fa-telegram-plane _blue"></i>
                     </h5>
                   </a>
