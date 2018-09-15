@@ -6,22 +6,6 @@
 
 @section('content')
 
-  <div class="container"><!-- Telegram attention -->
-    <div class="row">
-      <div class="col-md-12">
-        <a href="https://t.me/envienta" target="_blank">
-          <div class="card border border-dark mb-5 _bpulse">
-            <div class="card-body">
-              <h6 class="text-center mb-0">
-                Hi everyone. In order to further develop our platform, we need your feedback and help. Also if you have any questions, don't hesitate to ask. We are waiting for you in our Telegram channel. Click here: <a href="https://t.me/envienta" target="_blank"></a> <i class="fab fa-telegram-plane _blue"></i>
-              </h6>
-            </div>
-          </div>
-        </a>
-      </div>
-    </div>
-  </div><!-- End of  Telegram attention -->
-
     <div class="container p-3"><!-- Begin of the container -->
       <form method="post">
         {{ csrf_field() }}
@@ -29,7 +13,19 @@
         <div class="col-md-12"><!-- Begin of the Main colum -->
           <div class="" style="height: 100px;"></div>
 
-
+          <div class="row"><!-- Telegram attention -->
+            <div class="col-md-12">
+              <a href="https://t.me/envienta" target="_blank">
+                <div class="card border border-dark mb-5 _bpulse">
+                  <div class="card-body">
+                    <h6 class="text-center mb-0">
+                      Hi everyone. In order to further develop our platform, we need your feedback and help. Also if you have any questions, don't hesitate to ask. We are waiting for you in our Telegram channel. Click here: <a href="https://t.me/envienta" target="_blank"></a> <i class="fab fa-telegram-plane _blue"></i>
+                    </h6>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div><!-- End of  Telegram attention -->
 
           <div class="row my-5">
             <div class="col-md-12">
@@ -174,7 +170,20 @@
                 </div>
               </div>
 
+              <div class="col-md-12">
+                <div class="card border border-dark">
+                  <div class="card-body">
+                    <h6 class="float-left mb-0">Enable password based authenticaton</h6>
+                    <!-- "d-none" class below is to hide or show elements -->
+                    <i class="fas fa-check-circle ml-1 _clr align-top d-none"></i>
+                    <button type="button" class="float-right btn btn-primary btn-sm" data-toggle="modal" data-target="#add_pw">Set</button><br>
+                    <p class="w-75 mb-0">Here you are able to define a personal password instead of the pin code login method</p>
+                  </div>
+                </div>
+              </div>
+
           </div><!-- End of the Fill-form -->
+
             <div class="row"><!-- Begin of the Photo/Social/Bio Row -->
               <div class="col-md-3">
                 <div class="card border border-dark">
@@ -526,6 +535,50 @@
 
       </form>
       </div><!-- End of the container -->
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+
+            <!-- Password Modal -->
+            <div class="modal fade" id="add_pw" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Set your custom password</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="input-group input-group-sm mb-3">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">
+                          <i class="fas fa-key"></i>
+                        </span>
+                      </div>
+                      <input type="text" class="form-control" placeholder="Enter new password" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                    </div>
+                    <div class="input-group input-group-sm mb-3">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">
+                          <i class="far fa-key"></i>
+                        </span>
+                      </div>
+                      <input type="text" class="form-control" placeholder="Re-type new password" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
 
       <script type="text/javascript">
 
