@@ -172,12 +172,16 @@
 
               <div class="col-md-12">
                 <div class="card border border-dark">
+                  <div class="card-header">
+                    <h6 class="float-left">Enable password based authenticaton</h6>
+                    <div class="form-check float-right">
+                      <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                      <label class="form-check-label" for="defaultCheck1"></label>
+                    </div>
+                  </div>
                   <div class="card-body">
-                    <h6 class="float-left mb-0">Enable password based authenticaton</h6>
-                    <!-- "d-none" class below is to hide or show elements -->
-                    <i class="fas fa-check-circle ml-1 _clr align-top d-none"></i>
-                    <button type="button" class="float-right btn btn-primary btn-sm" data-toggle="modal" data-target="#add_pw">Set</button><br>
-                    <p class="w-75 mb-0">Here you are able to define a personal password instead of the pin code login method</p>
+                    <p class="w-75 mb-0 float-left">Here you are able to define a personal password instead of the pin code login method</p>
+                    <button type="button" class="float-right btn btn-primary btn-sm" data-toggle="modal" data-target="#add_pw" disabled="disabled">Set</button>
                   </div>
                 </div>
               </div>
