@@ -97,7 +97,7 @@
                 <div class="card-body text-center">
                   <i class="fa fa-industry fa-3x text-dark /*_clr*/ mb-3" aria-hidden="true"></i>
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="manifacturer_check" value="1"  disabled="disabled">
+                    <input class="form-check-input" type="checkbox" id="manifacturer_check" value="1" disabled="disabled">
                     <label class="form-check-label" for="defaultCheck1">
                       <h5 class="card-text">Manufacturer</h5>
                       <!-- <small class="_clr">Available</small> -->
@@ -318,6 +318,55 @@
                   then please fill out a few details about you
                 </h6>
                 <div class="row">
+                  <div class="col-md-10">
+                    <div class="input-group mb-2">
+                      <div class="input-group-prepend">
+                        <div class="input-group-text">Delivery address</div>
+                      </div>
+                      <input name="customerAddress" type="text" class="form-control" id="customerAddress" placeholder="Your delivery address" value="{{$user->customerAddress}}">
+                    </div>
+                  </div>
+                  <div class="col-md-2">
+                    <button type="button" class="btn btn-primary float-right">Find</button>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <div class="input-group-text">Country</div>
+                      </div>
+                      <input name="customerAddress" type="text" class="form-control" id="customerAddress" placeholder="Your country" value="{{$user->customerAddress}}">
+                    </div>
+                  </div>
+                  <div class="col-md-2">
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <div class="input-group-text">Zip code</div>
+                      </div>
+                      <input name="customerAddress" type="text" class="form-control" id="customerAddress" placeholder="Postal code" value="{{$user->customerAddress}}">
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <div class="input-group-text">City</div>
+                      </div>
+                      <input name="customerAddress" type="text" class="form-control" id="customerAddress" placeholder="Your city" value="{{$user->customerAddress}}">
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <div class="input-group-text">Street</div>
+                      </div>
+                      <input name="customerAddress" type="text" class="form-control" id="customerAddress" placeholder="Your street address" value="{{$user->customerAddress}}">
+                    </div>
+                  </div>
+                </div>
+                <hr>
+                <div class="row">
                   <div class="col-md-6">
                     <div class="input-group mb-2">
                       <div class="input-group-prepend">
@@ -327,7 +376,7 @@
                     </div>
                     <div class="input-group mb-2">
                       <div class="input-group-prepend">
-                        <div class="input-group-text">Address</div>
+                        <div class="input-group-text">Billing address</div>
                       </div>
                       <input type="text" class="form-control" id="" placeholder="Your address">
                     </div>
@@ -491,7 +540,7 @@
                   then please add a few tag about your skills
                 </h6>
 
-                <div class="row mb-2">
+                <div class="row">
                   <div class="col-md-10">
                     <div class="input-group mb-2">
                       <div class="input-group-prepend">
@@ -637,13 +686,11 @@
           $("#_maker").toggleClass("_hide");
         });
 
-        /*
         // Manifacturer Checkbox
-        $('#manifacturer_check').click(function(){
-          $(this).toggleClass("_pulse");
-          $("#_manifacturer").toggleClass("_hide");
-        });
-        */
+        // $('#manifacturer_check').click(function(){
+        //   $(this).toggleClass("_pulse");
+        //   $("#_manifacturer").toggleClass("_hide");
+        // });
 
         // Customer Checkbox
         $('#customer_check').click(function(){
