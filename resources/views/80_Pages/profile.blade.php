@@ -287,7 +287,8 @@
 
                 <h6 class="text-left mb-3">
                   You picked the <b class="_clr">Maker</b> user type,
-                  then please add a few tag about your skills
+                  then please add a few tag about your skills <br>
+                  <small>Be aware that, these informations just about to define your order - not gonna be public!</small>
                 </h6>
 
 
@@ -315,7 +316,8 @@
               <div class="card-body text-left">
                 <h6 class="text-left mb-3">
                   You picked the <b class="_clr">Manifacturer</b> user type,
-                  then please fill out a few details about you
+                  then please fill out a few details about you <br>
+                  <small>Be aware that, these informations just about to define your order - not gonna be public!</small>
                 </h6>
                 <div class="row">
                   <div class="col-md-10">
@@ -331,7 +333,7 @@
                   </div>
                 </div>
 
-                <div class="row">
+                <div class="row mb-2">
                   <div class="col-md-4">
                     <div class="input-group">
                       <div class="input-group-prepend">
