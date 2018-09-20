@@ -14,7 +14,7 @@
 <div class="alert alert-light alert-dismissible fade show box-shadow-bottom border-secondary" role="alert">
     <div class="row">
       <img src="{{ URL::to('img/language.svg') }}" class="ml-3" height="70" alt="Alert!">
-      <div class="right ml-4">
+      <div class="right ml-4 text-primary">
         <strong>Hey there!</strong>
         <br>Please keep in mind that we are not tolerate any profanities, obscene, indecent behavior in the post sessions!
         <br>Thank you for your understanding!
@@ -37,7 +37,7 @@
           <div class="env_wrap">
               <div class="mr-3">
                 <a href="https://www.gravatar.com/{{$avatar_hash}}" target="_blank">
-                <img src="{{ "https://www.gravatar.com/avatar/" . $avatar_hash . "?s=100"}}" 
+                <img src="{{ "https://www.gravatar.com/avatar/" . $avatar_hash . "?s=100"}}"
                   class="img-fluid img-thumbnail rounded-circle border mb-2" height="50" width="50">
                 </a>
               </div>
@@ -54,13 +54,3 @@
 </div>
 
 @include('50_project.52_newsfeed.feeds')
-
-
-
-
-
-
-
-
-
-
