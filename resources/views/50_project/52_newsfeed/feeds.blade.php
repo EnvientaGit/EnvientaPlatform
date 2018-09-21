@@ -36,7 +36,7 @@
         </div>
       </div>
     </h6>
-      <div class="card-body p-3 env_wrap">
+      <div class="card-body p-3 bg-white env_wrap">
           <div class="form-group w-100 mb-0">
             <p class="text-justify">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, dolore! Praesentium accusamus enim, similique sint veniam magnam ex at voluptate ducimus est officiis recusandae tempora perferendis sequi quos quod veritatis ratione optio doloremque labore illo consequuntur. Nisi deserunt qui dolor amet inventore error aliquid molestias, provident beatae nemo, tempora commodi porro earum eum at quam labore natus! Fuga commodi explicabo tempora cum vero nesciunt, molestias. Mollitia explicabo, unde illum natus ut a rem laudantium sit, soluta nisi officiis nihil at, temporibus dicta impedit illo quis. Deleniti, porro, et. Doloremque, debitis. Aut magni soluta, ullam explicabo saepe reiciendis amet error! Officia.
