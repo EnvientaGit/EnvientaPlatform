@@ -52,7 +52,7 @@
         </div>
       </div>
       <div class="card-footer p-3 admin-box">
-        <span class="rt-badge badge badge-dark" title="Admin panel"><i class="fa fa-exclamation-triangle"></i></span>
+        <span class="rt-badge badge badge-dark" data-toggle="tooltip" data-placement="top" title="Admin panel"><i class="fa fa-exclamation-triangle"></i></span>
         <div class="input-group input-group-sm">
           <div class="input-group-prepend">
             <button class="env_link_grey env_point input-group-text env_border_rslim" id="btnGroupAddon2" type="submit">
@@ -88,7 +88,7 @@
     
     <h6 class="card-header dtitle p-2">
       <i class="fa fa-eye-slash fa-fw mr-1 env_color"></i> Private Project
-      <span class="rt-badge badge badge-dark" title="Admin panel"><i class="fa fa-exclamation-triangle"></i></span>
+      <span class="rt-badge badge badge-dark" data-toggle="tooltip" data-placement="top" data-toggle="tooltip" data-placement="top" title="Admin panel"><i class="fa fa-exclamation-triangle"></i></span>
     </h6>
       <div class="card-body p-3">
 

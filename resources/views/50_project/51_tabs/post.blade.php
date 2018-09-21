@@ -39,7 +39,7 @@
         </div>
       </div>
       <div class="card-footer p-3 admin-box">
-        <span class="rt-badge badge badge-dark" title="Admin panel"><i class="fa fa-exclamation-triangle"></i></span>
+        <span class="rt-badge badge badge-dark" data-toggle="tooltip" data-placement="top" title="Admin panel"><i class="fa fa-exclamation-triangle"></i></span>
         <div class="input-group input-group-sm">
           <input name="cotributors" class="form-control" placeholder="Open new thread" aria-label="Open new theread" aria-describedby="btnGroupAddon3" type="text">
           <div class="input-group-append">
