@@ -13,7 +13,19 @@
         <div class="col-md-12"><!-- Begin of the Main colum -->
           <div class="" style="height: 100px;"></div>
 
-
+          <div class="row"><!-- Telegram attention -->
+            <div class="col-md-12">
+              <a href="https://t.me/envienta" target="_blank">
+                <div class="card border border-dark mb-5 _bpulse">
+                  <div class="card-body">
+                    <h6 class="text-center mb-0">
+                      Hi everyone. In order to further develop our platform, we need your feedback and help. Also if you have any questions, don't hesitate to ask. We are waiting for you in our Telegram channel. Click here: <a href="https://t.me/envienta" target="_blank"></a> <i class="fab fa-telegram-plane _blue"></i>
+                    </h6>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div><!-- End of  Telegram attention -->
 
           <div class="row my-5">
             <div class="col-md-12">
@@ -85,7 +97,7 @@
                 <div class="card-body text-center">
                   <i class="fa fa-industry fa-3x text-dark /*_clr*/ mb-3" aria-hidden="true"></i>
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="manifacturer_check" value="1"  disabled="disabled">
+                    <input class="form-check-input" type="checkbox" id="manifacturer_check" value="1" disabled="disabled">
                     <label class="form-check-label" for="defaultCheck1">
                       <h5 class="card-text">Manufacturer</h5>
                       <!-- <small class="_clr">Available</small> -->
@@ -158,7 +170,24 @@
                 </div>
               </div>
 
+              <div class="col-md-12">
+                <div class="card border border-dark">
+                  <div class="card-header">
+                    <h6 class="float-left">Enable password based authenticaton</h6>
+                    <div class="form-check float-right">
+                      <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                      <label class="form-check-label" for="defaultCheck1"></label>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <p class="w-75 mb-0 float-left">Here you are able to define a personal password instead of the pin code login method</p>
+                    <button type="button" class="float-right btn btn-primary btn-sm" data-toggle="modal" data-target="#add_pw" disabled="disabled">Set</button>
+                  </div>
+                </div>
+              </div>
+
           </div><!-- End of the Fill-form -->
+
             <div class="row"><!-- Begin of the Photo/Social/Bio Row -->
               <div class="col-md-3">
                 <div class="card border border-dark">
@@ -258,7 +287,8 @@
 
                 <h6 class="text-left mb-3">
                   You picked the <b class="_clr">Maker</b> user type,
-                  then please add a few tag about your skills
+                  then please add a few tag about your skills <br>
+                  <small>Be aware that, these informations just about to define your order - not gonna be public!</small>
                 </h6>
 
 
@@ -286,8 +316,58 @@
               <div class="card-body text-left">
                 <h6 class="text-left mb-3">
                   You picked the <b class="_clr">Manifacturer</b> user type,
-                  then please fill out a few details about you
+                  then please fill out a few details about you <br>
+                  <small>Be aware that, these informations just about to define your order - not gonna be public!</small>
                 </h6>
+                <div class="row">
+                  <div class="col-md-10">
+                    <div class="input-group mb-2">
+                      <div class="input-group-prepend">
+                        <div class="input-group-text">Delivery address</div>
+                      </div>
+                      <input name="customerAddress" type="text" class="form-control" id="customerAddress" placeholder="Your delivery address" value="{{$user->customerAddress}}">
+                    </div>
+                  </div>
+                  <div class="col-md-2">
+                    <button type="button" class="btn btn-primary float-right">Find</button>
+                  </div>
+                </div>
+
+                <div class="row mb-2">
+                  <div class="col-md-4">
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <div class="input-group-text">Country</div>
+                      </div>
+                      <input name="customerAddress" type="text" class="form-control" id="customerAddress" placeholder="Your country" value="{{$user->customerAddress}}">
+                    </div>
+                  </div>
+                  <div class="col-md-2">
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <div class="input-group-text">Zip code</div>
+                      </div>
+                      <input name="customerAddress" type="text" class="form-control" id="customerAddress" placeholder="Postal code" value="{{$user->customerAddress}}">
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <div class="input-group-text">City</div>
+                      </div>
+                      <input name="customerAddress" type="text" class="form-control" id="customerAddress" placeholder="Your city" value="{{$user->customerAddress}}">
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <div class="input-group-text">Street</div>
+                      </div>
+                      <input name="customerAddress" type="text" class="form-control" id="customerAddress" placeholder="Your street address" value="{{$user->customerAddress}}">
+                    </div>
+                  </div>
+                </div>
+                <hr>
                 <div class="row">
                   <div class="col-md-6">
                     <div class="input-group mb-2">
@@ -298,7 +378,7 @@
                     </div>
                     <div class="input-group mb-2">
                       <div class="input-group-prepend">
-                        <div class="input-group-text">Address</div>
+                        <div class="input-group-text">Billing address</div>
                       </div>
                       <input type="text" class="form-control" id="" placeholder="Your address">
                     </div>
@@ -461,14 +541,58 @@
                   You picked the <b class="_clr">Customer</b> user type,
                   then please add a few tag about your skills
                 </h6>
+
                 <div class="row">
-                  <div class="col-md-6">
+                  <div class="col-md-10">
                     <div class="input-group mb-2">
                       <div class="input-group-prepend">
                         <div class="input-group-text">Delivery address</div>
                       </div>
                       <input name="customerAddress" type="text" class="form-control" id="customerAddress" placeholder="Your delivery address" value="{{$user->customerAddress}}">
                     </div>
+                  </div>
+                  <div class="col-md-2">
+                    <button type="button" class="btn btn-primary float-right">Find</button>
+                  </div>
+                </div>
+
+                <div class="row mb-2">
+                  <div class="col-md-4">
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <div class="input-group-text">Country</div>
+                      </div>
+                      <input name="customerAddress" type="text" class="form-control" id="customerAddress" placeholder="Your country" value="{{$user->customerAddress}}">
+                    </div>
+                  </div>
+                  <div class="col-md-2">
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <div class="input-group-text">Zip code</div>
+                      </div>
+                      <input name="customerAddress" type="text" class="form-control" id="customerAddress" placeholder="Postal code" value="{{$user->customerAddress}}">
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <div class="input-group-text">City</div>
+                      </div>
+                      <input name="customerAddress" type="text" class="form-control" id="customerAddress" placeholder="Your city" value="{{$user->customerAddress}}">
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <div class="input-group-text">Street</div>
+                      </div>
+                      <input name="customerAddress" type="text" class="form-control" id="customerAddress" placeholder="Your street address" value="{{$user->customerAddress}}">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6">
                     <div class="input-group">
                       <div class="input-group-prepend">
                         <div class="input-group-text">Phone number</div>
@@ -485,6 +609,7 @@
                     </div>
                   </div>
                 </div>
+
               </div>
             </div>
           </div>
@@ -511,21 +636,49 @@
       </form>
       </div><!-- End of the container -->
 
-      <div class="container"><!-- Telegram attention -->
+      <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <a href="https://t.me/envienta" target="_blank">
-              <div class="card border border-dark mb-5 _bpulse">
-                <div class="card-body">
-                  <h6 class="text-center mb-0">
-                    For up to date news! Please visit our channel on Telegram <i class="fab fa-telegram-plane _blue"></i>
-                  </h6>
+
+            <!-- Password Modal -->
+            <div class="modal fade" id="add_pw" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Set your custom password</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="input-group input-group-sm mb-3">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">
+                          <i class="fas fa-key"></i>
+                        </span>
+                      </div>
+                      <input type="text" class="form-control" placeholder="Enter new password" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                    </div>
+                    <div class="input-group input-group-sm mb-3">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-sm">
+                          <i class="far fa-key"></i>
+                        </span>
+                      </div>
+                      <input type="text" class="form-control" placeholder="Re-type new password" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                  </div>
                 </div>
               </div>
-            </a>
+            </div>
+
           </div>
         </div>
-      </div><!-- End of  Telegram attention -->
+      </div>
 
       <script type="text/javascript">
 
@@ -535,13 +688,11 @@
           $("#_maker").toggleClass("_hide");
         });
 
-        /*
         // Manifacturer Checkbox
-        $('#manifacturer_check').click(function(){
-          $(this).toggleClass("_pulse");
-          $("#_manifacturer").toggleClass("_hide");
-        });
-        */
+        // $('#manifacturer_check').click(function(){
+        //   $(this).toggleClass("_pulse");
+        //   $("#_manifacturer").toggleClass("_hide");
+        // });
 
         // Customer Checkbox
         $('#customer_check').click(function(){
