@@ -349,7 +349,7 @@
                       <div class="input-group-prepend">
                         <span class="input-group-text" id="inputGroupPrepend1">Zip code</span>
                       </div>
-                      <input id="validationDefault1" name="manufacturerAddressZip" type="text" class="form-control" placeholder="Postal code" aria-describedby="inputGroupPrepend1" required aria-describedby="inputGroupPrepend1" required value="{{$user->manufacturerAddressZip}}" data-geo="postal_code">
+                      <input id="validationDefault1" name="manufacturerAddressZip" type="text" class="form-control" placeholder="Your zip" aria-describedby="inputGroupPrepend1" required aria-describedby="inputGroupPrepend1" required value="{{$user->manufacturerAddressZip}}" data-geo="postal_code">
                     </div>
                   </div>
 
@@ -359,7 +359,7 @@
                       <div class="input-group-prepend">
                           <span class="input-group-text" id="inputGroupPrepend2">City</span>
                       </div>
-                      <input id="validationDefault2" name="manufacturerAddressCity" type="text" class="form-control" placeholder="City" aria-describedby="inputGroupPrepend2" required aria-describedby="inputGroupPrepend2" required value="{{$user->manufacturerAddressCity}}" data-geo="locality">
+                      <input id="validationDefault2" name="manufacturerAddressCity" type="text" class="form-control" placeholder="Your City" aria-describedby="inputGroupPrepend2" required aria-describedby="inputGroupPrepend2" required value="{{$user->manufacturerAddressCity}}" data-geo="locality">
                     </div>
                   </div>
 
@@ -369,7 +369,7 @@
                       <div class="input-group-prepend">
                           <span class="input-group-text" id="inputGroupPrepend3">Street</span>
                       </div>
-                      <input id="validationDefault3" name="manufacturerAddressStreet" type="text" class="form-control" placeholder="Street" aria-describedby="inputGroupPrepend3" required aria-describedby="inputGroupPrepend3" required value="{{$user->manufacturerAddressStreet}}" data-geo="route">
+                      <input id="validationDefault3" name="manufacturerAddressStreet" type="text" class="form-control" placeholder="Your Street" aria-describedby="inputGroupPrepend3" required aria-describedby="inputGroupPrepend3" required value="{{$user->manufacturerAddressStreet}}" data-geo="route">
                     </div>
                   </div>
 
@@ -379,7 +379,7 @@
                       <div class="input-group-prepend">
                           <span class="input-group-text" id="inputGroupPrepend4">Number</span>
                       </div>
-                      <input id="validationDefault4" name="manufacturerAddressStreetNumber" type="text" class="form-control" placeholder="Number" aria-describedby="inputGroupPrepend4" required aria-describedby="inputGroupPrepend4" required value="{{$user->manufacturerAddressStreetNumber}}" data-geo="street_number">
+                      <input id="validationDefault4" name="manufacturerAddressStreetNumber" type="text" class="form-control" placeholder="Your Number" aria-describedby="inputGroupPrepend4" required aria-describedby="inputGroupPrepend4" required value="{{$user->manufacturerAddressStreetNumber}}" data-geo="street_number">
                     </div>
                   </div>
 
