@@ -15,8 +15,8 @@ class CreateMembersTable extends Migration
     {
         Schema::create('members', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('project_id');
-            $table->integer('user_id');
+            $table->integer('project_id')->unsigned();
+            $table->integer('user_id')->unsigned();
             // TODO: role
             $table->timestamps();
         });

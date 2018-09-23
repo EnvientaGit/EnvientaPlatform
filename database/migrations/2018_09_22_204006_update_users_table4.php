@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Schema;
-use Illuminate\Database\Schema\Blueprint;
+//use Illuminate\Database\Schema\Blueprint;
+use Grimzy\LaravelMysqlSpatial\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
 class UpdateUsersTable4 extends Migration
@@ -28,12 +29,14 @@ class UpdateUsersTable4 extends Migration
             $table->string('customerAddressZip')->nullable();
             $table->string('customerAddressCity')->nullable();
             $table->string('customerAddressStreet')->nullable();
+            $table->string('customerAddressStreetNumber')->nullable();
             $table->point('customerAddressGPS')->nullable();
 
             $table->string('manufacturerAddressCountry')->nullable();
             $table->string('manufacturerAddressZip')->nullable();
             $table->string('manufacturerAddressCity')->nullable();
             $table->string('manufacturerAddressStreet')->nullable();
+            $table->string('manufacturerAddressStreetNumber')->nullable();
             $table->point('manufacturerAddressGPS')->nullable();
         });
         //
