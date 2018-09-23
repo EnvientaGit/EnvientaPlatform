@@ -91,17 +91,17 @@
             </div>
           </div><!-- End of the - Maker/Projects/Investor -->
 
-          <div class="row mb-5"><!-- Begin of the - Manifacturer/Distributor/Customer -->
+          <div class="row mb-5"><!-- Begin of the - Manufacturer/Distributor/Customer -->
             <div class="col-md-4">
               <div class="card border border-dark" style="width: 18rem;">
                 <div class="card-body text-center">
-                  <i class="fa fa-industry fa-3x text-dark /*_clr*/ mb-3" aria-hidden="true"></i>
+                  <i class="fa fa-industry fa-3x _clr mb-3" aria-hidden="true"></i>
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="manifacturer_check" value="1" disabled="disabled">
-                    <label class="form-check-label" for="defaultCheck1">
+                    <input name="isManufacturer" class="form-check-input" type="checkbox" id="manufacturer_check" {{$user->isManufacturer ? 'checked="true"' : ''}}>
+                    <label class="form-check-label" for="manufacturer_check">
                       <h5 class="card-text">Manufacturer</h5>
-                      <!-- <small class="_clr">Available</small> -->
-                      <small><i>Unavailable</i> </small>
+                      <small class="_clr">Available</small>
+                      <!-- <small><i>Unavailable</i> </small> -->
                     </label>
                   </div>
                 </div>
@@ -138,7 +138,7 @@
                 </div>
               </div>
             </div>
-          </div><!-- End of the - Manifacturer/Distributor/Customer -->
+          </div><!-- End of the - Manufacturer/Distributor/Customer -->
 
           <hr>
 
@@ -310,12 +310,12 @@
           </div>
         </div><!-- End of the Maker Section -->
 
-        <div class="row mb-4 animated fadeIn _hide" id="_manifacturer"><!-- Begin of the Manifacturer Section -->
+        <div class="row mb-4 animated fadeIn {{$user->isManufacturer ? '' : '_hide'}}" id="_manufacturer"><!-- Begin of the Manufacturer Section -->
           <div class="col-md-12">
             <div class="card border border-dark">
               <div class="card-body text-left">
                 <h6 class="text-left mb-3">
-                  You picked the <b class="_clr">Manifacturer</b> user type,
+                  You picked the <b class="_clr">Manufacturer</b> user type,
                   then please fill out a few details about you <br>
                   <small>Be aware that, these informations just about to define your order - not gonna be public!</small>
                 </h6>
@@ -323,31 +323,31 @@
                   <div class="col-md-10">
                     <div class="input-group mb-2">
                       <div class="input-group-prepend">
-                        <div class="input-group-text">Delivery address</div>
+                        <div class="input-group-text">Address</div>
                       </div>
-                      <input name="customerAddress" type="text" class="form-control" id="customerAddress" placeholder="Your delivery address" value="{{$user->customerAddress}}">
+                      <input id="manufacturerAddress" name="manufacturerAddress" type="text" class="form-control"  placeholder="Your address" value="{{$user->manufacturerAddress}}">
                     </div>
                   </div>
                   <div class="col-md-2">
-                    <button type="button" class="btn btn-primary float-right">Find</button>
+                    <button type="button" class="btn btn-primary float-right geocomplete-button" data-geocomplete-target="manufacturerAddressTarget" data-geocomplete-field="manufacturerAddress">Find</button>
                   </div>
                 </div>
 
-                <div class="row mb-2">
-                  <div class="col-md-4">
+                <div class="row mb-2" id="manufacturerAddressTarget">
+                  <div class="col-md-2">
                     <div class="input-group">
                       <div class="input-group-prepend">
                         <div class="input-group-text">Country</div>
                       </div>
-                      <input name="customerAddress" type="text" class="form-control" id="customerAddress" placeholder="Your country" value="{{$user->customerAddress}}">
+                      <input name="manufacturerAddressCountry" type="text" class="form-control" value="{{$user->manufacturerAddressCountry}}" data-geo="country_short" readonly="true">
                     </div>
-                  </div>
+                  </div> 
                   <div class="col-md-2">
                     <div class="input-group">
                       <div class="input-group-prepend">
                         <div class="input-group-text">Zip code</div>
                       </div>
-                      <input name="customerAddress" type="text" class="form-control" id="customerAddress" placeholder="Postal code" value="{{$user->customerAddress}}">
+                      <input name="manufacturerAddressZip" type="text" class="form-control" value="{{$user->manufacturerAddressZip}}" data-geo="postal_code" readonly="true">
                     </div>
                   </div>
                   <div class="col-md-3">
@@ -355,7 +355,7 @@
                       <div class="input-group-prepend">
                         <div class="input-group-text">City</div>
                       </div>
-                      <input name="customerAddress" type="text" class="form-control" id="customerAddress" placeholder="Your city" value="{{$user->customerAddress}}">
+                      <input name="manufacturerAddressCity" type="text" class="form-control" value="{{$user->manufacturerAddressCity}}" data-geo="locality" readonly="true">
                     </div>
                   </div>
                   <div class="col-md-3">
@@ -363,18 +363,30 @@
                       <div class="input-group-prepend">
                         <div class="input-group-text">Street</div>
                       </div>
-                      <input name="customerAddress" type="text" class="form-control" id="customerAddress" placeholder="Your street address" value="{{$user->customerAddress}}">
+                      <input name="manufacturerAddressStreet" type="text" class="form-control" value="{{$user->manufacturerAddressStreet}}" data-geo="route" readonly="true">
                     </div>
                   </div>
+                  <div class="col-md-2">
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <div class="input-group-text">Number</div>
+                      </div>
+                      <input name="manufacturerAddressStreetNumber" type="text" class="form-control" value="{{$user->manufacturerAddressStreetNumber}}" data-geo="street_number" readonly="true">
+                    </div>
+                  </div>
+                  <input type="hidden" name="manufacturerAddressLat" data-geo="lat">
+                  <input type="hidden" name="manufacturerAddressLon" data-geo="lng">
                 </div>
+
                 <hr>
+                
                 <div class="row">
                   <div class="col-md-6">
                     <div class="input-group mb-2">
                       <div class="input-group-prepend">
-                        <div class="input-group-text">Manifacturer name</div>
+                        <div class="input-group-text">Manufacturer name</div>
                       </div>
-                      <input type="text" class="form-control" id="" placeholder="Your manifacturer name">
+                      <input type="text" class="form-control" id="" placeholder="Your manufacturer name">
                     </div>
                     <div class="input-group mb-2">
                       <div class="input-group-prepend">
@@ -531,7 +543,7 @@
               </div>
             </div>
           </div>
-        </div><!-- End of the Manifacturer Section -->
+        </div><!-- End of the Manufacturer Section -->
 
         <div class="row mb-4 animated fadeIn {{$user->isCustomer ? '' : '_hide'}}" id="_customer"><!-- Begin of the Customer Section -->
           <div class="col-md-12">
@@ -548,29 +560,29 @@
                       <div class="input-group-prepend">
                         <div class="input-group-text">Delivery address</div>
                       </div>
-                      <input name="customerAddress" type="text" class="form-control" id="customerAddress" placeholder="Your delivery address" value="{{$user->customerAddress}}">
+                      <input name="customerAddress" type="text" class="form-control geocomplete" id="customerAddress" placeholder="Your delivery address" value="{{$user->customerAddress}}">
                     </div>
                   </div>
                   <div class="col-md-2">
-                    <button type="button" class="btn btn-primary float-right">Find</button>
+                    <button type="button" class="btn btn-primary float-right geocomplete-button" data-geocomplete-target="customerAddressTarget" data-geocomplete-field="customerAddress">Find</button>
                   </div>
                 </div>
 
-                <div class="row mb-2">
-                  <div class="col-md-4">
+                <div class="row mb-2" id="customerAddressTarget">
+                  <div class="col-md-2">
                     <div class="input-group">
                       <div class="input-group-prepend">
                         <div class="input-group-text">Country</div>
                       </div>
-                      <input name="customerAddress" type="text" class="form-control" id="customerAddress" placeholder="Your country" value="{{$user->customerAddress}}">
+                      <input name="customerAddressCountry" type="text" class="form-control" value="{{$user->customerAddressCountry}}" data-geo="country_short" readonly="true">
                     </div>
-                  </div>
+                  </div> 
                   <div class="col-md-2">
                     <div class="input-group">
                       <div class="input-group-prepend">
                         <div class="input-group-text">Zip code</div>
                       </div>
-                      <input name="customerAddress" type="text" class="form-control" id="customerAddress" placeholder="Postal code" value="{{$user->customerAddress}}">
+                      <input name="customerAddressZip" type="text" class="form-control" value="{{$user->customerAddressZip}}" data-geo="postal_code" readonly="true">
                     </div>
                   </div>
                   <div class="col-md-3">
@@ -578,7 +590,7 @@
                       <div class="input-group-prepend">
                         <div class="input-group-text">City</div>
                       </div>
-                      <input name="customerAddress" type="text" class="form-control" id="customerAddress" placeholder="Your city" value="{{$user->customerAddress}}">
+                      <input name="customerAddressCity" type="text" class="form-control" value="{{$user->customerAddressCity}}" data-geo="locality" readonly="true">
                     </div>
                   </div>
                   <div class="col-md-3">
@@ -586,9 +598,19 @@
                       <div class="input-group-prepend">
                         <div class="input-group-text">Street</div>
                       </div>
-                      <input name="customerAddress" type="text" class="form-control" id="customerAddress" placeholder="Your street address" value="{{$user->customerAddress}}">
+                      <input name="customerAddressStreet" type="text" class="form-control" value="{{$user->customerAddressStreet}}" data-geo="route" readonly="true">
                     </div>
                   </div>
+                  <div class="col-md-2">
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <div class="input-group-text">Number</div>
+                      </div>
+                      <input name="customerAddressStreetNumber" type="text" class="form-control" value="{{$user->customerAddressStreetNumber}}" data-geo="street_number" readonly="true">
+                    </div>
+                  </div>
+                  <input type="hidden" name="customerAddressLat" data-geo="lat">
+                  <input type="hidden" name="customerAddressLon" data-geo="lng">
                 </div>
 
                 <div class="row">
@@ -688,11 +710,11 @@
           $("#_maker").toggleClass("_hide");
         });
 
-        // Manifacturer Checkbox
-        // $('#manifacturer_check').click(function(){
-        //   $(this).toggleClass("_pulse");
-        //   $("#_manifacturer").toggleClass("_hide");
-        // });
+        // Manufacturer Checkbox
+        $('#manufacturer_check').click(function(){
+           //$(this).toggleClass("_pulse");
+           $("#_manufacturer").toggleClass("_hide");
+        });
 
         // Customer Checkbox
         $('#customer_check').click(function(){
@@ -700,7 +722,18 @@
           $("#_customer").toggleClass("_hide");
         });
 
-        //var autocomplete = new google.maps.places.Autocomplete(document.getElementById('customerAddress'));
+        $('.geocomplete-button').each(function() {
+          var geocomplete_target = $(this).attr('data-geocomplete-target');
+          var geocomplete_field = $(this).attr('data-geocomplete-field');
+          console.log(geocomplete_field);
+          $('#' + geocomplete_field).geocomplete({
+            details: "#" + geocomplete_target,
+            detailsAttribute: "data-geo"
+          });
+          $(this).click(function() {
+            $('#' + geocomplete_field).trigger("geocode");
+          })
+        });
 
       </script>
 

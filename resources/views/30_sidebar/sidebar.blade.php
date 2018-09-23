@@ -10,13 +10,14 @@
         <h6 id="avatar_name" class="card-title font-weight-bold mb-2"></h6>
         <p id="avatar_description" class="card-text text-justify"></p>
       </div>
-{{--       <div class="card-footer env_uploaded_div pl-2">
+      <div class="card-footer env_uploaded_div pl-2">
+        {{--
         <p class="env_p">Uploaded at XXX</p>
-      </div> --}}
+        --}}
+      </div> 
   </div>
 </div>
 
-{{--
 <div class="row my-3 box-shadow-bottom">
   <div class="card w-100">
     <h6 class="card-header dtitle p-2">
@@ -50,7 +51,8 @@
             </div>
         </div>
       </div>
-      <div class="card-footer p-3">
+      <div class="card-footer p-3 admin-box">
+        <span class="rt-badge badge badge-dark" data-toggle="tooltip" data-placement="top" title="Admin panel"><i class="fa fa-exclamation-triangle"></i></span>
         <div class="input-group input-group-sm">
           <div class="input-group-prepend">
             <button class="env_link_grey env_point input-group-text env_border_rslim" id="btnGroupAddon2" type="submit">
@@ -62,7 +64,6 @@
       </div>
   </div>
 </div>
---}}
 
 <div class="row my-3 box-shadow-bottom">
   <div class="card w-100 border-0">
@@ -81,6 +82,38 @@
       </div>
   </div>
 </div> --}}
+
+<div class="row my-3 box-shadow-bottom">
+  <div class="card w-100 admin-box">
+    
+    <h6 class="card-header dtitle p-2">
+      <i class="fa fa-eye-slash fa-fw mr-1 env_color"></i> Private Project
+      <span class="rt-badge badge badge-dark" data-toggle="tooltip" data-placement="top" data-toggle="tooltip" data-placement="top" title="Admin panel"><i class="fa fa-exclamation-triangle"></i></span>
+    </h6>
+      <div class="card-body p-3">
+
+        <div class="form-row align-items-center">
+          <div class="col">
+            <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+              <option selected>Private</option>
+              <option value="1">Public</option>
+            </select>
+          </div>
+          <div class="col-auto">
+            <button type="submit" class="btn btn-primary">Set Status</button>
+          </div>
+        </div>
+        <div class="form-row align-items-center text-center">
+          <small class="form-text text-muted w-100">
+            <i class="fa fa-exclamation-triangle"></i> Pubilc projects are visible for everyone!
+          </small>
+        </div>
+
+      </div>
+  </div>
+</div>
+
+
 
 <script type="text/javascript">
   $.ajax({

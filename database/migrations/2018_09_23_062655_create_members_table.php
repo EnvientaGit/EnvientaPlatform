@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class UpdateProjectsTable extends Migration
+class CreateMembersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,12 @@ class UpdateProjectsTable extends Migration
      */
     public function up()
     {
-        Schema::table('projects', function (Blueprint $table) {
-            $table->integer('quality')->default(0);        
+        Schema::create('members', function (Blueprint $table) {
+            $table->increments('id');
+            $table->integer('project_id')->unsigned();
+            $table->integer('user_id')->unsigned();
+            // TODO: role
+            $table->timestamps();
         });
     }
 
@@ -25,6 +29,6 @@ class UpdateProjectsTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('members');
     }
 }

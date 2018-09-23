@@ -8,9 +8,9 @@
         <a data-toggle="pill" href="#project_files" class="btn btn-sm btn-light bg-light nav-link box-shadow-bottom">Files</a>
       </li>
       <!-- Laci! ezt itt -->
-      <!-- <li class="nav-item col-md-3">
+      <li class="nav-item col-md-3">
         <a data-toggle="pill" href="#menu3" class="btn btn-sm btn-light bg-light nav-link box-shadow-bottom">News Feed</a>
-      </li> -->
+      </li>
       <li class="nav-item col-md-3">
         <a data-toggle="pill" href="#menu2" class="btn btn-sm btn-light bg-light nav-link box-shadow-bottom">Comments</a>
       </li>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use Grimzy\LaravelMysqlSpatial\Types\Point;
 
 class ProfileController extends Controller
 {
@@ -26,13 +27,34 @@ class ProfileController extends Controller
 		$user->bio = $request->bio;
 
 		$user->isMaker = isset($request->isMaker); 
-		$user->skills = $request->skills;
-		$user->interests = $request->interests;
-		
+		if($user->isMaker) {
+			$user->skills = $request->skills;
+			$user->interests = $request->interests;
+		}
+
 		$user->isCustomer = isset($request->isCustomer);
-		$user->customerAddress = $request->customerAddress;
-		$user->customerPhone = $request->customerPhone;
-		$user->customerBillingAddress = $request->customerBillingAddress;
+		if($user->isCustomer) {
+			$user->customerAddress = $request->customerAddress;
+			$user->customerAddressCountry = $request->customerAddressCountry;
+			$user->customerAddressZip = $request->customerAddressZip;
+			$user->customerAddressCity = $request->customerAddressCity;
+			$user->customerAddressStreet = $request->customerAddressStreet;
+			$user->customerAddressStreetNumber = $request->customerAddressStreetNumber;
+			$user->customerAddressGPS = new Point($request->customerAddressLat, $request->customerAddressLon);
+			$user->customerPhone = $request->customerPhone;
+			$user->customerBillingAddress = $request->customerBillingAddress;
+		}
+
+		$user->isManufacturer = isset($request->isManufacturer);
+		if($user->isManufacturer) {
+			$user->manufacturerAddress = $request->manufacturerAddress;
+			$user->manufacturerAddressCountry = $request->manufacturerAddressCountry;
+			$user->manufacturerAddressZip = $request->manufacturerAddressZip;
+			$user->manufacturerAddressCity = $request->manufacturerAddressCity;
+			$user->manufacturerAddressStreet = $request->manufacturerAddressStreet;
+			$user->manufacturerAddressStreetNumber = $request->manufacturerAddressStreetNumber;
+			$user->manufacturerAddressGPS = new Point($request->manufacturerAddressLat, $request->manufacturerAddressLon);
+		}
 
 		$user->save();	
 

@@ -8292,3 +8292,13 @@ body {
   color: #ffffff;
   text-align: left;
 }
+
+.admin-box {
+  border: #000 1px solid;
+  position: relative;
+}
+.rt-badge {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+}
