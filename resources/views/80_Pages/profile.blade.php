@@ -341,45 +341,54 @@
                       </div>
                       <input name="manufacturerAddressCountry" type="text" class="form-control" value="{{$user->manufacturerAddressCountry}}" data-geo="country_short" readonly="true">
                     </div>
-                  </div> 
+                  </div>
+
                   <div class="col-md-2">
+                    <!-- <label for="validationDefault1">Zip code</label> -->
                     <div class="input-group">
                       <div class="input-group-prepend">
-                        <div class="input-group-text">Zip code</div>
+                        <span class="input-group-text" id="inputGroupPrepend1">Zip code</span>
                       </div>
-                      <input name="manufacturerAddressZip" type="text" class="form-control" value="{{$user->manufacturerAddressZip}}" data-geo="postal_code" readonly="true">
+                      <input id="validationDefault1" name="manufacturerAddressZip" type="text" class="form-control" placeholder="Postal code" aria-describedby="inputGroupPrepend1" required aria-describedby="inputGroupPrepend1" required value="{{$user->manufacturerAddressZip}}" data-geo="postal_code">
                     </div>
                   </div>
+
                   <div class="col-md-3">
+                    <!-- <label for="validationDefault2">City</label> -->
                     <div class="input-group">
                       <div class="input-group-prepend">
-                        <div class="input-group-text">City</div>
+                          <span class="input-group-text" id="inputGroupPrepend2">City</span>
                       </div>
-                      <input name="manufacturerAddressCity" type="text" class="form-control" value="{{$user->manufacturerAddressCity}}" data-geo="locality" readonly="true">
+                      <input id="validationDefault2" name="manufacturerAddressCity" type="text" class="form-control" placeholder="City" aria-describedby="inputGroupPrepend2" required aria-describedby="inputGroupPrepend2" required value="{{$user->manufacturerAddressCity}}" data-geo="locality">
                     </div>
                   </div>
+
                   <div class="col-md-3">
+                    <!-- <label for="validationDefault3">Street</label> -->
                     <div class="input-group">
                       <div class="input-group-prepend">
-                        <div class="input-group-text">Street</div>
+                          <span class="input-group-text" id="inputGroupPrepend3">Street</span>
                       </div>
-                      <input name="manufacturerAddressStreet" type="text" class="form-control" value="{{$user->manufacturerAddressStreet}}" data-geo="route" readonly="true">
+                      <input id="validationDefault3" name="manufacturerAddressStreet" type="text" class="form-control" placeholder="Street" aria-describedby="inputGroupPrepend3" required aria-describedby="inputGroupPrepend3" required value="{{$user->manufacturerAddressStreet}}" data-geo="route">
                     </div>
                   </div>
+
                   <div class="col-md-2">
+                    <!-- <label for="validationDefault4">Number</label> -->
                     <div class="input-group">
                       <div class="input-group-prepend">
-                        <div class="input-group-text">Number</div>
+                          <span class="input-group-text" id="inputGroupPrepend4">Number</span>
                       </div>
-                      <input name="manufacturerAddressStreetNumber" type="text" class="form-control" value="{{$user->manufacturerAddressStreetNumber}}" data-geo="street_number" readonly="true">
+                      <input id="validationDefault4" name="manufacturerAddressStreetNumber" type="text" class="form-control" placeholder="Number" aria-describedby="inputGroupPrepend4" required aria-describedby="inputGroupPrepend4" required value="{{$user->manufacturerAddressStreetNumber}}" data-geo="street_number">
                     </div>
                   </div>
+
                   <input type="hidden" name="manufacturerAddressLat" data-geo="lat">
                   <input type="hidden" name="manufacturerAddressLon" data-geo="lng">
                 </div>
 
                 <hr>
-                
+
                 <div class="row">
                   <div class="col-md-6">
                     <div class="input-group mb-2">
@@ -576,7 +585,7 @@
                       </div>
                       <input name="customerAddressCountry" type="text" class="form-control" value="{{$user->customerAddressCountry}}" data-geo="country_short" readonly="true">
                     </div>
-                  </div> 
+                  </div>
                   <div class="col-md-2">
                     <div class="input-group">
                       <div class="input-group-prepend">
@@ -692,7 +701,7 @@
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="submit" class="btn btn-primary">Save changes</button>
                   </div>
                 </div>
               </div>
