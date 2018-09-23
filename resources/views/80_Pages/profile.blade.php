@@ -91,17 +91,17 @@
             </div>
           </div><!-- End of the - Maker/Projects/Investor -->
 
-          <div class="row mb-5"><!-- Begin of the - Manifacturer/Distributor/Customer -->
+          <div class="row mb-5"><!-- Begin of the - Manufacturer/Distributor/Customer -->
             <div class="col-md-4">
               <div class="card border border-dark" style="width: 18rem;">
                 <div class="card-body text-center">
-                  <i class="fa fa-industry fa-3x text-dark /*_clr*/ mb-3" aria-hidden="true"></i>
+                  <i class="fa fa-industry fa-3x _clr mb-3" aria-hidden="true"></i>
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="manifacturer_check" value="1" disabled="disabled">
-                    <label class="form-check-label" for="defaultCheck1">
+                    <input name="isManufacturer" class="form-check-input" type="checkbox" id="manufacturer_check" {{$user->isManufacturer ? 'checked="true"' : ''}}>
+                    <label class="form-check-label" for="manufacturer_check">
                       <h5 class="card-text">Manufacturer</h5>
-                      <!-- <small class="_clr">Available</small> -->
-                      <small><i>Unavailable</i> </small>
+                      <small class="_clr">Available</small>
+                      <!-- <small><i>Unavailable</i> </small> -->
                     </label>
                   </div>
                 </div>
@@ -138,7 +138,7 @@
                 </div>
               </div>
             </div>
-          </div><!-- End of the - Manifacturer/Distributor/Customer -->
+          </div><!-- End of the - Manufacturer/Distributor/Customer -->
 
           <hr>
 
@@ -310,12 +310,12 @@
           </div>
         </div><!-- End of the Maker Section -->
 
-        <div class="row mb-4 animated fadeIn _hide" id="_manifacturer"><!-- Begin of the Manifacturer Section -->
+        <div class="row mb-4 animated fadeIn {{$user->isManufacturer ? '' : '_hide'}}" id="_manufacturer"><!-- Begin of the Manufacturer Section -->
           <div class="col-md-12">
             <div class="card border border-dark">
               <div class="card-body text-left">
                 <h6 class="text-left mb-3">
-                  You picked the <b class="_clr">Manifacturer</b> user type,
+                  You picked the <b class="_clr">Manufacturer</b> user type,
                   then please fill out a few details about you <br>
                   <small>Be aware that, these informations just about to define your order - not gonna be public!</small>
                 </h6>
@@ -323,7 +323,7 @@
                   <div class="col-md-10">
                     <div class="input-group mb-2">
                       <div class="input-group-prepend">
-                        <div class="input-group-text">Delivery address</div>
+                        <div class="input-group-text">Address</div>
                       </div>
                       <input name="customerAddress" type="text" class="form-control" id="customerAddress" placeholder="Your delivery address" value="{{$user->customerAddress}}">
                     </div>
@@ -372,9 +372,9 @@
                   <div class="col-md-6">
                     <div class="input-group mb-2">
                       <div class="input-group-prepend">
-                        <div class="input-group-text">Manifacturer name</div>
+                        <div class="input-group-text">Manufacturer name</div>
                       </div>
-                      <input type="text" class="form-control" id="" placeholder="Your manifacturer name">
+                      <input type="text" class="form-control" id="" placeholder="Your manufacturer name">
                     </div>
                     <div class="input-group mb-2">
                       <div class="input-group-prepend">
@@ -531,7 +531,7 @@
               </div>
             </div>
           </div>
-        </div><!-- End of the Manifacturer Section -->
+        </div><!-- End of the Manufacturer Section -->
 
         <div class="row mb-4 animated fadeIn {{$user->isCustomer ? '' : '_hide'}}" id="_customer"><!-- Begin of the Customer Section -->
           <div class="col-md-12">
@@ -688,11 +688,11 @@
           $("#_maker").toggleClass("_hide");
         });
 
-        // Manifacturer Checkbox
-        // $('#manifacturer_check').click(function(){
-        //   $(this).toggleClass("_pulse");
-        //   $("#_manifacturer").toggleClass("_hide");
-        // });
+        // Manufacturer Checkbox
+        $('#manufacturer_check').click(function(){
+           //$(this).toggleClass("_pulse");
+           $("#_manufacturer").toggleClass("_hide");
+        });
 
         // Customer Checkbox
         $('#customer_check').click(function(){

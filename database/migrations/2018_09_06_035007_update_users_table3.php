@@ -13,7 +13,7 @@ class UpdateUsersTable3 extends Migration
      */
     public function up()
     {
-	Schema::table('users', function (Blueprint $table) {
+	   Schema::table('users', function (Blueprint $table) {
             $table->boolean('isMaker')->nullable();
             $table->boolean('isCustomer')->nullable();
             $table->string('customerAddress')->nullable();

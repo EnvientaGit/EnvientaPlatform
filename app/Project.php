@@ -29,4 +29,13 @@ class Project extends Model
         return $this->belongsTo('App\User', 'owner');
     }
     
+    public function members()
+    {
+        return $this->hasMany('App\Memeber');
+    }
+
+    public function threads()
+    {
+        return $this->hasMany('App\Thread');
+    }
 }

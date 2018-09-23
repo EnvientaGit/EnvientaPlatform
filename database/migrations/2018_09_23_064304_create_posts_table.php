@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class UpdateProjectsTable extends Migration
+class CreatePostsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,12 @@ class UpdateProjectsTable extends Migration
      */
     public function up()
     {
-        Schema::table('projects', function (Blueprint $table) {
-            $table->integer('quality')->default(0);        
+        Schema::create('posts', function (Blueprint $table) {
+            $table->increments('id');
+            $table->integer('thread_id')->unsigned();
+            $table->integer('owner')->unsigned();
+            $table->longText('content');
+            $table->timestamps();
         });
     }
 
@@ -25,6 +29,6 @@ class UpdateProjectsTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('posts');
     }
 }
