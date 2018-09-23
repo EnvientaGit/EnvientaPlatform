@@ -7,7 +7,7 @@
         <i class="fa fa-times env_edit pull-right text-secondary" aria-hidden="true" data-toggle="modal" data-target="#newProjectModal"></i>
       </h6>
       <div class="card-body p-3">
-          
+
           <div class="form-group">
             <label for="title" class="mb-0">Title</label>
             <input name="title" type="text" class="btn-sm form-control" id="title" placeholder="Enter title" required="required">
@@ -24,7 +24,7 @@
             <label for="images" class="mb-0">Project images <small class="text-muted">(multiple images allowed, min. 1 required)</small></label>
             <div style="position: relative; left: 0px; top: 0px; height: 40px;" class="mb-3">
               <div class="btn btn-outline-primary" style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%;">Drop files here or click to upload</div>
-              <input id="env_point" type="file" name="images[]" style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; opacity:0;" required="true" multiple="true"> 
+              <input id="env_point" type="file" name="images[]" style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; opacity:0;" required="true" multiple="true">
             </div>
           </div>
           <div class="form-group">
@@ -64,13 +64,31 @@
               </small>
             </label>
           </div>
-          
+
       </div>
       <div class="card-footer p-2 text-right">
         <button type="button" class="btn btn-outline-secondary btn-sm" data-dismiss="modal">Close</button>
         <button type="submit" class="btn btn-sm env_button">Create project</button>
+        <br>
+        <hr>
+
+        <div class="row"><!-- Telegram attention -->
+          <div class="col-md-12">
+            <a href="https://t.me/envienta" target="_blank">
+              <div class="card border border-dark mb-5 _bpulse">
+                <div class="card-body">
+                  <h6 class="text-center mb-0">
+                    Hi everyone. In order to further develop our platform, we need your feedback and help. Also if you have any questions, don't hesitate to ask. We are waiting for you in our Telegram channel.<br>
+                    <i class="fab fa-telegram-plane fa-3x _blue"></i>
+                  </h6>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div><!-- End of  Telegram attention -->
       </div>
     </form>
+
     </div>
   </div>
 </div>
