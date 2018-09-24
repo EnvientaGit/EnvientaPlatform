@@ -48,7 +48,7 @@
                   <i class="fa fa-cogs fa-3x _clr mb-3" aria-hidden="true"></i>
                   <div class="form-check">
                     <input name="isMaker" class="form-check-input" type="checkbox" id="maker_check" {{$user->isMaker ? 'checked="true"' : ''}}>
-                    <label class="form-check-label" for="defaultCheck1">
+                    <label class="form-check-label" for="maker_check">
                       <h5 class="card-text">Maker</h5>
                       <small class="_clr">Available</small>
                       <!-- <small><i>Unavailable</i> </small> -->
@@ -63,8 +63,8 @@
                 <div class="card-body text-center">
                   <i class="fa fa-briefcase fa-3x text-dark /*_clr*/ mb-3" aria-hidden="true"></i>
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" disabled="disabled">
-                    <label class="form-check-label" for="defaultCheck1">
+                    <input class="form-check-input" type="checkbox" value="" id="projects_check" disabled="disabled">
+                    <label class="form-check-label" for="projects_check">
                       <h5 class="card-text">Projects</h5>
                       <small><i>Unavailable</i> </small>
                       <!-- <small><i>Unavailable</i> </small> -->
@@ -79,8 +79,8 @@
                 <div class="card-body text-center">
                   <i class="fa fa-money fa-3x text-dark /*_clr*/ mb-3" aria-hidden="true"></i>
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" disabled="disabled">
-                    <label class="form-check-label" for="defaultCheck1">
+                    <input class="form-check-input" type="checkbox" value="" id="investor_check" disabled="disabled">
+                    <label class="form-check-label" for="investor_check">
                       <h5 class="card-text">Investor</h5>
                       <small><i>Unavailable</i> </small>
                       <!-- <small><i>Unavailable</i> </small> -->
@@ -97,7 +97,11 @@
                 <div class="card-body text-center">
                   <i class="fa fa-industry fa-3x _clr mb-3" aria-hidden="true"></i>
                   <div class="form-check">
+<<<<<<< HEAD
                     <input name="isManufacturer" class="form-check-input" type="checkbox" id="manufacturer_check" {{$user->isManufacturer ? 'checked="true"' : ''}}>
+=======
+                    <input class="form-check-input" type="checkbox" id="manufacturer_check" value="1" disabled="disabled">
+>>>>>>> Fixing labels
                     <label class="form-check-label" for="manufacturer_check">
                       <h5 class="card-text">Manufacturer</h5>
                       <small class="_clr">Available</small>
@@ -113,8 +117,8 @@
                 <div class="card-body text-center">
                   <i class="fa fa-dot-circle-o fa-3x text-dark mb-3" aria-hidden="true"></i>
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" disabled="disabled">
-                    <label class="form-check-label" for="defaultCheck1">
+                    <input class="form-check-input" type="checkbox" value="" id="distributor_check" disabled="disabled">
+                    <label class="form-check-label" for="distributor_check">
                       <h5 class="card-text">Distributor</h5>
                       <small><i>Unavailable</i> </small>
                     </label>
@@ -129,7 +133,7 @@
                   <i class="fa fa-shopping-basket fa-3x _clr mb-3" aria-hidden="true"></i>
                   <div class="form-check">
                     <input name="isCustomer" class="form-check-input" type="checkbox" id="customer_check" {{$user->isCustomer ? 'checked="true"' : ''}} >
-                    <label class="form-check-label" for="defaultCheck1">
+                    <label class="form-check-label" for="customer_check">
                       <h5 class="card-text">Customer</h5>
                       <small class="_clr">Available</small>
                       <!-- <small><i>Unavailable</i> </small> -->
@@ -175,8 +179,8 @@
                   <div class="card-header">
                     <h6 class="float-left">Enable password based authenticaton</h6>
                     <div class="form-check float-right">
-                      <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                      <label class="form-check-label" for="defaultCheck1"></label>
+                      <input class="form-check-input" type="checkbox" value="" id="pw_auth">
+                      <label class="form-check-label" for="pw_auth"></label>
                     </div>
                   </div>
                   <div class="card-body">
@@ -265,9 +269,9 @@
                     <div class="card border border-dark">
                       <div class="card-body text-left">
                         <div class="form-group mb-0">
-                          <label for="exampleFormControlTextarea1"><h6>Description</h6>
+                          <label for="user_bio"><h6>Description</h6>
                           <small class="text-muted">Short description about you</small></label>
-                          <textarea class="form-control" name="bio" id="exampleFormControlTextarea1" rows="3">{{$user->bio}}</textarea>
+                          <textarea class="form-control" name="bio" id="user_bio" rows="3">{{$user->bio}}</textarea>
                         </div>
                       </div>
                     </div>
@@ -439,22 +443,22 @@
                     <h6 class="mb-3">Additional conditions and possiblities</h6>
 
                     <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                      <label class="form-check-label" for="defaultCheck1">
+                      <input class="form-check-input" type="checkbox" value="" id="manufacturer_1">
+                      <label class="form-check-label" for="manufacturer_1">
                          Cutting machines that cut a variety of materials (plastics, metal, plaster, and other common materials) with precision (laser, water jet, knife)
                       </label>
                     </div>
 
                     <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                      <label class="form-check-label" for="defaultCheck1">
+                      <input class="form-check-input" type="checkbox" value="" id="manufacturer_2">
+                      <label class="form-check-label" for="manufacturer_2">
                         Decorative materials for painting, embroidery and embellishing projects
                       </label>
                     </div>
 
                     <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                      <label class="form-check-label" for="defaultCheck1">
+                      <input class="form-check-input" type="checkbox" value="" id="manufacturer_3">
+                      <label class="form-check-label" for="manufacturer_3">
                         Joining machines that use computer control to sew, weld, or bond in other ways
                       </label>
                     </div>
@@ -464,36 +468,36 @@
                     <div class="row">
                       <div class="col-md-6">
                         <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                          <label class="form-check-label" for="defaultCheck1">
+                          <input class="form-check-input" type="checkbox" value="" id="manufacturer_4">
+                          <label class="form-check-label" for="manufacturer_4">
                             3D printers that are capable of producing three-dimensional objects
                           </label>
                         </div>
 
                         <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                          <label class="form-check-label" for="defaultCheck1">
+                          <input class="form-check-input" type="checkbox" value="" id="manufacturer_5">
+                          <label class="form-check-label" for="manufacturer_5">
                             Milling and routing machines that drill and shape complex parts
                           </label>
                         </div>
 
                         <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                          <label class="form-check-label" for="defaultCheck1">
+                          <input class="form-check-input" type="checkbox" value="" id="manufacturer_6">
+                          <label class="form-check-label" for="manufacturer_6">
                             Electronic parts and tools
                           </label>
                         </div>
 
                         <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                          <label class="form-check-label" for="defaultCheck1">
+                          <input class="form-check-input" type="checkbox" value="" id="manufacturer_7">
+                          <label class="form-check-label" for="manufacturer_7">
                             Tools for precision mechanics
                           </label>
                         </div>
 
                         <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                          <label class="form-check-label" for="defaultCheck1">
+                          <input class="form-check-input" type="checkbox" value="" id="manufacturer_8">
+                          <label class="form-check-label" for="manufacturer_8">
                             Traditional hand and power tools, including soldering irons
                           </label>
                         </div>
@@ -502,29 +506,29 @@
 
                       <div class="col-md-4">
                         <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                          <label class="form-check-label" for="defaultCheck1">
+                          <input class="form-check-input" type="checkbox" value="" id="manufacturer_9">
+                          <label class="form-check-label" for="manufacturer_9">
                             Computers, cameras, softwares
                           </label>
                         </div>
 
                         <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                          <label class="form-check-label" for="defaultCheck1">
+                          <input class="form-check-input" type="checkbox" value="" id="manufacturer_10">
+                          <label class="form-check-label" for="manufacturer_11">
                             Craft and art supplies
                           </label>
                         </div>
 
                         <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                          <label class="form-check-label" for="defaultCheck1">
+                          <input class="form-check-input" type="checkbox" value="" id="manufacturer_12">
+                          <label class="form-check-label" for="manufacturer_13">
                             Building materials
                           </label>
                         </div>
 
                         <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                          <label class="form-check-label" for="defaultCheck1">
+                          <input class="form-check-input" type="checkbox" value="" id="manufacturer_14">
+                          <label class="form-check-label" for="manufacturer_14">
                             Junk for recycling into new products
                           </label>
                         </div>
@@ -532,15 +536,15 @@
 
                       <div class="col-md-2">
                         <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                          <label class="form-check-label" for="defaultCheck1">
+                          <input class="form-check-input" type="checkbox" value="" id="manufacturer_15">
+                          <label class="form-check-label" for="manufacturer_15">
                             Batteries
                           </label>
                         </div>
 
                         <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                          <label class="form-check-label" for="defaultCheck1">
+                          <input class="form-check-input" type="checkbox" value="" id="manufacturer_16">
+                          <label class="form-check-label" for="manufacturer_16">
                             Library
                           </label>
                         </div>
@@ -672,11 +676,11 @@
           <div class="col-md-12">
 
             <!-- Password Modal -->
-            <div class="modal fade" id="add_pw" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal fade" id="add_pw" tabindex="-1" role="dialog" aria-labelledby="pw_modal" aria-hidden="true">
               <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Set your custom password</h5>
+                    <h5 class="modal-title" id="pw_modal">Set your custom password</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                       <span aria-hidden="true">&times;</span>
                     </button>
