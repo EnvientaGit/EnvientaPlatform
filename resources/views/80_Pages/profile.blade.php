@@ -97,11 +97,7 @@
                 <div class="card-body text-center">
                   <i class="fa fa-industry fa-3x _clr mb-3" aria-hidden="true"></i>
                   <div class="form-check">
-<<<<<<< HEAD
                     <input name="isManufacturer" class="form-check-input" type="checkbox" id="manufacturer_check" {{$user->isManufacturer ? 'checked="true"' : ''}}>
-=======
-                    <input class="form-check-input" type="checkbox" id="manufacturer_check" value="1" disabled="disabled">
->>>>>>> Fixing labels
                     <label class="form-check-label" for="manufacturer_check">
                       <h5 class="card-text">Manufacturer</h5>
                       <small class="_clr">Available</small>
