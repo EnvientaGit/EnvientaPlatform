@@ -103,10 +103,15 @@
 </div> --}}
 
 <div class="row my-3 box-shadow-bottom">
-  <div class="card w-100 admin-box">
+  <div class="card w-100 admin-box" id="projectStatusController">
     
     <h6 class="card-header dtitle p-2">
-      <i class="fa fa-eye-slash fa-fw mr-1 env_color"></i> Private Project
+      @if ($project->public == 0)
+        <i class="fa fa-eye-slash fa-fw mr-1 env_color"></i> <span>Private</span> Project
+      @endif
+        @if ($project->public == 1)
+          <i class="fa fa-eye fa-fw mr-1 env_color"></i> <span>Public</span> Project
+        @endif
       <span class="rt-badge badge badge-dark" data-toggle="tooltip" data-placement="top" data-toggle="tooltip" data-placement="top" title="Admin panel"><i class="fa fa-exclamation-triangle"></i></span>
     </h6>
       <div class="card-body p-3">
@@ -150,14 +155,18 @@
       e.preventDefault();
       var projectStatus = $('#projectStatus option:selected').val();
       console.log(projectStatus);
+      if(projectStatus==1) {
+          $("#projectStatusController h6 i").removeClass("fa-eye-slash").addClass("fa-eye");
+          $("#projectStatusController h6 span:first-of-type").text("Public");
+      } else {
+          $("#projectStatusController h6 i").removeClass("fa-eye").addClass("fa-eye-slash");
+          $("#projectStatusController h6 span:first-of-type").text("Private");
+      }
 
       $.ajax({
         url: '{{ url()->current() }}',
         type: 'POST',
         data: {'projectStatus': projectStatus},
-        /*success: function(data) {
-          console.log(data);
-        };*/
       });
 
     });
