@@ -113,13 +113,13 @@
 
         <div class="form-row align-items-center">
           <div class="col">
-            <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-              <option selected>Private</option>
-              <option value="1">Public</option>
+            <select name="status" class="custom-select mr-sm-2" id="projectStatus">
+              <option @if ($project->public == 0) SELECTED @endif value="0">Private</option>
+              <option @if ($project->public == 1) SELECTED @endif value="1">Public</option>
             </select>
           </div>
           <div class="col-auto">
-            <button type="submit" class="btn btn-primary">Set Status</button>
+            <button id="btnStatus" type="button" class="btn btn-primary">Set Status</button>
           </div>
         </div>
         <div class="form-row align-items-center text-center">
@@ -145,5 +145,23 @@
         console.log( response );
     }
   });
+  @if($project->owner == Auth::user()->id)
+    $('#btnStatus').click(function(e) {
+      e.preventDefault();
+      var projectStatus = $('#projectStatus option:selected').val();
+      console.log(projectStatus);
+
+      $.ajax({
+        url: '{{ url()->current() }}',
+        type: 'POST',
+        data: {'projectStatus': projectStatus},
+        /*success: function(data) {
+          console.log(data);
+        };*/
+      });
+
+    });
+  @endif
+
 </script>
 
