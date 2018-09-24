@@ -18,14 +18,30 @@
   </div>
 </div>
 
-<div class="row my-3 box-shadow-bottom">
+@if ($project->members)
+
+  <div class="row my-3 box-shadow-bottom">
   <div class="card w-100">
     <h6 class="card-header dtitle p-2">
       <i class="fa fa-briefcase fa-fw mr-1 env_color"></i>Contributors of this project
       <i class="fa fa-pencil-square-o pull-right" style="display: block;"></i>
     </h6>
       <div class="card-body p-3">
-        
+
+        @foreach ($project->members as $member)
+          <div class="card bg-light mb-1">
+            <div class="mx-1">
+              <i class="fa fa-times pull-right env_contr_del" aria-hidden="true"></i>
+              <p class="card-text text-justify text-truncate" title="{{ $member->user->skills }}">
+                  @if ($member->user->id == $project->owner)
+                    <span class="lt-badge badge badge-dark" data-toggle="tooltip" data-placement="top" title="Project owner"><i class="fa fa-user"></i></span>
+                  @endif
+                  {{ $member->user->realname }}
+              </p>
+            </div>
+          </div>
+        @endforeach
+<!--
         <div class="card bg-light mb-1">
             <div class="mx-1">
               <i class="fa fa-times pull-right env_contr_del" aria-hidden="true"></i>
@@ -50,6 +66,7 @@
               </p>
             </div>
         </div>
+-->
       </div>
       <div class="card-footer p-3 admin-box">
         <span class="rt-badge badge badge-dark" data-toggle="tooltip" data-placement="top" title="Admin panel"><i class="fa fa-exclamation-triangle"></i></span>
@@ -64,6 +81,8 @@
       </div>
   </div>
 </div>
+
+@endif
 
 <div class="row my-3 box-shadow-bottom">
   <div class="card w-100 border-0">

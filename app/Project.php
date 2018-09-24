@@ -31,7 +31,7 @@ class Project extends Model
     
     public function members()
     {
-        return $this->hasMany('App\Memeber');
+        return $this->hasMany('App\Member');
     }
 
     public function threads()
