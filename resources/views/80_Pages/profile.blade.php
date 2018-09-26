@@ -395,19 +395,19 @@
                       <div class="input-group-prepend">
                         <div class="input-group-text">Manufacturer name</div>
                       </div>
-                      <input type="text" class="form-control" id="" placeholder="Your manufacturer name">
+                      <input type="text" class="form-control" id="" placeholder="Your manufacturer name" name="manufacturerName" value="{{$user->manufacturerName}}">
                     </div>
                     <div class="input-group mb-2">
                       <div class="input-group-prepend">
                         <div class="input-group-text">Billing address</div>
                       </div>
-                      <input type="text" class="form-control" id="" placeholder="Your address">
+                      <input type="text" class="form-control" id="" placeholder="Your billing address" name="manufacturerBillingAddress" value="{{$user->manufacturerBillingAddress}}">
                     </div>
                     <div class="input-group mb-2">
                       <div class="input-group-prepend">
                         <div class="input-group-text">Phone number</div>
                       </div>
-                      <input type="text" class="form-control" id="" placeholder="Your pohne number">
+                      <input type="text" class="form-control" id="" placeholder="Your phone number" name="manufacturerPhoneNumber" value="{{$user->manufacturerPhoneNumber}}">
                     </div>
                   </div>
                   <div class="col-md-6">
@@ -415,21 +415,21 @@
                       <div class="input-group-prepend">
                         <div class="input-group-text">Website address</div>
                       </div>
-                      <input type="text" class="form-control" id="" placeholder="Your website address">
-                    </div>
-                    <select class="custom-select mb-2">
-                      <option selected>Working times:</option>
-                      <option value="1">10 hour/week</option>
-                      <option value="2">20 hour/week</option>
-                      <option value="3">30 hour/week</option>
-                      <option value="3">40 hour/week</option>
-                      <option value="3">50 hour/week</option>
+                      <input type="text" class="form-control" id="" placeholder="Your website address" name="manufacturerWebsite" value="{{$user->manufacturerWebsite}}">
+                    </div> 
+                    <select class="custom-select mb-2" name="manufacturerWorkTime">
+                      <option value="0" disabled selected>Working time:</option>
+                      <option value="1" {{$user->manufacturerWorkTime==1 ? "selected" : ""}}>10 hour/week</option>
+                      <option value="2" {{$user->manufacturerWorkTime==2 ? "selected" : ""}}>20 hour/week</option>
+                      <option value="3" {{$user->manufacturerWorkTime==3 ? "selected" : ""}}>30 hour/week</option>
+                      <option value="4" {{$user->manufacturerWorkTime==4 ? "selected" : ""}}>40 hour/week</option>
+                      <option value="5" {{$user->manufacturerWorkTime==5 ? "selected" : ""}}>50 hour/week</option>
                     </select>
                     <div class="input-group mb-2">
                       <div class="input-group-prepend">
                         <div class="input-group-text">Tools</div>
                       </div>
-                      <input type="text" class="form-control" id="" placeholder="3D printer, laqser cutter, milling..etc">
+                      <input type="text" class="form-control" id="" placeholder="3D printer, laqser cutter, milling..etc" name="manufacturerTools" value="{{$user->manufacturerTools}}">
                     </div>
                   </div>
                 </div>

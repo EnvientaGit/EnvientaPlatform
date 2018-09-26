@@ -54,6 +54,13 @@ class ProfileController extends Controller
 			$user->manufacturerAddressStreet = $request->manufacturerAddressStreet;
 			$user->manufacturerAddressStreetNumber = $request->manufacturerAddressStreetNumber;
 			$user->manufacturerAddressGPS = new Point($request->manufacturerAddressLat, $request->manufacturerAddressLon);
+			
+			$user->manufacturerName = $request->manufacturerName;
+			$user->manufacturerWebsite = $request->manufacturerWebsite;
+			$user->manufacturerBillingAddress = $request->manufacturerBillingAddress;
+			$user->manufacturerWorkTime = $request->manufacturerWorkTime;
+			$user->manufacturerPhoneNumber = $request->manufacturerPhoneNumber;
+			$user->manufacturerTools = $request->manufacturerTools;
 		}
 
 		$user->save();	
