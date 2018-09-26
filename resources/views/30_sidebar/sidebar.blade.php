@@ -167,6 +167,9 @@
         url: '{{ url()->current() }}',
         type: 'POST',
         data: {'projectStatus': projectStatus},
+        headers: {
+            'X-CSRF-TOKEN': '{{ csrf_token() }}'
+        }
       });
 
     });
