@@ -5,6 +5,7 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Grimzy\LaravelMysqlSpatial\Eloquent\SpatialTrait;
+use App\Utils;
 
 class User extends Authenticatable
 {
@@ -38,4 +39,13 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Project', 'owner');
     }
+
+    public function getManufacturerAdditionals() {
+        return Utils::strToBooleanArray($this->manufacturerAdditionals, 14);
+    }
+
+    public function setManufacturerAdditionals($booleanArray) {
+        $this->manufacturerAdditionals = Utils::booleanArrayToStr($booleanArray);    
+    }
+
 }

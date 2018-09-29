@@ -62,7 +62,7 @@
 
         {{-- Enter Pin part --}}
         <div id="pin_block" style="display: none;">
-          <p class="card-text text-justify">If you already have a <b class="env_color">pin code</b>, sign in with it. If you haven't or forgot it, use the <b class="env_color">request pin code</b> button.</p>
+          <p class="card-text text-justify">We have sent a <b class="env_color">pin code</b> to your e-mail address, sign in with it.
 
           <div class="input-group mb-3">
             <div class="input-group-prepend">
@@ -72,7 +72,7 @@
           </div>
 
           <div class="input-group mb-3">
-            <button id="request_pin_submit" class="btn btn-sm env_button env_right">Request pin code</button>
+            <button id="request_pin_submit" class="btn btn-sm env_button env_right" style="display: none;">Request pin code</button>
             <button id="login_submit" class="btn btn-sm env_button ml-2">Sign in</button>
             <input type="hidden" name="_token" value="{{{ csrf_token() }}}" />
             <input type="hidden" name="captcha_token" id="login_form_token" />
@@ -87,10 +87,10 @@
 
 <script type="text/javascript">
   $('#email_next_submit').click(function() {
-    //$.get("/auth/requestPin", {email: $('#request_pin_email').val()}).done(function() {
+    $.get("/auth/requestPin", {email: $('#request_pin_email').val()}).done(function() {
       $('#mail_block').hide();
       $('#pin_block').show();
-    //});
+    });
   });
   $('#request_pin_submit').click(function() {
     $.get("/auth/requestPin", {email: $('#request_pin_email').val()}).done(function() {

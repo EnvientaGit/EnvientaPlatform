@@ -434,26 +434,27 @@
                   </div>
                 </div>
                 <hr>
+                <?php $additionals = $user->getManufacturerAdditionals(); ?> 
                 <div class="row">
                   <div class="col-md-12">
                     <h6 class="mb-3">Additional conditions and possiblities</h6>
 
                     <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="manufacturer_1">
+                      <input class="form-check-input" type="checkbox" name="mcb0" id="manufacturer_1" {{$additionals[0] ? "checked" : ""}}>
                       <label class="form-check-label" for="manufacturer_1">
                          Cutting machines that cut a variety of materials (plastics, metal, plaster, and other common materials) with precision (laser, water jet, knife)
                       </label>
                     </div>
 
                     <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="manufacturer_2">
+                      <input class="form-check-input" type="checkbox" name="mcb1" id="manufacturer_2" {{$additionals[1] ? "checked" : ""}}>
                       <label class="form-check-label" for="manufacturer_2">
                         Decorative materials for painting, embroidery and embellishing projects
                       </label>
                     </div>
 
                     <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="manufacturer_3">
+                      <input class="form-check-input" type="checkbox" name="mcb2" id="manufacturer_3" {{$additionals[2] ? "checked" : ""}}>
                       <label class="form-check-label" for="manufacturer_3">
                         Joining machines that use computer control to sew, weld, or bond in other ways
                       </label>
@@ -464,35 +465,35 @@
                     <div class="row">
                       <div class="col-md-6">
                         <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="manufacturer_4">
+                          <input class="form-check-input" type="checkbox" name="mcb3" id="manufacturer_4" {{$additionals[3] ? "checked" : ""}}>
                           <label class="form-check-label" for="manufacturer_4">
                             3D printers that are capable of producing three-dimensional objects
                           </label>
                         </div>
 
                         <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="manufacturer_5">
+                          <input class="form-check-input" type="checkbox" name="mcb4" id="manufacturer_5" {{$additionals[4] ? "checked" : ""}}>
                           <label class="form-check-label" for="manufacturer_5">
                             Milling and routing machines that drill and shape complex parts
                           </label>
                         </div>
 
                         <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="manufacturer_6">
+                          <input class="form-check-input" type="checkbox" name="mcb5" id="manufacturer_6" {{$additionals[5] ? "checked" : ""}}>
                           <label class="form-check-label" for="manufacturer_6">
                             Electronic parts and tools
                           </label>
                         </div>
 
                         <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="manufacturer_7">
+                          <input class="form-check-input" type="checkbox" name="mcb6" id="manufacturer_7" {{$additionals[6] ? "checked" : ""}}>
                           <label class="form-check-label" for="manufacturer_7">
                             Tools for precision mechanics
                           </label>
                         </div>
 
                         <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="manufacturer_8">
+                          <input class="form-check-input" type="checkbox" name="mcb7" id="manufacturer_8" {{$additionals[7] ? "checked" : ""}}>
                           <label class="form-check-label" for="manufacturer_8">
                             Traditional hand and power tools, including soldering irons
                           </label>
@@ -502,28 +503,28 @@
 
                       <div class="col-md-4">
                         <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="manufacturer_9">
+                          <input class="form-check-input" type="checkbox" name="mcb8" id="manufacturer_9" {{$additionals[8] ? "checked" : ""}}>
                           <label class="form-check-label" for="manufacturer_9">
                             Computers, cameras, softwares
                           </label>
                         </div>
 
                         <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="manufacturer_10">
+                          <input class="form-check-input" type="checkbox" name="mcb9" id="manufacturer_10" {{$additionals[9] ? "checked" : ""}}>
                           <label class="form-check-label" for="manufacturer_11">
                             Craft and art supplies
                           </label>
                         </div>
 
                         <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="manufacturer_12">
+                          <input class="form-check-input" type="checkbox" name="mcb10" id="manufacturer_12" {{$additionals[10] ? "checked" : ""}}>
                           <label class="form-check-label" for="manufacturer_13">
                             Building materials
                           </label>
                         </div>
 
                         <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="manufacturer_14">
+                          <input class="form-check-input" type="checkbox" name="mcb11" id="manufacturer_14" {{$additionals[11] ? "checked" : ""}}>
                           <label class="form-check-label" for="manufacturer_14">
                             Junk for recycling into new products
                           </label>
@@ -532,14 +533,14 @@
 
                       <div class="col-md-2">
                         <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="manufacturer_15">
+                          <input class="form-check-input" type="checkbox" name="mcb12" id="manufacturer_15" {{$additionals[12] ? "checked" : ""}}>
                           <label class="form-check-label" for="manufacturer_15">
                             Batteries
                           </label>
                         </div>
 
                         <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="manufacturer_16">
+                          <input class="form-check-input" type="checkbox" name="mcb13" id="manufacturer_16" {{$additionals[13] ? "checked" : ""}}>
                           <label class="form-check-label" for="manufacturer_16">
                             Library
                           </label>

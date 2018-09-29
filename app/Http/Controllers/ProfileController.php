@@ -61,6 +61,23 @@ class ProfileController extends Controller
 			$user->manufacturerWorkTime = $request->manufacturerWorkTime;
 			$user->manufacturerPhoneNumber = $request->manufacturerPhoneNumber;
 			$user->manufacturerTools = $request->manufacturerTools;
+
+			$additionals = array();
+			$additionals[0] = isset($request->mcb0);
+			$additionals[1] = isset($request->mcb1);
+			$additionals[2] = isset($request->mcb2);
+			$additionals[3] = isset($request->mcb3);
+			$additionals[4] = isset($request->mcb4);
+			$additionals[5] = isset($request->mcb5);
+			$additionals[6] = isset($request->mcb6);
+			$additionals[7] = isset($request->mcb7);
+			$additionals[8] = isset($request->mcb8);
+			$additionals[9] = isset($request->mcb9);
+			$additionals[10] = isset($request->mcb10);
+			$additionals[11] = isset($request->mcb11);
+			$additionals[12] = isset($request->mcb12);
+			$additionals[13] = isset($request->mcb13);
+			$user->setManufacturerAdditionals($additionals);
 		}
 
 		$user->save();	
