@@ -185,6 +185,7 @@ figure[mbr-media-size] {
   width: 100%; }
 
 .card {
+  width: 100%;
   background-color: transparent;
   border: none; }
 
