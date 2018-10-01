@@ -13,7 +13,7 @@
               <div class="navbar-brand">
                   <span class="navbar-logo">
                       <a href="{{ url('/') }}">
-                           <img src="{{ url('assets/images/envienta-platform-logo-small-1000x275.png') }}" alt="Mobirise" title="" style="height: 4.3rem;">
+                           <img src="{{ url('assets/images/envienta-platform-logo-small-1000x275.png') }}" alt="Envienta" title="" style="height: 4.3rem;">
                       </a>
                   </span>
 
@@ -40,7 +40,7 @@
                 </li>
                 <li class="nav-item mt-3">
                   <a class="nav-link text-white" href="https://t.me/envienta" target="_blank">
-                    <h5>Need help? Click here 
+                    <h5>Need help? Click here
                       <i class="fab fa-telegram-plane _blue"></i>
                     </h5>
                   </a>

@@ -52,4 +52,21 @@ class Utils
     return Auth::user()->profileUrl ? Auth::user()->profileUrl : "https://www.gravatar.com/" . md5( strtolower( trim( Auth::user()->email ) ) );
   }
 
+  public static function booleanArrayToStr($booleanArray) {
+    $result = "";
+    for($i = 0; $i < count($booleanArray); $i++)
+      $result .= $booleanArray[$i] ? "1" : "0";
+    return $result;
+  }
+
+  public static function strToBooleanArray($str, $min) {
+    $result = array();
+    $strArray = str_split($str);
+    foreach ($strArray as $char)
+      array_push($result, $char == "1");
+    for($i=count($result); $i<$min; $i++)
+      array_push($result, false);
+    return $result;
+  }
+
 }

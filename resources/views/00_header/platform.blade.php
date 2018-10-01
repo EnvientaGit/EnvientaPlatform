@@ -11,6 +11,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         {{-- Link section --}}
+        <base href="{{ URL::to('/') }}">
         <link rel="icon" href="{{ URL::to('img/favicon_img.jpg') }}">
 
         {{-- Title --}}
@@ -39,7 +40,9 @@
         {{-- <link rel="stylesheet" href="{{ URL::to('css/platform.css') }}" type="text/css"> --}}
         <link rel="stylesheet" href="{{ URL::to('css/animate.css') }}" type="text/css">
         <link rel="stylesheet" href="{{ URL::to('css/style.css') }}" type="text/css">
+        {{--
         <link rel="stylesheet" href="{{ Utils::themePath('style.css') }}" type="text/css">
+        --}}
 
         {{-- reCAPTCHA --}}
         {{--

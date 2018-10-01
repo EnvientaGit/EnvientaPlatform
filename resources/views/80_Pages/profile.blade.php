@@ -48,7 +48,7 @@
                   <i class="fa fa-cogs fa-3x _clr mb-3" aria-hidden="true"></i>
                   <div class="form-check">
                     <input name="isMaker" class="form-check-input" type="checkbox" id="maker_check" {{$user->isMaker ? 'checked="true"' : ''}}>
-                    <label class="form-check-label" for="defaultCheck1">
+                    <label class="form-check-label" for="maker_check">
                       <h5 class="card-text">Maker</h5>
                       <small class="_clr">Available</small>
                       <!-- <small><i>Unavailable</i> </small> -->
@@ -63,8 +63,8 @@
                 <div class="card-body text-center">
                   <i class="fa fa-briefcase fa-3x text-dark /*_clr*/ mb-3" aria-hidden="true"></i>
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" disabled="disabled">
-                    <label class="form-check-label" for="defaultCheck1">
+                    <input class="form-check-input" type="checkbox" value="" id="projects_check" disabled="disabled">
+                    <label class="form-check-label" for="projects_check">
                       <h5 class="card-text">Projects</h5>
                       <small><i>Unavailable</i> </small>
                       <!-- <small><i>Unavailable</i> </small> -->
@@ -79,8 +79,8 @@
                 <div class="card-body text-center">
                   <i class="fa fa-money fa-3x text-dark /*_clr*/ mb-3" aria-hidden="true"></i>
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" disabled="disabled">
-                    <label class="form-check-label" for="defaultCheck1">
+                    <input class="form-check-input" type="checkbox" value="" id="investor_check" disabled="disabled">
+                    <label class="form-check-label" for="investor_check">
                       <h5 class="card-text">Investor</h5>
                       <small><i>Unavailable</i> </small>
                       <!-- <small><i>Unavailable</i> </small> -->
@@ -113,8 +113,8 @@
                 <div class="card-body text-center">
                   <i class="fa fa-dot-circle-o fa-3x text-dark mb-3" aria-hidden="true"></i>
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" disabled="disabled">
-                    <label class="form-check-label" for="defaultCheck1">
+                    <input class="form-check-input" type="checkbox" value="" id="distributor_check" disabled="disabled">
+                    <label class="form-check-label" for="distributor_check">
                       <h5 class="card-text">Distributor</h5>
                       <small><i>Unavailable</i> </small>
                     </label>
@@ -129,7 +129,7 @@
                   <i class="fa fa-shopping-basket fa-3x _clr mb-3" aria-hidden="true"></i>
                   <div class="form-check">
                     <input name="isCustomer" class="form-check-input" type="checkbox" id="customer_check" {{$user->isCustomer ? 'checked="true"' : ''}} >
-                    <label class="form-check-label" for="defaultCheck1">
+                    <label class="form-check-label" for="customer_check">
                       <h5 class="card-text">Customer</h5>
                       <small class="_clr">Available</small>
                       <!-- <small><i>Unavailable</i> </small> -->
@@ -175,8 +175,8 @@
                   <div class="card-header">
                     <h6 class="float-left">Enable password based authenticaton</h6>
                     <div class="form-check float-right">
-                      <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                      <label class="form-check-label" for="defaultCheck1"></label>
+                      <input class="form-check-input" type="checkbox" value="" id="pw_auth">
+                      <label class="form-check-label" for="pw_auth"></label>
                     </div>
                   </div>
                   <div class="card-body">
@@ -265,9 +265,9 @@
                     <div class="card border border-dark">
                       <div class="card-body text-left">
                         <div class="form-group mb-0">
-                          <label for="exampleFormControlTextarea1"><h6>Description</h6>
+                          <label for="user_bio"><h6>Description</h6>
                           <small class="text-muted">Short description about you</small></label>
-                          <textarea class="form-control" name="bio" id="exampleFormControlTextarea1" rows="3">{{$user->bio}}</textarea>
+                          <textarea class="form-control" name="bio" id="user_bio" rows="3">{{$user->bio}}</textarea>
                         </div>
                       </div>
                     </div>
@@ -341,64 +341,73 @@
                       </div>
                       <input name="manufacturerAddressCountry" type="text" class="form-control" value="{{$user->manufacturerAddressCountry}}" data-geo="country_short" readonly="true">
                     </div>
-                  </div> 
+                  </div>
+
                   <div class="col-md-2">
+                    <!-- <label for="validationDefault1">Zip code</label> -->
                     <div class="input-group">
                       <div class="input-group-prepend">
-                        <div class="input-group-text">Zip code</div>
+                        <span class="input-group-text" id="inputGroupPrepend1">Zip code</span>
                       </div>
-                      <input name="manufacturerAddressZip" type="text" class="form-control" value="{{$user->manufacturerAddressZip}}" data-geo="postal_code" readonly="true">
+                      <input id="validationDefault1" name="manufacturerAddressZip" type="text" class="form-control" placeholder="Your zip" aria-describedby="inputGroupPrepend1" required aria-describedby="inputGroupPrepend1" required value="{{$user->manufacturerAddressZip}}" data-geo="postal_code">
                     </div>
                   </div>
+
                   <div class="col-md-3">
+                    <!-- <label for="validationDefault2">City</label> -->
                     <div class="input-group">
                       <div class="input-group-prepend">
-                        <div class="input-group-text">City</div>
+                          <span class="input-group-text" id="inputGroupPrepend2">City</span>
                       </div>
-                      <input name="manufacturerAddressCity" type="text" class="form-control" value="{{$user->manufacturerAddressCity}}" data-geo="locality" readonly="true">
+                      <input id="validationDefault2" name="manufacturerAddressCity" type="text" class="form-control" placeholder="Your City" aria-describedby="inputGroupPrepend2" required aria-describedby="inputGroupPrepend2" required value="{{$user->manufacturerAddressCity}}" data-geo="locality">
                     </div>
                   </div>
+
                   <div class="col-md-3">
+                    <!-- <label for="validationDefault3">Street</label> -->
                     <div class="input-group">
                       <div class="input-group-prepend">
-                        <div class="input-group-text">Street</div>
+                          <span class="input-group-text" id="inputGroupPrepend3">Street</span>
                       </div>
-                      <input name="manufacturerAddressStreet" type="text" class="form-control" value="{{$user->manufacturerAddressStreet}}" data-geo="route" readonly="true">
+                      <input id="validationDefault3" name="manufacturerAddressStreet" type="text" class="form-control" placeholder="Your Street" aria-describedby="inputGroupPrepend3" required aria-describedby="inputGroupPrepend3" required value="{{$user->manufacturerAddressStreet}}" data-geo="route">
                     </div>
                   </div>
+
                   <div class="col-md-2">
+                    <!-- <label for="validationDefault4">Number</label> -->
                     <div class="input-group">
                       <div class="input-group-prepend">
-                        <div class="input-group-text">Number</div>
+                          <span class="input-group-text" id="inputGroupPrepend4">Number</span>
                       </div>
-                      <input name="manufacturerAddressStreetNumber" type="text" class="form-control" value="{{$user->manufacturerAddressStreetNumber}}" data-geo="street_number" readonly="true">
+                      <input id="validationDefault4" name="manufacturerAddressStreetNumber" type="text" class="form-control" placeholder="Your Number" aria-describedby="inputGroupPrepend4" required aria-describedby="inputGroupPrepend4" required value="{{$user->manufacturerAddressStreetNumber}}" data-geo="street_number">
                     </div>
                   </div>
+
                   <input type="hidden" name="manufacturerAddressLat" data-geo="lat">
                   <input type="hidden" name="manufacturerAddressLon" data-geo="lng">
                 </div>
 
                 <hr>
-                
+
                 <div class="row">
                   <div class="col-md-6">
                     <div class="input-group mb-2">
                       <div class="input-group-prepend">
                         <div class="input-group-text">Manufacturer name</div>
                       </div>
-                      <input type="text" class="form-control" id="" placeholder="Your manufacturer name">
+                      <input type="text" class="form-control" id="" placeholder="Your manufacturer name" name="manufacturerName" value="{{$user->manufacturerName}}">
                     </div>
                     <div class="input-group mb-2">
                       <div class="input-group-prepend">
                         <div class="input-group-text">Billing address</div>
                       </div>
-                      <input type="text" class="form-control" id="" placeholder="Your address">
+                      <input type="text" class="form-control" id="" placeholder="Your billing address" name="manufacturerBillingAddress" value="{{$user->manufacturerBillingAddress}}">
                     </div>
                     <div class="input-group mb-2">
                       <div class="input-group-prepend">
                         <div class="input-group-text">Phone number</div>
                       </div>
-                      <input type="text" class="form-control" id="" placeholder="Your pohne number">
+                      <input type="text" class="form-control" id="" placeholder="Your phone number" name="manufacturerPhoneNumber" value="{{$user->manufacturerPhoneNumber}}">
                     </div>
                   </div>
                   <div class="col-md-6">
@@ -406,46 +415,47 @@
                       <div class="input-group-prepend">
                         <div class="input-group-text">Website address</div>
                       </div>
-                      <input type="text" class="form-control" id="" placeholder="Your website address">
-                    </div>
-                    <select class="custom-select mb-2">
-                      <option selected>Working times:</option>
-                      <option value="1">10 hour/week</option>
-                      <option value="2">20 hour/week</option>
-                      <option value="3">30 hour/week</option>
-                      <option value="3">40 hour/week</option>
-                      <option value="3">50 hour/week</option>
+                      <input type="text" class="form-control" id="" placeholder="Your website address" name="manufacturerWebsite" value="{{$user->manufacturerWebsite}}">
+                    </div> 
+                    <select class="custom-select mb-2" name="manufacturerWorkTime">
+                      <option value="0" disabled selected>Working time:</option>
+                      <option value="1" {{$user->manufacturerWorkTime==1 ? "selected" : ""}}>10 hour/week</option>
+                      <option value="2" {{$user->manufacturerWorkTime==2 ? "selected" : ""}}>20 hour/week</option>
+                      <option value="3" {{$user->manufacturerWorkTime==3 ? "selected" : ""}}>30 hour/week</option>
+                      <option value="4" {{$user->manufacturerWorkTime==4 ? "selected" : ""}}>40 hour/week</option>
+                      <option value="5" {{$user->manufacturerWorkTime==5 ? "selected" : ""}}>50 hour/week</option>
                     </select>
                     <div class="input-group mb-2">
                       <div class="input-group-prepend">
                         <div class="input-group-text">Tools</div>
                       </div>
-                      <input type="text" class="form-control" id="" placeholder="3D printer, laqser cutter, milling..etc">
+                      <input type="text" class="form-control" id="" placeholder="3D printer, laqser cutter, milling..etc" name="manufacturerTools" value="{{$user->manufacturerTools}}">
                     </div>
                   </div>
                 </div>
                 <hr>
+                <?php $additionals = $user->getManufacturerAdditionals(); ?> 
                 <div class="row">
                   <div class="col-md-12">
                     <h6 class="mb-3">Additional conditions and possiblities</h6>
 
                     <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                      <label class="form-check-label" for="defaultCheck1">
+                      <input class="form-check-input" type="checkbox" name="mcb0" id="manufacturer_1" {{$additionals[0] ? "checked" : ""}}>
+                      <label class="form-check-label" for="manufacturer_1">
                          Cutting machines that cut a variety of materials (plastics, metal, plaster, and other common materials) with precision (laser, water jet, knife)
                       </label>
                     </div>
 
                     <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                      <label class="form-check-label" for="defaultCheck1">
+                      <input class="form-check-input" type="checkbox" name="mcb1" id="manufacturer_2" {{$additionals[1] ? "checked" : ""}}>
+                      <label class="form-check-label" for="manufacturer_2">
                         Decorative materials for painting, embroidery and embellishing projects
                       </label>
                     </div>
 
                     <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                      <label class="form-check-label" for="defaultCheck1">
+                      <input class="form-check-input" type="checkbox" name="mcb2" id="manufacturer_3" {{$additionals[2] ? "checked" : ""}}>
+                      <label class="form-check-label" for="manufacturer_3">
                         Joining machines that use computer control to sew, weld, or bond in other ways
                       </label>
                     </div>
@@ -455,36 +465,36 @@
                     <div class="row">
                       <div class="col-md-6">
                         <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                          <label class="form-check-label" for="defaultCheck1">
+                          <input class="form-check-input" type="checkbox" name="mcb3" id="manufacturer_4" {{$additionals[3] ? "checked" : ""}}>
+                          <label class="form-check-label" for="manufacturer_4">
                             3D printers that are capable of producing three-dimensional objects
                           </label>
                         </div>
 
                         <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                          <label class="form-check-label" for="defaultCheck1">
+                          <input class="form-check-input" type="checkbox" name="mcb4" id="manufacturer_5" {{$additionals[4] ? "checked" : ""}}>
+                          <label class="form-check-label" for="manufacturer_5">
                             Milling and routing machines that drill and shape complex parts
                           </label>
                         </div>
 
                         <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                          <label class="form-check-label" for="defaultCheck1">
+                          <input class="form-check-input" type="checkbox" name="mcb5" id="manufacturer_6" {{$additionals[5] ? "checked" : ""}}>
+                          <label class="form-check-label" for="manufacturer_6">
                             Electronic parts and tools
                           </label>
                         </div>
 
                         <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                          <label class="form-check-label" for="defaultCheck1">
+                          <input class="form-check-input" type="checkbox" name="mcb6" id="manufacturer_7" {{$additionals[6] ? "checked" : ""}}>
+                          <label class="form-check-label" for="manufacturer_7">
                             Tools for precision mechanics
                           </label>
                         </div>
 
                         <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                          <label class="form-check-label" for="defaultCheck1">
+                          <input class="form-check-input" type="checkbox" name="mcb7" id="manufacturer_8" {{$additionals[7] ? "checked" : ""}}>
+                          <label class="form-check-label" for="manufacturer_8">
                             Traditional hand and power tools, including soldering irons
                           </label>
                         </div>
@@ -493,29 +503,29 @@
 
                       <div class="col-md-4">
                         <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                          <label class="form-check-label" for="defaultCheck1">
+                          <input class="form-check-input" type="checkbox" name="mcb8" id="manufacturer_9" {{$additionals[8] ? "checked" : ""}}>
+                          <label class="form-check-label" for="manufacturer_9">
                             Computers, cameras, softwares
                           </label>
                         </div>
 
                         <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                          <label class="form-check-label" for="defaultCheck1">
+                          <input class="form-check-input" type="checkbox" name="mcb9" id="manufacturer_10" {{$additionals[9] ? "checked" : ""}}>
+                          <label class="form-check-label" for="manufacturer_11">
                             Craft and art supplies
                           </label>
                         </div>
 
                         <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                          <label class="form-check-label" for="defaultCheck1">
+                          <input class="form-check-input" type="checkbox" name="mcb10" id="manufacturer_12" {{$additionals[10] ? "checked" : ""}}>
+                          <label class="form-check-label" for="manufacturer_13">
                             Building materials
                           </label>
                         </div>
 
                         <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                          <label class="form-check-label" for="defaultCheck1">
+                          <input class="form-check-input" type="checkbox" name="mcb11" id="manufacturer_14" {{$additionals[11] ? "checked" : ""}}>
+                          <label class="form-check-label" for="manufacturer_14">
                             Junk for recycling into new products
                           </label>
                         </div>
@@ -523,15 +533,15 @@
 
                       <div class="col-md-2">
                         <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                          <label class="form-check-label" for="defaultCheck1">
+                          <input class="form-check-input" type="checkbox" name="mcb12" id="manufacturer_15" {{$additionals[12] ? "checked" : ""}}>
+                          <label class="form-check-label" for="manufacturer_15">
                             Batteries
                           </label>
                         </div>
 
                         <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                          <label class="form-check-label" for="defaultCheck1">
+                          <input class="form-check-input" type="checkbox" name="mcb13" id="manufacturer_16" {{$additionals[13] ? "checked" : ""}}>
+                          <label class="form-check-label" for="manufacturer_16">
                             Library
                           </label>
                         </div>
@@ -576,7 +586,7 @@
                       </div>
                       <input name="customerAddressCountry" type="text" class="form-control" value="{{$user->customerAddressCountry}}" data-geo="country_short" readonly="true">
                     </div>
-                  </div> 
+                  </div>
                   <div class="col-md-2">
                     <div class="input-group">
                       <div class="input-group-prepend">
@@ -663,11 +673,11 @@
           <div class="col-md-12">
 
             <!-- Password Modal -->
-            <div class="modal fade" id="add_pw" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal fade" id="add_pw" tabindex="-1" role="dialog" aria-labelledby="pw_modal" aria-hidden="true">
               <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Set your custom password</h5>
+                    <h5 class="modal-title" id="pw_modal">Set your custom password</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                       <span aria-hidden="true">&times;</span>
                     </button>
@@ -692,7 +702,7 @@
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="submit" class="btn btn-primary">Save changes</button>
                   </div>
                 </div>
               </div>
