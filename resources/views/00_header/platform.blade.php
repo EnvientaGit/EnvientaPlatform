@@ -66,13 +66,14 @@
         {{-- leaflet --}}
         <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.3.1/leaflet.css" />
         <script src="http://cdn.leafletjs.com/leaflet-0.3.1/leaflet.js"></script>
-        <script src="http://maps.google.com/maps/api/js?v=3.2&sensor=false&libraries=places"></script>
+        <script src="http://maps.google.com/maps/api/js?v=3.2&key=AIzaSyCsLUi82gxN97jSOR6eTDYRySBWGID6rzA&libraries=places"></script>
         <script src="{{ URL::to('js/leaflet-google.js') }}"></script>
 
         <link rel="stylesheet" href="{{ URL::to('css/jquery.tag-editor.css') }}">
         <script src="{{ URL::to('js/jquery.caret.min.js') }}"></script>
         <script src="{{ URL::to('js/jquery.tag-editor.min.js') }}"></script>
         <script src="{{ URL::to('js/jquery.geocomplete.js') }}"></script>
+        <script src="{{ URL::to('js/bootstrap-typeahead.min.js') }}"></script>
 
         {{-- mobi --}}
 

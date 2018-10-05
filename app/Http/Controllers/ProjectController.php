@@ -5,7 +5,9 @@ use Cz\Git\GitRepository;
 use Illuminate\Http\Request;
 use App\Project;
 use App\Member;
+use App\User;
 use App\Utils;
+use App\Mail\contributorInviteMail;
 use App\ParsedownExtra;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
@@ -172,10 +174,6 @@ class ProjectController extends Controller
       $project->public = $request->input('projectStatus');
       $project->save();
     }
-    if($request->has('removeMember')) {
-      $memberId = Member::findOrFail($request->input('removeMember'));
-      Member::destroy($memberId->id);
-    }
 
     if($request->has('details')) {
       $details = $request->input('details');
@@ -190,6 +188,24 @@ class ProjectController extends Controller
 
     if($request->has('redirect'))
       return redirect('/project/' . $project->slug);
+
+    // member/contributor functions
+    if($request->has('addMember')) {
+
+      $user = User::findOrFail($request->input('addMember'));
+
+      $member = new Member();
+      $member->user_id = $user->id;
+      $member->project_id = $project->id;
+      $member->save();
+
+      // TODO: FIX: mail sending is broken
+      Mail::to($user->email)->send(new contributorInviteMail($user, $project->title, $project->slug));
+    }
+    if($request->has('removeMember')) {
+      $member = Member::findOrFail($request->input('removeMember'));
+      Member::destroy($member->id);
+    }
 
     return 'done';
   }

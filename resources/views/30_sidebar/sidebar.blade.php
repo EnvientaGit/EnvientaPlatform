@@ -27,7 +27,7 @@
     <h6 class="card-header dtitle p-2">
       <i class="fa fa-pencil-square-o mr-1 env_color"></i>Contributors of this project
     </h6>
-    <div class="card-body p-3 contributors">
+    <div class="card-body p-3 contributors" id="contributors">
 
       @foreach ($project->members as $member)
         <div class="card bg-light mb-1">
@@ -48,12 +48,12 @@
     <div class="card-footer p-3 admin-box">
       <span class="rt-badge badge badge-dark" data-toggle="tooltip" data-placement="top" title="Admin panel"><i class="fa fa-exclamation-triangle"></i></span>
       <div class="input-group input-group-sm">
-        <div class="input-group-prepend">
-          <button class="env_link_grey env_point input-group-text env_border_rslim" id="btnGroupAddon2" type="submit">
-              Invite
+        <input name="cotributors" id="cotributors" class="form-control" placeholder="Search member" aria-label="Search member" aria-describedby="btnGroupAddon2" type="text" autocomplete="off">
+        <div class="input-group-append">
+          <button class="env_link_grey env_point input-group-text env_border_rslim" id="newContributorAddBtn">
+              Add
           </button>
         </div>
-        <input name="cotributors" class="form-control" placeholder="a new member" aria-label="Input group example" aria-describedby="btnGroupAddon2" type="text">
       </div>
     </div>
   </div>
@@ -129,25 +129,80 @@
   });
   
   @if($project->owner == Auth::user()->id)
+
+    var newMemberId = 0;
+    var newMemberName = '';
+
+    $("#newContributorAddBtn").click(function() {
+
+      if(newMemberId>0) {
+        
+        var newMemberRow = '<div class="card bg-light mb-1"><div class="mx-1"><a href="#" class="fa fa-times pull-right contributor-del" aria-hidden="true" rel="{memberId}" title="Remove from Contributors"></a><p class="card-text text-justify text-truncate" title="{memberName}">{memberName}</p></div></div>';
+
+        $.ajax({
+          url: '{{ url()->current() }}',
+          type: 'POST',
+          data: {'addMember': newMemberId},
+          complete: function(data) {
+
+            newMemberRow = newMemberRow.replace(/{memberId}/g, newMemberId).replace(/{memberName}/g, newMemberName);
+            $("#contributors").append(newMemberRow);
+
+            newMemberId = 0;
+            newMemberName = '';
+
+            $("#cotributors").val('');
+          },
+          headers: {
+              'X-CSRF-TOKEN': '{{ csrf_token() }}'
+          }
+        });
+      }
+    });
+    
+    function memberSelected(item) {
+      newMemberId = item.value;
+      newMemberName = item.text;
+    }
+
+    $("#cotributors").typeahead({
+      valueField: 'id',
+      displayField: 'realname',
+      scrollBar: true,
+      items: 20,
+      onSelect: memberSelected,
+      ajax: {
+        url: 'user/list',
+        method: 'get',
+        headers: {
+          'X-CSRF-TOKEN': '{{ csrf_token() }}'
+        }
+      }
+    });
+
     $(".contributors").on("click", ".contributor-del", function(e){
       e.preventDefault();
-      var memberId = $(this).attr("rel");
-      $.ajax({
-        url: '{{ url()->current() }}',
-        type: 'POST',
-        data: {'removeMember': memberId},
-        complete: function(data) {
-          console.log(data.responseText);
-        },
-        headers: {
-            'X-CSRF-TOKEN': '{{ csrf_token() }}'
-        }
-      });      
+      var $this = $(this);
+      var memberId = $this.attr("rel");
+      var memberName = $this.closest(".card").text().trim();
+      var ret = confirm("Are you sure to remove "+memberName+"\nfrom the contributor list?");
+      if(ret===true) {
+        $.ajax({
+          url: '{{ url()->current() }}',
+          type: 'POST',
+          data: {'removeMember': memberId},
+          complete: function(data) {
+            $this.closest(".card").remove();
+          },
+          headers: {
+              'X-CSRF-TOKEN': '{{ csrf_token() }}'
+          }
+        });
+      }
     });
     $('#btnStatus').click(function(e) {
       e.preventDefault();
       var projectStatus = $('#projectStatus option:selected').val();
-      console.log( projectStatus );
       if(projectStatus==1) {
           $("#projectStatusController h6 i").removeClass("fa-eye-slash").addClass("fa-eye");
           $("#projectStatusController h6 span:first-of-type").text("Public");

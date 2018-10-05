@@ -62,3 +62,5 @@ Route::get('/auth/logout', 'LoginController@logout');
 Route::get('/auth/fb_login', 'LoginController@loginWithFacebook');
 
 Route::get('/shop/sendOrder', 'ShopController@sendOrder');
+
+Route::get('/user/list', 'UserController@listUsers');
