@@ -145,8 +145,12 @@
           data: {'addMember': newMemberId},
           complete: function(data) {
 
-            newMemberRow = newMemberRow.replace(/{memberId}/g, newMemberId).replace(/{memberName}/g, newMemberName);
-            $("#contributors").append(newMemberRow);
+            if(data.responseText=='done') {
+              newMemberRow = newMemberRow.replace(/{memberId}/g, newMemberId).replace(/{memberName}/g, newMemberName);
+              $("#contributors").append(newMemberRow);
+            } else if(data.responseText=='already_member') {
+              alert(newMemberName+" is already a contributor of this project!");
+            }
 
             newMemberId = 0;
             newMemberName = '';

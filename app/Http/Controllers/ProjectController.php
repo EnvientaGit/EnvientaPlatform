@@ -196,12 +196,17 @@ class ProjectController extends Controller
       $user = User::findOrFail($request->input('addMember'));
 
       $member = new Member();
-      $member->user_id = $user->id;
-      $member->project_id = $project->id;
-      $member->save();
 
-      // TODO: FIX: mail sending is broken
-      Mail::to($user->email)->send(new contributorInviteMail($user, $project->title, $project->slug));
+      $projectHasMember = Member::where('user_id', $user->id)->where('project_id', $project->id)->first();
+      if(!$projectHasMember) {
+        $member->user_id = $user->id;
+        $member->project_id = $project->id;
+        $member->save();
+        Mail::to($user->email)->send(new contributorInviteMail($user, $project->title, $project->slug));
+      } else {
+        return 'already_member';
+      }
+
     }
     if($request->has('removeMember')) {
       $member = Member::findOrFail($request->input('removeMember'));
