@@ -97,7 +97,7 @@
                   <tr>
                     <td>
                       <font style="font-size: 18px;">
-                        Project url: {{$projectUrl}}<br/>
+                        Project url: <a href="http://platform.envienta.org/project/{{$projectUrl}}" target="_blank">http://platform.envienta.org/project/{{$projectUrl}}</a><br/>
                       </font>
                     </td>
                   </tr>
