@@ -78,7 +78,7 @@
                 <table style="margin: 0 auto; border-bottom: 1px solid #dddddd;" cellpadding="0" cellspacing="0" width="100%">
                   <tr>
                     <td style="font-size: 30px; text-align:center;">
-                      <img src="http://platform.envienta.org/img/logo_mail.png" alt="Logo" title="Logo" style="display:block; margin: 1em auto;" width="300" />
+                      <img src="{{Request::root()}}/img/logo_mail.png" alt="Logo" title="Logo" style="display:block; margin: 1em auto;" width="300" />
                     </td>
                   </tr>
                 </table>
@@ -97,7 +97,7 @@
                   <tr>
                     <td>
                       <font style="font-size: 18px;">
-                        Project url: <a href="http://platform.envienta.org/project/{{$projectUrl}}" target="_blank">http://platform.envienta.org/project/{{$projectUrl}}</a><br/>
+                        Project url: <a href="{{Request::root()}}/project/{{$projectUrl}}" target="_blank">{{Request::root()}}/project/{{$projectUrl}}</a><br/>
                       </font>
                     </td>
                   </tr>
