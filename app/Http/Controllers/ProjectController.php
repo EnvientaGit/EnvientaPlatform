@@ -7,6 +7,7 @@ use App\Project;
 use App\Member;
 use App\User;
 use App\Utils;
+use Illuminate\Support\Facades\Mail;
 use App\Mail\contributorInviteMail;
 use App\ParsedownExtra;
 use Illuminate\Support\Facades\DB;

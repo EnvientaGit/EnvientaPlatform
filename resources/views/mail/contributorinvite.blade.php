@@ -97,7 +97,7 @@
                   <tr>
                     <td>
                       <font style="font-size: 18px;">
-                        Project url: {{$productUrl}}<br/>
+                        Project url: {{$projectUrl}}<br/>
                       </font>
                     </td>
                   </tr>
