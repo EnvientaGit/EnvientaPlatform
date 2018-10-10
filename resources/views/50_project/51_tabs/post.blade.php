@@ -64,7 +64,7 @@
         
             <div class="card w-100">
               <h6 class="card-header dtitle p-2">
-                <a href="" class="env_link"><i class="fa fa-pencil" aria-hidden="true"></i> New post </a>
+                <a href="" class="env_link"><i class="far fa-pencil" aria-hidden="true"></i> New post </a>
           {{--       <a href="" class="env_link"><i class="fa fa-picture-o" aria-hidden="true"></i> Photo/video | </a>
                 <a href="" class="env_link"><i class="fa fa-video-camera" aria-hidden="true"></i> Broadcast</a> --}}
               </h6>
@@ -106,7 +106,7 @@
         
             <div class="card w-100">
               <h6 class="card-header dtitle p-2">
-                <a href="" class="env_link"><i class="fa fa-pencil" aria-hidden="true"></i> New post </a>
+                <a href="" class="env_link"><i class="far fa-pencil" aria-hidden="true"></i> New post </a>
           {{--       <a href="" class="env_link"><i class="fa fa-picture-o" aria-hidden="true"></i> Photo/video | </a>
                 <a href="" class="env_link"><i class="fa fa-video-camera" aria-hidden="true"></i> Broadcast</a> --}}
               </h6>
@@ -145,7 +145,7 @@
           <div class="card-body p-0">
             <div class="card w-100">
               <h6 class="card-header dtitle p-2">
-                <a href="" class="env_link"><i class="fa fa-pencil" aria-hidden="true"></i> New post </a>
+                <a href="" class="env_link"><i class="far fa-pencil" aria-hidden="true"></i> New post </a>
           {{--       <a href="" class="env_link"><i class="fa fa-picture-o" aria-hidden="true"></i> Photo/video | </a>
                 <a href="" class="env_link"><i class="fa fa-video-camera" aria-hidden="true"></i> Broadcast</a> --}}
               </h6>
