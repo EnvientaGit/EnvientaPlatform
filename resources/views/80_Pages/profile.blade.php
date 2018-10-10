@@ -319,7 +319,8 @@
                   then please fill out a few details about you <br>
                   <small>Be aware that, these informations just about to define your order - not gonna be public!</small>
                 </h6>
-                <div class="row">
+
+                <!-- <div class="row">
                   <div class="col-md-10">
                     <div class="input-group mb-2">
                       <div class="input-group-prepend">
@@ -331,7 +332,9 @@
                   <div class="col-md-2">
                     <button type="button" class="btn btn-primary float-right geocomplete-button" data-geocomplete-target="manufacturerAddressTarget" data-geocomplete-field="manufacturerAddress">Find</button>
                   </div>
-                </div>
+                </div> -->
+
+                <h6 class="mt-2">Your address</h6>
 
                 <div class="row mb-2" id="manufacturerAddressTarget">
                   <div class="col-md-2">
@@ -416,7 +419,7 @@
                         <div class="input-group-text">Website address</div>
                       </div>
                       <input type="text" class="form-control" id="" placeholder="Your website address" name="manufacturerWebsite" value="{{$user->manufacturerWebsite}}">
-                    </div> 
+                    </div>
                     <select class="custom-select mb-2" name="manufacturerWorkTime">
                       <option value="0" disabled selected>Working time:</option>
                       <option value="1" {{$user->manufacturerWorkTime==1 ? "selected" : ""}}>10 hour/week</option>
@@ -434,7 +437,7 @@
                   </div>
                 </div>
                 <hr>
-                <?php $additionals = $user->getManufacturerAdditionals(); ?> 
+                <?php $additionals = $user->getManufacturerAdditionals(); ?>
                 <div class="row">
                   <div class="col-md-12">
                     <h6 class="mb-3">Additional conditions and possiblities</h6>
@@ -564,7 +567,7 @@
                   then please add a few tag about your skills
                 </h6>
 
-                <div class="row">
+                <!-- <div class="row">
                   <div class="col-md-10">
                     <div class="input-group mb-2">
                       <div class="input-group-prepend">
@@ -576,7 +579,9 @@
                   <div class="col-md-2">
                     <button type="button" class="btn btn-primary float-right geocomplete-button" data-geocomplete-target="customerAddressTarget" data-geocomplete-field="customerAddress">Find</button>
                   </div>
-                </div>
+                </div> -->
+
+                <h6 class="mt-2">Your address</h6>
 
                 <div class="row mb-2" id="customerAddressTarget">
                   <div class="col-md-2">
