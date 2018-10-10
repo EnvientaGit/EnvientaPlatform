@@ -342,7 +342,7 @@
                       <div class="input-group-prepend">
                         <div class="input-group-text">Country</div>
                       </div>
-                      <input name="manufacturerAddressCountry" type="text" class="form-control" value="{{$user->manufacturerAddressCountry}}" data-geo="country_short" readonly="true">
+                      <input name="manufacturerAddressCountry" type="text" class="form-control" value="{{$user->manufacturerAddressCountry}}" data-geo="country_short">
                     </div>
                   </div>
 
@@ -352,7 +352,7 @@
                       <div class="input-group-prepend">
                         <span class="input-group-text" id="inputGroupPrepend1">Zip code</span>
                       </div>
-                      <input id="validationDefault1" name="manufacturerAddressZip" type="text" class="form-control" placeholder="Your zip" aria-describedby="inputGroupPrepend1" required aria-describedby="inputGroupPrepend1" required value="{{$user->manufacturerAddressZip}}" data-geo="postal_code">
+                      <input id="validationDefault1" name="manufacturerAddressZip" type="text" class="form-control" placeholder="" aria-describedby="inputGroupPrepend1" required aria-describedby="inputGroupPrepend1" required value="{{$user->manufacturerAddressZip}}" data-geo="postal_code">
                     </div>
                   </div>
 
@@ -362,7 +362,7 @@
                       <div class="input-group-prepend">
                           <span class="input-group-text" id="inputGroupPrepend2">City</span>
                       </div>
-                      <input id="validationDefault2" name="manufacturerAddressCity" type="text" class="form-control" placeholder="Your City" aria-describedby="inputGroupPrepend2" required aria-describedby="inputGroupPrepend2" required value="{{$user->manufacturerAddressCity}}" data-geo="locality">
+                      <input id="validationDefault2" name="manufacturerAddressCity" type="text" class="form-control" placeholder="" aria-describedby="inputGroupPrepend2" required aria-describedby="inputGroupPrepend2" required value="{{$user->manufacturerAddressCity}}" data-geo="locality">
                     </div>
                   </div>
 
@@ -372,7 +372,7 @@
                       <div class="input-group-prepend">
                           <span class="input-group-text" id="inputGroupPrepend3">Street</span>
                       </div>
-                      <input id="validationDefault3" name="manufacturerAddressStreet" type="text" class="form-control" placeholder="Your Street" aria-describedby="inputGroupPrepend3" required aria-describedby="inputGroupPrepend3" required value="{{$user->manufacturerAddressStreet}}" data-geo="route">
+                      <input id="validationDefault3" name="manufacturerAddressStreet" type="text" class="form-control" placeholder="" aria-describedby="inputGroupPrepend3" required aria-describedby="inputGroupPrepend3" required value="{{$user->manufacturerAddressStreet}}" data-geo="route">
                     </div>
                   </div>
 
@@ -382,7 +382,7 @@
                       <div class="input-group-prepend">
                           <span class="input-group-text" id="inputGroupPrepend4">Number</span>
                       </div>
-                      <input id="validationDefault4" name="manufacturerAddressStreetNumber" type="text" class="form-control" placeholder="Your Number" aria-describedby="inputGroupPrepend4" required aria-describedby="inputGroupPrepend4" required value="{{$user->manufacturerAddressStreetNumber}}" data-geo="street_number">
+                      <input id="validationDefault4" name="manufacturerAddressStreetNumber" type="text" class="form-control" placeholder="" aria-describedby="inputGroupPrepend4" required aria-describedby="inputGroupPrepend4" required value="{{$user->manufacturerAddressStreetNumber}}" data-geo="street_number">
                     </div>
                   </div>
 
@@ -589,7 +589,7 @@
                       <div class="input-group-prepend">
                         <div class="input-group-text">Country</div>
                       </div>
-                      <input name="customerAddressCountry" type="text" class="form-control" value="{{$user->customerAddressCountry}}" data-geo="country_short" readonly="true">
+                      <input name="customerAddressCountry" type="text" class="form-control" value="{{$user->customerAddressCountry}}" data-geo="country_short">
                     </div>
                   </div>
                   <div class="col-md-2">
@@ -597,7 +597,7 @@
                       <div class="input-group-prepend">
                         <div class="input-group-text">Zip code</div>
                       </div>
-                      <input name="customerAddressZip" type="text" class="form-control" value="{{$user->customerAddressZip}}" data-geo="postal_code" readonly="true">
+                      <input name="customerAddressZip" type="text" class="form-control" value="{{$user->customerAddressZip}}" data-geo="postal_code">
                     </div>
                   </div>
                   <div class="col-md-3">
@@ -605,7 +605,7 @@
                       <div class="input-group-prepend">
                         <div class="input-group-text">City</div>
                       </div>
-                      <input name="customerAddressCity" type="text" class="form-control" value="{{$user->customerAddressCity}}" data-geo="locality" readonly="true">
+                      <input name="customerAddressCity" type="text" class="form-control" value="{{$user->customerAddressCity}}" data-geo="locality">
                     </div>
                   </div>
                   <div class="col-md-3">
@@ -613,7 +613,7 @@
                       <div class="input-group-prepend">
                         <div class="input-group-text">Street</div>
                       </div>
-                      <input name="customerAddressStreet" type="text" class="form-control" value="{{$user->customerAddressStreet}}" data-geo="route" readonly="true">
+                      <input name="customerAddressStreet" type="text" class="form-control" value="{{$user->customerAddressStreet}}" data-geo="route">
                     </div>
                   </div>
                   <div class="col-md-2">
@@ -621,7 +621,7 @@
                       <div class="input-group-prepend">
                         <div class="input-group-text">Number</div>
                       </div>
-                      <input name="customerAddressStreetNumber" type="text" class="form-control" value="{{$user->customerAddressStreetNumber}}" data-geo="street_number" readonly="true">
+                      <input name="customerAddressStreetNumber" type="text" class="form-control" value="{{$user->customerAddressStreetNumber}}" data-geo="street_number">
                     </div>
                   </div>
                   <input type="hidden" name="customerAddressLat" data-geo="lat">
