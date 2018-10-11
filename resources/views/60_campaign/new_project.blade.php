@@ -20,6 +20,17 @@
             <label for="tags" class="mb-0">Tags <small id="descriptionHelp" class="text-muted">(max. 6)</small></label>
             <input name="tags" type="text" class="btn-sm form-control taglist" id="tags" placeholder="Enter tags">
           </div>
+
+          <!-- YouTube Link input section -->
+          <div class="form-group">
+            <label for="vid_links" class="mb-0">Video links</label>
+            <input name="vid_links" type="text" class="btn-sm form-control taglist" id="vid_links" placeholder="Enter links">
+
+            <!-- Adding a new input for a new link -->
+            <button type="button" class="btn btn-outline-primary btn-sm mt-2">Add more <i class="far fa-plus"></i></button>
+          </div>
+          <!-- YouTube Link input section -->
+
           <div class="form-group">
             <label for="images" class="mb-0">Project images <small class="text-muted">(multiple images allowed, min. 1 required)</small></label>
             <div style="position: relative; left: 0px; top: 0px; height: 40px;" class="mb-3">
