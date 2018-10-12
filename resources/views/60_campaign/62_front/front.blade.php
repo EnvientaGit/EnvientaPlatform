@@ -1,6 +1,6 @@
-<section class="cid-qUpCFK2vQh mbr-fullscreen" data-bg-video="https://www.youtube.com/embed/SBg4R6J8hCU?rel=0&amp;showinfo=0&amp;autoplay=0&amp;loop=0" id="header2-7f">
+<section class="cid-qUpCFK2vQh mbr-fullscreen" data-bg-videos="https://www.youtube.com/embed/SBg4R6J8hCU?rel=0&amp;showinfo=0&amp;autoplay=0&amp;loop=0" id="header2-7f">
 
-    
+
 
     <div class="mbr-overlay" style="opacity: 0.4; background-color: rgb(0, 0, 0);"></div>
 
@@ -8,21 +8,19 @@
         <div class="row justify-content-md-center">
             <div class="mbr-white col-md-10">
                 <h1 class="mbr-section-title mbr-bold pb-3 mbr-fonts-style display-1"><span style="font-weight: normal;"><br/>STARTUP ACCELERATOR FOR CLOUD-BASED MANUFACTURING</span></h1>
-                
+
                 <p class="mbr-text pb-3 mbr-fonts-style display-5">The first, blockchain based system aims to speed up the collaborative open source hardware development, from ideas to prototypes, through manufacturing, sales and distribution, based on local circular economy principles.</p>
-                <div class="mbr-section-btn"><a class="btn btn-md btn-primary display-4" href="#" data-toggle="modal"
-                           
-                          data-target="#newProjectModal">CREATE NEW PROJECT</a></div>
+                <div class="mbr-section-btn"><a class="btn btn-md btn-primary display-4" href="#" data-toggle="modal" data-target="#newProjectModal">CREATE NEW PROJECT</a></div>
             </div>
         </div>
     </div>
-    
+
 </section>
 
 <section class="clients cid-qUBZqJ7qIh" id="clients-7r">
-      
 
-    
+
+
         <div class="container mb-5">
             <div class="media-container-row">
                 <div class="col-12 align-center">
@@ -35,11 +33,11 @@
     <div class="container">
         <div class="carousel slide" data-ride="carousel" role="listbox">
             <div class="carousel-inner" data-visible="6">
-                
-                
-                
-                
-                
+
+
+
+
+
             <div class="carousel-item ">
                     <div class="media-container-row">
                         <div class="col-md-12">
@@ -105,7 +103,7 @@
 
 <section class="testimonials3 cid-qUCyQyOKDd mbr-parallax-background" id="testimonials3-7v">
 
-    
+
 
     <div class="mbr-overlay" style="opacity: 0.6; background-color: rgb(35, 35, 35);">
     </div>
@@ -129,10 +127,10 @@
 </section>
 
 <section class="features1 cid-qUyYfgWopf" id="features1-7n">
-    
-    
 
-    
+
+
+
     <div class="container">
         <div class="media-container-row">
 
@@ -189,9 +187,9 @@
 
 <section class="header14 cid-qUCIO5aKg0 mbr-fullscreen mbr-parallax-background" id="header14-7w">
 
-    
 
-    
+
+
 
     <div class="container">
         <div class="media-container-row">
@@ -203,7 +201,7 @@
             <div class="media-content">
                 <h1 class="mbr-section-title pb-3 align-left mbr-white mbr-fonts-style display-2">ENVISION &amp; ENCOURAGE TECHNOLOGICAL ALTERNATIVES
 </h1>
-                
+
                 <div class="mbr-section-text  pb-3 ">
                     <p class="mbr-text align-left mbr-white mbr-fonts-style display-5">
                         From establishing new designer collaborations and crowdfunding your open source projects to get into the supply chain, ENVIENTA has the tools.
@@ -211,7 +209,7 @@
                 </div>
 
                 <div class="mbr-section-btn"><a class="btn btn-md btn-primary display-4" href="#" data-toggle="modal"
-                           
+
                           data-target="#newProjectModal">CREATE NEW PROJECT</a></div>
             </div>
         </div>
