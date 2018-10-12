@@ -41,8 +41,7 @@
           <div class="form-group mb-0">
             <label for="license" class="mb-0"><b>License:</b> Creative Commons - Attribution + ShareAlike
               <small class="text-muted" style="display: none;">(Regularly used <a href="https://creativecommons.org/" class="env_link text-success" target="_blank">Creative Commons</a> license)</small>
-              <i class="far fa-glasses ml-1 text-primary" data-placement="left" data-toggle="popover" title="More about CC-BY-SA" data-content="This license lets others remix, tweak, and build upon your work even for commercial purposes, as long as they credit you and license their new creations under the identical terms. This license is often compared to “copyleft” free and open source software licenses. All new works based on yours will carry the same license, so any derivatives will also allow commercial use. This is the license used by Wikipedia, and is recommended for materials that would benefit from incorporating content from Wikipedia and similarly licensed projects." style="cursor: pointer;"></i>
-            </label>
+              <i class="far fa-glasses ml-1 text-primary" data-trigger="focus" role="button" tabindex="0" data-placement="left" data-toggle="popover" title="More about CC-BY-SA" data-content="This license lets others remix, tweak, and build upon your work even for commercial purposes, as long as they credit you and license their new creations under the identical terms. This license is often compared to “copyleft” free and open source software licenses. All new works based on yours will carry the same license, so any derivatives will also allow commercial use. This is the license used by Wikipedia, and is recommended for materials that would benefit from incorporating content from Wikipedia and similarly licensed projects." style="cursor: pointer;"></i>
             <select name="license" class="btn-sm form-control" id="license" required="true" style="display: none;">
               <option>Public Domain</option>
               {{-- CC-PD --}}
@@ -116,6 +115,9 @@
 
   $(function () {
     $('[data-toggle="popover"]').popover()
+    $('.popover-dismiss').popover({
+      trigger: 'focus'
+    })
   })
 
 </script>
