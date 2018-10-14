@@ -13,22 +13,27 @@
         <div class="row">
           <div class="col-md-3 col">
             <a href="#vlink_modal" data-toggle="modal">
-              <img src="img/1920x500_3.jpg" class="vlink_img img-thumbnail img-fluid" alt="Image" style="max-width:100%;">
+              <i class="fab fa-youtube fa-3x" style="position: absolute; color: #ccc7c7; left: 38%; top:30%;"></i>
+              <!-- YT index image sample - http://i.ytimg.com/vi/{video_id}/maxresdefault.jpg -->
+              <img src="http://i.ytimg.com/vi/vlDzYIIOYmM/maxresdefault.jpg" class="vlink_img img-thumbnail img-fluid" alt="Image" style="max-width:100%;">
             </a>
           </div>
           <div class="col-md-3 col">
             <a href="#vlink_modal" data-toggle="modal">
-              <img src="img/1920x500_2.jpg" class="vlink_img img-thumbnail img-fluid" alt="Image" style="max-width:100%;">
+              <i class="fab fa-youtube fa-3x" style="position: absolute; color: #ccc7c7; left: 38%; top:30%;"></i>
+              <img src="http://i.ytimg.com/vi/vlDzYIIOYmM/maxresdefault.jpg" class="vlink_img img-thumbnail img-fluid" alt="Image" style="max-width:100%;">
             </a>
           </div>
           <div class="col-md-3 col">
             <a href="#vlink_modal" data-toggle="modal">
-              <img src="img/1920x800_1.jpg" class="vlink_img img-thumbnail img-fluid" alt="Image" style="max-width:100%;">
+              <i class="fab fa-youtube fa-3x" style="position: absolute; color: #ccc7c7; left: 38%; top:30%;"></i>
+              <img src="http://i.ytimg.com/vi/vlDzYIIOYmM/maxresdefault.jpg" class="vlink_img img-thumbnail img-fluid" alt="Image" style="max-width:100%;">
             </a>
           </div>
           <div class="col-md-3 col">
             <a href="#vlink_modal" data-toggle="modal">
-              <img src="img/1920x800_3.jpg" class="vlink_img img-thumbnail img-fluid" alt="Image" style="max-width:100%;">
+              <i class="fab fa-youtube fa-3x" style="position: absolute; color: #ccc7c7; left: 38%; top:30%;"></i>
+              <img src="http://i.ytimg.com/vi/vlDzYIIOYmM/maxresdefault.jpg" class="vlink_img img-thumbnail img-fluid" alt="Image" style="max-width:100%;">
             </a>
           </div>
         </div>
@@ -41,22 +46,26 @@
         <div class="row">
           <div class="col-md-3 col">
             <a href="#vlink_modal" data-toggle="modal">
-              <img src="img/800x600_5.jpg" class="vlink_img img-thumbnail img-fluid" alt="Image" style="max-width:100%;">
+              <i class="fab fa-youtube fa-3x" style="position: absolute; color: #ccc7c7; left: 38%; top:30%;"></i>
+              <img src="http://i.ytimg.com/vi/vlDzYIIOYmM/maxresdefault.jpg" class="vlink_img img-thumbnail img-fluid" alt="Image" style="max-width:100%;">
             </a>
           </div>
           <div class="col-md-3 col">
             <a href="#vlink_modal" data-toggle="modal">
-              <img src="img/1024x600.jpg" class="vlink_img img-thumbnail img-fluid" alt="Image" style="max-width:100%;">
+              <i class="fab fa-youtube fa-3x" style="position: absolute; color: #ccc7c7; left: 38%; top:30%;"></i>
+              <img src="http://i.ytimg.com/vi/vlDzYIIOYmM/maxresdefault.jpg" class="vlink_img img-thumbnail img-fluid" alt="Image" style="max-width:100%;">
             </a>
           </div>
           <div class="col-md-3 col">
             <a href="#vlink_modal" data-toggle="modal">
-              <img src="img/1280x960_1.jpg" class="vlink_img img-thumbnail img-fluid" alt="Image" style="max-width:100%;">
+              <i class="fab fa-youtube fa-3x" style="position: absolute; color: #ccc7c7; left: 38%; top:30%;"></i>
+              <img src="http://i.ytimg.com/vi/vlDzYIIOYmM/maxresdefault.jpg" class="vlink_img img-thumbnail img-fluid" alt="Image" style="max-width:100%;">
             </a>
           </div>
           <div class="col-md-3 col">
             <a href="#vlink_modal" data-toggle="modal">
-              <img src="img/1440x700_3.jpg" class="vlink_img img-thumbnail img-fluid" alt="Image" style="max-width:100%;">
+              <i class="fab fa-youtube fa-3x" style="position: absolute; color: #ccc7c7; left: 38%; top:30%;"></i>
+              <img src="http://i.ytimg.com/vi/vlDzYIIOYmM/maxresdefault.jpg" class="vlink_img img-thumbnail img-fluid" alt="Image" style="max-width:100%;">
             </a>
           </div>
         </div>
