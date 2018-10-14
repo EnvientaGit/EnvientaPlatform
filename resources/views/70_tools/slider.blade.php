@@ -5,7 +5,7 @@
       <div class="card mt-3 bg-light box-shadow-bottom">
         <div class="col-md-12">
 
-          <div class="row"><!-- Video slider -->
+          <div class="row vlink"><!-- Video slider -->
             <div class="col-md-12">
               @include('70_tools.video_slider')
             </div>
