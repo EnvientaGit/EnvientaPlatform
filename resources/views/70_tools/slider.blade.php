@@ -5,12 +5,6 @@
       <div class="card mt-3 bg-light box-shadow-bottom">
         <div class="col-md-12">
 
-          <div class="row vlink"><!-- Video slider -->
-            <div class="col-md-12">
-              @include('70_tools.video_slider')
-            </div>
-          </div><!-- Video slider -->
-
           <div class="embed-responsive my-3"><!-- Image slider -->
             <div id="carousel" class="carousel slide carousel-fade" data-ride="carousel" data-interval="6000">
               <ol class="carousel-indicators">
@@ -58,6 +52,13 @@
               </a>
             </div>
           </div>
+
+          <div class="row vlink"><!-- Video slider -->
+            <div class="col-md-12">
+              @include('70_tools.video_slider')
+            </div>
+          </div><!-- Video slider -->
+
         </div>
       </div>
     </div>
