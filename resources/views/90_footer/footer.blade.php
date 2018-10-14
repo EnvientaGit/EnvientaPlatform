@@ -125,7 +125,7 @@
     var placeholder = $(this).attr('placeholder');
     $(this).tagEditor({
       delimiter: ' ',
-      placeholder: placeholder   
+      placeholder: placeholder
     });
   });
 </script>
@@ -157,3 +157,7 @@
   }
 </script>
 --}}
+
+<script type="text/javascript">
+  $('#vlink_modal').modal('hide')
+</script>

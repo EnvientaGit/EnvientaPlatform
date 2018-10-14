@@ -439,7 +439,7 @@ textarea.form-control{
     -webkit-animation: _bpulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
     -moz-animation: _bpulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
     -ms-animation: _bpulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
-    animation: _bpulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);  
+    animation: _bpulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
   }
     @-webkit-keyframes _bpulse {to {box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);}}
     @-moz-keyframes _bpulse {to {box-shadow: 0 0 0 45px rgba(232, 76, 61, 0);}}
@@ -461,7 +461,39 @@ textarea.form-control{
   color: #007bff;
 }
 
+/* Video link slider */
+.vlink_img {
+    height: 8em !important;
+    width: 11em !important;
+    object-fit: cover;
+    object-position: center;
+}
+.vlink .carousel-indicators {
+  left: -50%;
+  right: -50%;
+  top: auto;
+  bottom: 0.5em;
+  z-index: 0;
+  margin-right: auto;
+  margin-left: auto;
 
+}
+/* The colour of the indicators */
+.vlink .carousel-indicators li {
+  background: #a3a3a3;
+  border-radius: 50%;
+  width: 2em;
+  height: 2em;
+  cursor: pointer !important;
+}
+
+.vlink .carousel-indicators .active {
+  background: #707070;
+}
+.vlink .carousel-indicators li {
+    margin-right: auto;
+    margin-left: auto;
+}
 
 
 
