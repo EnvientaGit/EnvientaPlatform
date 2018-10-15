@@ -51,7 +51,7 @@
 					      @if($mine)
 					      <td class="text-left"><a href="#" class="text-danger file_drop" data-folder="{{$folder['name']}}" data-file="{{$file['name']}}">Drop <i class="fa fa-times text-danger" aria-hidden="true"></i></a></td>
 					      @endif
-					      <td class=""><a href="{{ $repo_url . '/' . $folder['name'] . '/' . $file['name'] }}" target="_blank"><i class="fa fa-cloud-download fa-lg" aria-hidden="true"></i></a></td>
+					      <td class=""><a href="{{ $repo_url . '/' . $folder['name'] . '/' . $file['name'] }}" target="_blank"><i class="far fa-cloud-download fa-lg" aria-hidden="true"></i></a></td>
 					    </tr>
 					    @endforeach
 					  </tbody>
@@ -63,7 +63,7 @@
 						  		<div class="position-relative" style="height: 5.5em">
 						  			<div class="text-center rounded position-absolute w-100 h-100 env_drag">
 				    					<div class="mt-3">
-				    						<i class="fa fa-cloud-upload fa-2x text-primary" aria-hidden="true"></i>
+				    						<i class="far fa-cloud-upload fa-2x text-primary" aria-hidden="true"></i>
 				    						<h6>Upload</h6>
 				    					</div>
 				    				</div>
