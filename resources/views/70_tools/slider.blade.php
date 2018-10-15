@@ -6,27 +6,38 @@
         <div class="col-md-12">
 
           <div class="embed-responsive my-3"><!-- Image slider -->
-            <div id="carousel" class="carousel slide carousel-fade" data-ride="carousel" data-interval="6000">
+            <div id="carousel" class="carousel slide" data-ride="carousel" data-interval="6000">
               <ol class="carousel-indicators">
                 @foreach($images as $idx => $image)
-                  <li data-target="#carousel" data-slide-to="{{ $idx }}" class="{{ $idx == 0 ? 'active': ''}}"></li>
+                  <!-- <li data-target="#carousel" data-slide-to="{{ $idx }}" class="{{ $idx == 0 ? 'active': ''}}"></li> -->
                 @endforeach
               </ol>
               <div class="carousel-inner" role="listbox">
                 @foreach($images as $idx => $image)
                   <div class="carousel-item {{ $idx == 0 ? 'active': ''}}">
-                    <img src="{{ $image }}" alt="project_xy" class="d-block img-fluid img-thumbnail env_slide_img_h">
+                    <!-- <img src="{{ $image }}" alt="project_xy" class="d-block img-fluid img-thumbnail env_slide_img_h"> -->
+
+                    <!-- Video -->
+                    <div class="env_slide_img_h img-thumbnail">
+                      <iframe width="560" height="315" src="https://www.youtube.com/embed/vlDzYIIOYmM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    </div>
+                    <!-- Video -->
+
                   </div>
                 @endforeach
               </div>
-              <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+
+              <!-- Navigation -->
+              <!-- <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="sr-only">Previous</span>
               </a>
               <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
-              </a>
+              </a> -->
+              <!-- Navigation -->
+
             </div>
           </div><!-- Image slider -->
 

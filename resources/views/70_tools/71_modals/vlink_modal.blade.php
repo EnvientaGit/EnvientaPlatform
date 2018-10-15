@@ -9,7 +9,7 @@
         </button>
       </div>
       <div class="modal-body p-0" style="height: 19.6em;">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/vlDzYIIOYmM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <img src="img/1920x800_3.jpg" class="img-fluid img-thumbnail" alt="modal_image">
       </div>
       <div class="modal-footer p-2">
         <button type="button" class="btn btn-sm btn-secondary" data-dismiss="modal">Close</button>
