@@ -1,6 +1,4 @@
-<section class="cid-qUpCFK2vQh mbr-fullscreen" data-bg-video="https://www.youtube.com/embed/SBg4R6J8hCU?rel=0&amp;showinfo=0&amp;autoplay=0&amp;loop=0" id="header2-7f">
-
-
+<section class="cid-qUpCFK2vQh mbr-fullscreen" data-bg-videos="https://www.youtube.com/embed/SBg4R6J8hCU?rel=0&amp;showinfo=0&amp;autoplay=0&amp;loop=0" id="header2-7f">
 
     <div class="mbr-overlay" style="opacity: 0.4; background-color: rgb(0, 0, 0);"></div>
 
@@ -195,7 +193,7 @@
         <div class="media-container-row">
 
             <div class="mbr-figure" style="width: 60%;">
-                <img src="assets/images/envienta-platform-logo-stand-1000x594.png" alt="Mobirise" title="">
+                <img src="assets/images/envienta-platform-logo-stand-1000x594.png" alt="Envienta" title="">
             </div>
 
             <div class="media-content">
@@ -208,9 +206,9 @@
                     </p>
                 </div>
 
-                <div class="mbr-section-btn"><a class="btn btn-md btn-primary display-4" href="#" data-toggle="modal"
-
-                          data-target="#newProjectModal">CREATE NEW PROJECT</a></div>
+                <div class="mbr-section-btn">
+                  <a class="btn btn-md btn-primary display-4" href="#" data-toggle="modal" data-target="#newProjectModal">CREATE NEW PROJECT</a>
+                </div>
             </div>
         </div>
     </div>
