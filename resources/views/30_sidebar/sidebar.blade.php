@@ -8,15 +8,34 @@
           <img src="{{ "https://www.gravatar.com/avatar/" . $avatar_hash . "?s=100"}}" class="img-fluid img-thumbnail mb-2" height="100" width="100">
         </a>
         <h6 id="avatar_name" class="card-title font-weight-bold mb-2">{{ $project->owner()->first()->realname }}</h6>
+        {{--
         <p id="avatar_description" class="card-text text-center">
           {{ $project->owner()->first()->bio }}
         </p>
+        --}}
       </div>
       <div class="card-footer env_uploaded_div pl-2">
+        <p class="text-center"><a data-toggle="modal" data-target="#ownerDescriptionModal"><small>More about the creator</small></a></p>
         {{--
         <p class="env_p">Uploaded at XXX</p>
         --}}
       </div> 
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="ownerDescriptionModal" tabindex="-1" role="dialog" aria-labelledby="ownerDescriptionModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+
+      <h6 class="card-header dtitle p-2">{{ $project->owner()->first()->realname }}
+        <i class="fa fa-times env_edit pull-right text-secondary" aria-hidden="true" data-dismiss="modal" aria-label="Close"></i>
+      </h6>
+
+      <div class="card-body p-3">
+        {{ $project->owner()->first()->bio }}
+      </div>
+    </div>
   </div>
 </div>
 
@@ -45,7 +64,15 @@
         </div>
       @endforeach
     </div>
-    <div class="card-footer p-3 admin-box">
+  </div>
+  </div>
+  
+  <div class="row my-3 box-shadow-bottom">
+  <div class="card w-100 admin-box">
+    <h6 class="card-header dtitle p-2">
+      <i class="fa fa-pencil-square-o mr-1 env_color"></i>Add new member
+    </h6>
+    <div class="card-body p-3">
       <span class="rt-badge badge badge-dark" data-toggle="tooltip" data-placement="top" title="Admin panel"><i class="fa fa-exclamation-triangle"></i></span>
       <div class="input-group input-group-sm">
         <input name="cotributors" id="cotributors" class="form-control" placeholder="Search member" aria-label="Search member" aria-describedby="btnGroupAddon2" type="text" autocomplete="off">
@@ -60,12 +87,6 @@
 </div>
 
 @endif
-
-<div class="row my-3 box-shadow-bottom">
-  <div class="card w-100 border-0">
-    <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank"><img src="{{ URL::to('img/CC_BY_SA_blue.svg') }}" alt="CC_BY_SA" class="img-fluid p-0 rounded"></a>
-  </div>
-</div>
 
 {{-- <div class="row mb-3 box-shadow-bottom">
   <div class="card">
@@ -114,6 +135,11 @@
   </div>
 </div>
 
+<div class="row my-3 box-shadow-bottom">
+  <div class="card w-100 border-0">
+    <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank"><img src="{{ URL::to('img/CC_BY_SA_blue.svg') }}" alt="CC_BY_SA" class="img-fluid p-0 rounded"></a>
+  </div>
+</div>
 
 
 <script type="text/javascript">
