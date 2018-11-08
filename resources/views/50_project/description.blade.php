@@ -25,7 +25,8 @@
       @include('50_project.51_tabs.blueprints')
   </div>
   <div id="menu3" class="tab-pane animated fadeIn">
-      @include('50_project.51_tabs.post')
+      {{-- @include('50_project.51_tabs.post') --}}
+      @include('50_project.51_tabs.iframed')
   </div>
   <div id="menu2" class="tab-pane animated fadeIn">
       @include('50_project.51_tabs.comments')

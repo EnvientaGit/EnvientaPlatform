@@ -667,6 +667,12 @@
                 Save <i class="fa fa-floppy-o ml-1" aria-hidden="true"></i>
               </button>
             </a>
+
+            <a class="" href="#" data-toggle="modal" data-target="#newProjectModal">
+              <button type="submit" class="btn btn-sm btn-primary ">
+                Create new project <i class="fas fa-lightbulb"></i>
+              </button>
+            </a>
           </div>
         </div>
 

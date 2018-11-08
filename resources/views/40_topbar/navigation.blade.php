@@ -59,6 +59,7 @@
                     <img src="{{ Utils::userAvatar() }}"
                       class="dropdown-toggle env_point d-block float-left ml-2 rounded env_border" height="40" width="40"  data-toggle="dropdown">
                     <div class="dropdown-menu">
+                        <a class="dropdown-item env_color" href="#" data-toggle="modal" data-target="#newProjectModal">New project <i class="fas fa-lightbulb"></i></a>
                         <a class="dropdown-item env_color" href="{{ URL::to('/profile') }}">Profile</a>
                         <!--a class="dropdown-item env_color" href="{{ Utils::userProfile() }}" target="_blank">Gravatar</a-->
                         <a class="dropdown-item env_color" href="{{ url('/u') . '/' . Auth::user()->id }}">Projects</a>

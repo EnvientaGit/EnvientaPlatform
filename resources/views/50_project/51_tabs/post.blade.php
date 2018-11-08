@@ -57,11 +57,11 @@
 
       {{-- pane --}}
       <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
-        
+
         <div class="card w-100 box-shadow-bottom">
           <h3 class="card-header dtitle p-2"><i class="fa fa-comments"></i> Project administration</h3>
           <div class="card-body p-0">
-        
+
             <div class="card w-100">
               <h6 class="card-header dtitle p-2">
                 <a href="" class="env_link"><i class="far fa-pencil" aria-hidden="true"></i> New post </a>
@@ -88,13 +88,13 @@
             </div>
           </div>
           <div class="card-footer p-3">
-        
+
             @include('50_project.52_newsfeed.feeds')
 
           </div>
         </div>
 
-      </div>    
+      </div>
       {{-- /pane --}}
 
       {{-- pane --}}
@@ -103,7 +103,7 @@
         <div class="card w-100 box-shadow-bottom">
           <h3 class="card-header dtitle p-2"><i class="fa fa-comments"></i> Mentoring</h3>
           <div class="card-body p-0">
-        
+
             <div class="card w-100">
               <h6 class="card-header dtitle p-2">
                 <a href="" class="env_link"><i class="far fa-pencil" aria-hidden="true"></i> New post </a>
