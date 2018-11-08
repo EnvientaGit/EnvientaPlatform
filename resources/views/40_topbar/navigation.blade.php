@@ -1,11 +1,11 @@
 <?php
     use App\Utils;
 ?>
-  <section class="menu cid-qUpCFG09UN" once="menu" id="menu1-7e">
+  <section>
 
     <div class="sticky-top">
       <div class="col-md-12 px-0">
-          <nav class="navbar navbar-expand beta-menu navbar-dropdown align-items-center navbar-fixed-top navbar-toggleable-sm">
+          <nav class="navbar navbar-expand beta-menu navbar-dropdown align-items-center navbar-fixed-top navbar-toggleable-sm px-2">
             <!--a href="{{ url('/') }}" class="mb-3">
               <img class="d-block" src="{{ Utils::themeResPath('header_logo') }}" height="40">
             </a-->
