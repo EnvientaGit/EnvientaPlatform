@@ -11,7 +11,7 @@
   </div>
 </div> --}}
 
-<div class="alert alert-light alert-dismissible fade show box-shadow-bottom border-secondary" role="alert">
+<div class="border border-warning rounded alert alert-light alert-dismissible fade show box-shadow-bottom border-secondary" role="alert">
     <div class="row">
       <img src="{{ URL::to('img/language.svg') }}" class="ml-3" height="70" alt="Alert!">
       <div class="right ml-4 text-primary">
@@ -21,7 +21,7 @@
       </div>
     </div>
   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-    <span aria-hidden="true">&times;</span>
+    <span aria-hidden="true" class="text-primary">&times;</span>
   </button>
 </div>
 
@@ -29,7 +29,7 @@
 <div class="row">
 
   <div class="col-3">
-    <div class="card w-100">
+    <div class="border card w-100">
       <h3 class="card-header dtitle p-2">Threads</h3>
       <div class="card-body p-3">
         <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
@@ -38,7 +38,7 @@
           <a class="nav-link" id="v-pills-investment-tab" data-toggle="pill" href="#v-pills-investment" role="tab" aria-controls="v-pills-investment" aria-selected="false">Investment informations</a>
         </div>
       </div>
-      <div class="card-footer p-3 admin-box">
+      <div class="card-footer p-3">
         <span class="rt-badge badge badge-dark" data-toggle="tooltip" data-placement="top" title="Admin panel"><i class="fa fa-exclamation-triangle"></i></span>
         <div class="input-group input-group-sm">
           <input name="cotributors" class="form-control" placeholder="Open new thread" aria-label="Open new theread" aria-describedby="btnGroupAddon3" type="text">
@@ -58,7 +58,7 @@
       {{-- pane --}}
       <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
 
-        <div class="card w-100 box-shadow-bottom">
+        <div class="border card w-100 box-shadow-bottom">
           <h3 class="card-header dtitle p-2"><i class="fa fa-comments"></i> Project administration</h3>
           <div class="card-body p-0">
 
