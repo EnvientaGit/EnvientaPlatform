@@ -5,7 +5,11 @@
 	<div class="container-fluid">
 		<div class="row py-3 bg-light shadow">
 			<div class="col-md-8 text-left">
-				<h1 class="project-title text-left">{{$project->title}}</h1>
+				<h1 class="project-title text-left">
+					<span class="btn-sm">
+						<a href="#"><i class="fa fa-pencil-square-o mr-1 env_color"></i></a>
+					</span>{{$project->title}}
+				</h1>
 			</div>
 			<div class="col-md-4 py-2 text-right">
 				<span class="mr-1"><i class="far fa-share"></i> Share</span>
