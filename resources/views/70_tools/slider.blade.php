@@ -1,5 +1,5 @@
   <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-12 px-0">
       <div class="card bg-light box-shadow-bottom">
 
           <div class="embed-responsive"><!-- Image slider -->
@@ -15,8 +15,10 @@
                     <!-- <img src="{{ $image }}" alt="project_xy" class="d-block img-fluid img-thumbnail env_slide_img_h"> -->
 
                     <!-- Video -->
-                    <div class="env_slide_img_h img-thumbnail">
-                      <iframe width="560" height="315" src="https://www.youtube.com/embed/vlDzYIIOYmM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    <div class="container-fluid px-0">
+                      <div class="embed-responsive embed-responsive-16by9">
+                          <iframe class="embed-responsive-item" style="border-radius: 5px;" src="https://www.youtube.com/embed/vlDzYIIOYmM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                      </div>
                     </div>
                     <!-- Video -->
 

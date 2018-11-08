@@ -1,6 +1,6 @@
-<div class="row my-3 box-shadow-bottom">
+<div class="row my-3">
   <div class="col-md-12">
-    <div class="border card w-100">
+    <div class="border card w-100 box-shadow-bottom">
       <h6 class="card-header dtitle p-2">
         <i class="fa fa-info-circle fa-fw mr-1 env_color"></i>Creator of this project
       </h6>
@@ -43,9 +43,9 @@
 
 @if ($project->members)
 
-  <div class="row my-3 box-shadow-bottom">
+  <div class="row my-3">
     <div class="col-md-12">
-      <div class="border card w-100">
+      <div class="border card w-100 box-shadow-bottom">
         <h6 class="card-header dtitle p-2">
           <i class="fa fa-pencil-square-o mr-1 env_color"></i>Contributors of this project
         </h6>
@@ -71,9 +71,9 @@
     </div>
   </div>
 
-  <div class="row my-3 box-shadow-bottom">
+  <div class="row my-3">
     <div class="col-md-12">
-      <div class="card w-100 border">
+      <div class="card w-100 border box-shadow-bottom">
         <h6 class="card-header dtitle p-2">
           <i class="fa fa-pencil-square-o mr-1 env_color"></i>Add new member
         </h6>
@@ -94,8 +94,8 @@
 
 @endif
 
-{{-- <div class="row mb-3 box-shadow-bottom">
-  <div class="card">
+{{-- <div class="row mb-3">
+  <div class="card box-shadow-bottom">
     <h6 class="card-header dtitle p-2">License type </h6>
       <div class="card-body p-3">
         <h4><i class="fa fa-creative-commons fa-fw env_color"></i> BY-SA</h4>
@@ -106,9 +106,9 @@
   </div>
 </div> --}}
 
-<div class="row my-3 box-shadow-bottom">
+<div class="row my-3">
   <div class="col-md-12">
-    <div class="card w-100 border" id="projectStatusController">
+    <div class="card w-100 border box-shadow-bottom" id="projectStatusController">
 
       <h6 class="card-header dtitle p-2">
         @if ($project->public == 0)
@@ -141,9 +141,9 @@
   </div>
 </div>
 
-<div class="row my-3 box-shadow-bottom">
+<div class="row my-3">
   <div class="col-md-12">
-    <div class="card w-100 border-0">
+    <div class="card w-100 border-0 box-shadow-bottom">
       <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank"><img src="{{ URL::to('img/CC_BY_SA_blue.svg') }}" alt="CC_BY_SA" class="img-fluid p-0 rounded"></a>
     </div>
   </div>
