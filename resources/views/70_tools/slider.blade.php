@@ -1,6 +1,6 @@
   <div class="row">
-    <div class="col-md-12 px-0">
-      <div class="card bg-light box-shadow-bottom">
+    <div class="col-md-12">
+      <div class="card">
 
           <div class="embed-responsive"><!-- Image slider -->
             <div id="carousel" class="carousel slide" data-ride="carousel" data-interval="6000">
@@ -15,7 +15,7 @@
                     <!-- <img src="{{ $image }}" alt="project_xy" class="d-block img-fluid img-thumbnail env_slide_img_h"> -->
 
                     <!-- Video -->
-                    <div class="container-fluid px-0">
+                    <div class="container-fluid px-0 mb-3">
                       <div class="embed-responsive embed-responsive-16by9">
                           <iframe class="embed-responsive-item" style="border-radius: 5px;" src="https://www.youtube.com/embed/vlDzYIIOYmM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                       </div>
@@ -40,12 +40,13 @@
             </div>
           </div><!-- Image slider -->
 
-          <div class="row vlink"><!-- Video slider -->
-            <div class="col-md-12">
-              @include('70_tools.video_slider')
-            </div>
-          </div><!-- Video slider -->
+
         </div>
+        <div class="row vlink"><!-- Video slider -->
+          <div class="col-md-12">
+            @include('70_tools.video_slider')
+          </div>
+        </div><!-- Video slider -->
 
     </div>
 

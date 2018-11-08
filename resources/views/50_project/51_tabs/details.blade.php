@@ -1,4 +1,4 @@
-<div class="row m-0 mb-3 box-shadow-bottom">
+<div class="row mt-3 mb-5 box-shadow-bottom">
 	<div class="border card w-100">
 		<form method="post" action="{{ $project_url }}">
 		{{ csrf_field() }}

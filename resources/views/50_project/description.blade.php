@@ -16,34 +16,35 @@
   </div>
 </div>
 -->
-
-<div class="row">
-  <div class="col-md-12">
-    <div class="tab-content mt-3">
-      <div id="project_details" class="tab-pane animated active fadeIn">
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="tab-content mt-3">
+        <div id="project_details" class="tab-pane animated active fadeIn">
           @include('70_tools.slider')
           @include('50_project.51_tabs.details')
-      </div>
-      <div id="project_files" class="tab-pane animated fadeIn">
+        </div>
+        <div id="project_files" class="tab-pane animated fadeIn">
           @include('50_project.51_tabs.blueprints')
-      </div>
-      <div id="menu3" class="tab-pane animated fadeIn">
+        </div>
+        <div id="menu3" class="tab-pane animated fadeIn">
           @include('50_project.51_tabs.post')
           {{-- @include('50_project.51_tabs.iframed') --}}
-      </div>
-      <div id="menu2" class="tab-pane animated fadeIn">
+        </div>
+        <div id="menu2" class="tab-pane animated fadeIn">
           @include('50_project.51_tabs.comments')
+        </div>
       </div>
-    </div>
 
-    @if($mine)
+      @if($mine)
       <iframe id="_blueprints_ajax_frame" name="_blueprints_ajax_frame" style="display: none;"></iframe>
 
       <script type="text/javascript">
-          $('#_blueprints_ajax_frame').on("load", function() {
-            $('#project_files').load('{{ $project_url }}/files');
-          });
+      $('#_blueprints_ajax_frame').on("load", function() {
+        $('#project_files').load('{{ $project_url }}/files');
+      });
       </script>
-    @endif
+      @endif
+    </div>
   </div>
 </div>
