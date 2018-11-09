@@ -2,7 +2,7 @@
     use App\Utils;
 ?>
 <section class="cid-qUpG10sFw7" id="footer5-7i">
-  <div class="container">
+  <div class="">
     <div class="media-container-row">
             <div class="col-md-3">
                 <div class="media-wrap">

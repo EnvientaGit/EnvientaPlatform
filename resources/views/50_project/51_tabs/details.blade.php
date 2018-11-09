@@ -1,5 +1,5 @@
-<div class="row m-0 mb-3 box-shadow-bottom">
-	<div class="card w-100">
+<div class="row mt-3 mb-5 box-shadow-bottom">
+	<div class="border card w-100">
 		<form method="post" action="{{ $project_url }}">
 		{{ csrf_field() }}
 		<input type="hidden" name="redirect" value="true" />
@@ -50,14 +50,14 @@
 </div>
 
 <script type="text/javascript">
-  var details_editor = new SimpleMDE({ 
+  var details_editor = new SimpleMDE({
   	element: document.getElementById("details_editor_area"),
   	forceSync: true,
   	toolbar: [
 	"heading-1",
 	"heading-2",
 	"heading-3",
-  	"bold","italic",	
+  	"bold","italic",
 	"|",
 	"quote",
 	"unordered-list",
@@ -107,8 +107,5 @@
   $('#details_editor_close').click(function() {
   	$('#details_content').show();
   	$('#details_editor').hide();
-  });	
+  });
 </script>
-
-
-

@@ -1,11 +1,8 @@
-<div class="container">
   <div class="row">
+    <div class="col-md-12">
+      <div class="card">
 
-    <div class="col-md-9">
-      <div class="card mt-3 bg-light box-shadow-bottom">
-        <div class="col-md-12">
-
-          <div class="embed-responsive my-3"><!-- Image slider -->
+          <div class="embed-responsive"><!-- Image slider -->
             <div id="carousel" class="carousel slide" data-ride="carousel" data-interval="6000">
               <ol class="carousel-indicators">
                 @foreach($images as $idx => $image)
@@ -18,8 +15,10 @@
                     <!-- <img src="{{ $image }}" alt="project_xy" class="d-block img-fluid img-thumbnail env_slide_img_h"> -->
 
                     <!-- Video -->
-                    <div class="env_slide_img_h img-thumbnail">
-                      <iframe width="560" height="315" src="https://www.youtube.com/embed/vlDzYIIOYmM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    <div class="container-fluid px-0 mb-3">
+                      <div class="embed-responsive embed-responsive-16by9">
+                          <iframe class="embed-responsive-item" style="border-radius: 5px;" src="https://www.youtube.com/embed/vlDzYIIOYmM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                      </div>
                     </div>
                     <!-- Video -->
 
@@ -41,45 +40,17 @@
             </div>
           </div><!-- Image slider -->
 
-          <div class="row px-3 mb-3 text-center">
-            <div class="col-md-12">
-              <a class="btn btn-outline-info btn-sm" href="https://www.facebook.com/sharer/sharer.php?u={{ URL::current() }}" target="_blank">
-                <i class="fa fa-facebook-square"></i> Facebook
-              </a>
-              <a class="btn btn-outline-info btn-sm" href="https://twitter.com/intent/tweet?url={{ URL::current() }}" target="_blank">
-                <i class="fa fa-twitter-square"></i> Twitter
-              </a>
-              <a class="btn btn-outline-info btn-sm" href="https://plus.google.com/share?url={{ URL::current() }}" target="_blank">
-                <i class="fa fa-google-plus-square"></i> Google+
-              </a>
-              <a class="btn btn-outline-info btn-sm" href="https://www.linkedin.com/shareArticle?url={{ URL::current() }}" target="_blank">
-                <i class="fa fa-linkedin-square"></i> LinkedIn
-              </a>
-              <a class="btn btn-outline-info btn-sm" href="http://pinterest.com/pin/create/button/?url={{ URL::current() }}" target="_blank">
-                <i class="fa fa-pinterest-square"></i> Pinterest
-              </a>
-              <a class="btn btn-outline-info btn-sm" href="https://reddit.com/submit?url={{ URL::current() }}" target="_blank">
-                <i class="fa fa-reddit-square"></i> Reddit
-              </a>
-            </div>
-          </div>
-
-          <div class="row vlink"><!-- Video slider -->
-            <div class="col-md-12">
-              @include('70_tools.video_slider')
-            </div>
-          </div><!-- Video slider -->
 
         </div>
-      </div>
-    </div>
+        <div class="row vlink"><!-- Video slider -->
+          <div class="col-md-12">
+            @include('70_tools.video_slider')
+          </div>
+        </div><!-- Video slider -->
 
-    <div class="col-md-3">
-      @include('30_sidebar.sidebar')
     </div>
 
   </div>
-</div>
 
 {{-- <h3 class="py-3"><b>{{$project->title}}</b></h3>
 <p class="">{{$project->description}}</p> --}}

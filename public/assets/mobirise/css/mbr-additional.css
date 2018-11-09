@@ -7360,7 +7360,7 @@ body {
   text-align: left;
 }
 .cid-qUpCFG09UN .navbar {
-  padding: .5rem 0;
+  /* padding: .5rem 0; */
   background: #232323;
   transition: none;
   min-height: 77px;
