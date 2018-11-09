@@ -54,7 +54,7 @@
           @foreach ($project->members as $member)
             <div class="card bg-light mb-1">
               <div class="mx-1">
-                @if ($project->owner == Auth::user()->id && $member->user->id != $project->owner)
+                @if (Auth::user() && $project->owner == Auth::user()->id && $member->user->id != $project->owner)
                   <a href="#" class="fa fa-times pull-right contributor-del" aria-hidden="true" rel="{{ $member->id }}" title="Remove from Contributors"></a>
                 @endif
                 <p class="card-text text-justify text-truncate" title="{{ $member->user->skills }}">
@@ -162,7 +162,7 @@
     }
   });
 
-  @if($project->owner == Auth::user()->id)
+  @if(Auth::user() && $project->owner == Auth::user()->id)
 
     var newMemberId = 0;
     var newMemberName = '';
