@@ -39,7 +39,7 @@
           </div>
         </div>
         <div class="card-footer p-3">
-          <span class="rt-badge badge badge-dark" data-toggle="tooltip" data-placement="top" title="Admin panel"><i class="fa fa-exclamation-triangle"></i></span>
+          <span class="rt-badge badge badge-env" data-toggle="tooltip" data-placement="top" title="Admin panel"><i class="fa fa-exclamation-triangle"></i></span>
           <div class="input-group input-group-sm">
             <input name="cotributors" class="form-control" placeholder="Open new thread" aria-label="Open new theread" aria-describedby="btnGroupAddon3" type="text">
             <div class="input-group-append">
@@ -59,12 +59,12 @@
         <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
 
           <div class="border card w-100 box-shadow-bottom">
-            <h3 class="card-header dtitle p-2"><i class="fa fa-comments"></i> Project administration</h3>
+            <h3 class="card-header dtitle p-2"><i class="fa fa-comments env_color"></i> Project administration</h3>
             <div class="card-body p-0">
 
               <div class="card w-100">
                 <h6 class="card-header dtitle p-2">
-                  <a href="" class="env_link"><i class="far fa-pencil" aria-hidden="true"></i> New post </a>
+                  <a href="" class="env_link"><i class="far fa-pencil env_color" aria-hidden="true"></i> New post </a>
                   {{--       <a href="" class="env_link"><i class="fa fa-picture-o" aria-hidden="true"></i> Photo/video | </a>
                   <a href="" class="env_link"><i class="fa fa-video-camera" aria-hidden="true"></i> Broadcast</a> --}}
                 </h6>

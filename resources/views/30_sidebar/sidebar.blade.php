@@ -16,7 +16,12 @@
           --}}
         </div>
         <div class="card-footer env_uploaded_div pl-2">
-          <p class="text-center"><a data-toggle="modal" data-target="#ownerDescriptionModal"><small>More about the creator</small></a></p>
+          <p class="text-center">
+            <a data-toggle="modal" data-target="#ownerDescriptionModal">
+              <i class="far fa-glasses fa-xs text-primary"></i>
+              <small>More about the creator</small>
+            </a>
+          </p>
           {{--
           <p class="env_p">Uploaded at XXX</p>
           --}}
@@ -30,9 +35,12 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
 
-      <h6 class="card-header dtitle p-2">{{ $project->owner()->first()->realname }}
-        <i class="fa fa-times env_edit pull-right text-secondary" aria-hidden="true" data-dismiss="modal" aria-label="Close"></i>
-      </h6>
+      <div class="modal-header bg-light p-2">
+        <h5 class="modal-title">{{ $project->owner()->first()->realname }}</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <i class="fa fa-times fa-xs"></i>
+        </button>
+      </div>
 
       <div class="card-body p-3">
         {{ $project->owner()->first()->bio }}
@@ -59,7 +67,7 @@
                 @endif
                 <p class="card-text text-justify text-truncate" title="{{ $member->user->skills }}">
                     @if ($member->user->id == $project->owner)
-                      <span class="pull-right lt-badge badge badge-dark" data-toggle="tooltip" data-placement="top" title="Project owner"><i class="fa fa-user"></i></span>
+                      <span class="pull-right lt-badge badge badge-env" data-toggle="tooltip" data-placement="top" title="Project owner"><i class="fa fa-user"></i></span>
                     @endif
                     {{ $member->user->realname }}
                 </p>
@@ -78,7 +86,7 @@
           <i class="fa fa-pencil-square-o mr-1 env_color"></i>Add new member
         </h6>
         <div class="card-body p-3">
-          <span class="rt-badge badge badge-dark" data-toggle="tooltip" data-placement="top" title="Admin panel"><i class="fa fa-exclamation-triangle"></i></span>
+          <span class="rt-badge badge badge-env" data-toggle="tooltip" data-placement="top" title="Admin panel"><i class="fa fa-exclamation-triangle"></i></span>
           <div class="input-group input-group-sm">
             <input name="cotributors" id="cotributors" class="form-control" placeholder="Search member" aria-label="Search member" aria-describedby="btnGroupAddon2" type="text" autocomplete="off">
             <div class="input-group-append">
@@ -117,7 +125,7 @@
         @if ($project->public == 1)
           <i class="fa fa-eye fa-fw mr-1 env_color"></i> <span>Public</span> Project
         @endif
-        <span class="rt-badge badge badge-dark" data-toggle="tooltip" data-placement="top" data-toggle="tooltip" data-placement="top" title="Admin panel"><i class="fa fa-exclamation-triangle"></i></span>
+        <span class="rt-badge badge badge-env" data-toggle="tooltip" data-placement="top" data-toggle="tooltip" data-placement="top" title="Admin panel"><i class="fa fa-exclamation-triangle"></i></span>
       </h6>
         <div class="card-body p-3">
           <div class="form-row align-items-center">
@@ -133,7 +141,7 @@
           </div>
           <div class="form-row align-items-center text-center">
             <small class="form-text text-muted w-100">
-              <i class="fa fa-exclamation-triangle"></i> Pubilc projects are visible for everyone!
+              <i class="fa fa-exclamation-triangle text-primary"></i> Pubilc projects are visible for everyone!
             </small>
           </div>
         </div>

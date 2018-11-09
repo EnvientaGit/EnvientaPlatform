@@ -4,18 +4,18 @@
         <div></div>
         <div class="mr-3">
           <a href="https://www.gravatar.com/{{$avatar_hash}}" target="_blank">
-          <img src="{{ "https://www.gravatar.com/avatar/" . $avatar_hash . "?s=100"}}" 
+          <img src="{{ "https://www.gravatar.com/avatar/" . $avatar_hash . "?s=100"}}"
             class="img-fluid img-thumbnail rounded-circle border mb-2" height="50" width="50">
           </a>
         </div>
         <div>
-          <a href="https://www.gravatar.com/{{$avatar_hash}}" class="env_link text-info">
+          <a href="https://www.gravatar.com/{{$avatar_hash}}" class="env_link">
             <strong>Mate Molnar</strong>
           </a>
           <!-- Split dropleft button -->
           <div class="btn-group pull-right">
             <div class="btn-group dropleft" role="group">
-              <i type="button" class="fa fa-ellipsis-h text-info dropdown-toggle-split env_point" 
+              <i type="button" class="fa fa-ellipsis-h text-info dropdown-toggle-split env_point"
                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               </i>
               <div class="dropdown-menu">
@@ -35,9 +35,9 @@
           <br>
           <small>41 mins</small>
           <p class="text-justify mt-3">
-            <a href="https://www.gravatar.com/{{$avatar_hash}}" class="env_link text-info">
+            <a href="https://www.gravatar.com/{{$avatar_hash}}" class="env_link">
               <strong>Mate Molnar - </strong>
-            </a> 
+            </a>
             According to the Selected - Re-replied ipsum dolor sit amet, consectetur adipisicing elit. Assumenda harum blanditiis minus minima sequi adipisci? Ex incidunt sunt hic temporibus quos nesciunt nobis aliquid ipsam illum, libero nihil voluptatem iste provident, veritatis laborum quidem autem, suscipit pariatur ipsum non. Sapiente distinctio incidunt doloremque quod. Doloremque sunt, fugiat eveniet fugit officia.
           </p>
           <button type="button" class="btn btn-outline-primary btn-sm pull-left">
@@ -65,4 +65,3 @@
     });
   });
 </script>
-

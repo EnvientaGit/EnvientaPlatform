@@ -1,18 +1,23 @@
 @extends('00_header.platform')
 
 @section('content')
+	<div class="container-fluid">
+		@include('60_campaign.edit_project')
+	</div>
 
 	<div class="container-fluid">
 		<div class="row py-3 bg-light shadow">
 			<div class="col-md-8 text-left">
 				<h1 class="project-title text-left">
 					<span class="btn-sm">
-						<a href="#"><i class="fa fa-pencil-square-o mr-1 env_color"></i></a>
+						<a data-toggle="modal" data-target="#editProjectModal">
+							<i class="fa fa-pencil-square-o mr-1 env_color"></i>
+						</a>
 					</span>{{$project->title}}
 				</h1>
 			</div>
 			<div class="col-md-4 py-2 text-right">
-				<span class="mr-1"><i class="far fa-share"></i> Share</span>
+				<span class="mr-1"><i class="fas fa-share text-primary"></i> Share</span>
 				<a class="btn btn-outline-info btn-sm" href="https://www.facebook.com/sharer/sharer.php?u={{ URL::current() }}" target="_blank" title="Facebook">
 					<i class="fa fa-facebook-square"></i>
 				</a>

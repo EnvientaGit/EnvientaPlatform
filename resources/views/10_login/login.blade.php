@@ -12,9 +12,12 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
 
-      <h6 class="card-header dtitle p-2">Sign in / Sign up
-        <i class="fa fa-times env_edit pull-right text-secondary" aria-hidden="true" data-dismiss="modal" aria-label="Close"></i>
-      </h6>
+      <div class="modal-header bg-light p-2">
+        <h5 class="modal-title">Sign in / Sign up</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <i class="fa fa-times fa-xs"></i>
+        </button>
+      </div>
 
       <div class="card-body p-3">
 
@@ -34,7 +37,7 @@
           </div>
 
           <div class="input-group mb-3">
-            <button id="email_next_submit" class="btn btn-sm env_button env_right">Next</button>
+            <button id="email_next_submit" class="btn btn-sm btn-primary env_right">Next</button>
             <input type="hidden" name="_token" value="{{{ csrf_token() }}}" />
             <input type="hidden" name="captcha_token" id="login_form_token" />
           </div>

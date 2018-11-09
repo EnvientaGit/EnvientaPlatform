@@ -3,18 +3,21 @@
     <div class="modal-content">
     <form method="post" action="{{ URL::to('project/new') }}" enctype="multipart/form-data">
       {{ csrf_field() }}
-      <h6 class="card-header dtitle p-2">New project
-        <i class="fa fa-times env_edit pull-right text-secondary" aria-hidden="true" data-toggle="modal" data-target="#newProjectModal"></i>
-      </h6>
+      <div class="modal-header bg-light p-2">
+        <h5 class="modal-title">New project</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <i class="fa fa-times fa-xs"></i>
+        </button>
+      </div>
       <div class="card-body p-3">
 
           <div class="form-group">
             <label for="title" class="mb-0">Title</label>
-            <input name="title" type="text" class="btn-sm form-control" id="title" placeholder="Enter title" required="required">
+            <input name="title" type="text" class="btn-sm form-control" id="title" placeholder="Write a title" required="required">
           </div>
           <div class="form-group">
             <label for="description" class="mb-0">Description <small id="descriptionHelp" class="text-muted">(short project description)</small></label>
-            <textarea name="description" class="btn-sm form-control" id="description" aria-describedby="descriptionHelp" placeholder="Enter description" rows="3" required="required"></textarea>
+            <textarea name="description" class="btn-sm form-control" id="description" aria-describedby="descriptionHelp" placeholder="Write a description" rows="3" required="required"></textarea>
           </div>
           <div class="form-group">
             <label for="tags" class="mb-0">Tags <small id="descriptionHelp" class="text-muted">(max. 6)</small></label>
