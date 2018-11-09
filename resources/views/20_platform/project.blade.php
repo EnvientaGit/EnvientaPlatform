@@ -53,4 +53,7 @@
 
 	</div>
 
+	<!-- 'Backdrop' issued Modals -->
+	@include('70_tools.71_modals.vlink_modal')
+
 @endsection
