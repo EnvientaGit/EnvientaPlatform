@@ -1,9 +1,25 @@
 <?php
   function get_project_image($slug) {
+
+    $ret = $blank = url('img/Blank_Box.jpg');
+
     $project_path = public_path() . "/repo/" . $slug;
     $images_path = $project_path . '/images';
-    $images = scandir ($images_path);
-    return url("/repo/" . $slug . '/images') . '/' . $images[2];
+    $images = scandir($images_path);
+    $url = url("/repo/" . $slug . '/images') . '/';
+    if(is_array($images) && count($images)>=3) {
+      $images = array_diff($images, array('.', '..'));
+      $images = array_values($images); // need to re-index keys
+      if(count($images)>=1) {
+        $ret = $url . $images[0];
+        //var_dump($images);
+      } else {
+        $ret = $blank;
+      }
+    } else {
+      $ret = $blank;
+    }
+    return $ret;
   }
 ?>
         <div class="container">
@@ -62,16 +78,3 @@
     $('[data-toggler="tooltip"]').tooltip()
   })
 </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
