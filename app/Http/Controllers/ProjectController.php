@@ -129,9 +129,10 @@ class ProjectController extends Controller
       @mkdir($blueprints_path, 0700, TRUE); 
       $images_path = $project_path . '/images';
       @mkdir($images_path, 0700, TRUE); 
+      $enabledMimes = array('image/x-png','image/gif','image/jpeg');
       $images = $request->file('images');
       foreach ($images as $image) {
-        if(Utils::checkFile($image))
+        if(Utils::checkFile($image, $enabledMimes))
           $image->move($images_path, $image->getClientOriginalName());
       }  
 

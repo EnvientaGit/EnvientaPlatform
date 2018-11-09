@@ -6,11 +6,23 @@ use Auth;
 
 class Utils
 {
-  
-  public static function checkFile($uploadedFile) {
-    if(strtolower($uploadedFile->getClientOriginalExtension()) == 'php')
-      return false;
-    return true;
+
+    /**
+     * @param $uploadedFile
+     * @param string $enabledMimes
+     * @return bool
+     */
+    public static function checkFile($uploadedFile, $enabledMimes = '*') {
+
+    $checked = false;
+    if ($enabledMimes != '*' && is_array($enabledMimes)) {
+      if(!in_array(mime_content_type($uploadedFile->getPathName()), $enabledMimes)) $checked = false;
+    } else {
+      $checked = true;
+    }
+    if($checked === true && strtolower($uploadedFile->getClientOriginalExtension()) == 'php')
+      $checked = false;
+    return $checked;
   }
 
   public static function clearFileName($filename) {
