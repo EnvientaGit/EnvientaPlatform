@@ -6,7 +6,7 @@
   <div class="navbar-brand">
     <span class="navbar-logo">
       <a href="{{ url('/') }}">
-        <img src="{{ url('assets/images/envienta-platform-logo-small-1000x275.png') }}" alt="Envienta" title="" style="height: 4.3rem;">
+        <img src="{{ url('assets/images/envienta-platform-logo-small-1000x275.png') }}" alt="Envienta" title="" style="height: 4.1rem;">
       </a>
     </span>
   </div>
@@ -14,11 +14,11 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item mt-3 border rounded bg-white">
-        <a class="nav-link text-white" href="#" data-toggle="modal" data-target="#newProjectModal">
-          <h5 class="text-dark my-1">Create new project
-            <i class="fas fa-lightbulb text-primary"></i>
+    <ul class="navbar-nav mr-auto" style="padding-bottom: 7px;">
+      <li class="nav-item mt-3 rounded bg-primary">
+        <a class="nav-link" href="#" data-toggle="modal" data-target="#newProjectModal">
+          <h5 class="text-white my-1">Create new project
+            <i class="fas fa-lightbulb"></i>
           </h5>
         </a>
       </li>
