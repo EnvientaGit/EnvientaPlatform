@@ -1,5 +1,4 @@
   <div class="row">
-    <div class="col-md-12">
       <div class="card">
           <div class="embed-responsive"><!-- Image slider -->
             @if($project->video_id)
@@ -45,7 +44,6 @@
         </div>
       </div><!-- Video slider -->
       @endif
-    </div>
 
   </div>
 
