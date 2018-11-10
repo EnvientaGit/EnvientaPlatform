@@ -17,7 +17,9 @@
                 <div class="carousel-inner" role="listbox">
                   @foreach($images as $idx => $image)
                     <div class="carousel-item {{ $idx == 0 ? 'active': ''}}">
-                      <img src="{{ $image }}" alt="project_xy" class="d-block img-fluid img-thumbnail env_slide_img_h">
+                      <div class="container-fluid px-0 mb-3">
+                        <img src="{{ $image }}" alt="Project image" class="d-block img-fluid img-thumbnail env_slide_img_h">
+                      </div>
                     </div>
                   @endforeach
                 </div>

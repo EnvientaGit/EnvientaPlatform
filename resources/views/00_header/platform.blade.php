@@ -94,6 +94,13 @@
 
             @yield('content')
 
+
+            @if(!Auth::check())
+                @include('60_campaign.new_project_unauth')
+            @else
+                @include('60_campaign.new_project')
+            @endif
+
             @include('90_footer.footer')
         </div>
     </body>

@@ -26,11 +26,8 @@
 
           <!-- YouTube Link input section -->
           <div class="form-group">
-            <label for="vid_links" class="mb-0">Video links</label>
-            <input name="vid_links" type="text" class="btn-sm form-control taglist" id="vid_links" placeholder="Enter links">
-
-            <!-- Adding a new input for a new link -->
-            <button type="button" class="btn btn-outline-primary btn-sm mt-2">Add more <i class="far fa-plus"></i></button>
+            <label for="vid_link" class="mb-0">Video link</label>
+            <input name="vid_link" type="text" class="btn-sm form-control" id="vid_link" placeholder="Enter YouTube video URL here">
           </div>
           <!-- YouTube Link input section -->
 
