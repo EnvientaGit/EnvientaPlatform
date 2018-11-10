@@ -117,6 +117,13 @@ class ProjectController extends Controller
       $project->tags = $request->tags;
       $project->slug = $this->slugify($request->title) . '-' . uniqid();
       $project->license = 'xxx'; //$request->license;
+
+      if($request->vid_link) {
+        parse_str(parse_url($request->vid_link, PHP_URL_QUERY), $params);
+        if($params && $params['v'])
+          $project->video_id = $params['v'];          
+      }
+
       Auth::user()->projects()->save($project);
       $project->save();
 
