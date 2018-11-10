@@ -62,6 +62,7 @@
 
     </main>
 
+    @extrajs
     <script type="text/javascript">
       $(document).ready(function() {
         $(document).on('click', '.pagination a', function (e) {
@@ -96,5 +97,6 @@
         });
       }
     </script>
+    @endextrajs
 
 @endsection

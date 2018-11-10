@@ -40,7 +40,7 @@
           </div><!-- Image slider -->
       </div>
       @if($project->video_id)
-      <div class="row vlink"><!-- Video slider -->
+      <div class="row vlink" style="width:100%"><!-- Video slider -->
         <div class="col-md-12">
           @include('70_tools.video_slider')
         </div>

@@ -465,6 +465,9 @@ textarea.form-control{
 }
 
 /* Video link slider */
+.carousel .carousel-item .row {
+  width: calc( 100% + 30px );
+}
 .carousel .carousel-control {
 	height: 100px;
     width: 40px;

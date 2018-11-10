@@ -142,7 +142,7 @@
   </div>
 </div>
 
-
+@extrajs
 <script type="text/javascript">
   $.ajax({
     url: "http://hu.gravatar.com/{{$avatar_hash}}.json",
@@ -201,6 +201,7 @@
       displayField: 'realname',
       scrollBar: true,
       items: 20,
+      minLength: 3,
       onSelect: memberSelected,
       ajax: {
         url: 'user/list',
@@ -255,3 +256,4 @@
   @endif
 
 </script>
+@endextrajs
