@@ -78,7 +78,7 @@
                 <table style="margin: 0 auto; border-bottom: 1px solid #dddddd;" cellpadding="0" cellspacing="0" width="100%">
                   <tr>
                     <td style="font-size: 30px; text-align:center;">
-                      <img src="{{Request::root()}}/img/logo_mail.png" alt="Logo" title="Logo" style="display:block; margin: 1em auto;" width="300" />
+                      <img src="{{Request::root()}}/img/logo_stand_colored_trans.png" alt="Logo" title="Logo" style="display:block; margin: 1em auto;" width="300" />
                     </td>
                   </tr>
                 </table>
