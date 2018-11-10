@@ -62,7 +62,7 @@
   </div>
 </nav><!-- navbar -->
 
-
+@extrajs
 <script type="text/javascript">
   $('#search_form').on('submit', function(e){
     e.preventDefault();
@@ -74,5 +74,6 @@
     }
   });
 </script>
+@endextrajs
 
 @include('10_login.login')

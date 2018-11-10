@@ -90,6 +90,8 @@
 
     <body>
         <div>
+            <?php $EXTRAJS = ""; global $EXTRAJS; ?>
+
             @include('40_topbar.navigation')
 
             @yield('content')
@@ -102,6 +104,9 @@
             @endif
 
             @include('90_footer.footer')
+
+            <!-- extrajs -->
+            <?php echo $EXTRAJS; ?>
         </div>
     </body>
 </html>

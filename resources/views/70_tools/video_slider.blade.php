@@ -42,9 +42,11 @@
 	</div>
 </div>
 
+@extrajs
 <script type="text/javascript">
 	$(".vs_img").click(function() {
 		$('#vlinks_slider').carousel($(this).data('idx'));
 		$('#vlinks_modal').modal('show');
 	});
 </script>
+@endextrajs
