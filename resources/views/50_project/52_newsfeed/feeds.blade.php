@@ -5,7 +5,7 @@
       <!-- Split dropleft button -->
       <div class="btn-group pull-right">
         <div class="btn-group dropleft" role="group">
-          <i type="button" class="fa fa-ellipsis-h text-info dropdown-toggle-split env_point" 
+          <i type="button" class="fa fa-ellipsis-h text-info dropdown-toggle-split env_point"
                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           </i>
           <div class="dropdown-menu">
@@ -24,12 +24,12 @@
       </div>
       <div class="mr-3">
         <a href="https://www.gravatar.com/{{$avatar_hash}}" target="_blank" class="pull-left">
-        <img src="{{ "https://www.gravatar.com/avatar/" . $avatar_hash . "?s=100"}}" 
+        <img src="{{ "https://www.gravatar.com/avatar/" . $avatar_hash . "?s=100"}}"
           class="img-fluid img-thumbnail rounded-circle border mt-2" height="50" width="50"
           style="margin-left: 0.7em;">
         </a>
         <div class="pull-left ml-3 mt-2">
-          <a href="https://www.gravatar.com/{{$avatar_hash}}" class="env_link text-info">
+          <a href="https://www.gravatar.com/{{$avatar_hash}}" class="env_link">
             <strong>Mate Molnar</strong>
           </a><br>
           <small>41 mins</small>
@@ -56,7 +56,7 @@
       <div id="show_write_back" class="card-footer grady pb-1" style="display: none;">
         @include('50_project.52_newsfeed.write_reply')
       </div>
-      
+
       {{-- Commented Section --}}
       @include('50_project.52_newsfeed.commented')
 
@@ -71,7 +71,7 @@
           <div class="env_wrap">
               <div class="mr-3">
                 <a href="https://www.gravatar.com/{{$avatar_hash}}" target="_blank">
-                <img src="{{ "https://www.gravatar.com/avatar/" . $avatar_hash . "?s=100"}}" 
+                <img src="{{ "https://www.gravatar.com/avatar/" . $avatar_hash . "?s=100"}}"
                   class="img-fluid img-thumbnail rounded-circle border mb-2" height="50" width="50">
                 </a>
               </div>
@@ -98,11 +98,5 @@
       $('#show_write_back').slideToggle("fast");
     });
   });
-  
+
 </script>
-
-
-
-
-
-

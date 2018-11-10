@@ -1,75 +1,50 @@
-<div class=""><!-- Video slider -->
-  <div id="vlinkCarousel" class="carousel slide" data-ride="0carousel">
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
 
-    <ol class="carousel-indicators">
-      <li data-target="#vlinkCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#vlinkCarousel" data-slide-to="1"></li>
-    </ol>
+			<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="0">
+				<!-- Carousel indicators -->
+				<ol class="carousel-indicators d-none">
+					@foreach($images as $idx => $image)
+                    	<li data-target="#carousel" data-slide-to="{{ $idx }}" class="{{ $idx == 0 ? 'active': ''}}"></li>
+                  	@endforeach
+				</ol>
+				<!-- Wrapper for carousel items -->
+				<div class="carousel-inner">
+					@foreach($images as $idx => $image)
+						@if($idx % 4 == 0)
+                    	<div class="carousel-item {{ $idx == 0 ? 'active': ''}}">
+                    		<div class="row">
+                    	@endif		
+	                      		<div class="col-sm-3">
+									<div class="thumb-wrapper">
+										<div class="img-box">
+											<img src="{{$image}}" class="img-fluid rounded vlink_img env_point vs_img" alt="" data-idx="{{$idx}}">
+										</div>
+									</div>
+								</div>
+						@if(($idx - 3) % 4 == 0 || count($images)-1 == $idx)		
+							</div>
+                    	</div>
+                    	@endif
+                  	@endforeach
+				</div>
+				<!-- Carousel controls -->
+				<a class="rounded carousel-control left carousel-control-prev" href="#myCarousel" data-slide="prev">
+					<i class="fa fa-angle-left"></i>
+				</a>
+				<a class="rounded carousel-control right carousel-control-next" href="#myCarousel" data-slide="next">
+					<i class="fa fa-angle-right"></i>
+				</a>
+			</div>
 
-    <!-- Carousel items -->
-    <div class="carousel-inner">
+		</div>
+	</div>
+</div>
 
-      <div class="carousel-item active">
-        <div class="row">
-          <div class="col-md-3 col">
-            <a href="#vlink_modal" data-toggle="modal">
-              <img src="img/1920x800_3.jpg" class="vlink_img img-thumbnail img-fluid" alt="Image" style="max-width:100%;">
-            </a>
-          </div>
-          <div class="col-md-3 col">
-            <a href="#vlink_modal" data-toggle="modal">
-              <img src="img/1920x800_3.jpg" class="vlink_img img-thumbnail img-fluid" alt="Image" style="max-width:100%;">
-            </a>
-          </div>
-          <div class="col-md-3 col">
-            <a href="#vlink_modal" data-toggle="modal">
-              <img src="img/1920x800_3.jpg" class="vlink_img img-thumbnail img-fluid" alt="Image" style="max-width:100%;">
-            </a>
-          </div>
-          <div class="col-md-3 col">
-            <a href="#vlink_modal" data-toggle="modal">
-              <img src="img/1920x800_3.jpg" class="vlink_img img-thumbnail img-fluid" alt="Image" style="max-width:100%;">
-            </a>
-          </div>
-        </div>
-        <!--.row-->
-
-      </div>
-      <!--.item-->
-
-      <div class="carousel-item">
-        <div class="row">
-          <div class="col-md-3 col">
-            <a href="#vlink_modal" data-toggle="modal">
-              <img src="img/1920x800_3.jpg" class="vlink_img img-thumbnail img-fluid" alt="Image" style="max-width:100%;">
-            </a>
-          </div>
-          <div class="col-md-3 col">
-            <a href="#vlink_modal" data-toggle="modal">
-              <img src="img/1920x800_3.jpg" class="vlink_img img-thumbnail img-fluid" alt="Image" style="max-width:100%;">
-            </a>
-          </div>
-          <div class="col-md-3 col">
-            <a href="#vlink_modal" data-toggle="modal">
-              <img src="img/1920x800_3.jpg" class="vlink_img img-thumbnail img-fluid" alt="Image" style="max-width:100%;">
-            </a>
-          </div>
-          <div class="col-md-3 col">
-            <a href="#vlink_modal" data-toggle="modal">
-              <img src="img/1920x800_3.jpg" class="vlink_img img-thumbnail img-fluid" alt="Image" style="max-width:100%;">
-            </a>
-          </div>
-        </div>
-        <!--.row-->
-      </div>
-      <!--.item-->
-
-    </div>
-    <!--.carousel-inner-->
-  </div>
-  <!--.Carousel-->
-</div><!-- Video slider -->
-
-<!-- vlink modal -->
-  @include('70_tools.71_modals.vlink_modal')
-<!-- vlink modal -->
+<script type="text/javascript">
+	$(".vs_img").click(function() {
+		$('#vlinks_slider').carousel($(this).data('idx'));
+		$('#vlinks_modal').modal('show');
+	});
+</script>

@@ -1,9 +1,12 @@
 <div class="modal fade" id="newProjectModal" tabindex="-1" role="dialog" aria-labelledby="newProjectModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
-      <h6 class="card-header dtitle p-2">New project
-        <i class="fa fa-times env_edit pull-right text-secondary" aria-hidden="true" data-dismiss="modal" aria-label="Close"></i>
-      </h6>
+      <div class="modal-header bg-light p-2">
+        <h5 class="modal-title">Login note</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <i class="fa fa-times fa-xs"></i>
+        </button>
+      </div>
       <div class="card-body p-3">
         <div class="card-title">
           <h5 class="text-center">
@@ -15,7 +18,7 @@
            <i class="fa fa-smile-o fa-2x env_color" aria-hidden="true"></i>
         </p>
         <p class="text-center">
-          <button id="login_btn" class="btn btn-light ml-2" data-toggle="modal" data-target="#login_dialog" data-dismiss="modal"> Log In </button>
+          <button id="login_btn" class="btn btn-primary ml-2" data-toggle="modal" data-target="#login_dialog" data-dismiss="modal"> Log In </button>
         </p>
         <div class="row"><!-- Telegram attention -->
           <div class="col-md-12">

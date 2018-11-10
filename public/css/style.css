@@ -462,39 +462,59 @@ textarea.form-control{
 }
 
 /* Video link slider */
+.carousel .carousel-control {
+	height: 100px;
+    width: 40px;
+    background: none;
+    margin: 2em 0;
+    background: rgba(0, 0, 0, 0.2);
+}
+.carousel .carousel-control i {
+    font-size: 30px;
+    position: absolute;
+    top: 50%;
+    display: inline-block;
+    margin: -16px 0 0 0;
+    z-index: 5;
+    left: 0;
+    right: 0;
+    color: rgba(0, 0, 0, 0.8);
+    text-shadow: none;
+    font-weight: bold;
+}
+.carousel .carousel-control.left i {
+	margin-left: -3px;
+}
+.carousel .carousel-control.left i {
+	margin-right: -3px;
+}
+.carousel-control-prev {
+    left: -3em;
+}
+.carousel-control-next {
+    right: -3em;
+}
+
+/* Custom vlink image */
 .vlink_img {
-    height: 8em !important;
-    width: 11em !important;
+    height: 10em;
+    width: 17em;
     object-fit: cover;
     object-position: center;
 }
-.vlink .carousel-indicators {
-  left: -50%;
-  right: -50%;
-  top: auto;
-  bottom: 0.5em;
-  z-index: 0;
-  margin-right: auto;
-  margin-left: auto;
 
-}
-/* The colour of the indicators */
-.vlink .carousel-indicators li {
-  background: #a3a3a3;
-  border-radius: 50%;
-  width: 2em;
-  height: 2em;
-  cursor: pointer !important;
+.slink_img {
+    height: 30em;
+    width: 51em;
+    object-fit: cover;
+    object-position: center;
 }
 
-.vlink .carousel-indicators .active {
-  background: #707070;
+/* Custom badge */
+.badge-env {
+    color: #fff;
+    background-color: #fe6700;
 }
-.vlink .carousel-indicators li {
-    margin-right: auto;
-    margin-left: auto;
-}
-
 
 
 

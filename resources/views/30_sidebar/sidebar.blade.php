@@ -9,14 +9,14 @@
             <img src="{{ "https://www.gravatar.com/avatar/" . $avatar_hash . "?s=100"}}" class="img-fluid img-thumbnail mb-2" height="100" width="100">
           </a>
           <h6 id="avatar_name" class="card-title font-weight-bold mb-2">{{ $project->owner()->first()->realname }}</h6>
-          {{--
-          <p id="avatar_description" class="card-text text-center">
-            {{ $project->owner()->first()->bio }}
-          </p>
-          --}}
         </div>
         <div class="card-footer env_uploaded_div pl-2">
-          <p class="text-center"><a data-toggle="modal" data-target="#ownerDescriptionModal"><small>More about the creator</small></a></p>
+          <p class="text-center">
+            <a data-toggle="modal" data-target="#ownerDescriptionModal">
+              <i class="far fa-glasses fa-xs text-primary"></i>
+              <small>More about the creator</small>
+            </a>
+          </p>
           {{--
           <p class="env_p">Uploaded at XXX</p>
           --}}
@@ -30,9 +30,12 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
 
-      <h6 class="card-header dtitle p-2">{{ $project->owner()->first()->realname }}
-        <i class="fa fa-times env_edit pull-right text-secondary" aria-hidden="true" data-dismiss="modal" aria-label="Close"></i>
-      </h6>
+      <div class="modal-header bg-light p-2">
+        <h5 class="modal-title">{{ $project->owner()->first()->realname }}</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <i class="fa fa-times fa-xs"></i>
+        </button>
+      </div>
 
       <div class="card-body p-3">
         {{ $project->owner()->first()->bio }}
@@ -41,8 +44,7 @@
   </div>
 </div>
 
-@if ($project->members)
-
+@if (count($project->members))
   <div class="row my-3">
     <div class="col-md-12">
       <div class="border card w-100 box-shadow-bottom">
@@ -59,7 +61,7 @@
                 @endif
                 <p class="card-text text-justify text-truncate" title="{{ $member->user->skills }}">
                     @if ($member->user->id == $project->owner)
-                      <span class="pull-right lt-badge badge badge-dark" data-toggle="tooltip" data-placement="top" title="Project owner"><i class="fa fa-user"></i></span>
+                      <span class="pull-right lt-badge badge badge-env" data-toggle="tooltip" data-placement="top" title="Project owner"><i class="fa fa-user"></i></span>
                     @endif
                     {{ $member->user->realname }}
                 </p>
@@ -70,7 +72,9 @@
       </div>
     </div>
   </div>
+@endif
 
+@if(Auth::user() && $project->owner == Auth::user()->id)
   <div class="row my-3">
     <div class="col-md-12">
       <div class="card w-100 border box-shadow-bottom">
@@ -78,7 +82,7 @@
           <i class="fa fa-pencil-square-o mr-1 env_color"></i>Add new member
         </h6>
         <div class="card-body p-3">
-          <span class="rt-badge badge badge-dark" data-toggle="tooltip" data-placement="top" title="Admin panel"><i class="fa fa-exclamation-triangle"></i></span>
+          <span class="rt-badge badge badge-env" data-toggle="tooltip" data-placement="top" title="Admin panel"><i class="fa fa-exclamation-triangle"></i></span>
           <div class="input-group input-group-sm">
             <input name="cotributors" id="cotributors" class="form-control" placeholder="Search member" aria-label="Search member" aria-describedby="btnGroupAddon2" type="text" autocomplete="off">
             <div class="input-group-append">
@@ -91,21 +95,9 @@
       </div>
     </div>
   </div>
-
 @endif
 
-{{-- <div class="row mb-3">
-  <div class="card box-shadow-bottom">
-    <h6 class="card-header dtitle p-2">License type </h6>
-      <div class="card-body p-3">
-        <h4><i class="fa fa-creative-commons fa-fw env_color"></i> BY-SA</h4>
-        <p class="card-text text-justify">
-          This license lets others remix, tweak, and build upon your work even for commercial purposes, as long as they credit you and license their new creations under the identical terms. This license is often compared to “copyleft” free and open source software licenses. All new works based on yours will carry the same license, so any derivatives will also allow commercial use. This is the license used by Wikipedia, and is recommended for materials that would benefit from incorporating content from Wikipedia and similarly licensed projects.
-        </p>
-      </div>
-  </div>
-</div> --}}
-
+@if(Auth::user() && $project->owner == Auth::user()->id)
 <div class="row my-3">
   <div class="col-md-12">
     <div class="card w-100 border box-shadow-bottom" id="projectStatusController">
@@ -117,7 +109,7 @@
         @if ($project->public == 1)
           <i class="fa fa-eye fa-fw mr-1 env_color"></i> <span>Public</span> Project
         @endif
-        <span class="rt-badge badge badge-dark" data-toggle="tooltip" data-placement="top" data-toggle="tooltip" data-placement="top" title="Admin panel"><i class="fa fa-exclamation-triangle"></i></span>
+        <span class="rt-badge badge badge-env" data-toggle="tooltip" data-placement="top" data-toggle="tooltip" data-placement="top" title="Admin panel"><i class="fa fa-exclamation-triangle"></i></span>
       </h6>
         <div class="card-body p-3">
           <div class="form-row align-items-center">
@@ -133,13 +125,14 @@
           </div>
           <div class="form-row align-items-center text-center">
             <small class="form-text text-muted w-100">
-              <i class="fa fa-exclamation-triangle"></i> Pubilc projects are visible for everyone!
+              <i class="fa fa-exclamation-triangle text-primary"></i> Pubilc projects are visible for everyone!
             </small>
           </div>
         </div>
     </div>
   </div>
 </div>
+@endif
 
 <div class="row my-3">
   <div class="col-md-12">
@@ -158,7 +151,7 @@
     success: function( response ) {
         $('#avatar_name').html(response.entry[0].name.formatted);
         $('#avatar_description').html(response.entry[0].aboutMe);
-        console.log( response );
+        //console.log( response );
     }
   });
 

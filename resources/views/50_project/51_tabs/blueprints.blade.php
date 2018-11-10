@@ -15,10 +15,10 @@
 				<div class="border card box-shadow-bottom mb-3">
 					<table class="table table-hover table-responsive table-sm rounded mb-0">
 						@if($folder['name'] == 'images')
-						<caption class="p-2 text-dark">Slider images</strong>
+						<caption class="p-2 text-dark bg-light border-top">Slider images</strong>
 						</caption>
 						@else
-						<caption class="p-2 text-dark">List of <strong class="env_color">{{ $folder['name'] }}</strong>
+						<caption class="p-2 text-dark bg-light border-top">List of <strong class="env_color">{{ $folder['name'] }}</strong>
 							@if($mine)
 							<a href=""><i class="fa fa-window-close text-danger env_edit p-1 pull-right"></i></a>
 							@endif
@@ -44,7 +44,7 @@
 						<tbody>
 							@foreach($folder['files'] as $idx => $file)
 							<tr class="text-center">
-								<td class="bg-danger text-white text-center ">{{ $idx + 1 }}.</td>
+								<td class="bg-primary text-light text-center ">{{ $idx + 1 }}.</td>
 								<td class="text-left"><span class="file_view" data-url="{{ $repo_url . '/' . $folder['name'] . '/' . $file['name'] }}" style="cursor: pointer;">{{$file['name']}}</span></td>
 								<td class="text-left">{{$file['lastmod']}}</td>
 								{{--<td class="text-left">v1.1.2</td>--}}
