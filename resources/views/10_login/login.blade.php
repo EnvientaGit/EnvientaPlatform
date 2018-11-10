@@ -76,7 +76,7 @@
 
           <div class="input-group mb-3">
             <button id="request_pin_submit" class="btn btn-sm env_button env_right" style="display: none;">Request pin code</button>
-            <button id="login_submit" class="btn btn-sm env_button ml-2">Sign in</button>
+            <button id="login_submit" class="btn btn-sm btn-primary ml-2">Sign in</button>
             <input type="hidden" name="_token" value="{{{ csrf_token() }}}" />
             <input type="hidden" name="captcha_token" id="login_form_token" />
           </div>
