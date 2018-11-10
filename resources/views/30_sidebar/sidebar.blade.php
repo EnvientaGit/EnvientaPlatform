@@ -9,11 +9,6 @@
             <img src="{{ "https://www.gravatar.com/avatar/" . $avatar_hash . "?s=100"}}" class="img-fluid img-thumbnail mb-2" height="100" width="100">
           </a>
           <h6 id="avatar_name" class="card-title font-weight-bold mb-2">{{ $project->owner()->first()->realname }}</h6>
-          {{--
-          <p id="avatar_description" class="card-text text-center">
-            {{ $project->owner()->first()->bio }}
-          </p>
-          --}}
         </div>
         <div class="card-footer env_uploaded_div pl-2">
           <p class="text-center">
@@ -49,8 +44,7 @@
   </div>
 </div>
 
-@if ($project->members)
-
+@if (count($project->members))
   <div class="row my-3">
     <div class="col-md-12">
       <div class="border card w-100 box-shadow-bottom">
@@ -78,7 +72,9 @@
       </div>
     </div>
   </div>
+@endif
 
+@if(Auth::user() && $project->owner == Auth::user()->id)
   <div class="row my-3">
     <div class="col-md-12">
       <div class="card w-100 border box-shadow-bottom">
@@ -99,21 +95,9 @@
       </div>
     </div>
   </div>
-
 @endif
 
-{{-- <div class="row mb-3">
-  <div class="card box-shadow-bottom">
-    <h6 class="card-header dtitle p-2">License type </h6>
-      <div class="card-body p-3">
-        <h4><i class="fa fa-creative-commons fa-fw env_color"></i> BY-SA</h4>
-        <p class="card-text text-justify">
-          This license lets others remix, tweak, and build upon your work even for commercial purposes, as long as they credit you and license their new creations under the identical terms. This license is often compared to “copyleft” free and open source software licenses. All new works based on yours will carry the same license, so any derivatives will also allow commercial use. This is the license used by Wikipedia, and is recommended for materials that would benefit from incorporating content from Wikipedia and similarly licensed projects.
-        </p>
-      </div>
-  </div>
-</div> --}}
-
+@if(Auth::user() && $project->owner == Auth::user()->id)
 <div class="row my-3">
   <div class="col-md-12">
     <div class="card w-100 border box-shadow-bottom" id="projectStatusController">
@@ -148,6 +132,7 @@
     </div>
   </div>
 </div>
+@endif
 
 <div class="row my-3">
   <div class="col-md-12">
@@ -166,7 +151,7 @@
     success: function( response ) {
         $('#avatar_name').html(response.entry[0].name.formatted);
         $('#avatar_description').html(response.entry[0].aboutMe);
-        console.log( response );
+        //console.log( response );
     }
   });
 

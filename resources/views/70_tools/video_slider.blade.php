@@ -5,126 +5,29 @@
 			<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="0">
 				<!-- Carousel indicators -->
 				<ol class="carousel-indicators d-none">
-					<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-					<li data-target="#myCarousel" data-slide-to="1"></li>
-					<li data-target="#myCarousel" data-slide-to="2"></li>
+					@foreach($images as $idx => $image)
+                    	<li data-target="#carousel" data-slide-to="{{ $idx }}" class="{{ $idx == 0 ? 'active': ''}}"></li>
+                  	@endforeach
 				</ol>
 				<!-- Wrapper for carousel items -->
 				<div class="carousel-inner">
-					<div class="carousel-item active">
-						<div class="row">
-
-							<div class="col-sm-3">
-								<div class="thumb-wrapper">
-									<div class="img-box">
-										<img src="img/350x350.jpg" class="img-fluid rounded vlink_img env_point" alt="" data-toggle="modal" data-target="#vlinks_modal">
-										<small class="text-truncate">01-Image name is something with bla blah</small>
+					@foreach($images as $idx => $image)
+						@if($idx % 4 == 0)
+                    	<div class="carousel-item {{ $idx == 0 ? 'active': ''}}">
+                    		<div class="row">
+                    	@endif		
+	                      		<div class="col-sm-3">
+									<div class="thumb-wrapper">
+										<div class="img-box">
+											<img src="{{$image}}" class="img-fluid rounded vlink_img env_point vs_img" alt="" data-idx="{{$idx}}">
+										</div>
 									</div>
 								</div>
+						@if(($idx - 3) % 4 == 0 || count($images)-1 == $idx)		
 							</div>
-							<div class="col-sm-3">
-								<div class="thumb-wrapper">
-									<div class="img-box">
-										<img src="img/800x600_8.jpg" class="img-fluid rounded vlink_img env_point" alt="" data-toggle="modal" data-target="#vlinks_modal">
-										<small class="text-truncate">02-Image name is something with bla blah</small>
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-3">
-								<div class="thumb-wrapper">
-									<div class="img-box">
-										<img src="img/800x600_1.jpg" class="img-fluid rounded vlink_img env_point" alt="" data-toggle="modal" data-target="#vlinks_modal">
-										<small class="text-truncate">03-Image name is something with bla blah</small>
-									</div>
-								</div>
-							</div>
-							<div class="col-sm-3">
-								<div class="thumb-wrapper">
-									<div class="img-box">
-										<img src="img/800x600_2.jpeg" class="img-fluid rounded vlink_img env_point" alt="" data-toggle="modal" data-target="#vlinks_modal">
-										<small class="text-truncate">04-Image name is something with bla blah</small>
-									</div>
-								</div>
-							</div>
-
-						</div>
-					</div>
-					<div class="carousel-item">
-						<div class="row">
-
-							<div class	="col-sm-3">
-								<div class="thumb-wrapper">
-									<div class="img-box">
-										<img src="img/800x600_3.jpg" class="img-fluid rounded vlink_img env_point" alt="" data-toggle="modal" data-target="#vlinks_modal">
-										<small class="text-truncate">05-Image name is something with bla blah</small>
-									</div>
-								</div>
-							</div>
-							<div class	="col-sm-3">
-								<div class="thumb-wrapper">
-									<div class="img-box">
-										<img src="img/800x600_4.jpg" class="img-fluid rounded vlink_img env_point" alt="" data-toggle="modal" data-target="#vlinks_modal">
-										<small class="text-truncate">06-Image name is something with bla blah</small>
-									</div>
-								</div>
-							</div>
-							<div class	="col-sm-3">
-								<div class="thumb-wrapper">
-									<div class="img-box">
-										<img src="img/800x600_5.jpg" class="img-fluid rounded vlink_img env_point" alt="" data-toggle="modal" data-target="#vlinks_modal">
-										<small class="text-truncate">07-Image name is something with bla blah</small>
-									</div>
-								</div>
-							</div>
-							<div class	="col-sm-3">
-								<div class="thumb-wrapper">
-									<div class="img-box">
-										<img src="img/800x600_6.png" class="img-fluid rounded vlink_img env_point" alt="" data-toggle="modal" data-target="#vlinks_modal">
-										<small class="text-truncate">08-Image name is something with bla blah</small>
-									</div>
-								</div>
-							</div>
-
-						</div>
-					</div>
-					<div class="carousel-item">
-						<div class="row">
-
-							<div class	="col-sm-3">
-								<div class="thumb-wrapper">
-									<div class="img-box">
-										<img src="img/800x600_7.jpg" class="img-fluid rounded vlink_img env_point" alt="" data-toggle="modal" data-target="#vlinks_modal">
-										<small class="text-truncate">09-Image name is something with bla blah</small>
-									</div>
-								</div>
-							</div>
-							<div class	="col-sm-3">
-								<div class="thumb-wrapper">
-									<div class="img-box">
-										<img src="img/350x350.jpg" class="img-fluid rounded vlink_img env_point" alt="" data-toggle="modal" data-target="#vlinks_modal">
-										<small class="text-truncate">10-Image name is something with bla blah</small>
-									</div>
-								</div>
-							</div>
-							<div class	="col-sm-3">
-								<div class="thumb-wrapper">
-									<div class="img-box">
-										<img src="img/350x350.jpg" class="img-fluid rounded vlink_img env_point" alt="" data-toggle="modal" data-target="#vlinks_modal">
-										<small class="text-truncate">11Image name is something with bla blah</small>
-									</div>
-								</div>
-							</div>
-							<div class	="col-sm-3">
-								<div class="thumb-wrapper">
-									<div class="img-box">
-										<img src="img/350x350.jpg" class="img-fluid rounded vlink_img env_point" alt="" data-toggle="modal" data-target="#vlinks_modal">
-										<small class="text-truncate">12Image name is something with bla blah</small>
-									</div>
-								</div>
-							</div>
-
-						</div>
-					</div>
+                    	</div>
+                    	@endif
+                  	@endforeach
 				</div>
 				<!-- Carousel controls -->
 				<a class="rounded carousel-control left carousel-control-prev" href="#myCarousel" data-slide="prev">
@@ -138,3 +41,10 @@
 		</div>
 	</div>
 </div>
+
+<script type="text/javascript">
+	$(".vs_img").click(function() {
+		$('#vlinks_slider').carousel($(this).data('idx'));
+		$('#vlinks_modal').modal('show');
+	});
+</script>

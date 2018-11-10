@@ -16,7 +16,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item mt-3 border rounded bg-white">
-        <a class="nav-link text-white" href="{{ url('/shop') }}">
+        <a class="nav-link text-white" href="#" data-toggle="modal" data-target="#newProjectModal">
           <h5 class="text-dark my-1">Create new project
             <i class="fas fa-lightbulb text-primary"></i>
           </h5>

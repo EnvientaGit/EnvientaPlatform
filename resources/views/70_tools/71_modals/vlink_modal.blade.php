@@ -11,25 +11,18 @@
       <div class="card-body p-3" style="margin: -1em;">
 
         <!-- Inner Image Slider -->
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <div id="vlinks_slider" class="carousel slide" data-ride="carousel">
           <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            @foreach($images as $idx => $image)
+            <li data-target="#carousel" data-slide-to="{{ $idx }}" class="{{ $idx == 0 ? 'active': ''}}"></li>
+            @endforeach
           </ol>
           <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img class="d-block img-fluid slink_img" src="img/350x350.jpg" alt="First slide">
+            @foreach($images as $idx => $image)
+            <div class="carousel-item {{ $idx == 0 ? 'active': ''}}">
+              <img class="d-block img-fluid slink_img" src="{{$image}}" alt="">
             </div>
-            <div class="carousel-item">
-              <img class="d-block img-fluid slink_img" src="img/800x600_8.jpg" alt="Second slide">
-            </div>
-            <div class="carousel-item">
-              <img class="d-block img-fluid slink_img" src="img/800x600_1.jpg" alt="Third slide">
-            </div>
-            <div class="carousel-item">
-              <img class="d-block img-fluid slink_img" src="img/800x600_2.jpeg" alt="Third slide">
-            </div>
+            @endforeach
           </div>
           <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
