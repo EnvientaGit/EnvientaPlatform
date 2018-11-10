@@ -14,11 +14,6 @@
         </div>
       </section>
 --}}
-        @if(!Auth::check())
-        @include('60_campaign.new_project_unauth')
-        @else
-        @include('60_campaign.new_project')
-        @endif
 
         @include('60_campaign.62_front.front')
 

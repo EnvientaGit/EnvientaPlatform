@@ -158,7 +158,10 @@ footer p {
 }
 
 .env_slide_img_h {
-  width: 50em !important;
+  margin-right: auto !important;
+  margin-left: auto !important;
+  width: auto !important;
+  max-width: 100% !important;
   height: 25em !important;
   object-fit: cover;
   object-position: center;
