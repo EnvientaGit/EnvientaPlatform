@@ -20,7 +20,7 @@
   <div class="row">
     <div class="col-md-12">
       <div class="tab-content mt-3">
-        <div id="project_details" class="tab-pane animated active fadeIn text-center">
+        <div id="project_details" class="tab-pane animated active fadeIn">
           @include('70_tools.slider')
           @include('50_project.51_tabs.details')
         </div>
