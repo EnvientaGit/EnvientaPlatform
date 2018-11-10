@@ -37,13 +37,14 @@
               </div>
             @endif
           </div><!-- Image slider -->
+      </div>
+      @if($project->video_id)
+      <div class="row vlink"><!-- Video slider -->
+        <div class="col-md-12">
+          @include('70_tools.video_slider')
         </div>
-        <div class="row vlink"><!-- Video slider -->
-          <div class="col-md-12">
-            @include('70_tools.video_slider')
-          </div>
-        </div><!-- Video slider -->
-
+      </div><!-- Video slider -->
+      @endif
     </div>
 
   </div>
