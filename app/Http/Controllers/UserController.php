@@ -10,6 +10,8 @@ use Illuminate\Database\Eloquent\Model;
 class UserController extends Controller
 {
 
+	// depricated
+	/*
     public function listUsers()
     {
         $ret = null;
@@ -19,5 +21,5 @@ class UserController extends Controller
           })->get();
         return $ret;
     }
-
+	*/
 }

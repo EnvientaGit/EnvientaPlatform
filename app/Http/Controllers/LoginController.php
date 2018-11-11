@@ -7,23 +7,14 @@ use App\User;
 use App\Mail\LoginMail;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Http\Request;
+use App\Utils;
 use Socialite;
-
-function random_str($length, $keyspace = '0123456789')
-{
-    $str = '';
-    $max = mb_strlen($keyspace, '8bit') - 1;
-    for ($i = 0; $i < $length; ++$i) {
-        $str .= $keyspace[random_int(0, $max)];
-    }
-    return $str;
-}
 
 class LoginController extends Controller
 {
 
     public function requestPin(Request $request) {
-      $user = User::updateOrCreate(['email' => $request->input('email')], ['pin' => random_str(6)]);
+      $user = User::updateOrCreate(['email' => $request->input('email')], ['pin' => Utils::random_str(6)]);
       Mail::to($user->email)->send(new LoginMail($user));
       return "sent";
     }
@@ -35,7 +26,7 @@ class LoginController extends Controller
         return "success";
       } 
       // always update to prevent brute force attacs
-      User::updateOrCreate(['email' => $request->input('email')], ['pin' => random_str(6)]); 
+      User::updateOrCreate(['email' => $request->input('email')], ['pin' => Utils::random_str(6)]); 
       return "fail";
     }
     
@@ -52,7 +43,7 @@ class LoginController extends Controller
         $user = User::updateOrCreate(
           ['email' => $fb_user->getEmail()], 
           [ 
-            'pin' => random_str(6), 
+            'pin' => Utils::random_str(6), 
             'avatarUrl' => $fb_user->getAvatar(), 
             'profileUrl' => 'https://www.facebook.com/' . $fb_user->getId()
           ]

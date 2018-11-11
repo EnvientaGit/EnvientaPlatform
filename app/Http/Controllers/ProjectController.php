@@ -147,6 +147,39 @@ class ProjectController extends Controller
     }
   }
 
+  public function listMembers($slug = NULL) {
+    $project = Project::where('slug', $slug)->first();
+    return view('30_sidebar.members', array(
+      'project' => $project
+    ));
+  }
+
+  private function updateMembers(Request $request, $project) {
+    if($request->has('addMember')) {
+      $user = User::updateOrCreate(['email' => $request->input('addMember')], ['pin' => Utils::random_str(6)]);
+      $member = new Member();
+      $projectHasMember = Member::where('user_id', $user->id)->where('project_id', $project->id)->first();
+      if($user->id == $project->owner)
+        $projectHasMember = true;
+      if(!$projectHasMember) {
+        $member->user_id = $user->id;
+        $member->project_id = $project->id;
+        $member->save();
+        Mail::to($user->email)->send(new contributorInviteMail($user, $project->title, $project->slug));
+        return 'done';
+      } else {
+        return 'already_member';
+      }
+    }
+
+    if($request->has('removeMember')) {
+      $member = Member::findOrFail($request->input('removeMember'));
+      Member::destroy($member->id);
+      return 'done';
+    }
+
+  }
+
   public function update(Request $request, $slug) {
     if (!Auth::check())
       return;
@@ -195,33 +228,11 @@ class ProjectController extends Controller
       @unlink($project_path . '/' . $folder. '/' . $file);
     }
 
+    if($updateMembersResult = $this->updateMembers($request, $project))
+      return $updateMembersResult;
+
     if($request->has('redirect'))
       return redirect('/project/' . $project->slug);
-
-    // member/contributor functions
-    if($request->has('addMember')) {
-
-      $user = User::findOrFail($request->input('addMember'));
-
-      $member = new Member();
-
-      $projectHasMember = Member::where('user_id', $user->id)->where('project_id', $project->id)->first();
-      if(!$projectHasMember) {
-        $member->user_id = $user->id;
-        $member->project_id = $project->id;
-        $member->save();
-        Mail::to($user->email)->send(new contributorInviteMail($user, $project->title, $project->slug));
-      } else {
-        return 'already_member';
-      }
-
-    }
-    if($request->has('removeMember')) {
-      $member = Member::findOrFail($request->input('removeMember'));
-      Member::destroy($member->id);
-    }
-
-    return 'done';
   }
 
 }
