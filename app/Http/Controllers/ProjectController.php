@@ -109,6 +109,12 @@ class ProjectController extends Controller
     return $clean;
   }
 
+  private function extractVideoId($video_link) {
+    parse_str(parse_url($video_link, PHP_URL_QUERY), $params);
+    if($params && $params['v'])
+      return $params['v'];          
+  }
+
   public function newProject(Request $request) {
     if (Auth::check()) {
       $project = new Project;
@@ -118,11 +124,8 @@ class ProjectController extends Controller
       $project->slug = $this->slugify($request->title) . '-' . uniqid();
       $project->license = 'xxx'; //$request->license;
 
-      if($request->vid_link) {
-        parse_str(parse_url($request->vid_link, PHP_URL_QUERY), $params);
-        if($params && $params['v'])
-          $project->video_id = $params['v'];          
-      }
+      if($request->vid_link)
+        $project->video_id = $this->extractVideoId($request->vid_link);
 
       Auth::user()->projects()->save($project);
       $project->save();
@@ -201,6 +204,15 @@ class ProjectController extends Controller
             $file->move($project_path . '/' . $folder, $file->getClientOriginalName());
         }
       }
+    }
+
+    if($request->has('title')) {
+      $project->title = $request->input('title');
+      $project->save();
+    }
+
+    if($request->has('vid_link')) {
+      $project->video_id = $this->extractVideoId($request->vid_link);
     }
 
     if($request->has('description')) {

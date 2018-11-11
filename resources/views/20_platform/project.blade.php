@@ -1,18 +1,23 @@
 @extends('00_header.platform')
 
 @section('content')
+	
+	@if($mine)
 	<div class="container-fluid">
 		@include('60_campaign.edit_project')
 	</div>
+	@endif
 
 	<div class="container-fluid">
 		<div class="row py-3 bg-light shadow">
 			<div class="col-md-8 text-left">
 				<h1 class="project-title text-left">
 					<span class="btn-sm">
+						@if($mine)
 						<a data-toggle="modal" data-target="#editProjectModal">
 							<i class="fa fa-pencil-square-o mr-1 env_color"></i>
 						</a>
+						@endif
 					</span>{{$project->title}}
 				</h1>
 			</div>
