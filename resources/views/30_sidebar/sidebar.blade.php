@@ -8,7 +8,7 @@
           <a href="https://www.gravatar.com/{{$avatar_hash}}" target="_blank">
             <img src="{{ "https://www.gravatar.com/avatar/" . $avatar_hash . "?s=100"}}" class="img-fluid img-thumbnail mb-2" height="100" width="100">
           </a>
-          <h6 id="avatar_name" class="card-title font-weight-bold mb-2">{{ $project->owner()->first()->realname }}</h6>
+          <h6 id="avatar_name" class="card-title font-weight-bold mb-2"></h6>
         </div>
         <div class="card-footer env_uploaded_div pl-2">
           <p class="text-center">
@@ -31,20 +31,20 @@
     <div class="modal-content">
 
       <div class="modal-header bg-light p-2">
-        <h5 class="modal-title">{{ $project->owner()->first()->realname }}</h5>
+        <h5 class="modal-title">More info about the creator</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <i class="fa fa-times fa-xs"></i>
         </button>
       </div>
 
-      <div class="card-body p-3">
-        {{ $project->owner()->first()->bio }}
+      <div class="card-body p-3" id="avatar_description">
+        
       </div>
     </div>
   </div>
 </div>
 
-@if (count($project->members))
+@if (count($project->members) || (Auth::user() && $project->owner == Auth::user()->id))
   <div class="row my-3">
     <div class="col-md-12">
       <div class="border card w-100 box-shadow-bottom">
@@ -53,44 +53,22 @@
         </h6>
         <div class="card-body p-3 contributors" id="contributors">
 
-          @foreach ($project->members as $member)
-            <div class="card bg-light mb-1">
-              <div class="mx-1">
-                @if (Auth::user() && $project->owner == Auth::user()->id && $member->user->id != $project->owner)
-                  <a href="#" class="fa fa-times pull-right contributor-del" aria-hidden="true" rel="{{ $member->id }}" title="Remove from Contributors"></a>
-                @endif
-                <p class="card-text text-justify text-truncate" title="{{ $member->user->skills }}">
-                    @if ($member->user->id == $project->owner)
-                      <span class="pull-right lt-badge badge badge-env" data-toggle="tooltip" data-placement="top" title="Project owner"><i class="fa fa-user"></i></span>
-                    @endif
-                    {{ $member->user->realname }}
-                </p>
-              </div>
-            </div>
-          @endforeach
-        </div>
-      </div>
-    </div>
-  </div>
-@endif
+          <span id="project_members">
+          @include('30_sidebar.members')
+          </span>
 
-@if(Auth::user() && $project->owner == Auth::user()->id)
-  <div class="row my-3">
-    <div class="col-md-12">
-      <div class="card w-100 border box-shadow-bottom">
-        <h6 class="card-header dtitle p-2">
-          <i class="fa fa-pencil-square-o mr-1 env_color"></i>Add new member
-        </h6>
-        <div class="card-body p-3">
+          @if(Auth::user() && $project->owner == Auth::user()->id)
           <span class="rt-badge badge badge-env" data-toggle="tooltip" data-placement="top" title="Admin panel"><i class="fa fa-exclamation-triangle"></i></span>
           <div class="input-group input-group-sm">
-            <input name="cotributors" id="cotributors" class="form-control" placeholder="Search member" aria-label="Search member" aria-describedby="btnGroupAddon2" type="text" autocomplete="off">
+            <input name="newMemberInput" id="newMemberInput" class="form-control" placeholder="E-mail address" aria-label="New member e-mail address" aria-describedby="btnGroupAddon2" type="text" autocomplete="off">
             <div class="input-group-append">
               <button class="env_link_grey env_point input-group-text env_border_rslim" id="newContributorAddBtn">
                 Add
               </button>
             </div>
           </div>
+          @endif
+
         </div>
       </div>
     </div>
@@ -155,63 +133,40 @@
     }
   });
 
+  $('.gravatar_name').each(function() {
+    var _this = $(this);
+    $.ajax({
+      url: "http://hu.gravatar.com/" + _this.data('gravatar-hash') + ".json",
+      jsonp: "callback",
+      dataType: "jsonp",
+      success: function( response ) {
+        _this.html(response.entry[0].name.formatted);
+      }
+    });
+  });
+
   @if(Auth::user() && $project->owner == Auth::user()->id)
 
-    var newMemberId = 0;
-    var newMemberName = '';
-
     $("#newContributorAddBtn").click(function() {
-
-      if(newMemberId>0) {
-
-        var newMemberRow = '<div class="card bg-light mb-1"><div class="mx-1"><a href="#" class="fa fa-times pull-right contributor-del" aria-hidden="true" rel="{memberId}" title="Remove from Contributors"></a><p class="card-text text-justify text-truncate" title="{memberName}">{memberName}</p></div></div>';
-
         $.ajax({
           url: '{{ url()->current() }}',
           type: 'POST',
-          data: {'addMember': newMemberId},
+          data: {'addMember': $('#newMemberInput').val()},
           complete: function(data) {
-
-            if(data.responseText=='done') {
-              newMemberRow = newMemberRow.replace(/{memberId}/g, newMemberId).replace(/{memberName}/g, newMemberName);
-              $("#contributors").append(newMemberRow);
-            } else if(data.responseText=='already_member') {
-              alert(newMemberName+" is already a contributor of this project!");
+            if(data.responseText=='already_member') {
+              alert($('#newMemberInput').val() + " is already a contributor of this project!");
+            } else {
+              $('#project_members').load('{{ url()->current() }}/members');
             }
-
-            newMemberId = 0;
-            newMemberName = '';
-
-            $("#cotributors").val('');
+            $("#newMemberInput").val('');
           },
           headers: {
               'X-CSRF-TOKEN': '{{ csrf_token() }}'
           }
         });
-      }
     });
 
-    function memberSelected(item) {
-      newMemberId = item.value;
-      newMemberName = item.text;
-    }
-
-    $("#cotributors").typeahead({
-      valueField: 'id',
-      displayField: 'realname',
-      scrollBar: true,
-      items: 20,
-      minLength: 3,
-      onSelect: memberSelected,
-      ajax: {
-        url: 'user/list',
-        method: 'get',
-        headers: {
-          'X-CSRF-TOKEN': '{{ csrf_token() }}'
-        }
-      }
-    });
-
+    // delete contributor
     $(".contributors").on("click", ".contributor-del", function(e){
       e.preventDefault();
       var $this = $(this);
@@ -232,6 +187,8 @@
         });
       }
     });
+
+    // set project status
     $('#btnStatus').click(function(e) {
       e.preventDefault();
       var projectStatus = $('#projectStatus option:selected').val();

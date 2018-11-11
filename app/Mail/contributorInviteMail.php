@@ -32,7 +32,7 @@ class contributorInviteMail extends Mailable
     {
         return $this->view('mail.contributorinvite')
         ->from($this->user->email, $this->user->realname)
-        ->subject('Invite to: ' . $this->projectName)
+        ->subject('ENVIENTA platform project invite: ' . $this->projectName)
         ->with([
            'user' => $this->user,
            'projectName' => $this->projectName,

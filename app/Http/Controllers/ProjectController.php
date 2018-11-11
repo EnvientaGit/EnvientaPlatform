@@ -59,9 +59,13 @@ class ProjectController extends Controller
 
   public function show($slug = NULL)
   {
-    $parsedown = new ParsedownExtra();
-
     $project = Project::where('slug', $slug)->first();
+
+    if(!$project->public)
+      if(!$this->checkMembership(Auth::user(), $project))
+        return redirect('/');
+
+    $parsedown = new ParsedownExtra();
 
     $project_path = public_path() . "/repo/" . $project->slug;
     $images_path = $project_path . '/images';
@@ -109,6 +113,12 @@ class ProjectController extends Controller
     return $clean;
   }
 
+  private function extractVideoId($video_link) {
+    parse_str(parse_url($video_link, PHP_URL_QUERY), $params);
+    if($params && $params['v'])
+      return $params['v'];          
+  }
+
   public function newProject(Request $request) {
     if (Auth::check()) {
       $project = new Project;
@@ -118,11 +128,8 @@ class ProjectController extends Controller
       $project->slug = $this->slugify($request->title) . '-' . uniqid();
       $project->license = 'xxx'; //$request->license;
 
-      if($request->vid_link) {
-        parse_str(parse_url($request->vid_link, PHP_URL_QUERY), $params);
-        if($params && $params['v'])
-          $project->video_id = $params['v'];          
-      }
+      if($request->vid_link)
+        $project->video_id = $this->extractVideoId($request->vid_link);
 
       Auth::user()->projects()->save($project);
       $project->save();
@@ -147,6 +154,43 @@ class ProjectController extends Controller
     }
   }
 
+  public function listMembers($slug = NULL) {
+    $project = Project::where('slug', $slug)->first();
+    return view('30_sidebar.members', array(
+      'project' => $project
+    ));
+  }
+
+  private function checkMembership($user, $project) {
+    if($user->id == $project->owner)
+      return true;
+    return Member::where('user_id', $user->id)->where('project_id', $project->id)->first();
+  }
+
+  private function updateMembers(Request $request, $project) {
+    if($request->has('addMember')) {
+      $user = User::updateOrCreate(['email' => $request->input('addMember')], ['pin' => Utils::random_str(6)]);
+      $member = new Member();
+      $projectHasMember = $this->checkMembership($user, $project);
+      if(!$projectHasMember) {
+        $member->user_id = $user->id;
+        $member->project_id = $project->id;
+        $member->save();
+        Mail::to($user->email)->send(new contributorInviteMail($user, $project->title, $project->slug));
+        return 'done';
+      } else {
+        return 'already_member';
+      }
+    }
+
+    if($request->has('removeMember')) {
+      $member = Member::findOrFail($request->input('removeMember'));
+      Member::destroy($member->id);
+      return 'done';
+    }
+
+  }
+
   public function update(Request $request, $slug) {
     if (!Auth::check())
       return;
@@ -168,6 +212,15 @@ class ProjectController extends Controller
             $file->move($project_path . '/' . $folder, $file->getClientOriginalName());
         }
       }
+    }
+
+    if($request->has('title')) {
+      $project->title = $request->input('title');
+      $project->save();
+    }
+
+    if($request->has('vid_link')) {
+      $project->video_id = $this->extractVideoId($request->vid_link);
     }
 
     if($request->has('description')) {
@@ -195,33 +248,11 @@ class ProjectController extends Controller
       @unlink($project_path . '/' . $folder. '/' . $file);
     }
 
+    if($updateMembersResult = $this->updateMembers($request, $project))
+      return $updateMembersResult;
+
     if($request->has('redirect'))
       return redirect('/project/' . $project->slug);
-
-    // member/contributor functions
-    if($request->has('addMember')) {
-
-      $user = User::findOrFail($request->input('addMember'));
-
-      $member = new Member();
-
-      $projectHasMember = Member::where('user_id', $user->id)->where('project_id', $project->id)->first();
-      if(!$projectHasMember) {
-        $member->user_id = $user->id;
-        $member->project_id = $project->id;
-        $member->save();
-        Mail::to($user->email)->send(new contributorInviteMail($user, $project->title, $project->slug));
-      } else {
-        return 'already_member';
-      }
-
-    }
-    if($request->has('removeMember')) {
-      $member = Member::findOrFail($request->input('removeMember'));
-      Member::destroy($member->id);
-    }
-
-    return 'done';
   }
 
 }

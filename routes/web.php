@@ -52,8 +52,9 @@ Route::post('/project/new', 'ProjectController@newProject');
 //Route::middleware('page-cache')->get('/project/{id}', 'ProjectController@show');
 Route::get('/project/{slug}', 'ProjectController@show');
 Route::get('/project/{slug}/files', 'ProjectController@showFiles');
-Route::post('/project/{slug}', 'ProjectController@update');
+Route::get('/project/{slug}/members', 'ProjectController@listMembers');
 
+Route::post('/project/{slug}', 'ProjectController@update');
 
 Route::get('/auth/requestPin', 'LoginController@requestPin');
 Route::get('/auth/login', 'LoginController@login');
@@ -63,4 +64,4 @@ Route::get('/auth/fb_login', 'LoginController@loginWithFacebook');
 
 Route::get('/shop/sendOrder', 'ShopController@sendOrder');
 
-Route::get('/user/list', 'UserController@listUsers');
+//Route::get('/user/list', 'UserController@listUsers');
