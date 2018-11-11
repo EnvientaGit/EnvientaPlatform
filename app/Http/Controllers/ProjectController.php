@@ -59,9 +59,13 @@ class ProjectController extends Controller
 
   public function show($slug = NULL)
   {
-    $parsedown = new ParsedownExtra();
-
     $project = Project::where('slug', $slug)->first();
+
+    if(!$project->public)
+      if(!$this->checkMembership(Auth::user(), $project))
+        return redirect('/');
+
+    $parsedown = new ParsedownExtra();
 
     $project_path = public_path() . "/repo/" . $project->slug;
     $images_path = $project_path . '/images';
@@ -157,13 +161,17 @@ class ProjectController extends Controller
     ));
   }
 
+  private function checkMembership($user, $project) {
+    if($user->id == $project->owner)
+      return true;
+    return Member::where('user_id', $user->id)->where('project_id', $project->id)->first();
+  }
+
   private function updateMembers(Request $request, $project) {
     if($request->has('addMember')) {
       $user = User::updateOrCreate(['email' => $request->input('addMember')], ['pin' => Utils::random_str(6)]);
       $member = new Member();
-      $projectHasMember = Member::where('user_id', $user->id)->where('project_id', $project->id)->first();
-      if($user->id == $project->owner)
-        $projectHasMember = true;
+      $projectHasMember = $this->checkMembership($user, $project);
       if(!$projectHasMember) {
         $member->user_id = $user->id;
         $member->project_id = $project->id;

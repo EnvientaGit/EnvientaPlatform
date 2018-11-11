@@ -12,12 +12,12 @@ class CampaignController extends Controller
     public function show(Request $request, $filter = NULL, $userId = null)
     {
     	if($filter) {
-    		$projects = Project::search($filter)->paginate(6);
+    		$projects = Project::search($filter)->where('public', true)->paginate(6);
     	} elseif ($userId) {
         $user = User::findOrFail($userId);
         $projects = $user->projects()->paginate(6);  
       } else {
-    		$projects = DB::table('projects')->orderBy('quality', 'desc')->orderBy('updated_at', 'desc')->paginate(6);
+    		$projects = DB::table('projects')->where('public', true)->orderBy('quality', 'desc')->orderBy('updated_at', 'desc')->paginate(6);
     	}
 
 		  if ($request->ajax()) {

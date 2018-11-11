@@ -29,7 +29,7 @@
             <div class="col-md-4">
               <div class="border card mb-4 box-shadow-bottom env_card_h">
                 <a href="{{ URL::to('project/' . $project->slug) }}">
-                  <img class="card-img-top img-fluid env_card_img_h" src="{{ get_project_image($project->slug) }}" alt="Project_XY">
+                  <img class="card-img-top img-fluid env_card_img_h" src="{{ get_project_image($project->slug) }}" alt="Project">
                 </a>
                 <div class="card-body">
                   <h5 class="card-title text-truncate">
