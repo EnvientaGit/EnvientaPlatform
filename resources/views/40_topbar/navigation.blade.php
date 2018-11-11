@@ -47,7 +47,7 @@
     <div id="profile_block">
       <div class="btn-group text-left">
         <img src="{{ Utils::userAvatar() }}"
-        class="dropdown-toggle env_point d-block float-left ml-2 rounded env_border" height="40" width="40"  data-toggle="dropdown">
+        class="dropdown-toggle env_point d-block float-left ml-2 rounded env_border border-warning" height="40" width="40"  data-toggle="dropdown">
         <div class="dropdown-menu">
           <a class="dropdown-item env_color" href="#" data-toggle="modal" data-target="#newProjectModal">New project <i class="fas fa-lightbulb"></i></a>
           <a class="dropdown-item env_color" href="{{ URL::to('/profile') }}">Profile</a>
