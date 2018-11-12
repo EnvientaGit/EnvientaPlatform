@@ -524,7 +524,7 @@ textarea.form-control{
 
 /* Custom iframe mirror */
 .env_mirror{
-  min-height: 100vh;
+  min-height: 100vmax;
   border: 0;
 }
 
