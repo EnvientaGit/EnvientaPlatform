@@ -60,8 +60,8 @@
           </div>
           <div class="row">
             <div class="col-md-12 text-right mt-3">
-              <button type="button" name="button" class="border btn text-dark bg-light" data-toggle="modal" data-target="#newProjectModal">
-                Create new project <i class="fas fa-lightbulb text-primary"></i>
+              <button type="button" name="button" class="border btn btn-primary" data-toggle="modal" data-target="#newProjectModal">
+                Create new project <i class="fas fa-lightbulb"></i>
               </button>
             </div>
           </div>

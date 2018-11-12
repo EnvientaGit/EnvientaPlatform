@@ -6,28 +6,28 @@
 				<!-- Carousel indicators -->
 				<ol class="carousel-indicators d-none">
 					@foreach($images as $idx => $image)
-                    	<li data-target="#carousel" data-slide-to="{{ $idx }}" class="{{ $idx == 0 ? 'active': ''}}"></li>
-                  	@endforeach
+					<li data-target="#carousel" data-slide-to="{{ $idx }}" class="{{ $idx == 0 ? 'active': ''}}"></li>
+					@endforeach
 				</ol>
 				<!-- Wrapper for carousel items -->
 				<div class="carousel-inner">
 					@foreach($images as $idx => $image)
-						@if($idx % 4 == 0)
-                    	<div class="carousel-item {{ $idx == 0 ? 'active': ''}}">
-                    		<div class="row">
-                    	@endif		
-	                      		<div class="col-sm-3">
-									<div class="thumb-wrapper">
-										<div class="img-box">
-											<img src="{{$image}}" class="img-fluid rounded vlink_img env_point vs_img" alt="" data-idx="{{$idx}}">
-										</div>
+					@if($idx % 4 == 0)
+					<div class="carousel-item {{ $idx == 0 ? 'active': ''}}">
+						<div class="row">
+							@endif
+							<div class="col-sm-3">
+								<div class="thumb-wrapper">
+									<div class="img-box">
+										<img src="{{$image}}" class="img-fluid rounded vlink_img env_point vs_img" alt="" data-idx="{{$idx}}">
 									</div>
 								</div>
-						@if(($idx - 3) % 4 == 0 || count($images)-1 == $idx)		
 							</div>
-                    	</div>
-                    	@endif
-                  	@endforeach
+							@if(($idx - 3) % 4 == 0 || count($images)-1 == $idx)
+						</div>
+					</div>
+					@endif
+					@endforeach
 				</div>
 				<!-- Carousel controls -->
 				<a class="rounded carousel-control left carousel-control-prev" href="#myCarousel" data-slide="prev">

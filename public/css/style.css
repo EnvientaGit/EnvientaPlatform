@@ -522,7 +522,11 @@ textarea.form-control{
     background-color: #fe6700;
 }
 
-
+/* Custom iframe mirror */
+.env_mirror{
+  min-height: 100vmax;
+  border: 0;
+}
 
 
 
