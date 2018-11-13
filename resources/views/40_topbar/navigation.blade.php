@@ -50,9 +50,9 @@
         class="dropdown-toggle env_point d-block float-left ml-2 rounded env_border border-warning" height="40" width="40"  data-toggle="dropdown">
         <div class="dropdown-menu">
           <a class="dropdown-item env_color" href="#" data-toggle="modal" data-target="#newProjectModal">New project <i class="fas fa-lightbulb"></i></a>
-          <a class="dropdown-item env_color" href="{{ URL::to('/profile') }}">Profile</a>
+          <a class="dropdown-item env_color" href="{{ URL::to('/profile') }}">My profile</a>
           <!--a class="dropdown-item env_color" href="{{ Utils::userProfile() }}" target="_blank">Gravatar</a-->
-          <a class="dropdown-item env_color" href="{{ url('/u') . '/' . Auth::user()->id }}">Projects</a>
+          <a class="dropdown-item env_color" href="{{ url('/u') . '/' . Auth::user()->id }}">My projects</a>
           <!--a class="dropdown-item env_color" href="{{ URL::to('/map') }}">Map</a-->
           <a class="dropdown-item env_color" href="{{ url('/auth/logout') }}">Log Out</a>
         </div>
