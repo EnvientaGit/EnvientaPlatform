@@ -15,7 +15,9 @@
       </section>
 --}}
 
+@if(!Auth::check())
         @include('60_campaign.62_front.front')
+@endif
 
       <div class="album py-5" id="projects">
         @include('60_campaign.projects')
