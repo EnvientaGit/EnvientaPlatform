@@ -19,6 +19,7 @@
 //    return view('20_platform.home');
 //})->name('20_platform.home');
 
+
 Route::get('/map', function () {
     return view('80_Pages.map');
 });
@@ -42,7 +43,7 @@ Route::get('/shop', function () {
     return view('80_Pages.shop');
 });
 
-Route::get('/', 'CampaignController@show');
+Route::name('home')->get('/', 'CampaignController@show');
 Route::get('/s/{filter}', 'CampaignController@show');
 Route::get('/u/{userId}', 'CampaignController@showByUser');
 
