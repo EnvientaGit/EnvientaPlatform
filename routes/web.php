@@ -27,19 +27,19 @@ Route::get('/map', function () {
 Route::get('/profile', 'ProfileController@show');
 Route::post('/profile', 'ProfileController@update');
 
-Route::get('/terms', function () {
+Route::name('terms')->get('/terms', function () {
     return view('80_Pages.terms');
 });
 
-Route::get('/privacy', function () {
+Route::name('privacy')->get('/privacy', function () {
     return view('80_Pages.privacy');
 });
 
-Route::get('/cookies', function () {
+Route::name('cookies')->get('/cookies', function () {
     return view('80_Pages.cookies');
 });
 
-Route::get('/shop', function () {
+Route::name('shop')->get('/shop', function () {
     return view('80_Pages.shop');
 });
 

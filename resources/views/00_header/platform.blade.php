@@ -94,8 +94,8 @@
 
             @include('40_topbar.navigation')
 
-            {{ Breadcrumbs::render('home') }}
-            
+            {{ Breadcrumbs::render() }}
+
             @yield('content')
 
 
