@@ -94,6 +94,8 @@
 
             @include('40_topbar.navigation')
 
+            @include('70_tools.breadcrumbs')<!-- breadcrumb - Indicate the current page’s location -->
+
             @yield('content')
 
 
