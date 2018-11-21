@@ -24,7 +24,7 @@ Route::get('/map', function () {
     return view('80_Pages.map');
 });
 
-Route::get('/profile', 'ProfileController@show');
+Route::name('profile')->get('/profile', 'ProfileController@show');
 Route::post('/profile', 'ProfileController@update');
 
 Route::name('terms')->get('/terms', function () {
@@ -45,7 +45,7 @@ Route::name('shop')->get('/shop', function () {
 
 Route::name('home')->get('/', 'CampaignController@show');
 Route::get('/s/{filter}', 'CampaignController@show');
-Route::get('/u/{userId}', 'CampaignController@showByUser');
+Route::name('my_project')->get('/u/{userId}', 'CampaignController@showByUser');
 
 Route::post('/project/new', 'ProjectController@newProject');
 

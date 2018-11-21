@@ -28,3 +28,15 @@ Breadcrumbs::register('cookies', function ($breadcrumbs) {
     $breadcrumbs->parent('home');
     $breadcrumbs->push('Cookies', route('cookies'));
 });
+
+// Home > Profile
+Breadcrumbs::register('profile', function ($breadcrumbs) {
+    $breadcrumbs->parent('home');
+    $breadcrumbs->push('My profile', route('profile'));
+});
+
+// Home > Profile
+Breadcrumbs::register('my_project', function ($breadcrumbs) {
+    $breadcrumbs->parent('home');
+    $breadcrumbs->push('My projects', route('my_project'));
+});
