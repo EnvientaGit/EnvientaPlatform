@@ -20,12 +20,12 @@
 //})->name('20_platform.home');
 
 
-Route::get('/map', function () {
+Route::name('map')->get('/map', function () {
     return view('80_Pages.map');
 });
 
 Route::name('profile')->get('/profile', 'ProfileController@show');
-Route::post('/profile', 'ProfileController@update');
+Route::name('profile')->post('/profile', 'ProfileController@update');
 
 Route::name('terms')->get('/terms', function () {
     return view('80_Pages.terms');
@@ -44,25 +44,25 @@ Route::name('shop')->get('/shop', function () {
 });
 
 Route::name('home')->get('/', 'CampaignController@show');
-Route::get('/s/{filter}', 'CampaignController@show');
-Route::name('my_project')->get('/u/{userId}', 'CampaignController@showByUser');
+Route::name('search')->get('/s/{filter}', 'CampaignController@show');
+Route::name('my_projects')->get('/u/{userId}', 'CampaignController@showByUser');
 
-Route::post('/project/new', 'ProjectController@newProject');
+Route::name('new_project')->post('/project/new', 'ProjectController@newProject');
 
 //cache disabled for development
 //Route::middleware('page-cache')->get('/project/{id}', 'ProjectController@show');
-Route::get('/project/{slug}', 'ProjectController@show');
-Route::get('/project/{slug}/files', 'ProjectController@showFiles');
-Route::get('/project/{slug}/members', 'ProjectController@listMembers');
+Route::name('project')->get('/project/{slug}', 'ProjectController@show');
+Route::name('project_files')->get('/project/{slug}/files', 'ProjectController@showFiles');
+Route::name('project_members')->get('/project/{slug}/members', 'ProjectController@listMembers');
 
-Route::post('/project/{slug}', 'ProjectController@update');
+Route::name('project_update')->post('/project/{slug}', 'ProjectController@update');
 
-Route::get('/auth/requestPin', 'LoginController@requestPin');
-Route::get('/auth/login', 'LoginController@login');
-Route::get('/auth/logout', 'LoginController@logout');
+Route::name('requestPin')->get('/auth/requestPin', 'LoginController@requestPin');
+Route::name('login')->get('/auth/login', 'LoginController@login');
+Route::name('logout')->get('/auth/logout', 'LoginController@logout');
 
-Route::get('/auth/fb_login', 'LoginController@loginWithFacebook');
+Route::name('fb_login')->get('/auth/fb_login', 'LoginController@loginWithFacebook');
 
-Route::get('/shop/sendOrder', 'ShopController@sendOrder');
+Route::name('sendOrder')->get('/shop/sendOrder', 'ShopController@sendOrder');
 
 //Route::get('/user/list', 'UserController@listUsers');
