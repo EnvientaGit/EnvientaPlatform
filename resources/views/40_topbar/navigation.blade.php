@@ -52,7 +52,7 @@
           <a class="dropdown-item env_color" href="#" data-toggle="modal" data-target="#newProjectModal">New project <i class="fas fa-lightbulb"></i></a>
           <a class="dropdown-item env_color" href="{{ URL::to('/profile') }}">My profile</a>
           <!--a class="dropdown-item env_color" href="{{ Utils::userProfile() }}" target="_blank">Gravatar</a-->
-          <a class="dropdown-item env_color" href="{{ url('/u') . '/' . Auth::user()->id }}">My projects</a>
+          <a class="dropdown-item env_color" href="{{ url('/profile/projects') }}">My projects</a>
           <!--a class="dropdown-item env_color" href="{{ URL::to('/map') }}">Map</a-->
           <a class="dropdown-item env_color" href="{{ url('/auth/logout') }}">Log Out</a>
         </div>

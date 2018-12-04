@@ -45,7 +45,7 @@ Route::name('shop')->get('/shop', function () {
 
 Route::name('home')->get('/', 'CampaignController@show');
 Route::name('search')->get('/s/{filter}', 'CampaignController@show');
-Route::name('my_projects')->get('/u/{userId}', 'CampaignController@showByUser');
+Route::name('myprojects')->get('/profile/projects', 'CampaignController@showByUser');
 
 Route::name('new_project')->post('/project/new', 'ProjectController@newProject');
 

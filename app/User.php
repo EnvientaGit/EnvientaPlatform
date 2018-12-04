@@ -37,7 +37,7 @@ class User extends Authenticatable
 
     public function projects()
     {
-        return $this->hasMany('App\Project', 'owner');
+        return $this->hasMany('App\Project', 'owner')->orderBy('id', 'desc');
     }
 
     public function getManufacturerAdditionals() {
