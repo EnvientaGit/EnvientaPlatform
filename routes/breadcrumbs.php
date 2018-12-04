@@ -36,9 +36,9 @@ Breadcrumbs::register('profile', function ($breadcrumbs) {
 });
 
 // Home > Profile
-Breadcrumbs::register('my_projects', function ($breadcrumbs) {
+Breadcrumbs::register('myprojects', function ($breadcrumbs) {
     $breadcrumbs->parent('home');
-    $breadcrumbs->push('My projects', route('my_project'));
+    $breadcrumbs->push('My projects', route('myprojects'));
 });
 
 Breadcrumbs::register('project', function ($breadcrumbs, $slug) {

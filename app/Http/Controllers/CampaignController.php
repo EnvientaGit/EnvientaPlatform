@@ -6,11 +6,13 @@ use Illuminate\Http\Request;
 use App\Project;
 use App\User;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 
 class CampaignController extends Controller
 {
     public function show(Request $request, $filter = NULL, $userId = null)
     {
+      if(!$userId) $userId = Auth::user()->id;
     	if($filter) {
     		$projects = Project::search($filter)->where('public', true)->paginate(6);
     	} elseif ($userId) {
