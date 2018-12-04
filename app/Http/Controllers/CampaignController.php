@@ -12,7 +12,6 @@ class CampaignController extends Controller
 {
     public function show(Request $request, $filter = NULL, $userId = null)
     {
-      if(!$userId) $userId = Auth::user()->id;
     	if($filter) {
     		$projects = Project::search($filter)->where('public', true)->paginate(6);
     	} elseif ($userId) {
@@ -35,6 +34,11 @@ class CampaignController extends Controller
     public function showByUser(Request $request, $userId = null)
     {
       return $this->show($request, NULL, $userId);
+    }
+
+    public function myProjects(Request $request, $userId = null)
+    {
+      return $this->show($request, NULL, Auth::user()->id);
     }
 
 }
