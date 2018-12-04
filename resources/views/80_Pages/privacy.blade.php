@@ -195,13 +195,11 @@
                 - By visiting this page on our website: <a href="http://platform.envienta.org" target="_blank">platform.envienta.org</a>
               </p>
 
-
             </div>
           </div>
 
         </div>
       </div>
     </div>
-
 
 @endsection

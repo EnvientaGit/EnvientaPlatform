@@ -7,6 +7,7 @@
     "require": {
         "php": ">=7.0.0",
         "czproject/git-php": "^3.12",
+        "davejamesmiller/laravel-breadcrumbs": "4.x",
         "fideloper/proxy": "~3.3",
         "grimzy/laravel-mysql-spatial": "^2.1",
         "laravel/framework": "5.5.*",

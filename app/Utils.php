@@ -15,7 +15,7 @@ class Utils
   public static function checkFile($uploadedFile, $enabledMimes = '*') {
     $checked = false;
     if ($enabledMimes != '*' && is_array($enabledMimes)) {
-      if(in_array(mime_content_type($uploadedFile->getPathName()), $enabledMimes)) 
+      if($uploadedFile->getPathName() && in_array(mime_content_type($uploadedFile->getPathName()), $enabledMimes)) 
         $checked = true;
     } else {
       $checked = true;

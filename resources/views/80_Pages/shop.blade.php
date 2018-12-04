@@ -298,7 +298,7 @@
 <script type="text/javascript">
   $('.buy').click(function() {
     var product = $(this).attr('data-product');
-    $('#order_button').attr('data-product-url', 'http://platform.envienta.org/project/' + product);    
+    $('#order_button').attr('data-product-url', 'http://platform.envienta.org/project/' + product);
     $('#order_button').attr('data-product-name', $(this).attr('data-product-name'));
   });
 
