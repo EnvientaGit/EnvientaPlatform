@@ -30,7 +30,7 @@
               <div class="card border border-dark mb-5 _bpulse">
                 <div class="card-body">
                   <h6 class="text-center mb-0">
-                    Hi everyone. In order to further develop our platform, we need your feedback and help. Also if you have any questions, don't hesitate to ask. We are waiting for you in our Telegram channel. Click here: <a href="https://t.me/envienta" target="_blank"></a> <i class="fab fa-telegram-plane _blue"></i>
+                  @lang('campaign.TELEGRAM')<a href="https://t.me/envienta" target="_blank"></a> <i class="fab fa-telegram-plane _blue"></i>
                   </h6>
                 </div>
               </div>
@@ -44,8 +44,10 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="title col-12 col-lg-8">
-                <h2 class="align-center pb-2 mbr-fonts-style display-2">DON'T MISS A THING</h2>
-                <h3 class="mbr-section-subtitle align-center pb-5 mbr-light mbr-fonts-style display-5">Sign up for our newsletter</h3>
+                <h2 class="align-center pb-2 mbr-fonts-style display-2">@lang('campaign.THING')</h2>
+                <h3 class="mbr-section-subtitle align-center pb-5 mbr-light mbr-fonts-style display-5">
+                   @lang('campaign.NEWSLETTER')
+                </h3>
             </div>
         </div>
 
@@ -54,7 +56,9 @@
                 <form class="mbr-form" action="https://envienta.us12.list-manage.com/subscribe/post?u=1cfb2999615d57f7f085b1680&amp;id=da900f432b" method="post" target="_blank">
                     <div class="mbr-subscribe input-group">
                         <input class="form-control" type="email" name="EMAIL" placeholder="Email" data-form-field="Email" required="" id="email-form3-7y">
-                        <span class="input-group-btn"><button name="subscribe" type="submit" class="btn  btn-primary display-4">SUBSCRIBE</button></span>
+                        <span class="input-group-btn">
+                        	<button name="subscribe" type="submit" class="btn  btn-primary display-4">@lang('campaign.SUBSCRIBE')</button>
+                        </span>
                     </div>
                 </form>
             </div>
