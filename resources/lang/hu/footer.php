@@ -4,7 +4,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Authentication Language Lines
+    | Footer Language Lines
     |--------------------------------------------------------------------------
     |
     | The following language lines are used during authentication for various
@@ -12,8 +12,10 @@ return [
     | these language lines according to your application's requirements.
     |
     */
-
-    'failed' => 'These credentials do not match our records.',
-    'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
-
+	'COPYRIGHT' => 'Copyright &copy; 2018 ENVIENTA Association',
+	'COPYRIGHT2' => '© Copyright 2018 - Envienta',
+   'TERM' => 'Felhasználási feltételek',
+   'PRIVACY' => 'Aadtvédelmi leírás',
+   'COOKIES' => 'Cookie használat',
+	
 ];

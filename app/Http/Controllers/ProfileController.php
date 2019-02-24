@@ -25,6 +25,14 @@ class ProfileController extends Controller
 		$user->linkedinUrl = $request->linkedinUrl;
 		$user->walletAddress = $request->walletAddress;
 		$user->bio = $request->bio;
+		
+		if (isset($request->pw_auth)) {
+			if ($request->psw != '') {
+				$user->psw = md5($request->psw);
+			}	
+		} else {
+			$user->psw = '';
+		}		
 
 		$user->isMaker = isset($request->isMaker); 
 		if($user->isMaker) {
@@ -79,9 +87,7 @@ class ProfileController extends Controller
 			$additionals[13] = isset($request->mcb13);
 			$user->setManufacturerAdditionals($additionals);
 		}
-
 		$user->save();	
-
 		return redirect('/profile');
 	}
 
