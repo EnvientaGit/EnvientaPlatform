@@ -37,32 +37,24 @@ class LoginController extends Controller
 	 */
     public function requestPin(Request $request) {
 		$result = "";
-      $user = User::where('email', $request->input('email'))->where('email', $request->input('email'))->first();
-
-		// alter table if not exist "psw" field
-      if (!isset($user->psw)) {
-        Schema::table('users', function (Blueprint $table) {
-            $table->string('psw',100)->default('');
-        });
-        $user->psw = '';
-      }     	
+     	$user = User::where('email', $request->input('email'))->where('email', $request->input('email'))->first();     	
 
 		// processing
 		if ($request->mode == 'pin') {
 			$result = $this->newPinMail($request);
 		} else {
 			if (isset($user->psw)) {
-				if ($user->psw != '')	{
+				if ($user->psw != '') {
 					$result = "psw";
 				} else {
 					$result = $this->newPinMail($request);
 				}	
 			} else {
 				$result = $this->newPinMail($request);
-	      }	
-      }
+	    	}	
+     	}
 
-      return $result;
+      	return $result;
     }
 
 	 /**
@@ -82,10 +74,11 @@ class LoginController extends Controller
 	        Auth::login($user, true);
 	        return "success";
 	      } 
-   	}
-      // always update to prevent brute force attacs
-      User::updateOrCreate(['email' => $request->input('email')], ['pin' => Utils::random_str(6)]); 
-      return "fail";
+   		}
+      
+      	// always update to prevent brute force attacs
+      	User::updateOrCreate(['email' => $request->input('email')], ['pin' => Utils::random_str(6)]); 
+      	return "fail";
     }
     
     public function logout() {
