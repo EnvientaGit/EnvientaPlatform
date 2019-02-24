@@ -7,7 +7,7 @@
 @section('content')
 
     <div class="container p-3"><!-- Begin of the container -->
-      <form method="post">
+      <form method="post" id="profileForm">
         {{ csrf_field() }}
       <div class="row mb-4"><!-- Begin of the Row -->
         <div class="col-md-12"><!-- Begin of the Main colum -->
@@ -170,23 +170,33 @@
                 </div>
               </div>
 
+          </div><!-- End of the Fill-form -->
+
+          <div class="row my-5"><!-- Begin of the Fill-form -->
               <div class="col-md-12">
                 <div class="card border border-dark">
                   <div class="card-header">
                     <h6 class="float-left">Enable password based authenticaton</h6>
-                    <div class="form-check float-right">
-                      <input class="form-check-input" type="checkbox" value="" id="pw_auth">
-                      <label class="form-check-label" for="pw_auth"></label>
-                    </div>
-                  </div>
+                  </div>  
                   <div class="card-body">
-                    <p class="w-75 mb-0 float-left">Here you are able to define a personal password instead of the pin code login method</p>
-                    <button type="button" class="float-right btn btn-primary btn-sm" data-toggle="modal" data-target="#add_pw" disabled="disabled">Set</button>
-                  </div>
-                </div>
-              </div>
-
+                    <input type="checkbox" value="0" id="pw_auth" name="pw_auth">
+                    <span id="pswInputs" style="display:none">
+                    @lang('profile.PSW'):
+                    <input type="password" id="inputPsw"  
+	                      	name="psw" value="" placeholder="@lang('password')" 
+	                      	value="{{$user->psw}}" />
+                    @lang('profile.PSWAGAIN'):
+                    <input type="password" id="inputPsw2"  
+	                      	name="psw2" value="" placeholder="@lang('password')" 
+	                      	value="{{$user->psw}}" />
+	                 @lang('PSWHELP')     	
+	                 </span>     	
+	                </div>
+				 	</div>
+				 </div>	
           </div><!-- End of the Fill-form -->
+          
+          
 
             <div class="row"><!-- Begin of the Photo/Social/Bio Row -->
               <div class="col-md-3">
@@ -352,7 +362,7 @@
                       <div class="input-group-prepend">
                         <span class="input-group-text" id="inputGroupPrepend1">Zip code</span>
                       </div>
-                      <input id="validationDefault1" name="manufacturerAddressZip" type="text" class="form-control" placeholder="" aria-describedby="inputGroupPrepend1" required aria-describedby="inputGroupPrepend1" required value="{{$user->manufacturerAddressZip}}" data-geo="postal_code">
+                      <input id="validationDefault1" name="manufacturerAddressZip" type="text" class="form-control" placeholder="" aria-describedby="inputGroupPrepend1" _required aria-describedby="inputGroupPrepend1" _required value="{{$user->manufacturerAddressZip}}" data-geo="postal_code">
                     </div>
                   </div>
 
@@ -362,7 +372,7 @@
                       <div class="input-group-prepend">
                           <span class="input-group-text" id="inputGroupPrepend2">City</span>
                       </div>
-                      <input id="validationDefault2" name="manufacturerAddressCity" type="text" class="form-control" placeholder="" aria-describedby="inputGroupPrepend2" required aria-describedby="inputGroupPrepend2" required value="{{$user->manufacturerAddressCity}}" data-geo="locality">
+                      <input id="validationDefault2" name="manufacturerAddressCity" type="text" class="form-control" placeholder="" aria-describedby="inputGroupPrepend2" _required aria-describedby="inputGroupPrepend2" _required value="{{$user->manufacturerAddressCity}}" data-geo="locality">
                     </div>
                   </div>
 
@@ -372,7 +382,7 @@
                       <div class="input-group-prepend">
                           <span class="input-group-text" id="inputGroupPrepend3">Street</span>
                       </div>
-                      <input id="validationDefault3" name="manufacturerAddressStreet" type="text" class="form-control" placeholder="" aria-describedby="inputGroupPrepend3" required aria-describedby="inputGroupPrepend3" required value="{{$user->manufacturerAddressStreet}}" data-geo="route">
+                      <input id="validationDefault3" name="manufacturerAddressStreet" type="text" class="form-control" placeholder="" aria-describedby="inputGroupPrepend3" _required aria-describedby="inputGroupPrepend3" _required value="{{$user->manufacturerAddressStreet}}" data-geo="route">
                     </div>
                   </div>
 
@@ -382,7 +392,7 @@
                       <div class="input-group-prepend">
                           <span class="input-group-text" id="inputGroupPrepend4">Number</span>
                       </div>
-                      <input id="validationDefault4" name="manufacturerAddressStreetNumber" type="text" class="form-control" placeholder="" aria-describedby="inputGroupPrepend4" required aria-describedby="inputGroupPrepend4" required value="{{$user->manufacturerAddressStreetNumber}}" data-geo="street_number">
+                      <input id="validationDefault4" name="manufacturerAddressStreetNumber" type="text" class="form-control" placeholder="" aria-describedby="inputGroupPrepend4" _required aria-describedby="inputGroupPrepend4" _required value="{{$user->manufacturerAddressStreetNumber}}" data-geo="street_number">
                     </div>
                   </div>
 
@@ -756,6 +766,43 @@
           })
         });
 
+			$('#pw_auth').click(function() {
+				$('#pswInputs').toggle();
+				if (this.value == 1) {
+				   this.value = 0;
+				} else {
+					this.value = 1;
+				}   
+			});
+
+			$('#profileForm').submit(function() {
+				var result = true;
+				var msg = '';
+				if ($('#pw_auth').val() == 0) {
+					$('#inputPsw').val('');				
+					$('#inputPsw2').val('');				
+				} else {
+					if ($('#inputPsw').val() != $('#inputPsw2').val()) {
+						msg += 'A két jelszó nem egyezik '+"\n";
+						result = false;					
+					}
+					if (($('#inputPsw').val() != '') && ($('#inputPsw').val().length < 6)) {
+						msg += 'A jelszó túl rövid! (min 6 karakter szükséges) '+"\n";
+						result = false;					
+					} 
+					// további elenörzések
+					if (!result) {
+						alert(msg);					
+					}
+					return result;
+				}
+			});
+			
+			$(function() {
+				if ('{{$user->psw}}' != '') {
+					$('#pw_auth').click();
+				}
+			});
       </script>
 
 @endsection

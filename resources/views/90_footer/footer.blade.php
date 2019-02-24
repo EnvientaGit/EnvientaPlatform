@@ -80,7 +80,7 @@
                             </a>
                         </div>
                         <div class="soc-item">
-                            <a href="https://www.youtube.com/channel/UCbS_n6qVwLtyVlwFYMjq4og/videos" target="_blank">
+                            <a href="https://t.me/envienta" target="_blank">
                                 <span class="mbr-iconfont mbr-iconfont-social socicon-telegram socicon" style="color: rgb(255, 255, 255);"></span>
                             </a>
                         </div>
