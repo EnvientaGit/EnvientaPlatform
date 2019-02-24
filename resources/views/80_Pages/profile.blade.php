@@ -19,7 +19,8 @@
                 <div class="card border border-dark mb-5 _bpulse">
                   <div class="card-body">
                     <h6 class="text-center mb-0">
-                      Hi everyone. In order to further develop our platform, we need your feedback and help. Also if you have any questions, don't hesitate to ask. We are waiting for you in our Telegram channel. Click here: <a href="https://t.me/envienta" target="_blank"></a> <i class="fab fa-telegram-plane _blue"></i>
+                      @lang('campaign.TELEGRAM');
+                      <a href="https://t.me/envienta" target="_blank"></a> <i class="fab fa-telegram-plane _blue"></i>
                     </h6>
                   </div>
                 </div>
@@ -32,8 +33,9 @@
               <div class="text-center">
                 <h3>
                   <i class="fa fa-user-plus _clr" aria-hidden="true"></i>
-                    Please pick your user type! <br>
-                  <h5>You can pick more!</h5>
+                    @lang('profile.PICK_TYPE')
+                    <br>
+                  <h5>@lang('profile.CAN_MORE')</h5>
                 </h3>
               </div>
             </div>
@@ -49,8 +51,8 @@
                   <div class="form-check">
                     <input name="isMaker" class="form-check-input" type="checkbox" id="maker_check" {{$user->isMaker ? 'checked="true"' : ''}}>
                     <label class="form-check-label" for="maker_check">
-                      <h5 class="card-text">Maker</h5>
-                      <small class="_clr">Available</small>
+                      <h5 class="card-text">@lang('profile.MAKER')</h5>
+                      <small class="_clr">@lang('profile.AVAILABLE')</small>
                       <!-- <small><i>Unavailable</i> </small> -->
                     </label>
                   </div>
@@ -65,8 +67,8 @@
                   <div class="form-check">
                     <input class="form-check-input" type="checkbox" value="" id="projects_check" disabled="disabled">
                     <label class="form-check-label" for="projects_check">
-                      <h5 class="card-text">Projects</h5>
-                      <small><i>Unavailable</i> </small>
+                      <h5 class="card-text">@lang('profile.PROJECTS')</h5>
+                      <small><i>@lang('profile.UNAVAILABLE')</i> </small>
                       <!-- <small><i>Unavailable</i> </small> -->
                     </label>
                   </div>
@@ -81,8 +83,8 @@
                   <div class="form-check">
                     <input class="form-check-input" type="checkbox" value="" id="investor_check" disabled="disabled">
                     <label class="form-check-label" for="investor_check">
-                      <h5 class="card-text">Investor</h5>
-                      <small><i>Unavailable</i> </small>
+                      <h5 class="card-text">@lang('profile.INVESTOR')</h5>
+                      <small><i>@lang('profile.UNAVAILABLE')</i> </small>
                       <!-- <small><i>Unavailable</i> </small> -->
                     </label>
                   </div>
@@ -99,8 +101,8 @@
                   <div class="form-check">
                     <input name="isManufacturer" class="form-check-input" type="checkbox" id="manufacturer_check" {{$user->isManufacturer ? 'checked="true"' : ''}}>
                     <label class="form-check-label" for="manufacturer_check">
-                      <h5 class="card-text">Manufacturer</h5>
-                      <small class="_clr">Available</small>
+                      <h5 class="card-text">@lang('profile.MANUFACTURER')</h5>
+                      <small class="_clr">@lang('profile.AVAILABLE')</small>
                       <!-- <small><i>Unavailable</i> </small> -->
                     </label>
                   </div>
@@ -115,8 +117,8 @@
                   <div class="form-check">
                     <input class="form-check-input" type="checkbox" value="" id="distributor_check" disabled="disabled">
                     <label class="form-check-label" for="distributor_check">
-                      <h5 class="card-text">Distributor</h5>
-                      <small><i>Unavailable</i> </small>
+                      <h5 class="card-text">@lang('profile.DISTRIBUTOR')</h5>
+                      <small><i>@lang('profile.UNAVAILABLE')</i> </small>
                     </label>
                   </div>
                 </div>
@@ -130,9 +132,9 @@
                   <div class="form-check">
                     <input name="isCustomer" class="form-check-input" type="checkbox" id="customer_check" {{$user->isCustomer ? 'checked="true"' : ''}} >
                     <label class="form-check-label" for="customer_check">
-                      <h5 class="card-text">Customer</h5>
-                      <small class="_clr">Available</small>
-                      <!-- <small><i>Unavailable</i> </small> -->
+                      <h5 class="card-text">@lang('profile.CUSTOMER')</h5>
+                      <small class="_clr">@lang('profile.AVAILABLE')</small>
+                      <!-- <small><i>@lang('profile.UNAVAILABLE')</i> </small> -->
                     </label>
                   </div>
                 </div>
@@ -148,25 +150,38 @@
               <div class="col-md-4">
                 <div class="form-group">
                   <label for="email">
-                    <i class="fa fa-envelope-o" aria-hidden="true"></i> Email address</label>
-                  <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" value="{{$user->email}}" readonly="true">
+                    <i class="fa fa-envelope-o" aria-hidden="true"></i> 
+                    @lang('profile.EMAIL')
+                  </label>
+                  <input type="email" class="form-control" id="email" aria-describedby="emailHelp" 
+                  	placeholder="@lang('profile.EMAIL')" value="{{$user->email}}" readonly="true">
                   <!--small id="emailHelp" class="form-text text-muted">Please enter a valid email addres</small-->
                 </div>
               </div>
               <div class="col-md-4">
                 <div class="form-group">
                   <label for="username">
-                    <i class="fa fa-user" aria-hidden="true"></i> Username</label>
-                  <input type="text" class="form-control" name="username" id="username" aria-describedby="emailHelp" placeholder="Enter username" value="{{$user->username}}">
-                  <small id="emailHelp" class="form-text text-muted">Please enter a valid username</small>
+                    <i class="fa fa-user" aria-hidden="true"></i> 
+                    @lang('profile.USERNAME')
+                  </label>
+                  <input type="text" class="form-control" name="username" id="username" aria-describedby="emailHelp"
+                     placeholder="@lang('profile.USERNAME')" value="{{$user->username}}">
+                  <small id="emailHelp" class="form-text text-muted">
+	                  @lang('profile.USERNAME_HELP')
+                  </small>
                 </div>
               </div>
               <div class="col-md-4">
                 <div class="form-group">
                   <label for="real_name">
-                    <i class="fa fa-id-card-o" aria-hidden="true"></i> Real name</label>
-                  <input type="text" class="form-control" name="realname" id="real_name" aria-describedby="emailHelp" placeholder="Enter real name" value="{{$user->realname}}">
-                  <small id="emailHelp" class="form-text text-muted">Please enter a valid real name</small>
+                    <i class="fa fa-id-card-o" aria-hidden="true"></i> 
+                    @lang('profile.REALNAME')
+                  </label>
+                  <input type="text" class="form-control" name="realname" id="real_name" aria-describedby="emailHelp"
+                     placeholder="@lang('profile.REALNAME')" value="{{$user->realname}}">
+                  <small id="emailHelp" class="form-text text-muted">
+	                  @lang('profile.USERNAME_HELP')
+                  </small>
                 </div>
               </div>
 
@@ -176,20 +191,20 @@
               <div class="col-md-12">
                 <div class="card border border-dark">
                   <div class="card-header">
-                    <h6 class="float-left">Enable password based authenticaton</h6>
+                    <h6 class="float-left">@lang('profile.ENABLE_PSW')</h6>
                   </div>  
                   <div class="card-body">
                     <input type="checkbox" value="0" id="pw_auth" name="pw_auth">
                     <span id="pswInputs" style="display:none">
                     @lang('profile.PSW'):
                     <input type="password" id="inputPsw"  
-	                      	name="psw" value="" placeholder="@lang('password')" 
+	                      	name="psw" value=""  
 	                      	value="{{$user->psw}}" />
                     @lang('profile.PSWAGAIN'):
                     <input type="password" id="inputPsw2"  
-	                      	name="psw2" value="" placeholder="@lang('password')" 
+	                      	name="psw2" value="" 
 	                      	value="{{$user->psw}}" />
-	                 @lang('PSWHELP')     	
+	                 <br />@lang('profile.PSWHELP')     	
 	                 </span>     	
 	                </div>
 				 	</div>
@@ -265,7 +280,7 @@
                       <input type="text" class="form-control" name="walletAddress" id="" placeholder="ERC-20" value="{{$user->walletAddress}}">
                     </div>
                     <div class="mb-4 ml-1">
-                      <small>Please be sure this is an ERC-20 wallet address. Otherwise your transaction could be lost.</small>
+                      <small>@lang('profile.ERC20_HELP')</small>
                     </div>
                   </div>
                 </div>
@@ -275,8 +290,10 @@
                     <div class="card border border-dark">
                       <div class="card-body text-left">
                         <div class="form-group mb-0">
-                          <label for="user_bio"><h6>Description</h6>
-                          <small class="text-muted">Short description about you</small></label>
+                          <label for="user_bio"><h6>@lang('profile.DESCRIPTION')</h6>
+                          <small class="text-muted">
+                          @lang('profile.DESCRIPTION_HELP')
+                          </small></label>
                           <textarea class="form-control" name="bio" id="user_bio" rows="3">{{$user->bio}}</textarea>
                         </div>
                       </div>
@@ -669,18 +686,20 @@
 
             <a href="{{ url('/') }}">
               <button type="button" class="btn btn-sm btn-secondary">
-                <i class="fa fa-chevron-left mr-1" aria-hidden="true"></i> Back to the front page</button>
+                <i class="fa fa-chevron-left mr-1" aria-hidden="true"></i>
+                 @lang('profile.BACK')
+              </button>
             </a>
 
             <a href="#">
               <button type="submit" class="btn btn-sm btn-primary float-right">
-                Save <i class="fa fa-floppy-o ml-1" aria-hidden="true"></i>
+                @lang('profile.SAVE') <i class="fa fa-floppy-o ml-1" aria-hidden="true"></i>
               </button>
             </a>
 
             <a class="" href="#" data-toggle="modal" data-target="#newProjectModal">
               <button type="submit" class="btn btn-sm btn-primary ">
-                Create new project <i class="fas fa-lightbulb"></i>
+                @lang('navigation.CREATE_NEW_PROJECT') <i class="fas fa-lightbulb"></i>
               </button>
             </a>
           </div>
