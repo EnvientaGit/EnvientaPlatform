@@ -130,7 +130,9 @@
   var wrongPswLimit = 3;
   var wrongPswCount = 0;
   $('#email_next_submit').click(function() {
-	   $.get("/auth/requestPin", {email: $('#request_pin_email').val()}).done(function(data) {
+	   $.get("/auth/requestPin",
+		   	 {email: $('#request_pin_email').val(), mode: '?'}
+	   	  ).done(function(data) {
 			if (data == 'psw') {
 		      $('#mail_block').hide();
 		      $('#psw_block').show();
@@ -159,7 +161,9 @@
     });
   });
   $('#psw_submit').click(function() {
-    $.get("/auth/login", {email: $('#request_pin_email').val(), psw: $('#login_psw').val()}).done(function(data) {
+    $.get("/auth/login", 
+    			{email: $('#request_pin_email').val(), psw: $('#login_psw').val()}
+    		).done(function(data) {
       $('#login_psw').val('');
       if(data == 'success') {
         location.replace('/profile');
@@ -181,6 +185,17 @@
     });
   });
   $('#pswForget').click(function() {
+	   $.get("/auth/requestPin",
+		   	 {email: $('#request_pin_email').val(), mode: 'pin'}
+	   	  ).done(function(data) {
+		      $('#mail_block').hide();
+		      $('#psw_block').hide();
+		   	$('#sentPinMsg').show();
+		      $('#pin_block').show();
+	    });
+  	
+  	
+  	
         $('#mail_block').hide();
         $('#psw_block').hide();
 	     $('#wrongPinMsg').hide();
