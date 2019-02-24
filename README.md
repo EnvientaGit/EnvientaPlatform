@@ -1,2 +1,0 @@
-# EnvientaPlatform
-ENVIENTA platform
