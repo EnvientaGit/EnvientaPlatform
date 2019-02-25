@@ -26,7 +26,7 @@ return [
 	'USERNAME' => 'Felhasználói rövid név',
 	'REALNAME' => 'Valódi név',
 	'USERNAME_HELP' => 'Kérjük, valódi felhasználói rövid nevet adjál meg!',
-	'REALNAME_HELP' => 'Kérjük, valódi felhasználói valódi nevet adjál meg!',
+	'REALNAME_HELP' => 'Kérjük a valódi neved adjad meg!',
 	'ENABLE_PSW' => 'Jalszavas belépés engedélyezése',
 	'PSW' => 'Jelszó',
 	'PSWAGAIN' => 'Jelszó ismét',

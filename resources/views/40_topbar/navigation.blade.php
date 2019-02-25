@@ -49,10 +49,10 @@
         <img src="{{ Utils::userAvatar() }}"
         class="dropdown-toggle env_point d-block float-left ml-2 rounded env_border border-warning" height="40" width="40"  data-toggle="dropdown">
         <div class="dropdown-menu">
-          <a class="dropdown-item env_color" href="#" data-toggle="modal" data-target="#newProjectModal">@lang('navigation.NEW_PROJECT')New project <i class="fas fa-lightbulb"></i></a>
+          <a class="dropdown-item env_color" href="#" data-toggle="modal" data-target="#newProjectModal">@lang('navigation.NEW_PROJECT') <i class="fas fa-lightbulb"></i></a>
           <a class="dropdown-item env_color" href="{{ URL::to('/profile') }}">@lang('navigation.MYPROFILE')</a>
           <!--a class="dropdown-item env_color" href="{{ Utils::userProfile() }}" target="_blank">@lang('navigation.GRAVATAR')</a-->
-          <a class="dropdown-item env_color" href="{{ url('/profile/projects') }}">My projects</a>
+          <a class="dropdown-item env_color" href="{{ url('/profile/projects') }}">@lang('navigation.MYPROJECTS')</a>
           <!--a class="dropdown-item env_color" href="{{ URL::to('/map') }}">@lang('navigation.MAP')</a-->
           <a class="dropdown-item env_color" href="{{ url('/auth/logout') }}">@lang('navigation.LOGOUT')</a>
         </div>
