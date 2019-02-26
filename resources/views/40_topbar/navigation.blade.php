@@ -59,6 +59,16 @@
       </div>
     </div>
     @endif
+    
+  </div>
+  <div class="changeLang">
+    <a href="/?lang=hu">
+    	<img src="img/flag-hu.png" />
+    </a>
+    <br />
+    <a href="/?lang=en">
+    	<img src="img/flag-en.png" />
+    </a>
   </div>
 </nav><!-- navbar -->
 

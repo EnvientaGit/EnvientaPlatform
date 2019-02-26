@@ -10,12 +10,6 @@
     'locale' => 'langCode',
 
 ```
-- Set / get language code in runtime
-```
-   App:getLocale()
-   App:setLocale('langCode')
-```
-
 - Use language token in bladeViewer html code:  
 ```
 @lang('langFileName.token')
@@ -77,4 +71,44 @@ DB::transaction(function() {
    .....
 });
 
+```
+### controllers and cookie ###
+```
+file: app/Http/Controllers/controllerName.php
+
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Database\Schema\Blueprint;
+
+class <ControllerName>Controller extends Controller
+{
+	protected function  <taskName>($request) {
+	
+		$cookieValue = $request->cookie('<cookieName>');
+		....
+		$param1 = $request->input('param1','defvalue');
+	
+		return 'resultStr';
+		
+		or
+		
+		return view('<viewName>',paramsArray)
+
+		or
+		
+		$minutes = 10;
+		return response('resultStr')
+		   ->header('httpHeaderStr')
+		   ->cookie('<cookieName',$cookieValue, $minutes);
+	}
+
+```
+
+### root  system ###
+```
+1.  process routes/web.php and breadcumbs.php ----> <ControllerName>
+2. app/Http/MiddleWare/*.php
+3. app/Http/Controllers/<controllerName>.php
 ```

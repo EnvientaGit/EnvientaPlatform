@@ -17,8 +17,6 @@
 
 <section class="clients cid-qUBZqJ7qIh" id="clients-7r">
 
-
-
         <div class="container mb-5">
             <div class="media-container-row">
                 <div class="col-12 align-center">
