@@ -27,14 +27,15 @@
         <link rel="stylesheet" href="{{ URL::to('css/bootstrap_4.1.0.min.css') }}" type="text/css">
 
         <!-- Font-Awesoem v5.2.0 -->
-        <link rel="stylesheet" type="text/css" href="css/all.css">
-        <link rel="stylesheet" type="text/css" href="css/brands.css">
-        <link rel="stylesheet" type="text/css" href="css/fontawesome.css">
-        <link rel="stylesheet" type="text/css" href="css/light.css">
-        <link rel="stylesheet" type="text/css" href="css/regular.css">
-        <link rel="stylesheet" type="text/css" href="css/solid.css">
-        <link rel="stylesheet" type="text/css" href="css/svg-with-js.css">
-        <link rel="stylesheet" type="text/css" href="css/v4-shims.css">
+        
+        <link rel="stylesheet" type="text/css" href="{{ URL::to('css/all.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ URL::to('css/brands.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ URL::to('css/fontawesome.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ URL::to('css/light.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ URL::to('css/regular.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ URL::to('css/solid.css"') }}>
+        <link rel="stylesheet" type="text/css" href="{{ URL::to('css/svg-with-js.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ URL::to('css/v4-shims.css') }}">
 
         <!-- Custom CSS -->
         {{-- <link rel="stylesheet" href="{{ URL::to('css/platform.css') }}" type="text/css"> --}}

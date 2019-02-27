@@ -130,7 +130,8 @@
   var wrongPswLimit = 3;
   var wrongPswCount = 0;
   $('#email_next_submit').click(function() {
-	   $.get("/auth/requestPin",
+	   console.log('aaaa');
+	   $.get("{{ url('/auth/requestPin') }}",
 		   	 {email: $('#request_pin_email').val(), mode: '?'}
 	   	  ).done(function(data) {
 			if (data == 'psw') {
@@ -144,12 +145,12 @@
 	    });
   });
   $('#request_pin_submit').click(function() {
-    $.get("/auth/requestPin", {email: $('#request_pin_email').val()}).done(function() {
+    $.get("{{ url('/auth/requestPin') }}", {email: $('#request_pin_email').val()}).done(function() {
       alert("New pincode generated, and sent to your e-mail address!");
     });
   });
   $('#login_submit').click(function() {
-    $.get("/auth/login", {email: $('#request_pin_email').val(), pin: $('#login_pin').val()}).done(function(data) {
+    $.get("{{ url('/auth/login') }}", {email: $('#request_pin_email').val(), pin: $('#login_pin').val()}).done(function(data) {
       $('#login_pin').val('');
       if(data == 'success') {
         location.replace('/profile');
@@ -161,12 +162,12 @@
     });
   });
   $('#psw_submit').click(function() {
-    $.get("/auth/login", 
+    $.get("{{ url('/auth/login') }}", 
     			{email: $('#request_pin_email').val(), psw: $('#login_psw').val()}
     		).done(function(data) {
       $('#login_psw').val('');
       if(data == 'success') {
-        location.replace('/profile');
+        location.replace("{{ url('/profile') }}");
       } else {
       	wrongPswCount++;
       	if (wrongPswCount < wrongPswLimit) {
@@ -185,7 +186,7 @@
     });
   });
   $('#pswForget').click(function() {
-	   $.get("/auth/requestPin",
+	   $.get("{{ url('/auth/requestPin') }}",
 		   	 {email: $('#request_pin_email').val(), mode: 'pin'}
 	   	  ).done(function(data) {
 		      $('#mail_block').hide();
@@ -203,7 +204,7 @@
   });
   function checkFBLoginState() {
     FB.getLoginStatus(function(response) {
-      $.get("/auth/fb_login", {token: response.authResponse.accessToken}).done(function(data) {
+      $.get("{{ url('/auth/fb_login') }}", {token: response.authResponse.accessToken}).done(function(data) {
         if(data == 'success') {
           location.reload();
         } else {

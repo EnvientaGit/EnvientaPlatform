@@ -31,23 +31,13 @@ php, javascript
 ## Framworks ##
 jQuery, bootstrap, laravel
 
-## Multilanguage translation ##
-- Set resource/lang/langCode/langFileName.php
- language files (see resource/lang/en folder)
+## Translate to new Languagen ##
+- Create resource/lang/**langCode** folder
+- Set languages files into resources/lang/**langCode** folder (see resources/lang/en folder)
+- insert language flag-**langCode**.png image file into public/img folder
+- Edit resources/views/40_topbar/navigation.blde.php "config" section
+	
+Note: the multilanguage system use  one cookie, name is "lang".
 
-- Use language token in bladeViewer html code:  
-```
-@lang('langFileName.token')
 
-or
-
-{{__('langFileName.token')}}
-```
-- Uses language token in controller php code:
-```
-  $str = __('langFileName.token');
-```
-- Set locale runtime in php code:
-```  
-App::setLocale('langCode');
-```
+ 

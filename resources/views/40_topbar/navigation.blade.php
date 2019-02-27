@@ -1,5 +1,8 @@
 <?php
     use App\Utils;
+    // =============== config ==========
+    $langs = array('hu', 'en');
+    // =============== config ==========
 ?>
 
 <nav class="navbar navbar-expand-lg navbar-light sticky-top py-0" style="background: #282828;"><!-- navbar -->
@@ -62,13 +65,11 @@
     
   </div>
   <div class="changeLang">
-    <a href="/?lang=hu">
-    	<img src="img/flag-hu.png" />
-    </a>
-    <br />
-    <a href="/?lang=en">
-    	<img src="img/flag-en.png" />
-    </a>
+  @foreach ($langs as $lang)
+  		<a href="{{ url('/?lang='.$lang) }}">
+  			<img src="{{ url('img/flag-'.$lang.'.png') }}" />
+  		</a>
+  @endforeach
   </div>
 </nav><!-- navbar -->
 

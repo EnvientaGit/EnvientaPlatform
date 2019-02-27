@@ -30,15 +30,11 @@
         <div class="carousel slide" data-ride="carousel" role="listbox">
             <div class="carousel-inner" data-visible="6">
 
-
-
-
-
             <div class="carousel-item ">
                     <div class="media-container-row">
                         <div class="col-md-12">
                             <div class="wrap-img ">
-                                <img src="assets/images/icon-02-makers-3-140x140.png" class="img-responsive clients-img" alt="" title="">
+                                <img src="{{ url('assets/images/icon-02-makers-3-140x140.png') }}" class="img-responsive clients-img" alt="" title="">
                                 @lang('front.MAKERS')
                             </div>
                         </div>
@@ -47,7 +43,7 @@
                     <div class="media-container-row">
                         <div class="col-md-12">
                             <div class="wrap-img ">
-                                <img src="assets/images/icon-03-projects-3-140x140.png" class="img-responsive clients-img" alt="" title="">
+                                <img src="{{ url('assets/images/icon-03-projects-3-140x140.png') }}" class="img-responsive clients-img" alt="" title="">
                                 @lang('front.PROJECTSS')
                             </div>
                         </div>
@@ -56,7 +52,7 @@
                     <div class="media-container-row">
                         <div class="col-md-12">
                             <div class="wrap-img ">
-                                <img src="assets/images/icon-06-investors-3-140x140.png" class="img-responsive clients-img" alt="" title="">
+                                <img src="{{ url('assets/images/icon-06-investors-3-140x140.png') }}" class="img-responsive clients-img" alt="" title="">
                                 @lang('front.INVESTORS')
                             </div>
                         </div>
@@ -65,7 +61,7 @@
                     <div class="media-container-row">
                         <div class="col-md-12">
                             <div class="wrap-img ">
-                                <img src="assets/images/icon-07-manufacturers-3-140x140.png" class="img-responsive clients-img" alt="" title="">
+                                <img src="{{ url('assets/images/icon-07-manufacturers-3-140x140.png') }}" class="img-responsive clients-img" alt="" title="">
                                 @lang('front.MANUFACTURES')
                             </div>
                         </div>
@@ -74,7 +70,7 @@
                     <div class="media-container-row">
                         <div class="col-md-12">
                             <div class="wrap-img ">
-                                <img src="assets/images/icon-08-distributors-3-140x140.png" class="img-responsive clients-img" alt="" title="">
+                                <img src="{{ url('assets/images/icon-08-distributors-3-140x140.png') }}" class="img-responsive clients-img" alt="" title="">
                                 @lang('front.DISTRIBUTORS')
                             </div>
                         </div>
@@ -83,7 +79,7 @@
                     <div class="media-container-row">
                         <div class="col-md-12">
                             <div class="wrap-img ">
-                                <img src="assets/images/icon-09-consumers-4-140x140.png" class="img-responsive clients-img" alt="" title="">
+                                <img src="{{ url('assets/images/icon-09-consumers-4-140x140.png') }}" class="img-responsive clients-img" alt="" title="">
                                 @lang('front.CONSUMERS')
                             </div>
                         </div>
@@ -122,7 +118,7 @@
             </div>
 
             <div class="mbr-figure pl-lg-5" style="width: 60%;">
-              <img src="assets/images/maker-1-389x600.png" alt="" title="">
+              <img src="{{ url('assets/images/maker-1-389x600.png') }}" alt="" title="">
             </div>
         </div>
     </div>
@@ -197,7 +193,7 @@
         <div class="media-container-row">
 
             <div class="mbr-figure" style="width: 60%;">
-                <img src="assets/images/envienta-platform-logo-stand-1000x594.png" alt="Envienta" title="">
+                <img src="{{ url('assets/images/envienta-platform-logo-stand-1000x594.png') }}" alt="Envienta" title="">
             </div>
 
             <div class="media-content">

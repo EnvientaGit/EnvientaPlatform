@@ -17,7 +17,7 @@ class SetLocale {
 				$locale = $request->input('lang','');
 		  }
 		  
-		  // get lang from $_SERVER
+		  // if not defined then get lang from $_SERVER
 		  if ($locale == '?') {
 			 $locale = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'],0,2);		  
 		  }
