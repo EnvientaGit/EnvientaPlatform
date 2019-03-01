@@ -127,10 +127,9 @@
 </div><!-- /.modal -->
 
 <script type="text/javascript">
-  var wrongPswLimit = 3;
+  var wrongPswLimit = 5;
   var wrongPswCount = 0;
   $('#email_next_submit').click(function() {
-	   console.log('aaaa');
 	   $.get("{{ url('/auth/requestPin') }}",
 		   	 {email: $('#request_pin_email').val(), mode: '?'}
 	   	  ).done(function(data) {

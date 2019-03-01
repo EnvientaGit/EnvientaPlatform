@@ -9,6 +9,8 @@
     <div class="container p-3"><!-- Begin of the container -->
       <form method="post" id="profileForm">
         {{ csrf_field() }}
+      <div class="row alert" style="display:none" id="msg">
+      </div>  
       <div class="row mb-4"><!-- Begin of the Row -->
         <div class="col-md-12"><!-- Begin of the Main colum -->
           <div class="" style="height: 100px;"></div>
@@ -27,6 +29,9 @@
               </a>
             </div>
           </div><!-- End of  Telegram attention -->
+
+		  <div class="alert alert-danger" id="errorMsg" style="display:none">
+		  </div>	
 
           <div class="row my-5">
             <div class="col-md-12">
@@ -369,8 +374,10 @@
 
                 <h6 class="mt-2">@lang('profile.ADDRESS')</h6>
 
+
+
                 <div class="row mb-2" id="manufacturerAddressTarget">
-                  <div class="col-md-2">
+                  <div class="col-md-3">
                     <div class="input-group">
                       <div class="input-group-prepend">
                         <div class="input-group-text">@lang('profile.COUNTRY')</div>
@@ -381,17 +388,17 @@
                     </div>
                   </div>
 
-                  <div class="col-md-2">
+                  <div class="col-md-3">
                     <!-- <label for="validationDefault1">@lang('profile.ZIP')</label> -->
                     <div class="input-group">
                       <div class="input-group-prepend">
                         <span class="input-group-text" id="inputGroupPrepend1">@lang('profile.ZIP')</span>
                       </div>
-                      <input id="validationDefault1" name="manufacturerAddressZip" type="text" class="form-control" placeholder="" aria-describedby="inputGroupPrepend1" _required aria-describedby="inputGroupPrepend1" _required value="{{$user->manufacturerAddressZip}}" data-geo="postal_code">
+                      <input id="validationDefault1" name="manufacturerAddressZip" type="text" class="form-control" placeholder="" aria-describedby="inputGroupPrepend1" aria-describedby="inputGroupPrepend1" value="{{$user->manufacturerAddressZip}}" data-geo="postal_code">
                     </div>
                   </div>
 
-                  <div class="col-md-3">
+                  <div class="col-md-6">
                     <!-- <label for="validationDefault2">City</label> -->
                     <div class="input-group">
                       <div class="input-group-prepend">
@@ -399,27 +406,28 @@
                           @lang('profile.CITY')
                           </span>
                       </div>
-                      <input id="validationDefault2" name="manufacturerAddressCity" type="text" class="form-control" placeholder="" aria-describedby="inputGroupPrepend2" _required aria-describedby="inputGroupPrepend2" _required value="{{$user->manufacturerAddressCity}}" data-geo="locality">
+                      <input id="validationDefault2" name="manufacturerAddressCity" type="text" class="form-control" placeholder="" aria-describedby="inputGroupPrepend2" aria-describedby="inputGroupPrepend2" value="{{$user->manufacturerAddressCity}}" data-geo="locality">
                     </div>
                   </div>
-
-                  <div class="col-md-3">
+				</div>
+                <div class="row mb-2" id="manufacturerAddressTarget">
+                  <div class="col-md-9">
                     <!-- <label for="validationDefault3">@lang('profile.STREET')</label> -->
                     <div class="input-group">
                       <div class="input-group-prepend">
                           <span class="input-group-text" id="inputGroupPrepend3">@lang('profile.STREET')</span>
                       </div>
-                      <input id="validationDefault3" name="manufacturerAddressStreet" type="text" class="form-control" placeholder="" aria-describedby="inputGroupPrepend3" _required aria-describedby="inputGroupPrepend3" _required value="{{$user->manufacturerAddressStreet}}" data-geo="route">
+                      <input id="validationDefault3" name="manufacturerAddressStreet" type="text" class="form-control" placeholder="" aria-describedby="inputGroupPrepend3" aria-describedby="inputGroupPrepend3" value="{{$user->manufacturerAddressStreet}}" data-geo="route">
                     </div>
                   </div>
 
-                  <div class="col-md-2">
+                  <div class="col-md-3">
                     <!-- <label for="validationDefault4">@lang('profile.NUMBER')</label> -->
                     <div class="input-group">
                       <div class="input-group-prepend">
                           <span class="input-group-text" id="inputGroupPrepend4">@lang('profile.NUMBER')</span>
                       </div>
-                      <input id="validationDefault4" name="manufacturerAddressStreetNumber" type="text" class="form-control" placeholder="" aria-describedby="inputGroupPrepend4" _required aria-describedby="inputGroupPrepend4" _required value="{{$user->manufacturerAddressStreetNumber}}" data-geo="street_number">
+                      <input id="validationDefault4" name="manufacturerAddressStreetNumber" type="text" class="form-control" placeholder="" aria-describedby="inputGroupPrepend4" aria-describedby="inputGroupPrepend4" value="{{$user->manufacturerAddressStreetNumber}}" data-geo="street_number">
                     </div>
                   </div>
 
@@ -435,7 +443,7 @@
                       <div class="input-group-prepend">
                         <div class="input-group-text">@lang('profile.MANUFACTURER_NAME')</div>
                       </div>
-                      <input type="text" class="form-control" id="" 
+                      <input type="text" class="form-control" id="manufacturerName" 
                       placeholder="@lang('profile.MANUFACTURER_NAME')" name="manufacturerName" value="{{$user->manufacturerName}}">
                     </div>
                     <div class="input-group mb-2">
@@ -461,7 +469,8 @@
                       <input type="text" class="form-control" id=""
                        placeholder="@lang('profile.WEB')" name="manufacturerWebsite" value="{{$user->manufacturerWebsite}}">
                     </div>
-                    <select class="custom-select mb-2" name="manufacturerWorkTime">
+                    <select class="custom-select mb-2" name="manufacturerWorkTime" 
+                      id="manufacturerWorkTime">
                       <option value="0" disabled selected>@lang('profile.WORKINGTIME'):</option>
                       <option value="1" {{$user->manufacturerWorkTime==1 ? "selected" : ""}}>10 @lang('profile.HOUR_PER_WEEK')</option>
                       <option value="2" {{$user->manufacturerWorkTime==2 ? "selected" : ""}}>20 @lang('profile.HOUR_PER_WEEK')</option>
@@ -625,7 +634,7 @@
                 <h6 class="mt-2">@lang('profile.ADDRESS')</h6>
 
                 <div class="row mb-2" id="customerAddressTarget">
-                  <div class="col-md-2">
+                  <div class="col-md-3">
                     <div class="input-group">
                       <div class="input-group-prepend">
                         <div class="input-group-text">@lang('profile.COUNTRY')</div>
@@ -634,7 +643,7 @@
                       class="form-control" value="{{$user->customerAddressCountry}}" data-geo="country_short">
                     </div>
                   </div>
-                  <div class="col-md-2">
+                  <div class="col-md-3">
                     <div class="input-group">
                       <div class="input-group-prepend">
                         <div class="input-group-text">@lang('profile.ZIP')</div>
@@ -642,7 +651,7 @@
                       <input name="customerAddressZip" type="text" class="form-control" value="{{$user->customerAddressZip}}" data-geo="postal_code">
                     </div>
                   </div>
-                  <div class="col-md-3">
+                  <div class="col-md-6">
                     <div class="input-group">
                       <div class="input-group-prepend">
                         <div class="input-group-text">@lang('profile.CITY')</div>
@@ -650,7 +659,10 @@
                       <input name="customerAddressCity" type="text" class="form-control" value="{{$user->customerAddressCity}}" data-geo="locality">
                     </div>
                   </div>
-                  <div class="col-md-3">
+                </div>  
+                <div class="row mb-2" id="customerAddressTarget">
+                  
+                  <div class="col-md-9">
                     <div class="input-group">
                       <div class="input-group-prepend">
                         <div class="input-group-text">@lang('profile.STREET')</div>
@@ -658,7 +670,7 @@
                       <input name="customerAddressStreet" type="text" class="form-control" value="{{$user->customerAddressStreet}}" data-geo="route">
                     </div>
                   </div>
-                  <div class="col-md-2">
+                  <div class="col-md-3">
                     <div class="input-group">
                       <div class="input-group-prepend">
                         <div class="input-group-text">@lang('profile.NUMBER')</div>
@@ -787,6 +799,15 @@
           $("#_customer").toggleClass("_hide");
         });
 
+		$('#pw_auth').click(function() {
+			$('#pswInputs').toggle();
+			if (this.value == 1) {
+			   this.value = 0;
+			} else {
+				this.value = 1;
+			}   
+		});
+
         $('.geocomplete-button').each(function() {
           var geocomplete_target = $(this).attr('data-geocomplete-target');
           var geocomplete_field = $(this).attr('data-geocomplete-field');
@@ -800,43 +821,95 @@
           })
         });
 
-			$('#pw_auth').click(function() {
-				$('#pswInputs').toggle();
-				if (this.value == 1) {
-				   this.value = 0;
-				} else {
-					this.value = 1;
-				}   
-			});
-
-			$('#profileForm').submit(function() {
+		$('#profileForm').submit(function() {
 				var result = true;
 				var msg = '';
+		        var requestValidator = function(selector, message) {
+					if ($(selector).val() == '') {
+						$(selector).addClass('alert-info');
+						msg += "<li>"+message+"</li>";
+						result = false;
+					} else {
+						$(selector).removeClass('alert-info');
+					}
+		        } 	
+				
+				// psw validations
 				if ($('#pw_auth').val() == 0) {
 					$('#inputPsw').val('');				
 					$('#inputPsw2').val('');				
 				} else {
 					if ($('#inputPsw').val() != $('#inputPsw2').val()) {
-						msg += 'A két jelszó nem egyezik '+"\n";
+						msg += "<li>@lang('profile.PSWS_NOTEQUAL')</li>";
+						$('#inputPsw2').addClass('alert-info');
 						result = false;					
+					} else {
+						$('#inputPsw2').removeClass('alert-info');
 					}
 					if (($('#inputPsw').val() != '') && ($('#inputPsw').val().length < 6)) {
-						msg += 'A jelszó túl rövid! (min 6 karakter szükséges) '+"\n";
+						msg += "<li>@lang('profile.PSW_SHORT')</li>";
+						$('#inputPsw').addClass('alert-info');
 						result = false;					
-					} 
-					// további elenörzések
-					if (!result) {
-						alert(msg);					
+					} else {
+						$('#inputPsw').removeClass('alert-info');
 					}
-					return result;
 				}
-			});
+					
+				// maker validations
+				if ($('#_maker').is(":visible")) {
+
+				}  
+					
+				// manufacturer validations
+				if ($('#_manufacturer').is(":visible")) {
+					requestValidator('#manufacturerName',
+	                  "@lang('profile.NAME_REQUEST')");
+					requestValidator('#validationDefault1',
+	                  "@lang('profile.ZIP_REQUEST')");
+					requestValidator('#validationDefault2',
+	                  "@lang('profile.CITY_REQUEST')");
+					requestValidator('#validationDefault3',
+	                  "@lang('profile.STREET_REQUEST')");
+					requestValidator('#validationDefault4',
+	                  "@lang('profile.NUMBER_REQUEST')");
+	                  
+					var wt = $('#manufacturerWorkTime').val();
+					if ((wt == 0) || (wt == undefined)) {
+						msg += "<li>@lang('profile.WORKTIME_REQUEST')</li>";
+						$('#manufacturerWorkTime').addClass('alert-info');
+						result = false;					
+					} else {
+						$('#manufacturerWorkTime').removeClass('alert-info');
+					}
+	                  
+				}  
+
+					
+				if (!result) {
+					$('#errorMsg').html("<ul>"+msg+"</ul>");
+					$('#errorMsg').show();	
+					window.scrollTo(0,100);				
+				} else {
+					$('#errorMsg').html('');
+					$('#errorMsg').hide();					
+				}
+
+				return result;
+				
+		});
 			
-			$(function() {
+		$(function() {
 				if ('{{$user->psw}}' != '') {
 					$('#pw_auth').click();
 				}
-			});
+				var msg = "{{ $msg }}";
+				var msgClass = "{{ $msgClass }}";
+				if (msg != '') {
+					$('#msg').html(msg);
+					$('#msg').addClass(msgClass);
+					$('#msg').show();
+				}
+		});
       </script>
 
 @endsection

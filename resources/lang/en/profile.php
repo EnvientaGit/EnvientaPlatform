@@ -41,7 +41,7 @@ return [
     'INTERESTS' => 'Interests',
     'SKILL_EXAMPLE' => 'Php, 3D printing.. etc',
     'INTERESTS_EXAMPLE' => 'Robotics, AI.. etc',
-    'MANUFACTURER_HELP' => 'You picked the <b class="_clr">Manufacturer</b> user type, then please fill out a few details about you <br> <small>Be aware that, these informations just about to define your order - not gonna be public!</small>'
+    'MANUFACTURER_HELP' => 'You picked the <b class="_clr">Manufacturer</b> user type, then please fill out a few details about you <br> <small>Be aware that, these informations just about to define your order - not gonna be public!</small>',
     'ADDRESS' => 'Address',
     'ADDRESS_EXAMPLE' => 'Your address',
     'COUNTRY' => 'Country',
@@ -73,4 +73,13 @@ return [
     'ADDITIONAL12' => 'Batteries',
     'ADDITIONAL13' => 'Library',
     'CUSTOMER_HELP' => 'You picked the <b class="_clr">Customer</b> user type, then please add a few tag about your skills',
+    'PSWS_NOTEQUAL' => 'The too password not equal0',
+    'PSW_SHORT' => 'Password length min 6 chars',
+    'ZIP_REQUEST' => 'ZIP code request',
+    'CITY_REQUEST' => 'city request',
+    'STREET_REQUEST' => 'street request',
+    'NUMBER_REQUEST' => 'Number request',
+    'NAME_REQUEST' => 'Name request',
+    'WORKTIME_REQUEST' => 'Worktime request',
+    'SAVED' => 'Saved',
 ];
