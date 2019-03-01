@@ -21,6 +21,13 @@ For more info, please visit our webpage at: [https://envienta.com/](https://envi
 - Type **http://127.0.0.1:8000** to your browser. If everythig fine, you will see the front page of the platform.
 - Let's start coding, and save the world! 
 
+## Test ##
+
+cd **projectRoot**
+
+./vendor/bin/phpunit
+ 
+
 ## Live demo ##
 
 http://platform.envienta.org/

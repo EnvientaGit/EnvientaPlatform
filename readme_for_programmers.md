@@ -82,7 +82,7 @@ DB::insert($sqlStr, $paramsArray)
 DB::ipdate($sqlStr, $paramsArray)
 DB::delete($sqlStr, $paramsArray)
 DB::table('tableName')->get()  return arrya of object all record
-							 ->where('fieldname', value)  return RecordSet
+							 ->where(['fieldname' => value])  return RecordSet
 							 ->where('fieldname,'<=|>=|<|>|=', value]]) return RecordSet
 							 ->where([['fieldname,'<=|>=|<|>|=', value], ...]) return RecordSet
 							 ->orWhere(....) return RecordSet
