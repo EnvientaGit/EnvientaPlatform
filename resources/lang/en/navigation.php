@@ -21,5 +21,7 @@ return [
 	'MYPROFILE' => 'My profile',
 	'GRAVATAR' => 'Gravatar',
 	'MAP' => 'Map',
-	'LOGOUT' => 'Log Out'
+	'LOGOUT' => 'Log Out',
+	'MYPROJECTS' => 'My projects',
+
 ];

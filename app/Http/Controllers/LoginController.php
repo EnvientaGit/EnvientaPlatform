@@ -37,8 +37,7 @@ class LoginController extends Controller
 	 */
     public function requestPin(Request $request) {
 		$result = "";
-     	$user = User::where('email', $request->input('email'))->where('email', $request->input('email'))->first();     	
-
+     	$user = User::where('email', $request->input('email'))->first();     	
 		// processing
 		if ($request->mode == 'pin') {
 			$result = $this->newPinMail($request);
@@ -53,8 +52,7 @@ class LoginController extends Controller
 				$result = $this->newPinMail($request);
 	    	}	
      	}
-
-      	return $result;
+     	return $result;
     }
 
 	 /**

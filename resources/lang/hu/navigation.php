@@ -12,7 +12,7 @@ return [
     | has failed, such as for an invalid token or invalid new password.
     |
     */
-	'CREATE_NEW_PROJECT' => 'Új projekt indítása',
+	'CREATE_NEW_PROJECT' => 'Új projekt létrehozása',
 	'SHOP' => 'Áruház',
 	'HELP' => 'Segitség kell? Kattints ide!',
 	'SEARCH' => 'Keresés',
@@ -21,5 +21,6 @@ return [
 	'MYPROFILE' => 'Profilom',
 	'GRAVATAR' => 'Arckép',
 	'MAP' => 'Térkép',
-	'LOGOUT' => 'Kijelentkezés'
+	'LOGOUT' => 'Kijelentkezés',
+	'MYPROJECTS' => 'Projektjeim',
 ];

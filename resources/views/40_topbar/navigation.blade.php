@@ -1,5 +1,8 @@
 <?php
     use App\Utils;
+    // =============== config ==========
+    $langs = array('hu', 'en');
+    // =============== config ==========
 ?>
 
 <nav class="navbar navbar-expand-lg navbar-light sticky-top py-0" style="background: #282828;"><!-- navbar -->
@@ -49,16 +52,24 @@
         <img src="{{ Utils::userAvatar() }}"
         class="dropdown-toggle env_point d-block float-left ml-2 rounded env_border border-warning" height="40" width="40"  data-toggle="dropdown">
         <div class="dropdown-menu">
-          <a class="dropdown-item env_color" href="#" data-toggle="modal" data-target="#newProjectModal">@lang('navigation.NEW_PROJECT')New project <i class="fas fa-lightbulb"></i></a>
+          <a class="dropdown-item env_color" href="#" data-toggle="modal" data-target="#newProjectModal">@lang('navigation.NEW_PROJECT') <i class="fas fa-lightbulb"></i></a>
           <a class="dropdown-item env_color" href="{{ URL::to('/profile') }}">@lang('navigation.MYPROFILE')</a>
           <!--a class="dropdown-item env_color" href="{{ Utils::userProfile() }}" target="_blank">@lang('navigation.GRAVATAR')</a-->
-          <a class="dropdown-item env_color" href="{{ url('/profile/projects') }}">My projects</a>
+          <a class="dropdown-item env_color" href="{{ url('/profile/projects') }}">@lang('navigation.MYPROJECTS')</a>
           <!--a class="dropdown-item env_color" href="{{ URL::to('/map') }}">@lang('navigation.MAP')</a-->
           <a class="dropdown-item env_color" href="{{ url('/auth/logout') }}">@lang('navigation.LOGOUT')</a>
         </div>
       </div>
     </div>
     @endif
+    
+  </div>
+  <div class="changeLang">
+  @foreach ($langs as $lang)
+  		<a href="{{ url('/?lang='.$lang) }}">
+  			<img src="{{ url('img/flag-'.$lang.'.png') }}" />
+  		</a>
+  @endforeach
   </div>
 </nav><!-- navbar -->
 

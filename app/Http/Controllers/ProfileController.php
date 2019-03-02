@@ -9,15 +9,21 @@ use Grimzy\LaravelMysqlSpatial\Types\Point;
 class ProfileController extends Controller
 {
 
-    public function show()
+    public function show(Request $request)
     {
-    	return view('80_Pages.profile', array(
-      		'user' => Auth::user()
+        $msg = $request->input('msg','');
+        $msgClass = $request->input('msgclass','');
+        return view('80_Pages.profile', array(
+      		'user' => Auth::user(),
+            'msg' => $msg,
+            'msgClass' => $msgClass
       	));
 	}
 
 	public function update(Request $request) {
-		$user = Auth::user();
+	    $msg = $request->input('msg','');
+	    $msgClass = $request->input('msgclass','');
+	    $user = Auth::user();
 		$user->username = $request->username;
 		$user->realname = $request->realname;
 		$user->profileUrl = $request->profileUrl;
@@ -88,7 +94,7 @@ class ProfileController extends Controller
 			$user->setManufacturerAdditionals($additionals);
 		}
 		$user->save();	
-		return redirect('/profile');
+		return redirect(url('/profile').'?msg='.__('profile.SAVED').'&msgclass=alert-success');
 	}
 
 }

@@ -12,5 +12,7 @@ yarn-error.log
 .env
 *.lock
 *~
-
+.buildpath
+.project
+/.settings
 
