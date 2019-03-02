@@ -4,6 +4,10 @@ Imagine if people from different fields of expertise worked together to open sou
 
 For more info, please visit our webpage at: [https://envienta.com/](https://envienta.com/)
 
+## Long time concept
+
+https://medium.com/envienta-open-source-everything/the-envienta-platform-through-the-developers-eyes-dd31943e40ae
+
 ## Get started
 
 - Download and install [composer](https://getcomposer.org/)
