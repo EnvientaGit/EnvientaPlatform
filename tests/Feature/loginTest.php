@@ -33,37 +33,47 @@ class loginTest extends TestCase
         
         $this->request->merge(['email' => 'test@test.hu']);
         $res = $this->controller->requestPin($this->request);
-        $this->assertEquals($res,'sent');
+        
+        // $this->assertFalse($actual);
+        // $this->assertTrue($actual);
+        // $this->assertGreaterThan($expected, $actual);
+        // $this->assertGreaterThanOrEqual()
+        // $this->assertLessThan($excepted, $actual)
+        // $this->assertLessThanOrEqual($excepted, $actual)
+        // $this->assertEquals($excepted, $actual);
+        // $this->assertRegExp($pattern, $actual)
+        
+        $this->assertEquals('sent',$res);
     }
     
     public function test_requestPin_ByPsw() {
         $this->request->merge(['email' => 'test2@test.hu']);
         $res = $this->controller->requestPin($this->request);
-        $this->assertEquals($res,'psw');
+        $this->assertEquals('psw',$res);
     }
     
     public function test_login_byPin_ok() {
         $this->request->merge(['email' => 'test1@test.hu', 'pin' => '123']);
         $res = $this->controller->login($this->request);
-        $this->assertEquals($res,'success');
+        $this->assertEquals('success',$res);
     }
     
     public function test_login_byPsw_ok() {
         $this->request->merge(['email' => 'test2@test.hu', 'psw' => '123']);
         $res = $this->controller->login($this->request);
-        $this->assertEquals($res,'success');
+        $this->assertEquals('success',$res);
     }
 
     public function test_login_byPin_notok() {
         $this->request->merge(['email' => 'test1@test.hu', 'pin' => '56123']);
         $res = $this->controller->login($this->request);
-        $this->assertEquals($res,'fail');
+        $this->assertEquals('fail',$res);
     }
     
     public function test_login_byPsw_notok() {
         $this->request->merge(['email' => 'test2@test.hu', 'psw' => '56123']);
         $res = $this->controller->login($this->request);
-        $this->assertEquals($res,'fail');
+        $this->assertEquals('fail',$res);
     }
     
     public function test_end() {
