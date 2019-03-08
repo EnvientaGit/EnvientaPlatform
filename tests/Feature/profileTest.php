@@ -68,7 +68,7 @@ class profileTest extends TestCase
         $this->request->bio = '';
         $this->pw_auth = 1;
         $res = $this->controller->update($this->request);
-        $this->assertRegExp('/profile\?msg\=/',$res);
+        $this->assertRegExp('/profile\?msg\=/',$res->redirect);
     }
     
     public function test_end() {

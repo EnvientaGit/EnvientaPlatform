@@ -30,6 +30,8 @@ class loginTest extends TestCase
         DB::table('users')->where(['email' => 'test2@test.hu'])->delete();
         DB::table('users')->insert(["email"=>'test1@test.hu', 'psw'=>'', 'pin'=> '123']);
         DB::table('users')->insert(["email"=>'test2@test.hu', 'psw'=> md5('123'), 'pin'=> '123']);
+        $user = DB::table('users')->where(["email"=>"test2@test.hu"])->first();
+        DB::table('users')->where(["email"=>"test2@test.hu"])->update(["psw" => md5('123'.$user->id)]);
         
         $this->request->merge(['email' => 'test@test.hu']);
         $res = $this->controller->requestPin($this->request);

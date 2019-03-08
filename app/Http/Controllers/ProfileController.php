@@ -34,7 +34,8 @@ class ProfileController extends Controller
 		
 		if (isset($request->pw_auth)) {
 			if ($request->psw != '') {
-				$user->psw = md5($request->psw);
+				// $user->psw = md5($request->psw.$user->id);
+			    $user->psw = md5($request->psw.$user->id);
 			}	
 		} else {
 			$user->psw = '';

@@ -229,6 +229,22 @@ class VerifyCsrfToken extends Middleware
     ];
 }
 ```
+## Data Models ##
+
+file: app/**modelName**.php
+```
+<?php
+
+namespace App;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Project extends Model {
+	...
+	inherited: DB::table(modelName)
+	
+}
+```
 
 ## see more ##
 

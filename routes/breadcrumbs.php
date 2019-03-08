@@ -45,3 +45,5 @@ Breadcrumbs::register('project', function ($breadcrumbs, $slug) {
     $breadcrumbs->parent('home');
     $breadcrumbs->push('Project', route('project', $slug));
 });
+
+        

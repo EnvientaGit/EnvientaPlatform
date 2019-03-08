@@ -18,5 +18,7 @@ function mockView(string $viewName, array $params = []) {
  * @return string
  */
 function mockRedirect(string $url) {
-    return $url;
+    $result = new stdClass();
+    $result->redirect = $url;
+    return $result;
 }

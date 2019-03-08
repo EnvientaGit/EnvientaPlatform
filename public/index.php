@@ -3,7 +3,7 @@
 use App\Http\Controllers;
 
 /**
- * mockedable view function for phpunit test
+ * view function can mock for phpunit test
  * @param string $viewName
  * @param array $params
  * @return array
@@ -13,7 +13,7 @@ function mockView(string $viewName, array $params = []) {
 }
 
 /**
- * mockedable redirect function for phpunit test
+ * redirect function can mock for phpunit test
  * @param string $url
  * @return \Illuminate\Routing\Redirector|\Illuminate\Http\RedirectResponse
  */
