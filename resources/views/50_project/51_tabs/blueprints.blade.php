@@ -13,34 +13,41 @@
 			@foreach($folders as $folder)
 			<div class="row mr-0">
 				<div class="border card box-shadow-bottom mb-3">
+					<div class="tableTitle">
+    						@if($folder['name'] == 'images')
+    							<caption class="p-2 text-dark bg-light border-top">
+    								<h4>@lang('project.SLIDER_IMAGES')</h4>
+    							</caption>
+    						@else
+    							@if ($folder['name'] == 'blueprints')
+    								<caption>
+        							<h4>@lang('project.BLUEPRINTS')</h4>
+        							</caption>
+    							@else
+        							<caption class="p-2 text-dark bg-light border-top">
+        							<h4>{{ $folder['name'] }}</h4>
+        							@if($mine)
+        								<a href=""><i class="fa fa-window-close text-danger env_edit p-1 pull-right" 
+        									title="@lang('project.DELETEFOLDER')"></i></a>
+        							@endif
+        							</caption>
+        						@endif
+    						@endif
+					</div>	
+				
 					<table class="table table-hover table-responsive table-sm rounded mb-0">
-						@if($folder['name'] == 'images')
-						<caption class="p-2 text-dark bg-light border-top">Slider images</strong>
-						</caption>
-						@else
-						<caption class="p-2 text-dark bg-light border-top">List of <strong class="env_color">{{ $folder['name'] }}</strong>
-							@if($mine)
-							<a href=""><i class="fa fa-window-close text-danger env_edit p-1 pull-right"></i></a>
-							@endif
-						</caption>
-						@endif
-						<thead class="thead-default bg-light">
+						<thead>
 							<tr>
 								<th class="border-0">№</th>
+								<th class="border-0 w-40">@lang('project.NAME')</th>
+								<th class="border-0 w-20">@lang('project.DATE')</th>
+								<th class="border-0 w-30">@lang('project.SIZE')</th>
 								@if($mine)
-								<th class="border-0 w-40">Name</th>
-								@else
-								<th class="border-0 w-55">Name</th>
+									<th class="border-0 w-15">@lang('project.DELETE')</th>
 								@endif
-								<th class="border-0 w-20">Date</th>
-								{{--<th class="border-0 w-15">Version</th>--}}
-								<th class="border-0 w-30">Size</th>
-								@if($mine)
-								<th class="border-0 w-15">Delete</th>
-								@endif
-								<th class="border-0">File</th>
+								<th class="border-0">@lang('project.DOWNLOAD')</th>
 							</tr>
-						</thead>
+						</thead>	
 						<tbody>
 							@foreach($folder['files'] as $idx => $file)
 							<tr class="text-center">
@@ -50,9 +57,16 @@
 								{{--<td class="text-left">v1.1.2</td>--}}
 								<td class="text-left">{{$file['size']}}</td>
 								@if($mine)
-								<td class="text-left"><a href="#" class="text-danger file_drop" data-folder="{{$folder['name']}}" data-file="{{$file['name']}}">Drop <i class="fa fa-times text-danger" aria-hidden="true"></i></a></td>
+								<td class="text-danger">
+								  <a href="#" data-folder="{{$folder['name']}}"
+									title="@lang('project.DROP')"  
+									data-file="{{$file['name']}}" class="file_drop">
+								     <i class="fa fa-times fa-lg" aria-hidden="true"></i></a>
+								</td>
 								@endif
-								<td class=""><a href="{{ $repo_url . '/' . $folder['name'] . '/' . $file['name'] }}" target="_blank"><i class="far fa-cloud-download fa-lg" aria-hidden="true"></i></a></td>
+								<td class="text-danger"><a href="{{ url($repo_url . '/' . $folder['name'] . '/' . $file['name']) }}" 
+									title="@lang('project.DOWNLOAD')" target="_blank">
+									<i class="far fa-cloud-download fa-lg" aria-hidden="true"></i></a></td>
 							</tr>
 							@endforeach
 						</tbody>
@@ -65,7 +79,7 @@
 										<div class="text-center rounded position-absolute w-100 h-100 env_drag">
 											<div class="mt-3">
 												<i class="far fa-cloud-upload fa-2x text-primary" aria-hidden="true"></i>
-												<h6>Upload</h6>
+												<h6>@lang('project.UPLOAD')</h6>
 											</div>
 										</div>
 										<input type="hidden" name="folder" value="{{ $folder['name'] }}">
@@ -87,10 +101,13 @@
 					<form id="blueprints_add_folder" method="post" target="_blueprints_ajax_frame" action="{{ $project_url }}">
 						{{ csrf_field() }}
 						<div class="input-group">
+							<input name="folder" type="text" class="form-control" 
+							placeholder="@lang('project.NEWFOLDER')" aria-label="Input group example" aria-describedby="btnGroupAddon2">
 							<div class="input-group-prepend">
-								<button class="env_link_grey env_point input-group-text env_border_rslim" id="btnGroupAddon2" type="submit">Add</button>
+								<button class="env_link_grey env_point input-group-text env_border_rslim" id="btnGroupAddon2" type="submit">
+									@lang('project.ADD')
+								</button>
 							</div>
-							<input name="folder" type="text" class="form-control" placeholder="New folder" aria-label="Input group example" aria-describedby="btnGroupAddon2">
 						</div>
 					</form>
 				</div>
@@ -109,7 +126,7 @@
 					</div>
 					{{--
 						<div class="card-footer env_uploaded_div pl-2">
-							<p class="env_p">Uploaded at XXX</p>
+							<p class="env_p">@lang('project.UPLADED')</p>
 						</div>
 						--}}
 					</div>

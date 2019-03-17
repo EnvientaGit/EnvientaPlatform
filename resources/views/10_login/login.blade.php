@@ -152,7 +152,7 @@
     $.get("{{ url('/auth/login') }}", {email: $('#request_pin_email').val(), pin: $('#login_pin').val()}).done(function(data) {
       $('#login_pin').val('');
       if(data == 'success') {
-        location.replace('/profile');
+        location.replace("{{ url('/profile') }}");
       } else {
         $('#mail_block').hide();
 	     $('#wrongPinMsg').show();

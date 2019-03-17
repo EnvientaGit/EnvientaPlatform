@@ -4,7 +4,7 @@
     <form method="post" action="{{ URL::to('project/new') }}" enctype="multipart/form-data">
       {{ csrf_field() }}
       <div class="modal-header bg-light p-2">
-        <h5 class="modal-title">New project</h5>
+        <h5 class="modal-title">@lang('project.NEW_PROJECT')</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <i class="fa fa-times fa-xs"></i>
         </button>
@@ -12,32 +12,44 @@
       <div class="card-body p-3">
 
           <div class="form-group">
-            <label for="title" class="mb-0">Title</label>
-            <input name="title" type="text" class="btn-sm form-control" id="title" placeholder="Write a title" required="required">
+            <label for="title" class="mb-0">@lang('project.TITLE')</label>
+            <input name="title" type="text" class="btn-sm form-control" id="title"
+            	 placeholder="" required="required">
           </div>
           <div class="form-group">
-            <label for="description" class="mb-0">Description <small id="descriptionHelp" class="text-muted">(short project description)</small></label>
+            <label for="description" class="mb-0">@lang('project.DESCRIPTION')</label>
             <textarea name="description" class="btn-sm form-control" id="description" aria-describedby="descriptionHelp" placeholder="Write a description" rows="3" required="required"></textarea>
           </div>
           <div class="form-group">
-            <label for="tags" class="mb-0">Tags <small id="descriptionHelp" class="text-muted">(max. 6)</small></label>
-            <input name="tags" type="text" class="btn-sm form-control taglist" id="tags" placeholder="Enter tags">
+            <label for="tags" class="mb-0">@lang('project.TAGS')<small id="descriptionHelp" class="text-muted">(max. 6)</small></label>
+            <input name="tags" type="text" class="btn-sm form-control taglist" id="tags" placeholder="">
           </div>
 
           <!-- YouTube Link input section -->
           <div class="form-group">
-            <label for="vid_link" class="mb-0">Video link</label>
-            <input name="vid_link" type="text" class="btn-sm form-control" id="vid_link" placeholder="Enter YouTube video URL here">
+            <label for="vid_link" class="mb-0">@lang('project.VIDEO')</label>
+            <input name="vid_link" type="text" class="btn-sm form-control" id="vid_link" placeholder="">
           </div>
           <!-- YouTube Link input section -->
 
           <div class="form-group">
-            <label for="images" class="mb-0">Project images <small class="text-muted">(multiple images allowed, min. 1 required)</small></label>
-            <div style="position: relative; left: 0px; top: 0px; height: 40px;" class="mb-3">
-              <div class="btn btn-outline-primary" style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%;">Drop files here or click to upload</div>
-              <input id="env_point" type="file" name="images[]" accept="image/x-png,image/gif,image/jpeg" style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; opacity:0;" required="true" multiple="true">
+            <label for="images" class="mb-0">
+            	@lang('project.IMAGES')
+            	<small class="text-muted">@lang('project.IMAGES_HELP')</small>
+            </label>
+       		<div id="selectedImages"></div>
+            <div style="position: relative; left: 0px; top: 0px; height: 60px;" class="mb-3">
+              <div class="btn btn-outline-primary" style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%;">
+				<i class="far fa-cloud-upload fa-2x text-primary" aria-hidden="true"></i>
+              	&nbsp; @lang('project.IMAGES_HELP2')
+              </div>
+              <input id="env_point" type="file" name="images[]" 
+                accept="image/x-png,image/gif,image/jpeg" 
+                style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%; opacity:0;" 
+                required="true" multiple="true">
             </div>
           </div>
+          
           <div class="form-group mb-0">
             <label for="license" class="mb-0"><b>License:</b> Creative Commons - Attribution + ShareAlike
               <small class="text-muted" style="display: none;">(Regularly used <a href="https://creativecommons.org/" class="env_link text-success" target="_blank">Creative Commons</a> license)</small>
@@ -78,8 +90,8 @@
 
       </div>
       <div class="card-footer p-2 text-right">
-        <button type="button" class="btn btn-outline-secondary btn-sm" data-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn-sm env_button">Create project</button>
+        <button type="button" class="btn btn-outline-secondary btn-sm" data-dismiss="modal">@lang('project.CLOSE')</button>
+        <button type="submit" class="btn btn-sm env_button">@lang('project.CREATE')</button>
         <br>
         <hr>
 
@@ -89,7 +101,7 @@
               <div class="card border border-dark mb-5 _bpulse">
                 <div class="card-body">
                   <h6 class="text-center mb-0">
-                    Hi everyone. In order to further develop our platform, we need your feedback and help. Also if you have any questions, don't hesitate to ask. We are waiting for you in our Telegram channel.<br>
+                  	@lang('campaign.TELEGRAM')
                     <i class="fab fa-telegram-plane fa-3x _blue"></i>
                   </h6>
                 </div>
@@ -118,6 +130,17 @@
     $('.popover-dismiss').popover({
       trigger: 'focus'
     })
+    $('#env_point').change(function() {
+        var c = $('#env_point');
+        var i = c.length;
+        var s = $('#selectedImages').html();
+        if (s != '') {
+            s += '<br />';
+        }
+        s += c[i - 1].value;
+        $('#selectedImages').html(s);
+    });
+    
   })
 
 </script>

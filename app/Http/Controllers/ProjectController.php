@@ -15,7 +15,8 @@ use Illuminate\Support\Facades\Auth;
 
 class ProjectController extends Controller
 {
-
+  private  $enabledMimes = array('image/png','image/gif','image/jpg','image/jpeg');
+    
   private function getFolders($project_path) {
     $folders = array();  
     $folder_names = scandir($project_path);
@@ -49,7 +50,7 @@ class ProjectController extends Controller
   public function showFiles($slug) {
     $project = DB::table('projects')->where('slug', $slug)->first();
     $project_path = public_path() . "/repo/" . $slug;
-    return view('50_project.51_tabs.blueprints', array(
+    return mockView('50_project.51_tabs.blueprints', array(
       'project_url' => url("/project") . '/' . $slug,
       'repo_url' => url("/repo") . '/' . $slug, 
       'folders' => $this->getFolders($project_path),
@@ -78,7 +79,7 @@ class ProjectController extends Controller
       $image_urls[] = url("/repo/" . $project->slug . '/images') . '/' . $image; 
     }  
 
-    return view('20_platform.project', array(
+    return mockView('20_platform.project', array(
       'project' => $project, 
       'project_url' => url("/project") . '/' . $project->slug,
       'repo_url' => url("/repo") . '/' . $project->slug, 
@@ -135,32 +136,35 @@ class ProjectController extends Controller
       $project->save();
 
       $project_path = public_path() . "/repo/" . $project->slug;
+     
       @mkdir($project_path, 0700, TRUE);
+      
       GitRepository::init($project_path);
-      file_put_contents($project_path . "/readme.md", 'Click on the pencil on the right top side to edit this content.');
+      file_put_contents($project_path . "/readme.md", '');
+      // 'Click on the pencil on the right top side to edit this content.');
 
       $blueprints_path = $project_path . '/blueprints';
       @mkdir($blueprints_path, 0700, TRUE); 
       $images_path = $project_path . '/images';
       @mkdir($images_path, 0700, TRUE); 
-      $enabledMimes = array('image/x-png','image/gif','image/jpeg');
       $images = $request->file('images');
-      foreach ($images as $image) {
-        if(Utils::checkFile($image, $enabledMimes))
-          $image->move($images_path, $image->getClientOriginalName());
-      }  
-
-      return redirect('/project/' . $project->slug);
+      if (is_array($images)) {
+          foreach ($images as $image) {
+            if(Utils::checkFile($image, $this->enabledMimes))
+              $image->move($images_path, $image->getClientOriginalName());
+          }  
+      }
+      return mockRedirect(url('/project/' . $project->slug));
     }
   }
 
   public function listMembers($slug = NULL) {
-    $project = Project::where('slug', $slug)->first();
-    return view('30_sidebar.members', array(
-      'project' => $project
-    ));
+      $project = Project::where('slug', $slug)->first();
+      return mockView('30_sidebar.members', array(
+          'project' => $project
+      ));
   }
-
+  
   private function checkMembership($user, $project) {
     if($user->id == $project->owner)
       return true;
@@ -208,8 +212,13 @@ class ProjectController extends Controller
       if ($request->has('files')) {
         $files = $request->file('files');
         foreach ($files as $file) {
-          if(Utils::checkFile($file))
-            $file->move($project_path . '/' . $folder, $file->getClientOriginalName());
+          if ($folder == 'images') {
+              if(Utils::checkFile($file, $this->enabledMimes))
+                  $file->move($project_path . '/' . $folder, $file->getClientOriginalName());
+          } else {
+              if(Utils::checkFile($file))
+                  $file->move($project_path . '/' . $folder, $file->getClientOriginalName());
+          }
         }
       }
     }
@@ -252,7 +261,7 @@ class ProjectController extends Controller
       return $updateMembersResult;
 
     if($request->has('redirect'))
-      return redirect('/project/' . $project->slug);
+      return mockRedirect(url('/project/' . $project->slug));
   }
 
 }

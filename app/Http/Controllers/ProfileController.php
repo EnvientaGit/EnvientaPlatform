@@ -13,13 +13,13 @@ class ProfileController extends Controller
     {
         $msg = $request->input('msg','');
         $msgClass = $request->input('msgclass','');
-        return view('80_Pages.profile', array(
+        return mockView('80_Pages.profile', array(
       		'user' => Auth::user(),
             'msg' => $msg,
             'msgClass' => $msgClass
       	));
-	}
-
+    }
+    
 	public function update(Request $request) {
 	    $msg = $request->input('msg','');
 	    $msgClass = $request->input('msgclass','');
@@ -34,7 +34,8 @@ class ProfileController extends Controller
 		
 		if (isset($request->pw_auth)) {
 			if ($request->psw != '') {
-				$user->psw = md5($request->psw);
+				// $user->psw = md5($request->psw.$user->id);
+			    $user->psw = md5($request->psw.$user->id);
 			}	
 		} else {
 			$user->psw = '';
@@ -94,7 +95,7 @@ class ProfileController extends Controller
 			$user->setManufacturerAdditionals($additionals);
 		}
 		$user->save();	
-		return redirect(url('/profile').'?msg='.__('profile.SAVED').'&msgclass=alert-success');
+		return mockRedirect(url('/profile').'?msg='.__('profile.SAVED').'&msgclass=alert-success');
 	}
 
 }
