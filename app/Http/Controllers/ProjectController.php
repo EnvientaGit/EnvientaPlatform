@@ -263,5 +263,5 @@ class ProjectController extends Controller
     if($request->has('redirect'))
       return mockRedirect(url('/project/' . $project->slug));
   }
-
+  
 }

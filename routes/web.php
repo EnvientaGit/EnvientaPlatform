@@ -65,3 +65,5 @@ Route::name('fb_login')->get('/auth/fb_login', 'LoginController@loginWithFaceboo
 Route::name('sendOrder')->get('/shop/sendOrder', 'ShopController@sendOrder');
 
 //Route::get('/user/list', 'UserController@listUsers');
+
+Route::name('pmapi')->get('/pmapi/{sessionid}/{projectid}', 'PmapiController@api');
