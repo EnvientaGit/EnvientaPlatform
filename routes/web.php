@@ -53,6 +53,7 @@ Route::name('new_project')->post('/project/new', 'ProjectController@newProject')
 //Route::middleware('page-cache')->get('/project/{id}', 'ProjectController@show');
 Route::name('project')->get('/project/{slug}', 'ProjectController@show');
 Route::name('project_files')->get('/project/{slug}/files', 'ProjectController@showFiles');
+Route::name('project_tasks')->get('/project/{slug}/tasks', 'ProjectController@tasks');
 Route::name('project_members')->get('/project/{slug}/members', 'ProjectController@listMembers');
 Route::name('project_update')->post('/project/{slug}', 'ProjectController@update');
 

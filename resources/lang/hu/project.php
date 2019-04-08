@@ -69,5 +69,6 @@ return [
     'PUBLIC' => "Nyilvános",
     'SET_STATUS' => "Beállít",
     'STAUS_HELP' => "A nyilvános projektek mindenki számára láthatóak!",
+    'TASKS' => "Feladatok",
     
 ];
