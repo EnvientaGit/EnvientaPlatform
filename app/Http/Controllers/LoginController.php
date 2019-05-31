@@ -61,11 +61,14 @@ class LoginController extends Controller
 	 */
     public function login(Request $request) {
     	if (isset($request->psw)) {
-	      $user = User::where('email', $request->input('email'))->where('psw', md5($request->input('psw')))->first();
-	      if($user) {
-	        Auth::login($user, true);
-	        return "success";
-	      } 
+    	    // $user = User::where('email', $request->input('email'))->where('psw', md5($request->input('psw')))->first();
+    	    $users = User::where('email', $request->input('email'));
+    	    $user = $users->first();
+    	    $user = $users->where('psw', md5($request->input('psw').$user->id))->first();
+    	    if($user) {
+	           Auth::login($user, true);
+	           return "success";
+	       } 
     	} else {
 	      $user = User::where('email', $request->input('email'))->where('pin', $request->input('pin'))->first();
 	      if($user) {
@@ -81,7 +84,7 @@ class LoginController extends Controller
     
     public function logout() {
       Auth::logout();
-      return redirect('/');
+      return redirect(url('/'));
     }
 
     public function loginWithFacebook(Request $request)
