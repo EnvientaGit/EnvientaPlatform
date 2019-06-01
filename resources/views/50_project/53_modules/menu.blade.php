@@ -1,9 +1,3 @@
-<?php 
-
-$remoteModules = config('app.remoteModules');
-echo JSON_encode($remoteModules);
-
-?>
 <div class="row my-3">
   <div class="col-md-12">
     <div class="border card w-100">
