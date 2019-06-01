@@ -9,15 +9,21 @@ use Grimzy\LaravelMysqlSpatial\Types\Point;
 class ProfileController extends Controller
 {
 
-    public function show()
+    public function show(Request $request)
     {
-    	return view('80_Pages.profile', array(
-      		'user' => Auth::user()
+        $msg = $request->input('msg','');
+        $msgClass = $request->input('msgclass','');
+        return mockView('80_Pages.profile', array(
+      		'user' => Auth::user(),
+            'msg' => $msg,
+            'msgClass' => $msgClass
       	));
-	}
-
+    }
+    
 	public function update(Request $request) {
-		$user = Auth::user();
+	    $msg = $request->input('msg','');
+	    $msgClass = $request->input('msgclass','');
+	    $user = Auth::user();
 		$user->username = $request->username;
 		$user->realname = $request->realname;
 		$user->profileUrl = $request->profileUrl;
@@ -25,6 +31,15 @@ class ProfileController extends Controller
 		$user->linkedinUrl = $request->linkedinUrl;
 		$user->walletAddress = $request->walletAddress;
 		$user->bio = $request->bio;
+		
+		if (isset($request->pw_auth)) {
+			if ($request->psw != '') {
+				// $user->psw = md5($request->psw.$user->id);
+			    $user->psw = md5($request->psw.$user->id);
+			}	
+		} else {
+			$user->psw = '';
+		}		
 
 		$user->isMaker = isset($request->isMaker); 
 		if($user->isMaker) {
@@ -79,10 +94,12 @@ class ProfileController extends Controller
 			$additionals[13] = isset($request->mcb13);
 			$user->setManufacturerAdditionals($additionals);
 		}
-
 		$user->save();	
-
-		return redirect('/profile');
+		return mockRedirect(url('/profile').'?msg='.__('profile.SAVED').'&msgclass=alert-success');
+	}
+	
+	public function tasks() {
+	    return 'project tasks';
 	}
 
 }

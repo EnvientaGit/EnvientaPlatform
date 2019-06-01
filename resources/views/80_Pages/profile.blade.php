@@ -7,8 +7,10 @@
 @section('content')
 
     <div class="container p-3"><!-- Begin of the container -->
-      <form method="post">
+      <form method="post" id="profileForm">
         {{ csrf_field() }}
+      <div class="row alert" style="display:none" id="msg">
+      </div>  
       <div class="row mb-4"><!-- Begin of the Row -->
         <div class="col-md-12"><!-- Begin of the Main colum -->
           <div class="" style="height: 100px;"></div>
@@ -19,7 +21,8 @@
                 <div class="card border border-dark mb-5 _bpulse">
                   <div class="card-body">
                     <h6 class="text-center mb-0">
-                      Hi everyone. In order to further develop our platform, we need your feedback and help. Also if you have any questions, don't hesitate to ask. We are waiting for you in our Telegram channel. Click here: <a href="https://t.me/envienta" target="_blank"></a> <i class="fab fa-telegram-plane _blue"></i>
+                      @lang('campaign.TELEGRAM');
+                      <a href="https://t.me/envienta" target="_blank"></a> <i class="fab fa-telegram-plane _blue"></i>
                     </h6>
                   </div>
                 </div>
@@ -27,13 +30,17 @@
             </div>
           </div><!-- End of  Telegram attention -->
 
+		  <div class="alert alert-danger" id="errorMsg" style="display:none">
+		  </div>	
+
           <div class="row my-5">
             <div class="col-md-12">
               <div class="text-center">
                 <h3>
                   <i class="fa fa-user-plus _clr" aria-hidden="true"></i>
-                    Please pick your user type! <br>
-                  <h5>You can pick more!</h5>
+                    @lang('profile.PICK_TYPE')
+                    <br>
+                  <h5>@lang('profile.CAN_MORE')</h5>
                 </h3>
               </div>
             </div>
@@ -49,8 +56,8 @@
                   <div class="form-check">
                     <input name="isMaker" class="form-check-input" type="checkbox" id="maker_check" {{$user->isMaker ? 'checked="true"' : ''}}>
                     <label class="form-check-label" for="maker_check">
-                      <h5 class="card-text">Maker</h5>
-                      <small class="_clr">Available</small>
+                      <h5 class="card-text">@lang('profile.MAKER')</h5>
+                      <small class="_clr">@lang('profile.AVAILABLE')</small>
                       <!-- <small><i>Unavailable</i> </small> -->
                     </label>
                   </div>
@@ -65,8 +72,8 @@
                   <div class="form-check">
                     <input class="form-check-input" type="checkbox" value="" id="projects_check" disabled="disabled">
                     <label class="form-check-label" for="projects_check">
-                      <h5 class="card-text">Projects</h5>
-                      <small><i>Unavailable</i> </small>
+                      <h5 class="card-text">@lang('profile.PROJECTS')</h5>
+                      <small><i>@lang('profile.UNAVAILABLE')</i> </small>
                       <!-- <small><i>Unavailable</i> </small> -->
                     </label>
                   </div>
@@ -81,8 +88,8 @@
                   <div class="form-check">
                     <input class="form-check-input" type="checkbox" value="" id="investor_check" disabled="disabled">
                     <label class="form-check-label" for="investor_check">
-                      <h5 class="card-text">Investor</h5>
-                      <small><i>Unavailable</i> </small>
+                      <h5 class="card-text">@lang('profile.INVESTOR')</h5>
+                      <small><i>@lang('profile.UNAVAILABLE')</i> </small>
                       <!-- <small><i>Unavailable</i> </small> -->
                     </label>
                   </div>
@@ -99,8 +106,8 @@
                   <div class="form-check">
                     <input name="isManufacturer" class="form-check-input" type="checkbox" id="manufacturer_check" {{$user->isManufacturer ? 'checked="true"' : ''}}>
                     <label class="form-check-label" for="manufacturer_check">
-                      <h5 class="card-text">Manufacturer</h5>
-                      <small class="_clr">Available</small>
+                      <h5 class="card-text">@lang('profile.MANUFACTURER')</h5>
+                      <small class="_clr">@lang('profile.AVAILABLE')</small>
                       <!-- <small><i>Unavailable</i> </small> -->
                     </label>
                   </div>
@@ -115,8 +122,8 @@
                   <div class="form-check">
                     <input class="form-check-input" type="checkbox" value="" id="distributor_check" disabled="disabled">
                     <label class="form-check-label" for="distributor_check">
-                      <h5 class="card-text">Distributor</h5>
-                      <small><i>Unavailable</i> </small>
+                      <h5 class="card-text">@lang('profile.DISTRIBUTOR')</h5>
+                      <small><i>@lang('profile.UNAVAILABLE')</i> </small>
                     </label>
                   </div>
                 </div>
@@ -130,9 +137,9 @@
                   <div class="form-check">
                     <input name="isCustomer" class="form-check-input" type="checkbox" id="customer_check" {{$user->isCustomer ? 'checked="true"' : ''}} >
                     <label class="form-check-label" for="customer_check">
-                      <h5 class="card-text">Customer</h5>
-                      <small class="_clr">Available</small>
-                      <!-- <small><i>Unavailable</i> </small> -->
+                      <h5 class="card-text">@lang('profile.CUSTOMER')</h5>
+                      <small class="_clr">@lang('profile.AVAILABLE')</small>
+                      <!-- <small><i>@lang('profile.UNAVAILABLE')</i> </small> -->
                     </label>
                   </div>
                 </div>
@@ -148,45 +155,68 @@
               <div class="col-md-4">
                 <div class="form-group">
                   <label for="email">
-                    <i class="fa fa-envelope-o" aria-hidden="true"></i> Email address</label>
-                  <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" value="{{$user->email}}" readonly="true">
+                    <i class="fa fa-envelope-o" aria-hidden="true"></i> 
+                    @lang('profile.EMAIL')
+                  </label>
+                  <input type="email" class="form-control" id="email" aria-describedby="emailHelp" 
+                  	placeholder="@lang('profile.EMAIL')" value="{{$user->email}}" readonly="true">
                   <!--small id="emailHelp" class="form-text text-muted">Please enter a valid email addres</small-->
                 </div>
               </div>
               <div class="col-md-4">
                 <div class="form-group">
                   <label for="username">
-                    <i class="fa fa-user" aria-hidden="true"></i> Username</label>
-                  <input type="text" class="form-control" name="username" id="username" aria-describedby="emailHelp" placeholder="Enter username" value="{{$user->username}}">
-                  <small id="emailHelp" class="form-text text-muted">Please enter a valid username</small>
+                    <i class="fa fa-user" aria-hidden="true"></i> 
+                    @lang('profile.USERNAME')
+                  </label>
+                  <input type="text" class="form-control" name="username" id="username" aria-describedby="emailHelp"
+                     placeholder="@lang('profile.USERNAME')" value="{{$user->username}}">
+                  <small id="emailHelp" class="form-text text-muted">
+	                  @lang('profile.USERNAME_HELP')
+                  </small>
                 </div>
               </div>
               <div class="col-md-4">
                 <div class="form-group">
                   <label for="real_name">
-                    <i class="fa fa-id-card-o" aria-hidden="true"></i> Real name</label>
-                  <input type="text" class="form-control" name="realname" id="real_name" aria-describedby="emailHelp" placeholder="Enter real name" value="{{$user->realname}}">
-                  <small id="emailHelp" class="form-text text-muted">Please enter a valid real name</small>
-                </div>
-              </div>
-
-              <div class="col-md-12">
-                <div class="card border border-dark">
-                  <div class="card-header">
-                    <h6 class="float-left">Enable password based authenticaton</h6>
-                    <div class="form-check float-right">
-                      <input class="form-check-input" type="checkbox" value="" id="pw_auth">
-                      <label class="form-check-label" for="pw_auth"></label>
-                    </div>
-                  </div>
-                  <div class="card-body">
-                    <p class="w-75 mb-0 float-left">Here you are able to define a personal password instead of the pin code login method</p>
-                    <button type="button" class="float-right btn btn-primary btn-sm" data-toggle="modal" data-target="#add_pw" disabled="disabled">Set</button>
-                  </div>
+                    <i class="fa fa-id-card-o" aria-hidden="true"></i> 
+                    @lang('profile.REALNAME')
+                  </label>
+                  <input type="text" class="form-control" name="realname" id="real_name" aria-describedby="emailHelp"
+                     placeholder="@lang('profile.REALNAME')" value="{{$user->realname}}">
+                  <small id="emailHelp" class="form-text text-muted">
+	                  @lang('profile.USERNAME_HELP')
+                  </small>
                 </div>
               </div>
 
           </div><!-- End of the Fill-form -->
+
+          <div class="row my-5"><!-- Begin of the Fill-form -->
+              <div class="col-md-12">
+                <div class="card border border-dark">
+                  <div class="card-header">
+                    <h6 class="float-left">@lang('profile.ENABLE_PSW')</h6>
+                  </div>  
+                  <div class="card-body">
+                    <input type="checkbox" value="0" id="pw_auth" name="pw_auth">
+                    <span id="pswInputs" style="display:none">
+                    @lang('profile.PSW'):
+                    <input type="password" id="inputPsw"  
+	                      	name="psw" value=""  
+	                      	value="{{$user->psw}}" />
+                    @lang('profile.PSWAGAIN'):
+                    <input type="password" id="inputPsw2"  
+	                      	name="psw2" value="" 
+	                      	value="{{$user->psw}}" />
+	                 <br />@lang('profile.PSWHELP')     	
+	                 </span>     	
+	                </div>
+				 	</div>
+				 </div>	
+          </div><!-- End of the Fill-form -->
+          
+          
 
             <div class="row"><!-- Begin of the Photo/Social/Bio Row -->
               <div class="col-md-3">
@@ -255,7 +285,7 @@
                       <input type="text" class="form-control" name="walletAddress" id="" placeholder="ERC-20" value="{{$user->walletAddress}}">
                     </div>
                     <div class="mb-4 ml-1">
-                      <small>Please be sure this is an ERC-20 wallet address. Otherwise your transaction could be lost.</small>
+                      <small>@lang('profile.ERC20_HELP')</small>
                     </div>
                   </div>
                 </div>
@@ -265,8 +295,10 @@
                     <div class="card border border-dark">
                       <div class="card-body text-left">
                         <div class="form-group mb-0">
-                          <label for="user_bio"><h6>Description</h6>
-                          <small class="text-muted">Short description about you</small></label>
+                          <label for="user_bio"><h6>@lang('profile.DESCRIPTION')</h6>
+                          <small class="text-muted">
+                          @lang('profile.DESCRIPTION_HELP')
+                          </small></label>
                           <textarea class="form-control" name="bio" id="user_bio" rows="3">{{$user->bio}}</textarea>
                         </div>
                       </div>
@@ -286,24 +318,30 @@
               <div class="card-body text-left">
 
                 <h6 class="text-left mb-3">
-                  You picked the <b class="_clr">Maker</b> user type,
-                  then please add a few tag about your skills <br>
-                  <small>Be aware that, these informations just about to define your order - not gonna be public!</small>
+                  @lang('profile.MAKER_HELP')
                 </h6>
 
 
                 <div class="input-group mb-2">
                   <div class="input-group-prepend">
-                    <span class="input-group-text" id="basic-addon3">Skills</span>
+                    <span class="input-group-text" id="basic-addon3">
+                    @lang('profile.SKILLS')
+                    </span>
                   </div>
-                  <input name="skills" type="text" class="form-control proplist" id="basic-url" aria-describedby="basic-addon3" placeholder="Php, 3D printing.. etc" value="{{$user->skills}}">
+                  <input name="skills" type="text" class="form-control proplist"
+                   id="basic-url" aria-describedby="basic-addon3" 
+                   placeholder="@lang('profile.SKILL_EXAMPLE')" value="{{$user->skills}}">
                 </div>
 
                 <div class="input-group">
                   <div class="input-group-prepend">
-                    <span class="input-group-text" id="basic-addon3">Interests</span>
+                    <span class="input-group-text" id="basic-addon3">
+                    @lang('profile.INTERESTS')
+                    </span>
                   </div>
-                  <input name="interests" type="text" class="form-control proplist" id="basic-url" aria-describedby="basic-addon3" placeholder="Robotics, AI.. etc" value="{{$user->interests}}">
+                  <input name="interests" type="text" class="form-control proplist"
+                   id="basic-url" aria-describedby="basic-addon3"
+                   placeholder="@lang('profile.INTERESTS_EXAMPLE')" value="{{$user->interests}}">
                 </div>
               </div>
             </div>
@@ -315,18 +353,18 @@
             <div class="card border border-dark">
               <div class="card-body text-left">
                 <h6 class="text-left mb-3">
-                  You picked the <b class="_clr">Manufacturer</b> user type,
-                  then please fill out a few details about you <br>
-                  <small>Be aware that, these informations just about to define your order - not gonna be public!</small>
+                  @lang('profile.MANUFACTURER_HELP')
                 </h6>
 
                 <!-- <div class="row">
                   <div class="col-md-10">
                     <div class="input-group mb-2">
                       <div class="input-group-prepend">
-                        <div class="input-group-text">Address</div>
+                        <div class="input-group-text">@lang('profile.ADDRESS')</div>
                       </div>
-                      <input id="manufacturerAddress" name="manufacturerAddress" type="text" class="form-control"  placeholder="Your address" value="{{$user->manufacturerAddress}}">
+                      <input id="manufacturerAddress" name="manufacturerAddress"
+                       type="text" class="form-control"
+                       placeholder="@lang('profile.ADDRESS_EXAMPLE')" value="{{$user->manufacturerAddress}}">
                     </div>
                   </div>
                   <div class="col-md-2">
@@ -334,55 +372,62 @@
                   </div>
                 </div> -->
 
-                <h6 class="mt-2">Your address</h6>
+                <h6 class="mt-2">@lang('profile.ADDRESS')</h6>
+
+
 
                 <div class="row mb-2" id="manufacturerAddressTarget">
-                  <div class="col-md-2">
+                  <div class="col-md-3">
                     <div class="input-group">
                       <div class="input-group-prepend">
-                        <div class="input-group-text">Country</div>
+                        <div class="input-group-text">@lang('profile.COUNTRY')</div>
                       </div>
-                      <input name="manufacturerAddressCountry" type="text" class="form-control" value="{{$user->manufacturerAddressCountry}}" data-geo="country_short">
-                    </div>
-                  </div>
-
-                  <div class="col-md-2">
-                    <!-- <label for="validationDefault1">Zip code</label> -->
-                    <div class="input-group">
-                      <div class="input-group-prepend">
-                        <span class="input-group-text" id="inputGroupPrepend1">Zip code</span>
-                      </div>
-                      <input id="validationDefault1" name="manufacturerAddressZip" type="text" class="form-control" placeholder="" aria-describedby="inputGroupPrepend1" required aria-describedby="inputGroupPrepend1" required value="{{$user->manufacturerAddressZip}}" data-geo="postal_code">
+                      <input name="manufacturerAddressCountry" type="text" 
+                      class="form-control" value="{{$user->manufacturerAddressCountry}}"
+                      data-geo="country_short">
                     </div>
                   </div>
 
                   <div class="col-md-3">
+                    <!-- <label for="validationDefault1">@lang('profile.ZIP')</label> -->
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroupPrepend1">@lang('profile.ZIP')</span>
+                      </div>
+                      <input id="validationDefault1" name="manufacturerAddressZip" type="text" class="form-control" placeholder="" aria-describedby="inputGroupPrepend1" aria-describedby="inputGroupPrepend1" value="{{$user->manufacturerAddressZip}}" data-geo="postal_code">
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
                     <!-- <label for="validationDefault2">City</label> -->
                     <div class="input-group">
                       <div class="input-group-prepend">
-                          <span class="input-group-text" id="inputGroupPrepend2">City</span>
+                          <span class="input-group-text" id="inputGroupPrepend2">
+                          @lang('profile.CITY')
+                          </span>
                       </div>
-                      <input id="validationDefault2" name="manufacturerAddressCity" type="text" class="form-control" placeholder="" aria-describedby="inputGroupPrepend2" required aria-describedby="inputGroupPrepend2" required value="{{$user->manufacturerAddressCity}}" data-geo="locality">
+                      <input id="validationDefault2" name="manufacturerAddressCity" type="text" class="form-control" placeholder="" aria-describedby="inputGroupPrepend2" aria-describedby="inputGroupPrepend2" value="{{$user->manufacturerAddressCity}}" data-geo="locality">
+                    </div>
+                  </div>
+				</div>
+                <div class="row mb-2" id="manufacturerAddressTarget">
+                  <div class="col-md-9">
+                    <!-- <label for="validationDefault3">@lang('profile.STREET')</label> -->
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                          <span class="input-group-text" id="inputGroupPrepend3">@lang('profile.STREET')</span>
+                      </div>
+                      <input id="validationDefault3" name="manufacturerAddressStreet" type="text" class="form-control" placeholder="" aria-describedby="inputGroupPrepend3" aria-describedby="inputGroupPrepend3" value="{{$user->manufacturerAddressStreet}}" data-geo="route">
                     </div>
                   </div>
 
                   <div class="col-md-3">
-                    <!-- <label for="validationDefault3">Street</label> -->
+                    <!-- <label for="validationDefault4">@lang('profile.NUMBER')</label> -->
                     <div class="input-group">
                       <div class="input-group-prepend">
-                          <span class="input-group-text" id="inputGroupPrepend3">Street</span>
+                          <span class="input-group-text" id="inputGroupPrepend4">@lang('profile.NUMBER')</span>
                       </div>
-                      <input id="validationDefault3" name="manufacturerAddressStreet" type="text" class="form-control" placeholder="" aria-describedby="inputGroupPrepend3" required aria-describedby="inputGroupPrepend3" required value="{{$user->manufacturerAddressStreet}}" data-geo="route">
-                    </div>
-                  </div>
-
-                  <div class="col-md-2">
-                    <!-- <label for="validationDefault4">Number</label> -->
-                    <div class="input-group">
-                      <div class="input-group-prepend">
-                          <span class="input-group-text" id="inputGroupPrepend4">Number</span>
-                      </div>
-                      <input id="validationDefault4" name="manufacturerAddressStreetNumber" type="text" class="form-control" placeholder="" aria-describedby="inputGroupPrepend4" required aria-describedby="inputGroupPrepend4" required value="{{$user->manufacturerAddressStreetNumber}}" data-geo="street_number">
+                      <input id="validationDefault4" name="manufacturerAddressStreetNumber" type="text" class="form-control" placeholder="" aria-describedby="inputGroupPrepend4" aria-describedby="inputGroupPrepend4" value="{{$user->manufacturerAddressStreetNumber}}" data-geo="street_number">
                     </div>
                   </div>
 
@@ -396,43 +441,49 @@
                   <div class="col-md-6">
                     <div class="input-group mb-2">
                       <div class="input-group-prepend">
-                        <div class="input-group-text">Manufacturer name</div>
+                        <div class="input-group-text">@lang('profile.MANUFACTURER_NAME')</div>
                       </div>
-                      <input type="text" class="form-control" id="" placeholder="Your manufacturer name" name="manufacturerName" value="{{$user->manufacturerName}}">
+                      <input type="text" class="form-control" id="manufacturerName" 
+                      placeholder="@lang('profile.MANUFACTURER_NAME')" name="manufacturerName" value="{{$user->manufacturerName}}">
                     </div>
                     <div class="input-group mb-2">
                       <div class="input-group-prepend">
-                        <div class="input-group-text">Billing address</div>
+                        <div class="input-group-text">@lang('profile.BILLING_ADDRESS')</div>
                       </div>
-                      <input type="text" class="form-control" id="" placeholder="Your billing address" name="manufacturerBillingAddress" value="{{$user->manufacturerBillingAddress}}">
+                      <input type="text" class="form-control" id="" 
+                      placeholder="@lang('profile.BILLING_ADDRESS')" name="manufacturerBillingAddress" value="{{$user->manufacturerBillingAddress}}">
                     </div>
                     <div class="input-group mb-2">
                       <div class="input-group-prepend">
-                        <div class="input-group-text">Phone number</div>
+                        <div class="input-group-text">@lang('profile.PHONE')</div>
                       </div>
-                      <input type="text" class="form-control" id="" placeholder="Your phone number" name="manufacturerPhoneNumber" value="{{$user->manufacturerPhoneNumber}}">
+                      <input type="text" class="form-control" id=""
+                         placeholder="@lang('profile.PHONE')" name="manufacturerPhoneNumber" value="{{$user->manufacturerPhoneNumber}}">
                     </div>
                   </div>
                   <div class="col-md-6">
                     <div class="input-group mb-2">
                       <div class="input-group-prepend">
-                        <div class="input-group-text">Website address</div>
+                        <div class="input-group-text">@lang('profile.WEB')</div>
                       </div>
-                      <input type="text" class="form-control" id="" placeholder="Your website address" name="manufacturerWebsite" value="{{$user->manufacturerWebsite}}">
+                      <input type="text" class="form-control" id=""
+                       placeholder="@lang('profile.WEB')" name="manufacturerWebsite" value="{{$user->manufacturerWebsite}}">
                     </div>
-                    <select class="custom-select mb-2" name="manufacturerWorkTime">
-                      <option value="0" disabled selected>Working time:</option>
-                      <option value="1" {{$user->manufacturerWorkTime==1 ? "selected" : ""}}>10 hour/week</option>
-                      <option value="2" {{$user->manufacturerWorkTime==2 ? "selected" : ""}}>20 hour/week</option>
-                      <option value="3" {{$user->manufacturerWorkTime==3 ? "selected" : ""}}>30 hour/week</option>
-                      <option value="4" {{$user->manufacturerWorkTime==4 ? "selected" : ""}}>40 hour/week</option>
-                      <option value="5" {{$user->manufacturerWorkTime==5 ? "selected" : ""}}>50 hour/week</option>
+                    <select class="custom-select mb-2" name="manufacturerWorkTime" 
+                      id="manufacturerWorkTime">
+                      <option value="0" disabled selected>@lang('profile.WORKINGTIME'):</option>
+                      <option value="1" {{$user->manufacturerWorkTime==1 ? "selected" : ""}}>10 @lang('profile.HOUR_PER_WEEK')</option>
+                      <option value="2" {{$user->manufacturerWorkTime==2 ? "selected" : ""}}>20 @lang('profile.HOUR_PER_WEEK')</option>
+                      <option value="3" {{$user->manufacturerWorkTime==3 ? "selected" : ""}}>30 @lang('profile.HOUR_PER_WEEK')</option>
+                      <option value="4" {{$user->manufacturerWorkTime==4 ? "selected" : ""}}>40 @lang('profile.HOUR_PER_WEEK')</option>
+                      <option value="5" {{$user->manufacturerWorkTime==5 ? "selected" : ""}}>50 @lang('profile.HOUR_PER_WEEK')</option>
                     </select>
                     <div class="input-group mb-2">
                       <div class="input-group-prepend">
-                        <div class="input-group-text">Tools</div>
+                        <div class="input-group-text">@lang('profile.TOOLS')</div>
                       </div>
-                      <input type="text" class="form-control" id="" placeholder="3D printer, laqser cutter, milling..etc" name="manufacturerTools" value="{{$user->manufacturerTools}}">
+                      <input type="text" class="form-control" id=""
+                        placeholder="@lang('profile.TOOLS_EXAMPLE')" name="manufacturerTools" value="{{$user->manufacturerTools}}">
                     </div>
                   </div>
                 </div>
@@ -440,26 +491,26 @@
                 <?php $additionals = $user->getManufacturerAdditionals(); ?>
                 <div class="row">
                   <div class="col-md-12">
-                    <h6 class="mb-3">Additional conditions and possiblities</h6>
+                    <h6 class="mb-3">@lang('profile.ADDITIONAL')</h6>
 
                     <div class="form-check">
                       <input class="form-check-input" type="checkbox" name="mcb0" id="manufacturer_1" {{$additionals[0] ? "checked" : ""}}>
                       <label class="form-check-label" for="manufacturer_1">
-                         Cutting machines that cut a variety of materials (plastics, metal, plaster, and other common materials) with precision (laser, water jet, knife)
+                         @lang('profile.ADDITIONAL0')
                       </label>
                     </div>
 
                     <div class="form-check">
                       <input class="form-check-input" type="checkbox" name="mcb1" id="manufacturer_2" {{$additionals[1] ? "checked" : ""}}>
                       <label class="form-check-label" for="manufacturer_2">
-                        Decorative materials for painting, embroidery and embellishing projects
+                        @lang('profile.ADDITIONAL1')
                       </label>
                     </div>
 
                     <div class="form-check">
                       <input class="form-check-input" type="checkbox" name="mcb2" id="manufacturer_3" {{$additionals[2] ? "checked" : ""}}>
                       <label class="form-check-label" for="manufacturer_3">
-                        Joining machines that use computer control to sew, weld, or bond in other ways
+                        @lang('profile.ADDITIONAL2')
                       </label>
                     </div>
 
@@ -470,35 +521,35 @@
                         <div class="form-check">
                           <input class="form-check-input" type="checkbox" name="mcb3" id="manufacturer_4" {{$additionals[3] ? "checked" : ""}}>
                           <label class="form-check-label" for="manufacturer_4">
-                            3D printers that are capable of producing three-dimensional objects
+                            @lang('profile.ADDITIONAL3')
                           </label>
                         </div>
 
                         <div class="form-check">
                           <input class="form-check-input" type="checkbox" name="mcb4" id="manufacturer_5" {{$additionals[4] ? "checked" : ""}}>
                           <label class="form-check-label" for="manufacturer_5">
-                            Milling and routing machines that drill and shape complex parts
+                            @lang('profile.ADDITIONAL4')
                           </label>
                         </div>
 
                         <div class="form-check">
                           <input class="form-check-input" type="checkbox" name="mcb5" id="manufacturer_6" {{$additionals[5] ? "checked" : ""}}>
                           <label class="form-check-label" for="manufacturer_6">
-                            Electronic parts and tools
+                            @lang('profile.ADDITIONAL5')
                           </label>
                         </div>
 
                         <div class="form-check">
                           <input class="form-check-input" type="checkbox" name="mcb6" id="manufacturer_7" {{$additionals[6] ? "checked" : ""}}>
                           <label class="form-check-label" for="manufacturer_7">
-                            Tools for precision mechanics
+                            @lang('profile.ADDITIONAL6')
                           </label>
                         </div>
 
                         <div class="form-check">
                           <input class="form-check-input" type="checkbox" name="mcb7" id="manufacturer_8" {{$additionals[7] ? "checked" : ""}}>
                           <label class="form-check-label" for="manufacturer_8">
-                            Traditional hand and power tools, including soldering irons
+                            @lang('profile.ADDITIONAL7')
                           </label>
                         </div>
 
@@ -508,28 +559,28 @@
                         <div class="form-check">
                           <input class="form-check-input" type="checkbox" name="mcb8" id="manufacturer_9" {{$additionals[8] ? "checked" : ""}}>
                           <label class="form-check-label" for="manufacturer_9">
-                            Computers, cameras, softwares
+                            @lang('profile.ADDITIONAL8')
                           </label>
                         </div>
 
                         <div class="form-check">
                           <input class="form-check-input" type="checkbox" name="mcb9" id="manufacturer_10" {{$additionals[9] ? "checked" : ""}}>
                           <label class="form-check-label" for="manufacturer_11">
-                            Craft and art supplies
+                            @lang('profile.ADDITIONAL9')
                           </label>
                         </div>
 
                         <div class="form-check">
                           <input class="form-check-input" type="checkbox" name="mcb10" id="manufacturer_12" {{$additionals[10] ? "checked" : ""}}>
                           <label class="form-check-label" for="manufacturer_13">
-                            Building materials
+                            @lang('profile.ADDITIONAL10')
                           </label>
                         </div>
 
                         <div class="form-check">
                           <input class="form-check-input" type="checkbox" name="mcb11" id="manufacturer_14" {{$additionals[11] ? "checked" : ""}}>
                           <label class="form-check-label" for="manufacturer_14">
-                            Junk for recycling into new products
+                            @lang('profile.ADDITIONAL11')
                           </label>
                         </div>
                       </div>
@@ -538,14 +589,14 @@
                         <div class="form-check">
                           <input class="form-check-input" type="checkbox" name="mcb12" id="manufacturer_15" {{$additionals[12] ? "checked" : ""}}>
                           <label class="form-check-label" for="manufacturer_15">
-                            Batteries
+                            @lang('profile.ADDITIONAL12')
                           </label>
                         </div>
 
                         <div class="form-check">
                           <input class="form-check-input" type="checkbox" name="mcb13" id="manufacturer_16" {{$additionals[13] ? "checked" : ""}}>
                           <label class="form-check-label" for="manufacturer_16">
-                            Library
+                            @lang('profile.ADDITIONAL13')
                           </label>
                         </div>
                       </div>
@@ -563,8 +614,7 @@
             <div class="card border border-dark">
               <div class="card-body text-left">
                 <h6 class="text-left mb-3">
-                  You picked the <b class="_clr">Customer</b> user type,
-                  then please add a few tag about your skills
+                  @lang('profile.CUSTOMER_HELP')
                 </h6>
 
                 <!-- <div class="row">
@@ -581,45 +631,49 @@
                   </div>
                 </div> -->
 
-                <h6 class="mt-2">Your address</h6>
+                <h6 class="mt-2">@lang('profile.ADDRESS')</h6>
 
                 <div class="row mb-2" id="customerAddressTarget">
-                  <div class="col-md-2">
+                  <div class="col-md-3">
                     <div class="input-group">
                       <div class="input-group-prepend">
-                        <div class="input-group-text">Country</div>
+                        <div class="input-group-text">@lang('profile.COUNTRY')</div>
                       </div>
-                      <input name="customerAddressCountry" type="text" class="form-control" value="{{$user->customerAddressCountry}}" data-geo="country_short">
+                      <input name="customerAddressCountry" type="text" 
+                      class="form-control" value="{{$user->customerAddressCountry}}" data-geo="country_short">
                     </div>
                   </div>
-                  <div class="col-md-2">
+                  <div class="col-md-3">
                     <div class="input-group">
                       <div class="input-group-prepend">
-                        <div class="input-group-text">Zip code</div>
+                        <div class="input-group-text">@lang('profile.ZIP')</div>
                       </div>
                       <input name="customerAddressZip" type="text" class="form-control" value="{{$user->customerAddressZip}}" data-geo="postal_code">
                     </div>
                   </div>
-                  <div class="col-md-3">
+                  <div class="col-md-6">
                     <div class="input-group">
                       <div class="input-group-prepend">
-                        <div class="input-group-text">City</div>
+                        <div class="input-group-text">@lang('profile.CITY')</div>
                       </div>
                       <input name="customerAddressCity" type="text" class="form-control" value="{{$user->customerAddressCity}}" data-geo="locality">
                     </div>
                   </div>
-                  <div class="col-md-3">
+                </div>  
+                <div class="row mb-2" id="customerAddressTarget">
+                  
+                  <div class="col-md-9">
                     <div class="input-group">
                       <div class="input-group-prepend">
-                        <div class="input-group-text">Street</div>
+                        <div class="input-group-text">@lang('profile.STREET')</div>
                       </div>
                       <input name="customerAddressStreet" type="text" class="form-control" value="{{$user->customerAddressStreet}}" data-geo="route">
                     </div>
                   </div>
-                  <div class="col-md-2">
+                  <div class="col-md-3">
                     <div class="input-group">
                       <div class="input-group-prepend">
-                        <div class="input-group-text">Number</div>
+                        <div class="input-group-text">@lang('profile.NUMBER')</div>
                       </div>
                       <input name="customerAddressStreetNumber" type="text" class="form-control" value="{{$user->customerAddressStreetNumber}}" data-geo="street_number">
                     </div>
@@ -632,7 +686,7 @@
                   <div class="col-md-6">
                     <div class="input-group">
                       <div class="input-group-prepend">
-                        <div class="input-group-text">Phone number</div>
+                        <div class="input-group-text">@lang('profile.PHONE')</div>
                       </div>
                       <input name="customerPhone" type="text" class="form-control" id="" placeholder="Your phone number" value="{{$user->customerPhone}}">
                     </div>
@@ -640,7 +694,7 @@
                   <div class="col-md-6">
                     <div class="input-group mb-2">
                       <div class="input-group-prepend">
-                        <div class="input-group-text">Billing address</div>
+                        <div class="input-group-text">@lang('profile.BILLING_ADDRESS')</div>
                       </div>
                       <input name="customerBillingAddress" type="text" class="form-control" id="" placeholder="Your billing address" value="{{$user->customerBillingAddress}}">
                     </div>
@@ -659,18 +713,20 @@
 
             <a href="{{ url('/') }}">
               <button type="button" class="btn btn-sm btn-secondary">
-                <i class="fa fa-chevron-left mr-1" aria-hidden="true"></i> Back to the front page</button>
+                <i class="fa fa-chevron-left mr-1" aria-hidden="true"></i>
+                 @lang('profile.BACK')
+              </button>
             </a>
 
             <a href="#">
               <button type="submit" class="btn btn-sm btn-primary float-right">
-                Save <i class="fa fa-floppy-o ml-1" aria-hidden="true"></i>
+                @lang('profile.SAVE') <i class="fa fa-floppy-o ml-1" aria-hidden="true"></i>
               </button>
             </a>
 
             <a class="" href="#" data-toggle="modal" data-target="#newProjectModal">
               <button type="submit" class="btn btn-sm btn-primary ">
-                Create new project <i class="fas fa-lightbulb"></i>
+                @lang('navigation.CREATE_NEW_PROJECT') <i class="fas fa-lightbulb"></i>
               </button>
             </a>
           </div>
@@ -743,6 +799,15 @@
           $("#_customer").toggleClass("_hide");
         });
 
+		$('#pw_auth').click(function() {
+			$('#pswInputs').toggle();
+			if (this.value == 1) {
+			   this.value = 0;
+			} else {
+				this.value = 1;
+			}   
+		});
+
         $('.geocomplete-button').each(function() {
           var geocomplete_target = $(this).attr('data-geocomplete-target');
           var geocomplete_field = $(this).attr('data-geocomplete-field');
@@ -756,6 +821,95 @@
           })
         });
 
+		$('#profileForm').submit(function() {
+				var result = true;
+				var msg = '';
+		        var requestValidator = function(selector, message) {
+					if ($(selector).val() == '') {
+						$(selector).addClass('alert-info');
+						msg += "<li>"+message+"</li>";
+						result = false;
+					} else {
+						$(selector).removeClass('alert-info');
+					}
+		        } 	
+				
+				// psw validations
+				if ($('#pw_auth').val() == 0) {
+					$('#inputPsw').val('');				
+					$('#inputPsw2').val('');				
+				} else {
+					if ($('#inputPsw').val() != $('#inputPsw2').val()) {
+						msg += "<li>@lang('profile.PSWS_NOTEQUAL')</li>";
+						$('#inputPsw2').addClass('alert-info');
+						result = false;					
+					} else {
+						$('#inputPsw2').removeClass('alert-info');
+					}
+					if (($('#inputPsw').val() != '') && ($('#inputPsw').val().length < 6)) {
+						msg += "<li>@lang('profile.PSW_SHORT')</li>";
+						$('#inputPsw').addClass('alert-info');
+						result = false;					
+					} else {
+						$('#inputPsw').removeClass('alert-info');
+					}
+				}
+					
+				// maker validations
+				if ($('#_maker').is(":visible")) {
+
+				}  
+					
+				// manufacturer validations
+				if ($('#_manufacturer').is(":visible")) {
+					requestValidator('#manufacturerName',
+	                  "@lang('profile.NAME_REQUEST')");
+					requestValidator('#validationDefault1',
+	                  "@lang('profile.ZIP_REQUEST')");
+					requestValidator('#validationDefault2',
+	                  "@lang('profile.CITY_REQUEST')");
+					requestValidator('#validationDefault3',
+	                  "@lang('profile.STREET_REQUEST')");
+					requestValidator('#validationDefault4',
+	                  "@lang('profile.NUMBER_REQUEST')");
+	                  
+					var wt = $('#manufacturerWorkTime').val();
+					if ((wt == 0) || (wt == undefined)) {
+						msg += "<li>@lang('profile.WORKTIME_REQUEST')</li>";
+						$('#manufacturerWorkTime').addClass('alert-info');
+						result = false;					
+					} else {
+						$('#manufacturerWorkTime').removeClass('alert-info');
+					}
+	                  
+				}  
+
+					
+				if (!result) {
+					$('#errorMsg').html("<ul>"+msg+"</ul>");
+					$('#errorMsg').show();	
+					window.scrollTo(0,100);				
+				} else {
+					$('#errorMsg').html('');
+					$('#errorMsg').hide();					
+				}
+
+				return result;
+				
+		});
+			
+		$(function() {
+				if ('{{$user->psw}}' != '') {
+					$('#pw_auth').click();
+				}
+				var msg = "{{ $msg }}";
+				var msgClass = "{{ $msgClass }}";
+				if (msg != '') {
+					$('#msg').html(msg);
+					$('#msg').addClass(msgClass);
+					$('#msg').show();
+				}
+		});
       </script>
 
 @endsection

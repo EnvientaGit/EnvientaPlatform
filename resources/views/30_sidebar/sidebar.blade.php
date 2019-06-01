@@ -2,7 +2,7 @@
   <div class="col-md-12">
     <div class="border card w-100 box-shadow-bottom">
       <h6 class="card-header dtitle p-2">
-        <i class="fa fa-info-circle fa-fw mr-1 env_color"></i>Creator of this project
+        <i class="fa fa-info-circle fa-fw mr-1 env_color"></i>@lang('project.CREATOR')
       </h6>
         <div class="card-body p-3 text-center">
           <a href="https://www.gravatar.com/{{$avatar_hash}}" target="_blank">
@@ -14,11 +14,11 @@
           <p class="text-center">
             <a data-toggle="modal" data-target="#ownerDescriptionModal">
               <i class="far fa-glasses fa-xs text-primary"></i>
-              <small>More about the creator</small>
+              <small>@lang('project.MEMBERS')</small>
             </a>
           </p>
           {{--
-          <p class="env_p">Uploaded at XXX</p>
+          <p class="env_p">@palng('project.UPLOADED')</p>
           --}}
         </div>
     </div>
@@ -31,7 +31,7 @@
     <div class="modal-content">
 
       <div class="modal-header bg-light p-2">
-        <h5 class="modal-title">More info about the creator</h5>
+        <h5 class="modal-title">@lang('project.CREATORINFO')</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <i class="fa fa-times fa-xs"></i>
         </button>
@@ -49,7 +49,8 @@
     <div class="col-md-12">
       <div class="border card w-100 box-shadow-bottom">
         <h6 class="card-header dtitle p-2">
-          <i class="fa fa-pencil-square-o mr-1 env_color"></i>Contributors of this project
+          <i class="fa fa-pencil-square-o mr-1 env_color"></i>
+          @lang('project.CONTRIBUTORS')
         </h6>
         <div class="card-body p-3 contributors" id="contributors">
 
@@ -63,7 +64,7 @@
             <input name="newMemberInput" id="newMemberInput" class="form-control" placeholder="E-mail address" aria-label="New member e-mail address" aria-describedby="btnGroupAddon2" type="text" autocomplete="off">
             <div class="input-group-append">
               <button class="env_link_grey env_point input-group-text env_border_rslim" id="newContributorAddBtn">
-                Add
+                @lang('project.ADDMEMBER')
               </button>
             </div>
           </div>
@@ -82,10 +83,12 @@
 
       <h6 class="card-header dtitle p-2">
         @if ($project->public == 0)
-          <i class="fa fa-eye-slash fa-fw mr-1 env_color"></i> <span>Private</span> Project
+          <i class="fa fa-eye-slash fa-fw mr-1 env_color"></i> 
+          	<span>@lang('project.PRIVATE')</span> Project
         @endif
         @if ($project->public == 1)
-          <i class="fa fa-eye fa-fw mr-1 env_color"></i> <span>Public</span> Project
+          <i class="fa fa-eye fa-fw mr-1 env_color"></i> 
+          	<span>@lang('project.PUBLIC')</span> Project
         @endif
         <span class="rt-badge badge badge-env" data-toggle="tooltip" data-placement="top" data-toggle="tooltip" data-placement="top" title="Admin panel"><i class="fa fa-exclamation-triangle"></i></span>
       </h6>
@@ -93,17 +96,16 @@
           <div class="form-row align-items-center">
             <div class="col">
               <select name="status" class="custom-select mr-sm-2" id="projectStatus">
-                <option @if ($project->public == 0) SELECTED @endif value="0">Private</option>
-                <option @if ($project->public == 1) SELECTED @endif value="1">Public</option>
+                <option @if ($project->public == 0) SELECTED @endif value="0">@lang('project.PRIVATE')</option>
+                <option @if ($project->public == 1) SELECTED @endif value="1">@lang('project.PUBLIC')</option>
               </select>
-            </div>
-            <div class="col-auto">
-              <button id="btnStatus" type="button" class="btn btn-primary">Set Status</button>
+              <button id="btnStatus" type="button" class="btn btn-primary">@lang('project.SET_STATUS')</button>
             </div>
           </div>
           <div class="form-row align-items-center text-center">
             <small class="form-text text-muted w-100">
-              <i class="fa fa-exclamation-triangle text-primary"></i> Pubilc projects are visible for everyone!
+              <i class="fa fa-exclamation-triangle text-primary"></i> 
+              @lang('project.STAUS_HELP')
             </small>
           </div>
         </div>

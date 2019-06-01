@@ -61,7 +61,7 @@
           <div class="row">
             <div class="col-md-12 text-right mt-3">
               <button type="button" name="button" class="border btn btn-primary" data-toggle="modal" data-target="#newProjectModal">
-                Create new project <i class="fas fa-lightbulb"></i>
+                @lang('front.CREATE_PROJECT')&nbsp;<i class="fas fa-lightbulb"></i>
               </button>
             </div>
           </div>

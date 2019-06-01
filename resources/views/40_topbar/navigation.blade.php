@@ -1,5 +1,8 @@
 <?php
     use App\Utils;
+    // =============== config ==========
+    $langs = array('hu', 'en');
+    // =============== config ==========
 ?>
 
 <nav class="navbar navbar-expand-lg navbar-light sticky-top py-0" style="background: #282828;"><!-- navbar -->
@@ -17,21 +20,21 @@
     <ul class="navbar-nav mr-auto" style="padding-bottom: 7px;">
       <li class="nav-item mt-3 rounded bg-primary">
         <a class="nav-link" href="#" data-toggle="modal" data-target="#newProjectModal">
-          <h5 class="text-white my-1">Create new project
+          <h5 class="text-white my-1">@lang('navigation.CREATE_NEW_PROJECT')
             <i class="fas fa-lightbulb"></i>
           </h5>
         </a>
       </li>
       <li class="nav-item mt-3">
         <a class="nav-link text-white" href="{{ url('/shop') }}">
-          <h5 class="my-1">Shop
+          <h5 class="my-1">@lang('navigation.SHOP')
             <i class="fa fa-shopping-basket _clr" aria-hidden="true"></i>
           </h5>
         </a>
       </li>
       <li class="nav-item mt-3">
         <a class="nav-link text-white" href="https://t.me/envienta" target="_blank">
-          <h5 class="my-1">Need help? Click here
+          <h5 class="my-1">@lang('navigation.HELP')
             <i class="fab fa-telegram-plane _blue"></i>
           </h5>
         </a>
@@ -39,26 +42,34 @@
     </ul>
     <form id='search_form' class="form-inline ml-2">
       <input class="form-control mr-sm-2 btn-sm env_width_20" id="search_edit" type="search" placeholder="Search" aria-label="Search" value="{{ empty($filter) ? '' : $filter }}">
-      <button id="search_button" class="btn btn-sm btn-primary my-2 my-sm-0">Search</button>
+      <button id="search_button" class="btn btn-sm btn-primary my-2 my-sm-0">@lang('navigation.SEARCH')</button>
     </form>
     @if(!Auth::check())
-    <button id="login_btn" class="btn btn-sm btn-primary ml-2" data-toggle="modal" data-target="#login_dialog"> Sign in / Sign up </button>
+	 <button id="login_btn" class="btn btn-sm btn-primary ml-2" data-toggle="modal" data-target="#login_dialog"> @lang('navigation.SIGN') </button>
     @else
     <div id="profile_block">
       <div class="btn-group text-left">
         <img src="{{ Utils::userAvatar() }}"
         class="dropdown-toggle env_point d-block float-left ml-2 rounded env_border border-warning" height="40" width="40"  data-toggle="dropdown">
         <div class="dropdown-menu">
-          <a class="dropdown-item env_color" href="#" data-toggle="modal" data-target="#newProjectModal">New project <i class="fas fa-lightbulb"></i></a>
-          <a class="dropdown-item env_color" href="{{ URL::to('/profile') }}">My profile</a>
-          <!--a class="dropdown-item env_color" href="{{ Utils::userProfile() }}" target="_blank">Gravatar</a-->
-          <a class="dropdown-item env_color" href="{{ url('/profile/projects') }}">My projects</a>
-          <!--a class="dropdown-item env_color" href="{{ URL::to('/map') }}">Map</a-->
-          <a class="dropdown-item env_color" href="{{ url('/auth/logout') }}">Log Out</a>
+          <a class="dropdown-item env_color" href="#" data-toggle="modal" data-target="#newProjectModal">@lang('navigation.NEW_PROJECT') <i class="fas fa-lightbulb"></i></a>
+          <a class="dropdown-item env_color" href="{{ URL::to('/profile') }}">@lang('navigation.MYPROFILE')</a>
+          <!--a class="dropdown-item env_color" href="{{ Utils::userProfile() }}" target="_blank">@lang('navigation.GRAVATAR')</a-->
+          <a class="dropdown-item env_color" href="{{ url('/profile/projects') }}">@lang('navigation.MYPROJECTS')</a>
+          <!--a class="dropdown-item env_color" href="{{ URL::to('/map') }}">@lang('navigation.MAP')</a-->
+          <a class="dropdown-item env_color" href="{{ url('/auth/logout') }}">@lang('navigation.LOGOUT')</a>
         </div>
       </div>
     </div>
     @endif
+    
+  </div>
+  <div class="changeLang">
+  @foreach ($langs as $lang)
+  		<a href="{{ url('/?lang='.$lang) }}">
+  			<img src="{{ url('img/flag-'.$lang.'.png') }}" />
+  		</a>
+  @endforeach
   </div>
 </nav><!-- navbar -->
 

@@ -26,7 +26,7 @@
             <i class="fa fa-arrow-up fa-2x p-2 rounded-circle border border-white" aria-hidden="true"></i>
         </a>
     </p>
-    <p class="text-white">Copyright &copy; 2018 ENVIENTA Association</p>
+    <p class="text-white">@lang('footer.COPYRIGHT')</p>
     <p>
       <a href="https://www.facebook.com/envienta" class="text-white">
         <i class="fa fa-facebook mr-3" aria-hidden="true"></i>
@@ -48,16 +48,18 @@
           <div class="footer-lower">
             <div class="media-container-row">
                 <div class="col-md-12">
-                  <p class="mbr-text mbr-fonts-style display-7 float-right">© Copyright 2018 - Envienta</p>
+                  <p class="mbr-text mbr-fonts-style display-7 float-right">
+                  	@lang('footer.COPYRIGHT2')
+                  	</p>
                   <hr>
                 </div>
             </div>
             <div class="media-container-row mbr-white">
                 <div class="col-md-6 copyright">
                     <p>
-                      <a href="{{ URL::to('/terms') }}" class="text-white mr-2">Terms & conditions </a>
-                      <a href="{{ URL::to('/privacy') }}" class="text-white mr-2">Privacy policy </a>
-                      <a href="{{ URL::to('/cookies') }}" class="text-white">Cookies </a>
+                      <a href="{{ URL::to('/terms') }}" class="text-white mr-2">@lang('footer.TERM') </a>
+                      <a href="{{ URL::to('/privacy') }}" class="text-white mr-2">@lang('footer.PRIVACY') </a>
+                      <a href="{{ URL::to('/cookies') }}" class="text-white">@lang('footer.COOKIES') </a>
                     </p>
                 </div>
                 <div class="col-md-6">
@@ -78,7 +80,7 @@
                             </a>
                         </div>
                         <div class="soc-item">
-                            <a href="https://www.youtube.com/channel/UCbS_n6qVwLtyVlwFYMjq4og/videos" target="_blank">
+                            <a href="https://t.me/envienta" target="_blank">
                                 <span class="mbr-iconfont mbr-iconfont-social socicon-telegram socicon" style="color: rgb(255, 255, 255);"></span>
                             </a>
                         </div>

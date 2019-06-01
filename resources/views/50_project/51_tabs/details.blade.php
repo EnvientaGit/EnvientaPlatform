@@ -5,18 +5,21 @@
 		<input type="hidden" name="redirect" value="true" />
 		<h6 class="card-header {{-- dtitle --}} p-2">{{$project->title}}
 			@if($mine)
-			<i class="fa fa-pencil-square-o env_edit pull-right" id="edit_details"></i>
+			<i class="fa fa-pencil-square-o env_edit pull-right" 
+				title="@lang('project.EDIT')" id="edit_details"></i>
 			@endif
 		</h6>
 	  	<div class="card-body p-3">
 	  		<div id="details_content">
 	  			<div class="card bg-light">
   					<div class="card-body p-2">
+  						<p><label>@lang('project.DESCRIPTION')</label></p>
 		    			<p class="card-text text-justify">
 		    				{{$project->description}}
 		    			</p>
 		    		</div>
 		    	</div>
+				<p><label>@lang('project.DETAILS')</label></p>
 		    	<p class="card-text text-justify">
 		    		{!! $details !!}
 		    	</p>
@@ -28,22 +31,26 @@
 	    	</div>
 	    	<div id="details_editor" style="display: none;">
 		  		<div class="form-group">
+					<p><label>@lang('project.DESCRIPTION')</label></p>
 		            <textarea name="description" class="form-control" id="description" aria-describedby="descriptionHelp" placeholder="Enter description" rows="3" required="required">{{$project->description}}</textarea>
 	          	</div>
 	          	<div class="form-group my-0">
+					<p><label>@lang('project.DETAILS')</label></p>
 	    			<textarea name="details" id="details_editor_area" rows="200" cols="100">{{$details_raw}}</textarea>
 	    		</div>
 	    		<div class="form-group">
 	    			<input name="tags" type="text" class="btn-sm form-control taglist" id="tags" value="{{$project->tags}}">
 	    		</div>
 	    		<div class="form-group my-0">
-	    			<button type="button" class="btn btn-sm btn-outline-secondary" id="details_editor_close">Close</button>
-        			<button type="submit" class="btn btn-sm env_button">Save changes</button>
+	    			<button type="button" class="btn btn-sm btn-outline-secondary" id="details_editor_close">@lang('project.CLOSE')</button>
+        			<button type="submit" class="btn btn-sm env_button">
+        				@lang('project.SAVE')
+        			</button>
 	    		</div>
 	    	</div>
 	  	</div>
 	  	<div class="card-footer env_uploaded_div pl-2">
-	  		<p class="env_p">Uploaded at {{ $project->created_at }}</p>
+	  		<p class="env_p">@lang('project.UPLOADED') {{ $project->created_at }}</p>
 	  	</div>
 	  	</form>
 	</div>

@@ -78,7 +78,7 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'hu',
 
     /*
     |--------------------------------------------------------------------------
@@ -229,5 +229,12 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
     ],
+    
+    /**
+     * define remote modules when can call in iframe
+     */
+    'remoteModules' => [
+        'projectManager' => '../projectmanager/app.php'
+    ]
 
 ];

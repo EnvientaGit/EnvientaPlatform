@@ -1,5 +1,26 @@
 <?php
 
+use App\Http\Controllers;
+
+/**
+ * view function can mock for phpunit test
+ * @param string $viewName
+ * @param array $params
+ * @return array
+ */
+function mockView(string $viewName, array $params = []) {
+    return view($viewName, $params);
+}
+
+/**
+ * redirect function can mock for phpunit test
+ * @param string $url
+ * @return \Illuminate\Routing\Redirector|\Illuminate\Http\RedirectResponse
+ */
+function mockRedirect(string $url) {
+    return redirect($url);
+}
+
 /**
  * Laravel - A PHP Framework For Web Artisans
  *
