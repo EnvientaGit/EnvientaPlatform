@@ -6,7 +6,7 @@ For more info, please visit our webpage at: [https://envienta.com/](https://envi
 
 ## Long time concept
 
-https://medium.com/envienta-open-source-everything/the-envienta-platform-through-the-developers-eyes-dd31943e40ae
+A short FAQ like intorduction about the concepts and targets of the ENVIENTA Platform: https://medium.com/envienta-open-source-everything/the-envienta-platform-through-the-developers-eyes-dd31943e40ae
 
 ## Get started
 
