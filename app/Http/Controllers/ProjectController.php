@@ -166,6 +166,8 @@ class ProjectController extends Controller
   }
   
   private function checkMembership($user, $project) {
+    if($user->isAdmin)
+      return true;
     if($user->id == $project->owner)
       return true;
     return Member::where('user_id', $user->id)->where('project_id', $project->id)->first();
