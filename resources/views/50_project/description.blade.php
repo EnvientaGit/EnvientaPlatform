@@ -34,6 +34,9 @@
         <div id="menu2" class="tab-pane animated fadeIn">
           @include('50_project.51_tabs.comments')
         </div>
+        <div id="project_tasks" class="tab-pane animated fadeIn">
+          @include('50_project.51_tabs.tasks')
+        </div>
       </div>
 
       @if($mine)

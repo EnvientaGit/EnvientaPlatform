@@ -19,7 +19,9 @@ class SetLocale {
 		  
 		  // if not defined then get lang from $_SERVER
 		  if ($locale == '?') {
-			 $locale = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'],0,2);		  
+		      if (isset($_SERVER['HTTP_ACCEPT_LANGUAGE'])) {
+		         $locale = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'],0,2);
+		      }
 		  }
 		  
 		  // set app locale

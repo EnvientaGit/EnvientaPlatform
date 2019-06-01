@@ -68,4 +68,5 @@ return [
     'PUBLIC' => "Public",
     'SET_STATUS' => "Set Status",
     'STAUS_HELP' => "Pubilc projects are visible for everyone!",
+    'TASKS' => "Tasks",
 ];
