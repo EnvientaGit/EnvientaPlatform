@@ -53,6 +53,7 @@ Route::name('new_project')->post('/project/new', 'ProjectController@newProject')
 //Route::middleware('page-cache')->get('/project/{id}', 'ProjectController@show');
 Route::name('project')->get('/project/{slug}', 'ProjectController@show');
 Route::name('project_files')->get('/project/{slug}/files', 'ProjectController@showFiles');
+Route::name('project_tasks')->get('/project/{slug}/tasks', 'ProjectController@tasks');
 Route::name('project_members')->get('/project/{slug}/members', 'ProjectController@listMembers');
 Route::name('project_update')->post('/project/{slug}', 'ProjectController@update');
 
@@ -65,3 +66,5 @@ Route::name('fb_login')->get('/auth/fb_login', 'LoginController@loginWithFaceboo
 Route::name('sendOrder')->get('/shop/sendOrder', 'ShopController@sendOrder');
 
 //Route::get('/user/list', 'UserController@listUsers');
+
+Route::name('pmapi')->get('/pmapi/{sessionid}/{projectid}', 'PmapiController@api');

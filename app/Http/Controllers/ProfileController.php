@@ -97,5 +97,9 @@ class ProfileController extends Controller
 		$user->save();	
 		return mockRedirect(url('/profile').'?msg='.__('profile.SAVED').'&msgclass=alert-success');
 	}
+	
+	public function tasks() {
+	    return 'project tasks';
+	}
 
 }

@@ -58,7 +58,7 @@ class ProjectController extends Controller
     ));
   }
 
-  public function show($slug = NULL)
+  public function show(Request $request, $slug = NULL)
   {
     $project = Project::where('slug', $slug)->first();
 
@@ -89,6 +89,7 @@ class ProjectController extends Controller
       'folders' => $this->getFolders($project_path),
       'avatar_hash' => md5( strtolower( trim( $project->owner()->first()->email ) ) ),
       'tags' => $project->tags ? explode(' ', $project->tags) : array(), 
+      'sessionid' => $request->session()->getId(), 
       'mine' => Auth::check() ? $project->owner == Auth::user()->id : false
     ));
   }
@@ -198,7 +199,7 @@ class ProjectController extends Controller
   }
 
   public function update(Request $request, $slug) {
-    if (!Auth::check())
+      if (!Auth::check())
       return;
 
     $project = Project::where('slug', $slug)->first();
@@ -266,4 +267,15 @@ class ProjectController extends Controller
       return mockRedirect(url('/project/' . $project->slug));
   }
 
+  /*
+   * 
+   
+   public function tasks(Request $request, $slug) {
+      $project = DB::table('projects')->where('slug', $slug)->first();
+      $project_path = public_path() . "/repo/" . $slug;
+      return mockView('50_project.51_tabs.tasks', array(
+          'projectid' => $project->id
+      ));
+  }
+  */
 }
