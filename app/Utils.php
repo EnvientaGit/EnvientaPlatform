@@ -7,89 +7,122 @@ use Auth;
 class Utils
 {
 
-    /**
-     * @param $uploadedFile
-     * @param string $enabledMimes
-     * @return bool
-     */
-  public static function checkFile($uploadedFile, $enabledMimes = '*') {
+  /**
+   * @param $uploadedFile
+   * @param string $enabledMimes
+   * @return bool
+   */
+  public static function checkFile($uploadedFile, $enabledMimes = '*')
+  {
     $checked = false;
     if ($enabledMimes != '*' && is_array($enabledMimes)) {
-      if($uploadedFile->getPathName() && in_array(mime_content_type($uploadedFile->getPathName()), $enabledMimes)) 
+      if ($uploadedFile->getPathName() && in_array(mime_content_type($uploadedFile->getPathName()), $enabledMimes))
         $checked = true;
     } else {
       $checked = true;
     }
     var_dump($checked);
-    if($checked === true && strtolower($uploadedFile->getClientOriginalExtension()) == 'php')
+    if ($checked === true && strtolower($uploadedFile->getClientOriginalExtension()) == 'php')
       $checked = false;
     return $checked;
   }
 
-  public static function clearFileName($filename) {
+  public static function clearFileName($filename)
+  {
     return preg_replace('/[^a-zA-Z0-9_.-]/', '', $filename);
   }
 
-  public static function clearFolderName($filename) {
+  public static function clearFolderName($filename)
+  {
     return preg_replace('/[^a-zA-Z0-9_-]/', '', $filename);
   }
 
-	public static function bytesToHuman($bytes)
-    {
-        $units = ['B', 'KiB', 'MiB', 'GiB', 'TiB', 'PiB'];
+  public static function bytesToHuman($bytes)
+  {
+    $units = ['B', 'KiB', 'MiB', 'GiB', 'TiB', 'PiB'];
 
-        for ($i = 0; $bytes > 1024; $i++) {
-            $bytes /= 1024;
-        }
-
-        return round($bytes, 2) . ' ' . $units[$i];
+    for ($i = 0; $bytes > 1024; $i++) {
+      $bytes /= 1024;
     }
-    
-  public static function themeResPath($name) {
+
+    return round($bytes, 2) . ' ' . $units[$i];
+  }
+
+  public static function themeResPath($name)
+  {
     return url('/themes/' . $_SERVER['HTTP_HOST'] . '/' . config('themes.' . str_replace('.', '_', $_SERVER['HTTP_HOST']) . '.' . $name));
   }
 
-  public static function themePath($name) {
+  public static function themePath($name)
+  {
     return url('/themes/' . $_SERVER['HTTP_HOST'] . '/' . $name);
   }
 
-  public static function userAvatar() {
-    return Auth::user()->avatarUrl ? Auth::user()->avatarUrl : "https://www.gravatar.com/avatar/" . md5( strtolower( trim( Auth::user()->email ) ) ) . "?s=40";
+  public static function userAvatar()
+  {
+    return Auth::user()->avatarUrl ? Auth::user()->avatarUrl : "https://www.gravatar.com/avatar/" . md5(strtolower(trim(Auth::user()->email))) . "?s=40";
   }
 
-  public static function userAvatarBig() {
-    return Auth::user()->avatarUrl ? Auth::user()->avatarUrl : "https://www.gravatar.com/avatar/" . md5( strtolower( trim( Auth::user()->email ) ) ) . "?s=200";
+  public static function userAvatarBig()
+  {
+    return Auth::user()->avatarUrl ? Auth::user()->avatarUrl : "https://www.gravatar.com/avatar/" . md5(strtolower(trim(Auth::user()->email))) . "?s=200";
   }
 
-  public static function userProfile() {
-    return Auth::user()->profileUrl ? Auth::user()->profileUrl : "https://www.gravatar.com/" . md5( strtolower( trim( Auth::user()->email ) ) );
+  public static function userProfile()
+  {
+    return Auth::user()->profileUrl ? Auth::user()->profileUrl : "https://www.gravatar.com/" . md5(strtolower(trim(Auth::user()->email)));
   }
 
-  public static function booleanArrayToStr($booleanArray) {
+  public static function booleanArrayToStr($booleanArray)
+  {
     $result = "";
-    for($i = 0; $i < count($booleanArray); $i++)
+    for ($i = 0; $i < count($booleanArray); $i++)
       $result .= $booleanArray[$i] ? "1" : "0";
     return $result;
   }
 
-  public static function strToBooleanArray($str, $min) {
+  public static function strToBooleanArray($str, $min)
+  {
     $result = array();
     $strArray = str_split($str);
     foreach ($strArray as $char)
       array_push($result, $char == "1");
-    for($i=count($result); $i<$min; $i++)
+    for ($i = count($result); $i < $min; $i++)
       array_push($result, false);
     return $result;
   }
 
   public static function random_str($length, $keyspace = '0123456789')
   {
-      $str = '';
-      $max = mb_strlen($keyspace, '8bit') - 1;
-      for ($i = 0; $i < $length; ++$i) {
-          $str .= $keyspace[random_int(0, $max)];
-      }
-      return $str;
+    $str = '';
+    $max = mb_strlen($keyspace, '8bit') - 1;
+    for ($i = 0; $i < $length; ++$i) {
+      $str .= $keyspace[random_int(0, $max)];
+    }
+    return $str;
   }
+
+  public static function getFirebaseUserByToken($token)
+  {
+      $data = array("idToken" => $token);
+      $data_string = json_encode($data);
+  
+      $ch = curl_init('https://identitytoolkit.googleapis.com/v1/accounts:lookup?key=AIzaSyCsLUi82gxN97jSOR6eTDYRySBWGID6rzA');
+      curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+      curl_setopt($ch, CURLOPT_POSTFIELDS, $data_string);
+      curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+      curl_setopt(
+          $ch,
+          CURLOPT_HTTPHEADER,
+          array(
+              'Content-Type: application/json',
+              'Content-Length: ' . strlen($data_string)
+          )
+      );
+  
+      $response = json_decode(curl_exec($ch));
+      return $response->users[0];
+  }
+  
 
 }
