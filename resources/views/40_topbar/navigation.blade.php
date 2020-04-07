@@ -1,11 +1,13 @@
 <?php
-    use App\Utils;
-    // =============== config ==========
-    $langs = array('hu', 'en');
-    // =============== config ==========
+
+use App\Utils;
+// =============== config ==========
+$langs = array('hu', 'en');
+// =============== config ==========
 ?>
 
-<nav class="navbar navbar-expand-lg navbar-light sticky-top py-0" style="background: #282828;"><!-- navbar -->
+<nav class="navbar navbar-expand-lg navbar-light sticky-top py-0" style="background: #282828;">
+  <!-- navbar -->
   <div class="navbar-brand">
     <span class="navbar-logo">
       <a href="{{ url('/') }}">
@@ -45,44 +47,50 @@
       <button id="search_button" class="btn btn-sm btn-primary my-2 my-sm-0">@lang('navigation.SEARCH')</button>
     </form>
     @if(!Auth::check())
-	 <button id="login_btn" class="btn btn-sm btn-primary ml-2" data-toggle="modal" data-target="#login_dialog"> @lang('navigation.SIGN') </button>
+    <button id="login_btn" class="btn btn-sm btn-primary ml-2" data-toggle="modal" data-target="#login_dialog"> @lang('navigation.SIGN') </button>
     @else
     <div id="profile_block">
       <div class="btn-group text-left">
-        <img src="{{ Utils::userAvatar() }}"
-        class="dropdown-toggle env_point d-block float-left ml-2 rounded env_border border-warning" height="40" width="40"  data-toggle="dropdown">
+        <img src="{{ Utils::userAvatar() }}" class="dropdown-toggle env_point d-block float-left ml-2 rounded env_border border-warning" height="40" width="40" data-toggle="dropdown">
         <div class="dropdown-menu">
           <a class="dropdown-item env_color" href="#" data-toggle="modal" data-target="#newProjectModal">@lang('navigation.NEW_PROJECT') <i class="fas fa-lightbulb"></i></a>
           <a class="dropdown-item env_color" href="{{ URL::to('/profile') }}">@lang('navigation.MYPROFILE')</a>
           <!--a class="dropdown-item env_color" href="{{ Utils::userProfile() }}" target="_blank">@lang('navigation.GRAVATAR')</a-->
           <a class="dropdown-item env_color" href="{{ url('/profile/projects') }}">@lang('navigation.MYPROJECTS')</a>
           <!--a class="dropdown-item env_color" href="{{ URL::to('/map') }}">@lang('navigation.MAP')</a-->
-          <a class="dropdown-item env_color" href="{{ url('/auth/logout') }}">@lang('navigation.LOGOUT')</a>
+          <a id="logoutButton" class="dropdown-item env_color" href="{{ url('/auth/logout') }}">@lang('navigation.LOGOUT')</a>
         </div>
       </div>
     </div>
     @endif
-    
+
   </div>
   <div class="changeLang">
-  @foreach ($langs as $lang)
-  		<a href="{{ url('/?lang='.$lang) }}">
-  			<img src="{{ url('img/flag-'.$lang.'.png') }}" />
-  		</a>
-  @endforeach
+    @foreach ($langs as $lang)
+    <a href="{{ url('/?lang='.$lang) }}">
+      <img src="{{ url('img/flag-'.$lang.'.png') }}" />
+    </a>
+    @endforeach
   </div>
 </nav><!-- navbar -->
 
 @extrajs
 <script type="text/javascript">
-  $('#search_form').on('submit', function(e){
+  $('#search_form').on('submit', function(e) {
     e.preventDefault();
     var expr = $('#search_edit').val();
-    if(expr) {
-      window.location = '{{ url('/s') }}' + '/' + encodeURI(expr);
+    if (expr) {
+      window.location = '{{ url(' / s ') }}' + '/' + encodeURI(expr);
     } else {
-      window.location = '{{ url('/') }}';
+      window.location = '{{ url(' / ') }}';
     }
+  });
+  $('#logoutButton').click(function() {
+    firebase.auth().signOut().then(function() {
+      console.log('Signed Out');
+    }, function(error) {
+      console.error('Sign Out Error', error);
+    });
   });
 </script>
 @endextrajs

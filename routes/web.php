@@ -62,6 +62,7 @@ Route::name('login')->get('/auth/login', 'LoginController@login');
 Route::name('logout')->get('/auth/logout', 'LoginController@logout');
 
 Route::name('fb_login')->get('/auth/fb_login', 'LoginController@loginWithFacebook');
+Route::name('firebase_login')->get('/auth/firebase_login', 'LoginController@loginWithFirebase');
 
 Route::name('sendOrder')->get('/shop/sendOrder', 'ShopController@sendOrder');
 
