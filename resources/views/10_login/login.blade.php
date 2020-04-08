@@ -30,6 +30,26 @@
     firebase.initializeApp(firebaseConfig);
     firebase.analytics();
 
+    firebase.auth().onAuthStateChanged(async function(user) {
+        if (user) {
+            var idToken = await firebase.auth().currentUser.getIdToken(true);
+            console.log(idToken);
+            $.get("{{ url('/auth/firebase_login') }}", {
+                token: idToken
+            }).done(function(data) {
+                console.log(data);
+@if(!Auth::check())
+                if (data == 'success') {
+                    location.reload();
+                }
+@endif
+            });
+        } else {
+            console.log("No user is signed in.");
+        }
+    });
+
+
     var ui = new firebaseui.auth.AuthUI(firebase.auth());
     ui.start('#firebaseui-auth-container', {
         signInSuccessUrl: "{{ url('/') }}",
@@ -45,24 +65,3 @@
         ]
     });
 </script>
-
-@if(!Auth::check())
-<script type="text/javascript">
-    firebase.auth().onAuthStateChanged(async function(user) {
-        if (user) {
-            var idToken = await firebase.auth().currentUser.getIdToken(true);
-            console.log(idToken);
-            $.get("{{ url('/auth/firebase_login') }}", {
-                token: idToken
-            }).done(function(data) {
-                console.log(data);
-                if (data == 'success') {
-                    location.reload();
-                }
-            });
-        } else {
-            console.log("No user is signed in.");
-        }
-    });
-</script>
-@endif

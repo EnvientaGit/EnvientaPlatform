@@ -67,9 +67,9 @@ use App\Utils;
   <script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
 
   {{-- leaflet --}}
-  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.3.1/leaflet.css" />
-  <script src="http://cdn.leafletjs.com/leaflet-0.3.1/leaflet.js"></script>
-  <script src="http://maps.google.com/maps/api/js?v=3.2&key=AIzaSyCsLUi82gxN97jSOR6eTDYRySBWGID6rzA&libraries=places"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.6.0/leaflet.css" integrity="sha256-SHMGCYmST46SoyGgo4YR/9AlK1vf3ff84Aq9yK4hdqM=" crossorigin="anonymous" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.6.0/leaflet.js" integrity="sha256-fNoRrwkP2GuYPbNSJmMJOCyfRB2DhPQe0rGTgzRsyso=" crossorigin="anonymous"></script>
+  <script src="https://maps.google.com/maps/api/js?v=3.2&key=AIzaSyCsLUi82gxN97jSOR6eTDYRySBWGID6rzA&libraries=places"></script>
   <script src="{{ URL::to('js/leaflet-google.js') }}"></script>
 
   <link rel="stylesheet" href="{{ URL::to('css/jquery.tag-editor.css') }}">
