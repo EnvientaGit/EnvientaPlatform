@@ -27,6 +27,7 @@ $langs = array('hu', 'en');
           </h5>
         </a>
       </li>
+      <!--
       <li class="nav-item mt-3">
         <a class="nav-link text-white" href="{{ url('/shop') }}">
           <h5 class="my-1">@lang('navigation.SHOP')
@@ -41,6 +42,7 @@ $langs = array('hu', 'en');
           </h5>
         </a>
       </li>
+      -->
     </ul>
     <form id='search_form' class="form-inline ml-2">
       <input class="form-control mr-sm-2 btn-sm env_width_20" id="search_edit" type="search" placeholder="Search" aria-label="Search" value="{{ empty($filter) ? '' : $filter }}">

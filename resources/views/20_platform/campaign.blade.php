@@ -23,7 +23,8 @@
         @include('60_campaign.projects')
       </div>
 
-      <div class="container"><!-- Telegram attention -->
+      <!--
+      <div class="container">
         <div class="row">
           <div class="col-md-12">
             <a href="https://t.me/envienta" target="_blank">
@@ -37,8 +38,8 @@
             </a>
           </div>
         </div>
-      </div><!-- End of  Telegram attention -->
-
+      </div>
+      -->
 
 <section class="mbr-section form3 cid-qUCSa8RrlP" id="form3-7y">
     <div class="container">
